@@ -205,6 +205,18 @@ Each team member should fork [HackYourFutureBelgium/javascript-30](https://githu
 
 No need to stop at 1 project! If your team is on a roll, keep going.  There's a lot of projects :)
 
+#### Checklist
+
+```md
+- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [live demo](https://_.github.io/_)
+- [ ] [development-strategy](https://github.com/_/_/tree/master/development-strategy.md)
+- [ ] [One branch per step in `development-strategy.md`](https://github.com/_/_/network)
+- [ ] [One closed issue per task](https://github.com/_/_/issues?q=is%3Aissue+is%3Aclosed) (you can have more than task per development step!)
+- [ ] [One closed PR per task issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
+- [ ] [A project board](https://github.com/_/_/projects/X) with all issues moved to "Done"
+```
+
 [TOP](#separation-of-concerns)
 
 ---
