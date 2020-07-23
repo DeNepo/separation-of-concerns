@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>set, display</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main id='user-interface' class='centered'>
+    <button id='set-button'>set string</button> <br>
+    <button id='display-button'>display string</button>
+  </main>
+
+  <script id='obfuscated'>
+    const a = ['enter\x20a\x20new\x20string', 'set-button', 'your\x20string\x20is\x20saved', 'addEventListener', 'display-button', 'getElementById', 'click']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0xc3)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; 'use strict'; let userString = ''; const setStringHandler = () => { debugger; const c = prompt(b('0x1')); if (c === null) return; userString = c, alert(b('0x3')); }, displayStringHandler = () => { debugger; alert(userString); }, setStringButton = document[b('0x6')](b('0x2')); setStringButton[b('0x4')](b('0x0'), setStringHandler); const displayStringButton = document[b('0x6')](b('0x5')); displayStringButton['addEventListener'](b('0x0'), displayStringHandler);
+  </script>
+</body>
+
+</html>

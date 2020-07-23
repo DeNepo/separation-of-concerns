@@ -1,0 +1,176 @@
+{
+  "path": "/",
+  "dirs": [
+    {
+      "path": "/01-dom-elements",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-create-element.js"
+            },
+            {
+              "path": "/2-node-name.js"
+            },
+            {
+              "path": "/3-class-name.js"
+            },
+            {
+              "path": "/4-inner-html.js"
+            },
+            {
+              "path": "/5-clone-node.js"
+            },
+            {
+              "path": "/6-value.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/fill-in-the-blanks.js"
+            },
+            {
+              "path": "/fix-the-bugs.js"
+            },
+            {
+              "path": "/pass-tests-1.js"
+            },
+            {
+              "path": "/pass-tests-2.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/02-html-templates",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-inner-html-super-power.js"
+            },
+            {
+              "path": "/2-template-strings.js"
+            },
+            {
+              "path": "/3-template-functions.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/write-the-template-1.js"
+            },
+            {
+              "path": "/write-the-template-2.js"
+            },
+            {
+              "path": "/write-the-template-3.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/03-add-event-listener",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-onclick.js"
+            },
+            {
+              "path": "/2-add-event-listenenr.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/add-event-listener-1.js"
+            },
+            {
+              "path": "/add-event-listener-2.js"
+            },
+            {
+              "path": "/write-the-handler.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/04-element-children",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-dot-children.js"
+            },
+            {
+              "path": "/2-modifying-child.js"
+            },
+            {
+              "path": "/3-array-from-children.js"
+            }
+          ],
+          "isExample": true
+        }
+      ]
+    },
+    {
+      "path": "/07-event-parameter",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-event-argument.js"
+            },
+            {
+              "path": "/2-modifying-the-target.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/write-the-handler-1.js"
+            },
+            {
+              "path": "/write-the-handler-2.js"
+            },
+            {
+              "path": "/write-the-handler-3.js"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "title": "s-o-c/isolate",
+    "path": "/",
+    "loopGuard": {
+      "active": false,
+      "max": 20
+    },
+    "buttons": []
+  }
+}

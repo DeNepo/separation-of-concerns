@@ -1,0 +1,13 @@
+.main-interface {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+}
+
+.half {
+  width: 50vw;
+}
+
+.mirror {
+  text-align: right;
+}

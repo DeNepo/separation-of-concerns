@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>up-down interval</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+
+  <script id='data'>
+    debugger;
+    'use strict';
+
+    let currentNumber = 0;
+    let interval = 1;
+  </script>
+
+  <script id='handlers'>
+    'use strict';
+
+    const upHandler = () => {
+      debugger;
+      currentNumber = currentNumber + interval;
+      alert(`the current number is: ${currentNumber}`);
+    };
+
+    const downHandler = () => {
+      debugger;
+      currentNumber = currentNumber - interval;
+      alert(`the current number is: ${currentNumber}`);
+    };
+
+    const setIntervalHandler = () => {
+      debugger;
+
+      const userInput = prompt('enter a new interval');
+      const userNumber = Number(userInput);
+      if (Number.isNaN(userNumber)) {
+        alert(`"${userInput}" is not a valid number.`);
+        return;
+      }
+      interval = userNumber;
+      alert(`the interval is now ${interval}`)
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user interface' class='centered'>
+    <button id='up'>+</button>
+    <button id='down'>-</button>
+    <br>
+    <button id='set-interval'>set interval</button>
+  </main>
+
+  <script id='listeners'>
+    // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
+    // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
+
+    const upButton = document.getElementById('up');
+    upButton.addEventListener('click', upHandler);
+
+    const downButton = document.getElementById('down');
+    downButton.addEventListener('click', downHandler);
+
+    const setIntervalButton = document.getElementById('set-interval');
+    setIntervalButton.addEventListener('click', setIntervalHandler);
+  </script>
+
+</body>
+
+</html>

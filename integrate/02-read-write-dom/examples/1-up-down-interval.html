@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>up-down interval</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+
+  <script id='data'>
+    debugger;
+    'use strict';
+
+    let currentNumber = 0;
+    let interval = 1;
+  </script>
+
+  <script id='handlers'>
+    'use strict';
+
+    const upHandler = () => {
+      debugger;
+      currentNumber = currentNumber + interval;
+
+      const output = document.getElementById('output');
+      output.innerHTML = currentNumber;
+    };
+
+    const downHandler = () => {
+      debugger;
+      currentNumber = currentNumber - interval;
+
+      const output = document.getElementById('output');
+      output.innerHTML = currentNumber;
+    };
+
+    const setIntervalHandler = () => {
+      debugger;
+
+      const inputEl = document.getElementById('set-interval');
+      const newIntervalString = inputEl.value;
+      const newInterval = Number(newIntervalString);
+      interval = newInterval;
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user interface' class='centered'>
+    <code id='output'>0</code> <br>
+    <br>
+    <button id='up'>+</button>
+    <button id='down'>-</button> <br>
+    <br>
+    <input id='set-interval' type='number' value='1'>
+  </main>
+
+  <script id='listeners'>
+    const upButton = document.getElementById('up');
+    upButton.addEventListener('click', upHandler);
+
+    const downButton = document.getElementById('down');
+    downButton.addEventListener('click', downHandler);
+
+    const setIntervalInput = document.getElementById('set-interval');
+    setIntervalInput.addEventListener('change', setIntervalHandler);
+  </script>
+
+</body>
+
+</html>

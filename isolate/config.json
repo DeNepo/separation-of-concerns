@@ -1,0 +1,9 @@
+{
+  "title": "s-o-c/isolate",
+  "path": "/",
+  "loopGuard": {
+    "active": false,
+    "max": 20
+  },
+  "buttons": []
+}

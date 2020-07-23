@@ -1,0 +1,106 @@
+{
+  "path": "/",
+  "dirs": [
+    {
+      "path": "/1-add-event-listener",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/authentication.html"
+            },
+            {
+              "path": "/up-down-interval.html"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/1-set-display-demo.html",
+              "isExample": true
+            },
+            {
+              "path": "/1-set-display.html"
+            },
+            {
+              "path": "/2-guessing-game-demo.html",
+              "isExample": true
+            },
+            {
+              "path": "/2-guessing-game.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/2-read-write-dom",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-up-down-interval.html"
+            },
+            {
+              "path": "/2-authentication.html"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/1-set-display-demo.html",
+              "isExample": true
+            },
+            {
+              "path": "/1-set-display.html"
+            },
+            {
+              "path": "/2-guessing-game-demo.html",
+              "isExample": true
+            },
+            {
+              "path": "/2-guessing-game.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/5-event-parameter",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/color-changer.html"
+            },
+            {
+              "path": "/fancy-reversy.html"
+            },
+            {
+              "path": "/mouse-coordinates.html"
+            }
+          ],
+          "isExample": true
+        }
+      ]
+    }
+  ],
+  "config": {
+    "title": "testing/integrate",
+    "path": "/",
+    "language": "html",
+    "buttons": [],
+    "ignore": [
+      "stepped-vs-separated"
+    ]
+  }
+}

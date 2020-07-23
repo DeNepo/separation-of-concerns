@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>authentication</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .auth-error {
+      color: red;
+    }
+
+    .auth-success {
+      color: green;
+    }
+  </style>
+
+  <script id='data'>
+    'use strict';
+    debugger;
+    let loggedIn = false;
+    let currentUser = undefined;
+  </script>
+
+  <script id='handlers'>
+    'use strict';
+
+    const logInHandler = () => {
+      debugger;
+
+      const outputEl = document.getElementById('output');
+      if (loggedIn) {
+        outputEl.className = 'auth-error';
+        outputEl.innerHTML = 'another user is already logged in';
+        return;
+      }
+
+      const userNameEl = document.getElementById('user-name');
+      const userName = userNameEl.value;
+      if (userName === '') {
+        outputEl.className = 'auth-error';
+        outputEl.innerHTML = 'please enter your user name';
+        return;
+      }
+
+      const password1El = document.getElementById('password');
+      const password1 = password1El.value;
+      if (password1 === '') {
+        outputEl.className = 'auth-error';
+        outputEl.innerHTML = 'please enter a password';
+        return;
+      }
+
+      const password2El = document.getElementById('confirm-password');
+      const password2 = password2El.value;
+      if (password2 === '') {
+        outputEl.className = 'auth-error';
+        outputEl.innerHTML = 'please confirm your password';
+        return;
+      }
+
+      if (password1 !== password2) {
+        outputEl.className = 'auth-error';
+        outputEl.innerHTML = 'passwords do not match';
+        return;
+      }
+
+      loggedIn = true;
+      currentUser = userName;
+      outputEl.className = 'auth-success';
+      outputEl.innerHTML = `welcome ${currentUser}`;
+      userNameEl.value = password1El.value = password2El.value = '';
+    };
+
+
+    const logOutHandler = () => {
+      debugger;
+      const outputEl = document.getElementById('output');
+
+      if (!loggedIn) {
+        outputEl.className = 'auth-error';
+        outputEl.innerHTML = 'no one is logged in';
+        return;
+      }
+
+      const confirmLogOut = confirm(`${currentUser}, are you sure you want to log out?`);
+      if (!confirmLogOut) { return; }
+
+      const message = `good bye ${currentUser}`;
+      alert(message);
+      loggedIn = false;
+      currentUser = undefined;
+
+      const userNameEl = document.getElementById('user-name');
+      const password1El = document.getElementById('password');
+      const password2El = document.getElementById('confirm-password');
+      outputEl.innerHTML = userNameEl.value = password1El.value = password2El.value = '';
+      outputEl.className = '';
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user interface' class='centered'>
+    <p id='output'></p> <br>
+    <br>
+    <input id='user-name' placeholder='user name'> <br>
+    <input id='password' placeholder='enter password' type='password'> <br>
+    <input id='confirm-password' placeholder='confirm password' type='password'> <br>
+    <br>
+    <button id='log-in'>log in</button>
+    <button id='log-out'>log out</button>
+  </main>
+
+  <script id='listeners'>
+    const logInButton = document.getElementById('log-in');
+    logInButton.addEventListener('click', logInHandler);
+
+    const logOutButton = document.getElementById('log-out');
+    logOutButton.addEventListener('click', logOutHandler);
+  </script>
+
+</body>
+
+</html>

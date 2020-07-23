@@ -1,0 +1,9 @@
+{
+  "title": "testing/integrate",
+  "path": "/",
+  "language": "html",
+  "buttons": [],
+  "ignore": [
+    "stepped-vs-separated"
+  ]
+}
