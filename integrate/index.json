@@ -2,7 +2,7 @@
   "path": "/",
   "dirs": [
     {
-      "path": "/1-add-event-listener",
+      "path": "/01-add-event-listener",
       "dirs": [
         {
           "path": "/examples",
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "path": "/2-read-write-dom",
+      "path": "/02-read-write-dom",
       "dirs": [
         {
           "path": "/examples",
@@ -56,13 +56,6 @@
           "path": "/exercises",
           "files": [
             {
-              "path": "/1-set-display-demo.html",
-              "isExample": true
-            },
-            {
-              "path": "/1-set-display.html"
-            },
-            {
               "path": "/2-guessing-game-demo.html",
               "isExample": true
             },
@@ -74,24 +67,82 @@
       ]
     },
     {
-      "path": "/5-event-parameter",
+      "path": "/stepped-and-separated",
       "dirs": [
         {
-          "path": "/examples",
+          "path": "/debugger",
           "files": [
             {
-              "path": "/color-changer.html"
+              "path": "/index.html"
+            }
+          ]
+        },
+        {
+          "path": "/flip-book-separated",
+          "files": [
+            {
+              "path": "/index.html"
+            }
+          ]
+        },
+        {
+          "path": "/flip-book-stepped",
+          "files": [
+            {
+              "path": "/0-setup.html"
             },
             {
-              "path": "/fancy-reversy.html"
+              "path": "/1-dom.html"
             },
             {
-              "path": "/mouse-coordinates.html"
+              "path": "/2-style.html"
+            },
+            {
+              "path": "/3-listener.html"
+            },
+            {
+              "path": "/4-handler.html"
+            },
+            {
+              "path": "/5-logic.html"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/mouse-coordinates-separated",
+          "files": [
+            {
+              "path": "/index.html"
+            }
+          ]
+        },
+        {
+          "path": "/mouse-coordinates-stepped",
+          "files": [
+            {
+              "path": "/0-setup.html"
+            },
+            {
+              "path": "/1-dom.html"
+            },
+            {
+              "path": "/2-style.html"
+            },
+            {
+              "path": "/3-listeners.html"
+            },
+            {
+              "path": "/4-handlers.html"
+            },
+            {
+              "path": "/5-logic.html"
             }
           ],
           "isExample": true
         }
-      ]
+      ],
+      "isExample": true
     }
   ],
   "config": {

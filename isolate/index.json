@@ -48,7 +48,38 @@
       ]
     },
     {
-      "path": "/02-html-templates",
+      "path": "/02-add-event-listener",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-onclick.js"
+            },
+            {
+              "path": "/2-add-event-listenenr.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/add-event-listener-1.js"
+            },
+            {
+              "path": "/add-event-listener-2.js"
+            },
+            {
+              "path": "/write-the-handler.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/03-html-templates",
       "dirs": [
         {
           "path": "/examples",
@@ -82,37 +113,6 @@
       ]
     },
     {
-      "path": "/03-add-event-listener",
-      "dirs": [
-        {
-          "path": "/examples",
-          "files": [
-            {
-              "path": "/1-onclick.js"
-            },
-            {
-              "path": "/2-add-event-listenenr.js"
-            }
-          ],
-          "isExample": true
-        },
-        {
-          "path": "/exercises",
-          "files": [
-            {
-              "path": "/add-event-listener-1.js"
-            },
-            {
-              "path": "/add-event-listener-2.js"
-            },
-            {
-              "path": "/write-the-handler.js"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "path": "/04-element-children",
       "dirs": [
         {
@@ -129,37 +129,6 @@
             }
           ],
           "isExample": true
-        }
-      ]
-    },
-    {
-      "path": "/07-event-parameter",
-      "dirs": [
-        {
-          "path": "/examples",
-          "files": [
-            {
-              "path": "/1-event-argument.js"
-            },
-            {
-              "path": "/2-modifying-the-target.js"
-            }
-          ],
-          "isExample": true
-        },
-        {
-          "path": "/exercises",
-          "files": [
-            {
-              "path": "/write-the-handler-1.js"
-            },
-            {
-              "path": "/write-the-handler-2.js"
-            },
-            {
-              "path": "/write-the-handler-3.js"
-            }
-          ]
         }
       ]
     }
