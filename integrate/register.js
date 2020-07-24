@@ -2,7 +2,6 @@
 const fs = require("fs");
 const path = require("path");
 const config = require("./config.json");
-const { dir } = require("console");
 
 // declare constants
 const EXERCISES_DIR = path.normalize(path.join(__dirname, config.path));
