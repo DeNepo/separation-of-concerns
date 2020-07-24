@@ -65,84 +65,6 @@
           ]
         }
       ]
-    },
-    {
-      "path": "/stepped-and-separated",
-      "dirs": [
-        {
-          "path": "/debugger",
-          "files": [
-            {
-              "path": "/index.html"
-            }
-          ]
-        },
-        {
-          "path": "/flip-book-separated",
-          "files": [
-            {
-              "path": "/index.html"
-            }
-          ]
-        },
-        {
-          "path": "/flip-book-stepped",
-          "files": [
-            {
-              "path": "/0-setup.html"
-            },
-            {
-              "path": "/1-dom.html"
-            },
-            {
-              "path": "/2-style.html"
-            },
-            {
-              "path": "/3-listener.html"
-            },
-            {
-              "path": "/4-handler.html"
-            },
-            {
-              "path": "/5-logic.html"
-            }
-          ],
-          "isExample": true
-        },
-        {
-          "path": "/mouse-coordinates-separated",
-          "files": [
-            {
-              "path": "/index.html"
-            }
-          ]
-        },
-        {
-          "path": "/mouse-coordinates-stepped",
-          "files": [
-            {
-              "path": "/0-setup.html"
-            },
-            {
-              "path": "/1-dom.html"
-            },
-            {
-              "path": "/2-style.html"
-            },
-            {
-              "path": "/3-listeners.html"
-            },
-            {
-              "path": "/4-handlers.html"
-            },
-            {
-              "path": "/5-logic.html"
-            }
-          ],
-          "isExample": true
-        }
-      ],
-      "isExample": true
     }
   ],
   "config": {
@@ -151,7 +73,7 @@
     "language": "html",
     "buttons": [],
     "ignore": [
-      "stepped-vs-separated"
+      "stepped-and-separated"
     ]
   }
 }
