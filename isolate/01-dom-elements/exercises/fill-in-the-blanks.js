@@ -31,6 +31,6 @@ console.assert(_5_test, 'Test 5');
 
 const _6_element = document.createElement('textarea');
 _6_element._ = 'many many mumbling mice';
-const _6_test = _6_element._ === _;
+const _6_test = _6_element.value === _;
 console.assert(_6_test, 'Test 6');
 
