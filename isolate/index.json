@@ -58,6 +58,9 @@
             },
             {
               "path": "/2-add-event-listenenr.js"
+            },
+            {
+              "path": "/3-add-event-listener-gotcha.js"
             }
           ],
           "isExample": true
