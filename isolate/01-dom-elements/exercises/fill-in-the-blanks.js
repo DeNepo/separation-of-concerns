@@ -34,3 +34,8 @@ _6_element._ = 'many many mumbling mice';
 const _6_test = _6_element.value === _;
 console.assert(_6_test, 'Test 6');
 
+const _7_element = document.createElement('textarea');
+_7_element._ = 'many many mumbling mice';
+const _7_test = _7_element.innerHTML === _;
+console.assert(_7_test, 'Test 7');
+
