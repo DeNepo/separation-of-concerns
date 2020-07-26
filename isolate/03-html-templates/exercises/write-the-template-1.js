@@ -22,6 +22,6 @@ console.assert(sadH2 === '<h2>:(</h2>',
 
 const divEl = document.createElement('div');
 
-divEl.innerHTML = happyH2;
-divEl.innerHTML += sadH1;
+divEl.innerHTML = happyH1;
+divEl.innerHTML += sadH2;
 console.log(divEl);
