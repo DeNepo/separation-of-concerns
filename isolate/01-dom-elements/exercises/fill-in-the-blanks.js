@@ -1,5 +1,12 @@
 'use strict';
 
+/* Scavenger Hunt!
+
+  practice reading through all the element properties in the debugger
+  many of the answers are there if you look in the right place ;)
+
+*/
+
 const _1_element = document.createElement('input');
 const _1_test = _1_element.nodeName === _;
 console.assert(_1_test, 'Test 1');
