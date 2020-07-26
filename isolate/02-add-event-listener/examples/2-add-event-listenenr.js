@@ -28,6 +28,8 @@ const greetingHandler = () => {
 
 // add a 'click' event listener to the button
 //  notice the 'onclick' property is still null!
+// greetingHandler is being passed as an argument
+//  not called!  debugger will go from this line to console.log
 buttonEl.addEventListener('click', greetingHandler);
 
 // ! event listeners do not appear on the element
@@ -42,8 +44,16 @@ console.log(buttonEl.nodeName, buttonEl);
 //  you will not need to know it, just to understand it in these exercises
 //  in "integrate", events are dispatched by actually clicking a button
 
+// triggering an event will call the handler function
+//  debugger will go from .dispatchEvent to greetingHandler
 // 1. create a new "click" event
-const clickEvent = new Event('click');
-
+const clickEvent1 = new Event('click');
 // 2. dispatch the event from the button
-buttonEl.dispatchEvent(clickEvent);
+buttonEl.dispatchEvent(clickEvent1);
+
+
+// "click" the button a second time
+//  call the handler a second time
+//  debugger will go from .dispatchEvent to greetingHandler
+const clickEvent2 = new Event('click');
+buttonEl.dispatchEvent(clickEvent2);
