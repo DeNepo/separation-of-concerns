@@ -1,10 +1,10 @@
 'use strict';
 
 /**
- * renders an unordered list of all even numbers in an array
- * @param {number[]} numbers - an array of numbers
- * @param {string} id - a value to use for the list's id
- * @returns {string} an HTML <ul> string with all even numbers
+ * renders a summary/details element with a <p> in the body
+ * @param {string} caption - the summary
+ * @param {string} mainText - the full paragraph
+ * @returns {string} an HTML string
  */
 const renderSummaryDetails = (caption, mainText) => {
   return (
