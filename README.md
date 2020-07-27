@@ -201,7 +201,7 @@ The focus of week 1 is using _event listeners_, _event handlers_ and _DOM elemen
 
 There's an outstanding series of tutorials called [The JavaScript 30](https://javascript30.com/) put together by [Wes Bos](https://wesbos.com), it's 30 fun frontend projects with video tutorials and finished code to study.  The team project this week is to study one of the projects and reconstruct it as a collaborative project.
 
-Each team member should fork [HackYourFutureBelgium/javascript-30](https://github.com/HackYourFutureBelgium/JavaScript-30), this repo contains more detailed instructions for the week's project.
+Each team member should fork [HackYourFutureBelgium/javascript-30](https://github.com/HackYourFutureBelgium/JavaScript-30), this repo contains more detailed instructions for the week's project.  You can use the [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) repo to get off the ground.
 
 No need to stop at 1 project! If your team is on a roll, keep going.  There's a lot of projects :)
 
