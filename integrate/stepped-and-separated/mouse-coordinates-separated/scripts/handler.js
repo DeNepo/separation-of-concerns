@@ -14,7 +14,4 @@ function handler(event) {
   console.log('xValue:', typeof xValue + ',', xValue);
   console.log('yValue:', typeof yValue + ',', yValue);
   console.log('formattedCoordinates:', typeof formattedCoordinates + ',', formattedCoordinates);
-
-  // for the browser
-  return true;
 }

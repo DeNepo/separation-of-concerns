@@ -12,7 +12,4 @@ function handler(event) {
   console.log('\n--- user action ---');
   console.log('input:', typeof input + ',', input);
   console.log('reversedUppercase:', typeof reversedUppercase + ',', reversedUppercase);
-
-  // for the browser
-  return true;
 }

@@ -15,7 +15,4 @@ function handler(event) {
   console.log('--- user action ---');
   console.log('input:', typeof input + ',', input);
   console.log('output', typeof reversed + ',', reversed);
-
-  // browser: continue default behavior
-  return true;
 }
