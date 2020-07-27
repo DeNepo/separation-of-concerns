@@ -60,8 +60,29 @@ window.onload = async () => {
       document.getElementById('current-path').innerHTML = exercise.path.abs;
       liveStudyApp.active = exercise;
 
+
       const view = liveStudyApp.render(exercise);
       document.getElementById('drop-down').appendChild(view);
+
+      if (url.searchParams.get("code")) {
+        console.log(5)
+        document.getElementById('current-path').innerHTML = 'permalink';
+        const code = decodeURIComponent(url.searchParams.get("code"));
+        setTimeout(() => {
+          editor.setValue(code)
+          const encoded = encodeURIComponent(code)
+            .replace(/\(/g, '%28')
+            .replace(/\)/g, '%29')
+            .replace(/%09/g, '%20%20');
+          // liveStudyApp.permalinkInput.value = liveStudyApp.permalink + '?code=' + encoded;
+          history.replaceState(null, "", `?code=${encoded}`);
+          if (index.config.language === 'html') {
+            document.getElementById('output').src = "data:text/html;charset=utf-8," + encodeURIComponent(code);
+          }
+        }, 50);
+      } else {
+        document.getElementById('current-path').innerHTML = exercise.path.abs;
+      }
     })
     .catch(err => console.error(err));
 

@@ -1,9 +1,10 @@
 {
-  "title": "testing/integrate",
+  "title": "s-o-c/integrate",
   "path": "/",
   "language": "html",
   "buttons": [],
   "ignore": [
     "stepped-and-separated"
-  ]
+  ],
+  "permalink": "https://hackyourfuture.be/separation-of-concerns/integrate"
 }

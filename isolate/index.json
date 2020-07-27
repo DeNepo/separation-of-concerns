@@ -58,6 +58,9 @@
             },
             {
               "path": "/2-add-event-listenenr.js"
+            },
+            {
+              "path": "/3-add-event-listener-gotcha.js"
             }
           ],
           "isExample": true
@@ -140,6 +143,7 @@
       "active": false,
       "max": 20
     },
-    "buttons": []
+    "buttons": [],
+    "permalink": "https://hackyourfuture.be/separation-of-concerns/isolate"
   }
 }
