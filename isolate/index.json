@@ -128,10 +128,95 @@
               "path": "/2-modifying-child.js"
             },
             {
-              "path": "/3-array-from-children.js"
+              "path": "/3-iterating-children.js"
+            },
+            {
+              "path": "/4-array-from-children.js"
             }
           ],
           "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/pass-the-tests-1.js"
+            },
+            {
+              "path": "/pass-the-tests-2.js"
+            },
+            {
+              "path": "/pass-the-tests-3.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/05-dom-manipulation",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-append-child.js"
+            },
+            {
+              "path": "/2-remove-child.js"
+            },
+            {
+              "path": "/3-replace-child.js"
+            },
+            {
+              "path": "/4-insert-before.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/pass-the-tests-1.js"
+            },
+            {
+              "path": "/pass-the-tests-2.js"
+            },
+            {
+              "path": "/pass-the-tests-3.js"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/07-event-keyword",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/1-event-keyword.js"
+            },
+            {
+              "path": "/2-modifying-the-target.js"
+            }
+          ],
+          "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/write-the-handler-1.js"
+            },
+            {
+              "path": "/write-the-handler-2.js"
+            },
+            {
+              "path": "/write-the-handler-3.js"
+            }
+          ]
         }
       ]
     }

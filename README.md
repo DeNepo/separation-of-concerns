@@ -129,9 +129,11 @@ Good luck!
   - [javascript.inf/event-details](https://javascript.info/event-details)
   - [MDN Building Blocks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 - [Generating HTML with Template Literals](https://wesbos.com/template-strings-html)
-- DOM Manipulation
+- The DOM
   - [javascript.info/document](https://javascript.info/document)
   - [super highly recommended DOM tutorial](https://dom-tutorials.appspot.com/static/index.html)
+  - [Zac Gordon](https://www.youtube.com/watch?v=l-0nPnSvbX8&list=PLruo2gSoqlej-QjRW25c97socsRiAUVuf&index=8)
+  - [Traversy](https://www.youtube.com/watch?v=0ik6X4DJKCc)
   - [study.hackyourfuture.be](https://study.hackyourfuture.be/javascript/dom-manipulation)
 - Code to Study
   - [bradtraversy/vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)
@@ -159,7 +161,7 @@ Exercises for solo-study.  We won't be checking these exercises unless you ask u
 
 ### The DOM
 
-- :edd: [dom-manipulation](https://github.com/HackYourFutureBelgium/dom-manipulation)
+- :egg: [dom-manipulation](https://github.com/HackYourFutureBelgium/dom-manipulation)
 
 ### JavaScript 30
 
@@ -176,16 +178,14 @@ The focus of week 1 is using _event listeners_, _event handlers_ and _DOM elemen
 
 ### Prep Work
 
-#### Readings
-
-- [javascript.info/document](https://javascript.info/document)
-- [javascript.info/events](https://javascript.info/events)
-- [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
-
-#### Practice
-
-- [isolate/01-dom-elements](../isolate/01-dom-elements)
-- [integrate/01-add-event-listener](../integrate/01-add-event-listener)
+- Study
+  - [javascript.info/document](https://javascript.info/document)
+  - [javascript.info/events](https://javascript.info/events)
+  - [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
+  - [What are event listeners in JS?](https://www.youtube.com/watch?v=jqU3uaRgQyQ)
+- Practice
+  - [isolate/01-dom-elements](../isolate/01-dom-elements)
+  - [integrate/01-add-event-listener](../integrate/01-add-event-listener)
 
 ### Isolate
 
@@ -227,11 +227,43 @@ The focus of week 2 is using forms to handle more gather and process more user d
 
 ### Prep Work
 
-### Isolate
+- Study
+  - [js.info: Bubbling & Capturing](https://javascript.info/bubbling-and-capturing) (`event.target`)
+  - [js.info: Event Delegation](https://javascript.info/event-delegation)
+  - [Gordon: DOM Events](https://www.youtube.com/watch?v=QE1YQnhntgw)
+  - [Griffith: JS Event Listeners](https://www.youtube.com/watch?v=EaRrmOtPYTM)
+- [Isolate](../isolate/index.html)
+  - HTML Templates
+  - Element Children
+  - DOM Manipulation
+  - Event Parameter
+- [Integrate](../integrate/index.html)
+  - Read & Write DOM
 
-### Integrate
+### [Isolate](../isolate/index.html)
+
+- Event Parameter
+
+### [Integrate](../integrate/index.html)
+
+- Event Delegation
 
 ### Project
+
+Just like last week, choose a JavaScript 30 project to reverse-engineer as a team.
+
+#### Checklist
+
+```md
+- [ ] [repo](https://github.com/_/_) with a complete README
+- [ ] [live demo](https://_.github.io/_)
+- [ ] [development-strategy](https://github.com/_/_/tree/master/development-strategy.md)
+- [ ] [One branch per step in `development-strategy.md`](https://github.com/_/_/network)
+- [ ] [One closed issue per task](https://github.com/_/_/issues?q=is%3Aissue+is%3Aclosed) (you can have more than task per development step!)
+- [ ] [One closed PR per task issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
+- [ ] [A project board](https://github.com/_/_/projects/X) with all issues moved to "Done"
+```
+
 
 [TOP](#separation-of-concerns)
 

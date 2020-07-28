@@ -65,6 +65,29 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/05-event-delegation",
+      "dirs": [
+        {
+          "path": "/examples",
+          "files": [
+            {
+              "path": "/0-event-parameter.html"
+            },
+            {
+              "path": "/1-change-text-loop.html"
+            },
+            {
+              "path": "/2-change-text-delegation.html"
+            },
+            {
+              "path": "/3-tic-tac-toe.html"
+            }
+          ],
+          "isExample": true
+        }
+      ]
     }
   ],
   "config": {

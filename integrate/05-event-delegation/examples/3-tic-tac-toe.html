@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>change text (delegation)</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid black;
+      height: 5em;
+      width: 5em;
+    }
+  </style>
+
+  <script id='data'>
+    let firstPlayer = true;
+  </script>
+
+  <script id='handlers'>
+    'use strict';
+
+    const placeMoveHandler = (event) => {
+      debugger;
+
+      const target = event.target;
+      if (target.nodeName !== 'TD') {
+        return;
+      }
+
+      if (target.innerHTML !== '') {
+        alert('this square is not empty');
+        return;
+      }
+
+      // update UI
+      if (firstPlayer) {
+        target.innerHTML = 'X';
+      } else {
+        target.innerHTML = 'O';
+      }
+
+      // update shared variable
+      firstPlayer = !firstPlayer;
+    };
+
+    const resetHandler = () => {
+      debugger;
+
+      firstPlayer = true;
+
+      // clear board
+      const theBoard = document.getElementById('the-board');
+      const squares = theBoard.getElementsByTagName('td');
+      for (const square of squares) {
+        square.innerHTML = '';
+      }
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user interface' class='centered'>
+    <table>
+      <thead>
+        <button id='reset-button'>reset</button>
+      </thead>
+      <tbody id='the-board'>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script id='listeners'>
+    // attach the event listener to the table body
+    //  let event.target make sure the correct element is updated
+    //  https://javascript.info/event-delegation
+    const theBoard = document.getElementById('the-board');
+    theBoard.addEventListener('click', placeMoveHandler);
+
+    const resetButton = document.getElementById('reset-button');
+    resetButton.addEventListener('click', resetHandler);
+  </script>
+
+</body>
+
+</html>

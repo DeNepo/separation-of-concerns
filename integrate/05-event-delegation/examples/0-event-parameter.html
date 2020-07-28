@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>parameter demo</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+
+  <script id='handlers'>
+    'use strict';
+
+    const demoHandler = (event) => {
+      debugger;
+
+      const eventType = event.type;
+
+      const target = event.target;
+      const nodeName = target.nodeName;
+
+      const message = `you ${eventType}ed the ${nodeName}`;
+      alert(message);
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user interface' class='centered'>
+    <button id='the-button'>mouseleave or click</button> <br>
+    <input id='the-input' type='number' value='0'>
+  </main>
+
+  <script id='listeners'>
+    const theButton = document.getElementById('the-button');
+    theButton.addEventListener('click', demoHandler);
+    theButton.addEventListener('mouseleave', demoHandler);
+
+    const theInput = document.getElementById('the-input');
+    theInput.addEventListener('click', demoHandler);
+    theInput.addEventListener('mouseleave', demoHandler);
+  </script>
+
+</body>
+
+</html>

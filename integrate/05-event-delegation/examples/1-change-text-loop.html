@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>change text (loop)</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid black;
+    }
+  </style>
+
+  <script id='handlers'>
+    'use strict';
+
+    const updateInnerHTMLHandler = (event) => {
+      const newInnerHTML = prompt('enter new text');
+      if (newInnerHTML === null) {
+        return;
+      }
+
+      const target = event.target;
+      target.innerHTML = newInnerHTML;
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user interface' class='centered'>
+    <table>
+      <tbody>
+        <tr>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script id='listeners'>
+    // attach the event listener to each and every <td>
+    const tdEls = document.getElementsByTagName('td');
+    for (const tdEl of tdEls) {
+      tdEl.addEventListener('click', updateInnerHTMLHandler);
+    }
+  </script>
+
+</body>
+
+</html>

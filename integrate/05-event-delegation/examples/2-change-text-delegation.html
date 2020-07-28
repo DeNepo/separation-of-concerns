@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>change text (delegation)</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid black;
+    }
+  </style>
+
+  <script id='handlers'>
+    'use strict';
+
+    const updateInnerHTMLHandler = (event) => {
+      const target = event.target;
+      if (target.nodeName !== 'TD') {
+        return;
+      }
+
+      const newInnerHTML = prompt('enter new text');
+      if (newInnerHTML === null) {
+        return;
+      }
+
+      target.innerHTML = newInnerHTML;
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user interface' class='centered'>
+    <table>
+      <tbody id='the-table-body'>
+        <tr>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script id='listeners'>
+    // attach the event listener to the table body
+    //  let event.target make sure the correct element is updated
+    //  https://javascript.info/event-delegation
+    const theTableBody = document.getElementById('the-table-body');
+    theTableBody.addEventListener('click', updateInnerHTMLHandler);
+  </script>
+
+</body>
+
+</html>
