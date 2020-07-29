@@ -32,12 +32,6 @@ export default class LiveStudy {
 
     if (index.config.permalink) {
       this.permalink = index.config.permalink;
-      // this.editor.onKeyUp((e) => {
-      //   this.permalinkInput.value = this.permalink + '?code=' + encodeURIComponent(this.editor.getValue())
-      //     .replace(/\(/g, '%28')
-      //     .replace(/\)/g, '%29')
-      //     .replace(/%09/g, '%20%20');
-      // });
     }
   }
 
@@ -54,7 +48,13 @@ export default class LiveStudy {
         .map(file => new Exercise(file.path, path, config));
     };
     if (data.dirs) {
-      copy.dirs = data.dirs.map(subDir => LiveStudy.populate(subDir, path + subDir.path, subDir.config ? Object.assign({}, config, subDir.config) : config));
+      copy.dirs = [];
+      data.dirs.forEach(subDir => {
+        if (subDir.ignore) { return; }
+        copy.dirs.push(
+          LiveStudy.populate(subDir, path + subDir.path, subDir.config ? Object.assign({}, config, subDir.config) : config)
+        );
+      });
     };
     return copy;
   }

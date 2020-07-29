@@ -26,5 +26,26 @@ examples and exercises to illustrate how JS can be integrated with HTML & CSS to
     - <a href="./05-event-delegation/examples/3-tic-tac-toe.html" target="_blank">/3-tic-tac-toe.html</a>
   - /exercises
     - <a href="./05-event-delegation/exercises/list.html" target="_blank">/list.html</a>
+- /stepped-and-separated
+  - /debugger
+    - <a href="./stepped-and-separated/debugger/index.html" target="_blank">/index.html</a>
+  - /flip-book-separated
+    - <a href="./stepped-and-separated/flip-book-separated/index.html" target="_blank">/index.html</a>
+  - /flip-book-stepped
+    - <a href="./stepped-and-separated/flip-book-stepped/0-setup.html" target="_blank">/0-setup.html</a>
+    - <a href="./stepped-and-separated/flip-book-stepped/1-dom.html" target="_blank">/1-dom.html</a>
+    - <a href="./stepped-and-separated/flip-book-stepped/2-style.html" target="_blank">/2-style.html</a>
+    - <a href="./stepped-and-separated/flip-book-stepped/3-listener.html" target="_blank">/3-listener.html</a>
+    - <a href="./stepped-and-separated/flip-book-stepped/4-handler.html" target="_blank">/4-handler.html</a>
+    - <a href="./stepped-and-separated/flip-book-stepped/5-logic.html" target="_blank">/5-logic.html</a>
+  - /mouse-coordinates-separated
+    - <a href="./stepped-and-separated/mouse-coordinates-separated/index.html" target="_blank">/index.html</a>
+  - /mouse-coordinates-stepped
+    - <a href="./stepped-and-separated/mouse-coordinates-stepped/0-setup.html" target="_blank">/0-setup.html</a>
+    - <a href="./stepped-and-separated/mouse-coordinates-stepped/1-dom.html" target="_blank">/1-dom.html</a>
+    - <a href="./stepped-and-separated/mouse-coordinates-stepped/2-style.html" target="_blank">/2-style.html</a>
+    - <a href="./stepped-and-separated/mouse-coordinates-stepped/3-listeners.html" target="_blank">/3-listeners.html</a>
+    - <a href="./stepped-and-separated/mouse-coordinates-stepped/4-handlers.html" target="_blank">/4-handlers.html</a>
+    - <a href="./stepped-and-separated/mouse-coordinates-stepped/5-logic.html" target="_blank">/5-logic.html</a>
 
 <!-- END TOC -->

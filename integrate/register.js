@@ -41,14 +41,19 @@ const register = function (dirPath) {
     const isDirectory = fs.statSync(path.normalize(path.join(dirPath, nextPath))).isDirectory();
     if (nextPath.includes('.git') || !isDirectory && path.extname(nextPath) !== '.html') { continue; }
     if (nextPath === 'index.html' && root) { root = false; continue; }
-    if (IGNORE.includes(nextPath)) { continue; }
 
 
     if (isDirectory) {
 
       // recursively register the path if it's a directory
       //  this will create a virtual folder structure for this path
+
       const subDir = register(path.normalize(path.join(dirPath, nextPath)));
+
+      if (IGNORE.includes(nextPath)) {
+        subDir.ignore = true;
+      }
+
       if (subDir) {
         // add the registered sub-directory to the current virtual directory
         dirs.push(subDir);
