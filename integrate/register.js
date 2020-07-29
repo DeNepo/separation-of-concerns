@@ -39,7 +39,6 @@ const register = function (dirPath) {
 
     // is the next path a directory or a file?
     const isDirectory = fs.statSync(path.normalize(path.join(dirPath, nextPath))).isDirectory();
-    // if it is a file, and not a javascript file, skip it
     if (nextPath.includes('.git') || !isDirectory && path.extname(nextPath) !== '.html') { continue; }
     if (nextPath === 'index.html' && root) { root = false; continue; }
     if (IGNORE.includes(nextPath)) { continue; }
@@ -119,3 +118,5 @@ console.log('\n--- writing /index.json ---\n');
 // write the file
 const stringifiedReg = JSON.stringify(registered, null, '  ');
 fs.writeFileSync(path.normalize(path.join(__dirname, 'index.json')), stringifiedReg);
+
+

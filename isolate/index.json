@@ -190,16 +190,19 @@
       ]
     },
     {
-      "path": "/07-event-keyword",
+      "path": "/07-event-parameter",
       "dirs": [
         {
           "path": "/examples",
           "files": [
             {
-              "path": "/1-event-keyword.js"
+              "path": "/1-event-parameter.js"
             },
             {
               "path": "/2-modifying-the-target.js"
+            },
+            {
+              "path": "/extra-event-keyword.js"
             }
           ],
           "isExample": true

@@ -107,7 +107,11 @@ Just like in the previous module, you will be expected to explain your developme
 
 ### Git Branching
 
-In this module we will be expected to build your projects using branches.  If you are looking to challenge yourself try making branches on your branches!  Instead of simply building each user story as a series of commits on one branch, try making one branch for each user story (like before) but then develop each file in your user story on _another_ branch, merging back into your story branch when the file is done.  And merging your story branch back to master when the story is finished.
+In this module’s project you have many more files and folders, and you’re learning how to break a single feature into more smaller pieces.  To implement a single user story you will need HTML, CSS, event listener(s), handler(s) and possibly a logic function. All of these smaller tasks can be shared between different team mates.
+
+The extra branching challenge this module is to create different branches for each user story like before, but then to also create branches off of the user story branches for the smaller units of work.  This way your group can confirm your work before merging it into the feature, and confirm the feature before merging it to master
+
+So it’s not about how many commits are on a branch, but how much work is on a branch.  If you only commit once for your piece of work then there will be only commit on a branch, but that’s the measure
 
 Good luck!
 
@@ -122,12 +126,6 @@ Good luck!
   - [Jon Bellah](https://jonbellah.com/articles/separation-of-concerns/)
   - [stackexchange](https://softwareengineering.stackexchange.com/questions/32581/how-do-you-explain-separation-of-concerns-to-others
 )
-- Events
-  - [what are events?](https://www.youtube.com/watch?v=gx0oAgvXyE4) (mmtuts)
-  - [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
-  - [javascript.info/events](https://javascript.info/events)
-  - [javascript.inf/event-details](https://javascript.info/event-details)
-  - [MDN Building Blocks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 - [Generating HTML with Template Literals](https://wesbos.com/template-strings-html)
 - The DOM
   - [javascript.info/document](https://javascript.info/document)
@@ -135,6 +133,12 @@ Good luck!
   - [Zac Gordon](https://www.youtube.com/watch?v=l-0nPnSvbX8&list=PLruo2gSoqlej-QjRW25c97socsRiAUVuf&index=8)
   - [Traversy](https://www.youtube.com/watch?v=0ik6X4DJKCc)
   - [study.hackyourfuture.be](https://study.hackyourfuture.be/javascript/dom-manipulation)
+- Events
+  - [what are events?](https://www.youtube.com/watch?v=gx0oAgvXyE4) (mmtuts)
+  - [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
+  - [javascript.info/events](https://javascript.info/events)
+  - [javascript.inf/event-details](https://javascript.info/event-details)
+  - [MDN Building Blocks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 - Code to Study
   - [bradtraversy/vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)
   - [wesbos/JavaScript30](https://github.com/wesbos/JavaScript30)

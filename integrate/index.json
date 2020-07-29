@@ -86,6 +86,14 @@
             }
           ],
           "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/list.html"
+            }
+          ]
         }
       ]
     }

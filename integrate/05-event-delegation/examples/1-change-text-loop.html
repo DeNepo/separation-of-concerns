@@ -38,7 +38,7 @@
 
   <main id='user interface' class='centered'>
     <table>
-      <tbody>
+      <tbody id='table-body'>
         <tr>
           <td>X</td>
           <td>X</td>
@@ -53,7 +53,8 @@
 
   <script id='listeners'>
     // attach the event listener to each and every <td>
-    const tdEls = document.getElementsByTagName('td');
+    const tableBody = document.getElementById('table-body');
+    const tdEls = tableBody.getElementsByTagName('td');
     for (const tdEl of tdEls) {
       tdEl.addEventListener('click', updateInnerHTMLHandler);
     }
