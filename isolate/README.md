@@ -1,1 +1,66 @@
 examples and exercises of how JavaScript works in isolation: away from HTML & CSS
+
+
+<!-- BEGIN TOC -->
+- /01-dom-elements
+  - /examples
+    - <a href="./01-dom-elements/examples/1-create-element.js" target="_blank">/1-create-element.js</a>
+    - <a href="./01-dom-elements/examples/2-node-name.js" target="_blank">/2-node-name.js</a>
+    - <a href="./01-dom-elements/examples/3-class-name.js" target="_blank">/3-class-name.js</a>
+    - <a href="./01-dom-elements/examples/4-inner-html.js" target="_blank">/4-inner-html.js</a>
+    - <a href="./01-dom-elements/examples/5-clone-node.js" target="_blank">/5-clone-node.js</a>
+    - <a href="./01-dom-elements/examples/6-value.js" target="_blank">/6-value.js</a>
+  - /exercises
+    - <a href="./01-dom-elements/exercises/fill-in-the-blanks.js" target="_blank">/fill-in-the-blanks.js</a>
+    - <a href="./01-dom-elements/exercises/fix-the-bugs.js" target="_blank">/fix-the-bugs.js</a>
+    - <a href="./01-dom-elements/exercises/pass-tests-1.js" target="_blank">/pass-tests-1.js</a>
+    - <a href="./01-dom-elements/exercises/pass-tests-2.js" target="_blank">/pass-tests-2.js</a>
+- /02-add-event-listener
+  - /examples
+    - <a href="./02-add-event-listener/examples/1-onclick.js" target="_blank">/1-onclick.js</a>
+    - <a href="./02-add-event-listener/examples/2-add-event-listenenr.js" target="_blank">/2-add-event-listenenr.js</a>
+    - <a href="./02-add-event-listener/examples/3-add-event-listener-gotcha.js" target="_blank">/3-add-event-listener-gotcha.js</a>
+  - /exercises
+    - <a href="./02-add-event-listener/exercises/add-event-listener-1.js" target="_blank">/add-event-listener-1.js</a>
+    - <a href="./02-add-event-listener/exercises/add-event-listener-2.js" target="_blank">/add-event-listener-2.js</a>
+    - <a href="./02-add-event-listener/exercises/write-the-handler.js" target="_blank">/write-the-handler.js</a>
+- /03-html-templates
+  - /examples
+    - <a href="./03-html-templates/examples/1-inner-html-super-power.js" target="_blank">/1-inner-html-super-power.js</a>
+    - <a href="./03-html-templates/examples/2-template-strings.js" target="_blank">/2-template-strings.js</a>
+    - <a href="./03-html-templates/examples/3-template-functions.js" target="_blank">/3-template-functions.js</a>
+  - /exercises
+    - <a href="./03-html-templates/exercises/write-the-template-1.js" target="_blank">/write-the-template-1.js</a>
+    - <a href="./03-html-templates/exercises/write-the-template-2.js" target="_blank">/write-the-template-2.js</a>
+    - <a href="./03-html-templates/exercises/write-the-template-3.js" target="_blank">/write-the-template-3.js</a>
+- /04-element-children
+  - /examples
+    - <a href="./04-element-children/examples/1-dot-children.js" target="_blank">/1-dot-children.js</a>
+    - <a href="./04-element-children/examples/2-modifying-child.js" target="_blank">/2-modifying-child.js</a>
+    - <a href="./04-element-children/examples/3-iterating-children.js" target="_blank">/3-iterating-children.js</a>
+    - <a href="./04-element-children/examples/4-array-from-children.js" target="_blank">/4-array-from-children.js</a>
+  - /exercises
+    - <a href="./04-element-children/exercises/pass-the-tests-1.js" target="_blank">/pass-the-tests-1.js</a>
+    - <a href="./04-element-children/exercises/pass-the-tests-2.js" target="_blank">/pass-the-tests-2.js</a>
+    - <a href="./04-element-children/exercises/pass-the-tests-3.js" target="_blank">/pass-the-tests-3.js</a>
+- /05-dom-manipulation
+  - /examples
+    - <a href="./05-dom-manipulation/examples/1-append-child.js" target="_blank">/1-append-child.js</a>
+    - <a href="./05-dom-manipulation/examples/2-remove-child.js" target="_blank">/2-remove-child.js</a>
+    - <a href="./05-dom-manipulation/examples/3-replace-child.js" target="_blank">/3-replace-child.js</a>
+    - <a href="./05-dom-manipulation/examples/4-insert-before.js" target="_blank">/4-insert-before.js</a>
+  - /exercises
+    - <a href="./05-dom-manipulation/exercises/pass-the-tests-1.js" target="_blank">/pass-the-tests-1.js</a>
+    - <a href="./05-dom-manipulation/exercises/pass-the-tests-2.js" target="_blank">/pass-the-tests-2.js</a>
+    - <a href="./05-dom-manipulation/exercises/pass-the-tests-3.js" target="_blank">/pass-the-tests-3.js</a>
+- /07-event-parameter
+  - /examples
+    - <a href="./07-event-parameter/examples/1-event-parameter.js" target="_blank">/1-event-parameter.js</a>
+    - <a href="./07-event-parameter/examples/2-modifying-the-target.js" target="_blank">/2-modifying-the-target.js</a>
+    - <a href="./07-event-parameter/examples/extra-event-keyword.js" target="_blank">/extra-event-keyword.js</a>
+  - /exercises
+    - <a href="./07-event-parameter/exercises/write-the-handler-1.js" target="_blank">/write-the-handler-1.js</a>
+    - <a href="./07-event-parameter/exercises/write-the-handler-2.js" target="_blank">/write-the-handler-2.js</a>
+    - <a href="./07-event-parameter/exercises/write-the-handler-3.js" target="_blank">/write-the-handler-3.js</a>
+
+<!-- END TOC -->
