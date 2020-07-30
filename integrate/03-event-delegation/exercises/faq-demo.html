@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>FAQ</title>
+</head>
+
+<body>
+
+  <main id='user-interface'>
+    <section id='faqs'>
+      <details id='one-fish'>
+        <summary>one fish?</summary>
+        <p>
+          if only there were two fish!
+        </p>
+      </details>
+      <details id='two-fish'>
+        <summary>two fish?</summary>
+        <p>
+          well now that we have two fish, don't you wish ...
+        </p>
+      </details>
+      <details id='red-fish'>
+        <summary>red fish?</summary>
+        <p>
+          ... for a blue fish!
+        </p>
+      </details>
+      <details id='blue-fish'>
+        <summary>blue fish?</summary>
+        <p>
+          ahhh.. that's the ticket
+        </p>
+      </details>
+    </section>
+  </main>
+
+  <script id='obfuscated-demo'>
+    const a = ['faqs', 'getElementById', 'target', 'from', 'includes', 'addEventListener', 'path', 'currentTarget', 'children', 'click', 'open']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0x17f)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; 'use strict'; const toggleFAQsHandler = c => { const d = c[b('0x9')], e = d[b('0xa')], f = Array[b('0x5')](e), g = c[b('0x8')], h = c[b('0x4')]; for (const i of f) { const j = !g[b('0x6')](i); j && (i[b('0x1')] = ![]); } }, faqSection = document[b('0x3')](b('0x2')); faqSection[b('0x7')](b('0x0'), toggleFAQsHandler);
+  </script>
+
+</body>
+
+</html>

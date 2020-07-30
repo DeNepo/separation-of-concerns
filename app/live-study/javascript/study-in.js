@@ -30,42 +30,6 @@ export default {
     const URL = 'https://janke-learning.org/flowviz?snippet=' + sanitized;
     window.open(URL, '_blank');
   },
-  parsonizer: function (code) {
-    const encoded = encodeURIComponent(code);
-    const sanitized = this.utils.sanitize(encoded);
-    const URL = 'https://janke-learning.org/parsonizer?code=' + sanitized;
-    window.open(URL, '_blank');
-  },
-  jsHint: function (code) {
-    const encoded = encodeURIComponent(code);
-    const sanitized = this.utils.sanitize(encoded);
-    const URL = 'https://janke-learning.org/linter?snippet=' + sanitized;
-    window.open(URL, '_blank');
-  },
-  spot: function (code) {
-    const encoded = encodeURIComponent(code);
-    const sanitized = this.utils.sanitize(encoded);
-    const URL = 'https://janke-learning.org/spot?snippet=' + sanitized;
-    window.open(URL, '_blank');
-  },
-  shuffle: function (code) {
-    const encoded = encodeURIComponent(code);
-    const sanitized = this.utils.sanitize(encoded);
-    const URL = 'https://janke-learning.org/shuffle?snippet=' + sanitized;
-    window.open(URL, '_blank');
-  },
-  // staticStudy: function(code) {
-  //   const encoded = encodeURIComponent(code);
-  //   const sanitized = this.utils.sanitize(encoded);
-  //   const URL = 'https://janke-learning.org/static-study?snippet=' + sanitized;
-  //   window.open(URL, '_blank');
-  // },
-  codeAlong: function (code) {
-    const encoded = encodeURIComponent(code);
-    const sanitized = this.utils.sanitize(encoded);
-    const URL = 'https://janke-learning.org/code-along?snippet=' + sanitized;
-    window.open(URL, '_blank');
-  },
   babel: async function (code) {
     // conditionally load this function since it's large and not often used
     if (!this.utils.compressToBase64) {

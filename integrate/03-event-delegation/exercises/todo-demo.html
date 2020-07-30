@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>Todo</title>
+</head>
+
+<body>
+
+  <main id='user-interface'>
+    <ul id='list'>
+      <li><button>X</button><input value='start coding' /></li>
+      <li><button>X</button><input value='stop coding' /></li>
+      <li><button id='add-todo-button'>+</button></li>
+    </ul>
+  </main>
+
+  <script id='obfuscated-demo'>
+    const a = ['getElementById', 'removeChild', 'button', 'parentElement', 'target', 'addEventListener', 'BUTTON', 'input', 'createElement', 'appendChild', 'insertBefore', 'nodeName', 'list']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0x14a)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; 'use strict'; const deleteTodoHandler = c => { const d = c[b('0xc')]; if (d[b('0x6')] === b('0x1') && d['innerHTML'] === 'X') { const e = d['parentElement'], f = document[b('0x8')](b('0x7')); f[b('0x9')](e); } }, addTodoHandler = c => { const d = document[b('0x3')]('li'), e = document[b('0x3')](b('0xa')); e['innerHTML'] = 'X', d[b('0x4')](e); const f = document[b('0x3')](b('0x2')); d[b('0x4')](f); const g = c[b('0xc')], h = g['parentElement']; h[b('0xb')][b('0x5')](d, h); }, todoList = document[b('0x8')](b('0x7')); todoList[b('0x0')]('click', deleteTodoHandler); const addTodoButton = document[b('0x8')]('add-todo-button'); addTodoButton[b('0x0')]('click', addTodoHandler);
+  </script>
+</body>
+
+</html>

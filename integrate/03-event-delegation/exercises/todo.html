@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>Todo</title>
+
+  <script id='handlers'>
+    'use strict';
+
+    const deleteTodoHandler = (event) => {
+      debugger;
+      const target = _;
+      if (target._ === 'BUTTON' && target._ === 'X') {
+        const liToRemove = _.parentElement;
+        const todoList = document.getElementById(_);
+        todoList._(liToRemove);
+      }
+    };
+
+    const addTodoHandler = (event) => {
+      debugger;
+
+      const newLi = document.createElement(_);
+      const newButton = document.createElement(_);
+      newButton.innerHTML = '_';
+      newLi.appendChild(newButton);
+      const newInput = document.createElement(_);
+      newLi.appendChild(newInput);
+
+      const addButton = _;
+      const addButtonParent = addButton._;
+      const todoList = addButtonParent._;
+      todoList.insertBefore(_, _);
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user-interface'>
+    <ul id='list'>
+      <li><button>X</button><input value='start coding' /></li>
+      <li><button>X</button><input value='stop coding' /></li>
+      <li><button id='add-todo-button'>+</button></li>
+    </ul>
+  </main>
+
+  <script id=' listeners'>
+    const todoList = document.getElementById(_);
+    todoList.addEventListener('click', _);
+
+    const addTodoButton = document.getElementById(_);
+    addTodoButton.addEventListener('click', _);
+  </script>
+</body>
+
+</html>
