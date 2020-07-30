@@ -139,6 +139,8 @@ Good luck!
   - [javascript.info/events](https://javascript.info/events)
   - [javascript.inf/event-details](https://javascript.info/event-details)
   - [MDN Building Blocks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+  - [Event Delegation (mosh)](https://programmingwithmosh.com/javascript/javascript-event-bubbling-and-event-delegation/)
+  - [Bubble & Capture (dev.to)](https://dev.to/shimphillip/handing-javascript-events-efficiently-with-bubble-and-capture-4ha5)
 - Code to Study
   - [bradtraversy/vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)
   - [wesbos/JavaScript30](https://github.com/wesbos/JavaScript30)
@@ -236,6 +238,7 @@ The focus of week 2 is using forms to handle more gather and process more user d
   - [js.info: Event Delegation](https://javascript.info/event-delegation)
   - [Gordon: DOM Events](https://www.youtube.com/watch?v=QE1YQnhntgw)
   - [Griffith: JS Event Listeners](https://www.youtube.com/watch?v=EaRrmOtPYTM)
+  - [Event Delegation (mosh)](https://programmingwithmosh.com/javascript/javascript-event-bubbling-and-event-delegation/)
 - [Isolate](../isolate/index.html)
   - HTML Templates
   - Element Children

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>parameter demo</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    section,
+    div {
+      border: solid black;
+    }
+
+    #div-el-2 {
+      height: 8em;
+      width: 8em;
+    }
+
+    #section-el {
+      height: 6em;
+      width: 6em;
+    }
+
+    #div-el-1 {
+      height: 4em;
+      width: 4em;
+    }
+  </style>
+
+  <script id='handlers'>
+    'use strict';
+
+    const demoHandler = (event) => {
+      debugger;
+
+      const currentTarget = event.currentTarget;
+      const id = currentTarget.id;
+      const nodeName = currentTarget.nodeName;
+
+      const path = event.path;
+      const currentIndex = path.indexOf(currentTarget);
+
+      const message = `bubbling past the ${currentIndex}th element in it's path:\n`
+        + ` nodeName: ${nodeName}\n`
+        + ` id: ${id}`;
+      alert(message);
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user interface' class='centered'>
+    <div id='div-el-2' class='centered'>
+      <section id='section-el' class='centered'>
+        <div id='div-el-1' class='centered'>
+          <button id='button-el' class='centered'>
+            clicky!
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script id='listeners'>
+    const sectionEl = document.getElementById('section-el');
+    sectionEl.addEventListener('click', demoHandler);
+
+    const divEl1 = document.getElementById('div-el-1');
+    divEl1.addEventListener('click', demoHandler);
+
+    const buttonEl = document.getElementById('button-el');
+    buttonEl.addEventListener('click', demoHandler);
+
+    const divEl2 = document.getElementById('div-el-2');
+    divEl2.addEventListener('click', demoHandler);
+  </script>
+
+</body>
+
+</html>
