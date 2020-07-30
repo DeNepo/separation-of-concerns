@@ -67,13 +67,16 @@
       ]
     },
     {
-      "path": "/05-event-delegation",
+      "path": "/03-event-delegation",
       "dirs": [
         {
           "path": "/examples",
           "files": [
             {
-              "path": "/0-event-parameter.html"
+              "path": "/0-event-bubbling.html"
+            },
+            {
+              "path": "/0-event-target.html"
             },
             {
               "path": "/1-change-text-loop.html"
@@ -86,14 +89,6 @@
             }
           ],
           "isExample": true
-        },
-        {
-          "path": "/exercises",
-          "files": [
-            {
-              "path": "/list.html"
-            }
-          ]
         }
       ]
     },

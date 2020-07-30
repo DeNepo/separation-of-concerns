@@ -18,14 +18,13 @@ examples and exercises to illustrate how JS can be integrated with HTML & CSS to
   - /exercises
     - <a href="./02-read-write-dom/exercises/2-guessing-game-demo.html" target="_blank">/2-guessing-game-demo.html</a>
     - <a href="./02-read-write-dom/exercises/2-guessing-game.html" target="_blank">/2-guessing-game.html</a>
-- /05-event-delegation
+- /03-event-delegation
   - /examples
-    - <a href="./05-event-delegation/examples/0-event-parameter.html" target="_blank">/0-event-parameter.html</a>
-    - <a href="./05-event-delegation/examples/1-change-text-loop.html" target="_blank">/1-change-text-loop.html</a>
-    - <a href="./05-event-delegation/examples/2-change-text-delegation.html" target="_blank">/2-change-text-delegation.html</a>
-    - <a href="./05-event-delegation/examples/3-tic-tac-toe.html" target="_blank">/3-tic-tac-toe.html</a>
-  - /exercises
-    - <a href="./05-event-delegation/exercises/list.html" target="_blank">/list.html</a>
+    - <a href="./03-event-delegation/examples/0-event-bubbling.html" target="_blank">/0-event-bubbling.html</a>
+    - <a href="./03-event-delegation/examples/0-event-target.html" target="_blank">/0-event-target.html</a>
+    - <a href="./03-event-delegation/examples/1-change-text-loop.html" target="_blank">/1-change-text-loop.html</a>
+    - <a href="./03-event-delegation/examples/2-change-text-delegation.html" target="_blank">/2-change-text-delegation.html</a>
+    - <a href="./03-event-delegation/examples/3-tic-tac-toe.html" target="_blank">/3-tic-tac-toe.html</a>
 - /stepped-and-separated
   - /debugger
     - <a href="./stepped-and-separated/debugger/index.html" target="_blank">/index.html</a>
