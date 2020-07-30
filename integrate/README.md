@@ -25,6 +25,11 @@ examples and exercises to illustrate how JS can be integrated with HTML & CSS to
     - <a href="./03-event-delegation/examples/1-change-text-loop.html" target="_blank">/1-change-text-loop.html</a>
     - <a href="./03-event-delegation/examples/2-change-text-delegation.html" target="_blank">/2-change-text-delegation.html</a>
     - <a href="./03-event-delegation/examples/3-tic-tac-toe.html" target="_blank">/3-tic-tac-toe.html</a>
+  - /exercises
+    - <a href="./03-event-delegation/exercises/faq-demo.html" target="_blank">/faq-demo.html</a>
+    - <a href="./03-event-delegation/exercises/faq.html" target="_blank">/faq.html</a>
+    - <a href="./03-event-delegation/exercises/todo-demo.html" target="_blank">/todo-demo.html</a>
+    - <a href="./03-event-delegation/exercises/todo.html" target="_blank">/todo.html</a>
 - /stepped-and-separated
   - /debugger
     - <a href="./stepped-and-separated/debugger/index.html" target="_blank">/index.html</a>
