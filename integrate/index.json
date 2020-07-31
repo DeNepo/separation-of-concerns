@@ -89,6 +89,25 @@
             }
           ],
           "isExample": true
+        },
+        {
+          "path": "/exercises",
+          "files": [
+            {
+              "path": "/faq-demo.html",
+              "isExample": true
+            },
+            {
+              "path": "/faq.html"
+            },
+            {
+              "path": "/todo-demo.html",
+              "isExample": true
+            },
+            {
+              "path": "/todo.html"
+            }
+          ]
         }
       ]
     },
