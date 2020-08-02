@@ -243,15 +243,16 @@ The focus of week 2 is using forms to handle more gather and process more user d
   - HTML Templates
   - Element Children
   - DOM Manipulation
-  - Event Parameter
 - [Integrate](../integrate/index.html)
   - Read & Write DOM
 
-### [Isolate](../isolate/index.html)
+### Lesson Plan
+
+#### [Isolate](../isolate/index.html)
 
 - Event Parameter
 
-### [Integrate](../integrate/index.html)
+#### [Integrate](../integrate/index.html)
 
 - Event Delegation
 
