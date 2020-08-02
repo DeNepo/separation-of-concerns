@@ -30,26 +30,9 @@
     </section>
 
     <section style='display: flex;height: 95%; width: 100%;'>
-      <iframe id='output' style="width:30%;border:1px solid grey;"></iframe>
-      <div id='dragbar' style='padding: 6px; cursor: col-resize; background-color: silver;'></div>
-      <div id="container" style="width:70%;border:1px solid grey; flex: 1; "></div>
+      <iframe id='output' style="width:20%;border:1px solid grey;"></iframe>
+      <div id="container" style="width:80%;border:1px solid grey; flex: 1; "></div>
     </section>
-    <script>
-      const left = document.getElementById('output');
-      const right = document.getElementById('container');
-      const bar = document.getElementById('dragbar');
-      const drag = (e) => {
-        document.selection ? document.selection.empty() : window.getSelection().removeAllRanges();
-        left.style.width = (e.pageX - bar.offsetWidth / 2) + 'px';
-      }
-
-      bar.addEventListener('mousedown', () => {
-        document.addEventListener('mousemove', drag);
-        document.addEventListener('mouseup', () => {
-          document.removeEventListener('mousemove', drag);
-        });
-      });
-    </script>
 
   </main>
 
