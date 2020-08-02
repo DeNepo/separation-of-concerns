@@ -21,6 +21,7 @@ examples and exercises to illustrate how JS can be integrated with HTML & CSS to
 - /03-event-delegation
   - /examples
     - <a href="./03-event-delegation/examples/0-event-bubbling.html" target="_blank">/0-event-bubbling.html</a>
+    - <a href="./03-event-delegation/examples/0-event-target-vs-current-target.html" target="_blank">/0-event-target-vs-current-target.html</a>
     - <a href="./03-event-delegation/examples/0-event-target.html" target="_blank">/0-event-target.html</a>
     - <a href="./03-event-delegation/examples/1-change-text-loop.html" target="_blank">/1-change-text-loop.html</a>
     - <a href="./03-event-delegation/examples/2-change-text-delegation.html" target="_blank">/2-change-text-delegation.html</a>

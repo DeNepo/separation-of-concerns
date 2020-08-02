@@ -76,6 +76,9 @@
               "path": "/0-event-bubbling.html"
             },
             {
+              "path": "/0-event-target-vs-current-target.html"
+            },
+            {
               "path": "/0-event-target.html"
             },
             {
