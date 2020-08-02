@@ -14,8 +14,9 @@
       text-align: center;
     }
 
-    td {
-      border: 1px solid black;
+    ol {
+      border: solid black;
+      padding-right: 1em;
     }
   </style>
 
@@ -23,6 +24,8 @@
     'use strict';
 
     const updateInnerHTMLHandler = (event) => {
+      debugger;
+
       const newInnerHTML = prompt('enter new text');
       if (newInnerHTML === null) {
         return;
@@ -37,26 +40,26 @@
 <body>
 
   <main id='user interface' class='centered'>
-    <table>
-      <tbody id='table-body'>
-        <tr>
-          <td>X</td>
-          <td>X</td>
-        </tr>
-        <tr>
-          <td>X</td>
-          <td>X</td>
-        </tr>
-      </tbody>
-    </table>
+    <ul id='main-list'>
+      <ol>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+      </ol>
+      <ol>
+        <li>x</li>
+        <li>y</li>
+        <li>z</li>
+      </ol>
+    </ul>
   </main>
 
   <script id='listeners'>
     // attach the event listener to each and every <td>
-    const tableBody = document.getElementById('table-body');
-    const tdEls = tableBody.getElementsByTagName('td');
-    for (const tdEl of tdEls) {
-      tdEl.addEventListener('click', updateInnerHTMLHandler);
+    const tableBody = document.getElementById('main-list');
+    const liEls = tableBody.getElementsByTagName('li');
+    for (const liEl of liEls) {
+      liEl.addEventListener('click', updateInnerHTMLHandler);
     }
   </script>
 

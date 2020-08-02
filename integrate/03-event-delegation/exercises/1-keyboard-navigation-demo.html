@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>Keyboard Navigation</title>
+
+  <style>
+    button {
+      height: 8vh;
+      width: 9vw;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main id='user-interface'>
+    <p>
+      keyboard navigation: use <code>tab</code> and <code>shift+tab</code>
+    </p>
+    <table>
+      <tbody id='the-board'>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script id='obfuscated-demo'>
+    const a = ['style', 'focusin', 'focusout', 'backgroundColor', 'the-board', 'black', 'BUTTON', 'type', 'getElementById', 'addEventListener', 'white', 'target', 'nodeName']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0x1d2)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; 'use strict'; const toggleColorHandler = c => { const d = c[b('0x0')]; if (d[b('0x1')] !== b('0x8')) return; if (c['type'] === b('0x3')) d[b('0x2')][b('0x5')] = b('0x7'), d[b('0x2')]['color'] = b('0xc'); else c[b('0x9')] === b('0x4') && (d[b('0x2')][b('0x5')] = b('0xc'), d[b('0x2')]['color'] = b('0x7')); }; document[b('0xa')](b('0x6'))[b('0xb')](b('0x3'), toggleColorHandler), document[b('0xa')](b('0x6'))[b('0xb')](b('0x4'), toggleColorHandler);
+  </script>
+</body>
+
+</html>

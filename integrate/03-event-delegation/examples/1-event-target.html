@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8'>
-  <title>event target</title>
+  <title>event.target</title>
 
   <style>
     .centered {
@@ -29,12 +29,14 @@
       const message = `you ${eventType}ed the ${nodeName}`;
       alert(message);
     };
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/Event/target
   </script>
 </head>
 
 <body>
 
-  <main id='user interface' class='centered'>
+  <main id='user-interface' class='centered'>
     <button id='the-button'>mouseleave or click</button> <br>
     <input id='the-input' placeholder='type here'>
   </main>

@@ -14,8 +14,9 @@
       text-align: center;
     }
 
-    td {
-      border: 1px solid black;
+    ol {
+      border: solid black;
+      padding-right: 1em;
     }
   </style>
 
@@ -23,8 +24,10 @@
     'use strict';
 
     const updateInnerHTMLHandler = (event) => {
+      debugger;
+
       const target = event.target;
-      if (target.nodeName !== 'TD') {
+      if (target.nodeName !== 'LI') {
         return;
       }
 
@@ -41,25 +44,26 @@
 <body>
 
   <main id='user interface' class='centered'>
-    <table>
-      <tbody id='the-table-body'>
-        <tr>
-          <td>X</td>
-          <td>X</td>
-        </tr>
-        <tr>
-          <td>X</td>
-          <td>X</td>
-        </tr>
-      </tbody>
-    </table>
+    <ul id='main-list'>
+      <ol>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+      </ol>
+      <ol>
+        <li>x</li>
+        <li>y</li>
+        <li>z</li>
+      </ol>
+    </ul>
   </main>
 
   <script id='listeners'>
     // attach the event listener to the table body
+    //  delegate all <td> events to the table body
     //  let event.target make sure the correct element is updated
     //  https://javascript.info/event-delegation
-    document.getElementById('the-table-body')
+    document.getElementById('main-list')
       .addEventListener('click', updateInnerHTMLHandler);
   </script>
 

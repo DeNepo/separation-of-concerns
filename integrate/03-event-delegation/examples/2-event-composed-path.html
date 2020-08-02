@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>event.composedPath()</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    section,
+    div {
+      border: solid black;
+    }
+
+    #div-el-2 {
+      height: 8em;
+      width: 8em;
+    }
+
+    #section-el {
+      height: 6em;
+      width: 6em;
+    }
+
+    #div-el-1 {
+      height: 4em;
+      width: 4em;
+    }
+  </style>
+
+  <script id='handlers'>
+    'use strict';
+
+    const demoHandler = (event) => {
+      debugger;
+
+      const eventType = event.type;
+      const eventTargetId = event.target.id;
+
+      // all of the target's parent elements are in this array
+      //  the event will bubble past each one of these elements
+      const composedPath = event.composedPath();
+      const pathListItems = composedPath
+        .map((el, index) => {
+          return `${index}. ${el.nodeName || 'window'}${el.id ? '#' + el.id : ''}`;
+        });
+      const renderedPathElements = pathListItems
+        .reduce((list, item) => {
+          return `${list}\n${item}`;
+        }, '');
+
+      const message = `"${eventType}" event dispatched from "${eventTargetId}" bubbles past:`
+        + renderedPathElements;
+      alert(message);
+    };
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath
+  </script>
+</head>
+
+<body>
+
+  <main id='user-interface' class='centered'>
+    <div id='div-el-2' class='centered'>
+      <section id='section-el' class='centered'>
+        <div id='div-el-1' class='centered'>
+          <button id='button-el' class='centered'>
+            clicky!
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script id='listeners'>
+    document.getElementById('button-el')
+      .addEventListener('click', demoHandler);
+
+    document.getElementById('button-el')
+      .addEventListener('mouseleave', demoHandler);
+  </script>
+
+</body>
+
+</html>

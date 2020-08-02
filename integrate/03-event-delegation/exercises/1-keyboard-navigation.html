@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <title>Keyboard Navigation</title>
+
+  <style>
+    button {
+      height: 8vh;
+      width: 9vw;
+    }
+  </style>
+
+  <script id='handlers'>
+    'use strict';
+
+    const toggleColorHandler = (event) => {
+      debugger;
+
+      const target = _;
+      if (target.nodeName !== '_') {
+        return;
+      }
+
+      if (event.type === '_') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+      }
+      else if (event.type === '_') {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+      }
+    };
+  </script>
+</head>
+
+<body>
+
+  <main id='user-interface'>
+    <p>
+      keyboard navigation: use <code>tab</code> and <code>shift+tab</code>
+    </p>
+    <table>
+      <tbody id='the-board'>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+        <tr>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+          <td><button>X</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script id='listeners'>
+    // this works! no need to change it
+    document.getElementById('the-board')
+      .addEventListener('focusin', toggleColorHandler);
+
+    document.getElementById('the-board')
+      .addEventListener('focusout', toggleColorHandler);
+
+    // trick question: why would 'blur' and 'focus' not work?
+    //  https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
+    //  https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event
+
+  </script>
+</body>
+
+</html>

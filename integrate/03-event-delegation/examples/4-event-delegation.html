@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8'>
-  <title>event bubbling</title>
+  <title>event.currentTarget</title>
 
   <style>
     .centered {
@@ -35,22 +35,28 @@
     }
   </style>
 
+  <script id='data'>
+    let numberOfDelegations = 0;
+  </script>
+
   <script id='handlers'>
     'use strict';
 
+    // event delegation is when an element does not handle the events it dispatches
+    //  instead a parent element in the bubble path handles the event
+    //  the event is "delegated" to it's parents
+
     const demoHandler = (event) => {
       debugger;
+      numberOfDelegations = numberOfDelegations + 1;
 
+      const eventType = event.type;
+      const eventTarget = event.target;
       const currentTarget = event.currentTarget;
-      const id = currentTarget.id;
-      const nodeName = currentTarget.nodeName;
 
-      const path = event.path;
-      const currentIndex = path.indexOf(currentTarget);
-
-      const message = `bubbling past the #${currentIndex} element in it's path:\n`
-        + ` nodeName: ${nodeName}\n`
-        + ` id: ${id}`;
+      const message = `a "${eventType}" event was dispatched from ${eventTarget.nodeName}#${eventTarget.id}\n`
+        + `- it is being handled by ${currentTarget.nodeName || 'window'}${currentTarget.id ? '#' + currentTarget.id : ''}\n`
+        + `- this event has been delegated ${numberOfDelegations} times`;
       alert(message);
     };
   </script>
@@ -58,7 +64,7 @@
 
 <body>
 
-  <main id='user interface' class='centered'>
+  <main id='user-interface' class='centered'>
     <div id='div-el-2' class='centered'>
       <section id='section-el' class='centered'>
         <div id='div-el-1' class='centered'>
@@ -71,22 +77,30 @@
   </main>
 
   <script id='listeners'>
-    document.getElementById('section-el')
-      .addEventListener('click', demoHandler);
+    // notice! the button does not handle it's own event!
+
+    // document.getElementById('button-el')
+    //   .addEventListener('click', demoHandler);
 
     document.getElementById('div-el-1')
       .addEventListener('click', demoHandler);
 
-    document.getElementById('button-el')
+    document.getElementById('section-el')
       .addEventListener('click', demoHandler);
 
     document.getElementById('div-el-2')
+      .addEventListener('click', demoHandler);
+
+    document.getElementById('user-interface')
       .addEventListener('click', demoHandler);
 
     document.body
       .addEventListener('click', demoHandler);
 
     document
+      .addEventListener('click', demoHandler);
+
+    window
       .addEventListener('click', demoHandler);
   </script>
 
