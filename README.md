@@ -193,12 +193,14 @@ The focus of week 1 is using _event listeners_, _event handlers_ and _DOM elemen
   - [isolate/01-dom-elements](../isolate/01-dom-elements)
   - [integrate/01-add-event-listener](../integrate/01-add-event-listener)
 
-### Isolate
+### Lesson Plan
+
+#### Isolate
 
 - [isolate/01-dom-elements](../isolate/01-dom-elements)
 - [isolate/02-read-write-dom](../isolate/02-read-write-dom)
 
-### Integrate
+#### Integrate
 
 - [integrate/01-add-event-listener](../integrate/01-add-event-listener)
 - [integrate/02-read-write-dom](../integrate/02-read-write-dom)
