@@ -7,7 +7,7 @@ ulEl.innerHTML = `
   <li>salamander</li>
   <li>fish</li>
 `;
-console.log(ulEl.nodeName, ulEl.cloneNode(true));
+console.log(ulEl.nodeName + ' (before)', ulEl.cloneNode(true));
 
 // --- write some code ---
 
@@ -17,7 +17,7 @@ console.log(ulEl.nodeName, ulEl.cloneNode(true));
 
 // --- --- --- --- --- ---
 
-console.log(ulEl.nodeName, ulEl.cloneNode(true));
+console.log(ulEl.nodeName + ' (after)', ulEl.cloneNode(true));
 
 console.assert(ulEl.childElementCount === 3,
   'Test: .childElementCount should be 3');
