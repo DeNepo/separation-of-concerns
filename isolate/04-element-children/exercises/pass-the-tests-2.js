@@ -17,7 +17,7 @@ console.log(divEl.nodeName, divEl.cloneNode(true));
 
 console.log(divEl.nodeName, divEl.cloneNode(true));
 
-console.assert(divEl.children[0].href === '#top',
+console.assert(divEl.children[0].getAttribute('href') === '#top',
   'Test: href');
 
 console.assert(divEl.children[0].children[0].innerHTML === 'to the top',
