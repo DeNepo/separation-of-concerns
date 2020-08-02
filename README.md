@@ -239,19 +239,19 @@ The focus of week 2 is using forms to handle more gather and process more user d
   - [Gordon: DOM Events](https://www.youtube.com/watch?v=QE1YQnhntgw)
   - [Griffith: JS Event Listeners](https://www.youtube.com/watch?v=EaRrmOtPYTM)
   - [Event Delegation (mosh)](https://programmingwithmosh.com/javascript/javascript-event-bubbling-and-event-delegation/)
-- [Isolate](../isolate/index.html)
+- [Isolate](./isolate/index.html)
   - HTML Templates
   - Element Children
   - DOM Manipulation
   - Event Parameter
-- [Integrate](../integrate/index.html)
+- [Integrate](./integrate/index.html)
   - Read & Write DOM
 
-### [Isolate](../isolate/index.html)
+### [Isolate](./isolate/index.html)
 
 - Event Parameter
 
-### [Integrate](../integrate/index.html)
+### [Integrate](./integrate/index.html)
 
 - Event Delegation
 
