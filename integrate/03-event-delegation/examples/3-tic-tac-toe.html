@@ -98,11 +98,11 @@
     // attach the event listener to the table body
     //  let event.target make sure the correct element is updated
     //  https://javascript.info/event-delegation
-    const theBoard = document.getElementById('the-board');
-    theBoard.addEventListener('click', placeMoveHandler);
+    document.getElementById('the-board')
+      .addEventListener('click', placeMoveHandler);
 
-    const resetButton = document.getElementById('reset-button');
-    resetButton.addEventListener('click', resetHandler);
+    document.getElementById('reset-button')
+      .addEventListener('click', resetHandler);
   </script>
 
 </body>

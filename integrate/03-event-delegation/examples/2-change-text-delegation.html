@@ -59,8 +59,8 @@
     // attach the event listener to the table body
     //  let event.target make sure the correct element is updated
     //  https://javascript.info/event-delegation
-    const theTableBody = document.getElementById('the-table-body');
-    theTableBody.addEventListener('click', updateInnerHTMLHandler);
+    document.getElementById('the-table-body')
+      .addEventListener('click', updateInnerHTMLHandler);
   </script>
 
 </body>
