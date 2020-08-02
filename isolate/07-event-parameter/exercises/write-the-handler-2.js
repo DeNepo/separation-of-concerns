@@ -2,7 +2,6 @@
 
 
 const headerEl = document.createElement('h1');
-headerEl.type = 'checkbox';
 console.log('initial header:', headerEl.cloneNode(true));
 
 
