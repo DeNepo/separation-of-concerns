@@ -33,3 +33,5 @@ buttonEl.dispatchEvent(clickEvent);
 
 const hoverEvent = new Event('mouseover');
 buttonEl.dispatchEvent(hoverEvent);
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/event
