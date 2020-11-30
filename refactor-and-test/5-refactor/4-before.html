@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>before refactor: 4</title>
+
+  <script>
+    debugger;
+
+    alert('guess if a string casts to NaN');
+
+    const input = prompt('enter a string');
+
+    const guess = confirm('"ok" if you think it will be NaN \n"cancel" if you think it will not be')
+
+
+    const inputCastToNumber = Number(input);
+    const inputIsNaN = Number.isNaN(inputCastToNumber);
+    const guessWasCorrect = inputCastToNumber === guess;
+    const message = guessWasCorrect ? 'correct!' : 'nope :(';
+
+    alert(message);
+
+    console.log('-- interaction log --');
+    console.log('input:', typeof input, '\n', input);
+    console.log('guess:', typeof guess, '\n', guess);
+    console.log('message:', typeof message, '\n', message);
+  </script>
+</head>
+
+<body></body>
+
+</html>

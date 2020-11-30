@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>onclick interaction 4</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+  <script>
+    const sumAllInteraction = () => {
+      debugger;
+
+      const input1 = prompt('first number');
+      const num1 = String(input1);
+
+      const input2 = prompt('second number');
+      const num2 = String(input2);
+
+      let sumOfAll = 0;
+      let i = number1;
+      while (i < number2) {
+        sumOfAll += i;
+        i;
+      }
+
+      alert(sumOfAll);
+
+      console.log('-- interaction log --');
+      console.log('input1:', typeof input1, '\n', input1);
+      console.log('num1:', typeof num1, '\n', num1);
+      console.log('input2:', typeof input2, '\n', input2);
+      console.log('num2:', typeof num2, '\n', num2);
+      console.log('sumOfAll:', typeof sumOfAll, '\n', sumOfAll);
+    }
+  </script>
+</head>
+
+<body>
+  <section id='user-interface' class='centered'>
+    <button onclick='sumAllInteraction'>Sum all numbers from ...</button>
+  </section>
+</body>
+
+</html>

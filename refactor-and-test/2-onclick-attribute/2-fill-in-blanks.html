@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>onclick interaction 2</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+  <script>
+    const sameNumberTwiceInteraction = () => {
+      debugger;
+
+      const input1 = prompt('enter a number');
+      const num1 = _(input1);
+
+      const input2 = prompt('enter the same number');
+      const num2 = _(input2);
+
+      let result;
+      if (_.isNaN(_)) {
+        result = 'first input is not a number';
+      } else if (_.isNaN(_)) {
+        result = 'second input is not a number';
+      } else {
+        result = `are they the same? ${num1 === num2}`;
+      }
+
+      alert(result);
+
+      console.log('-- interaction log --');
+      console.log('input1:', typeof input1, '\n', input1);
+      console.log('num1:', typeof num1, '\n', num1);
+      console.log('input2:', typeof input2, '\n', input2);
+      console.log('num2:', typeof num2, '\n', num2);
+      console.log('result:', typeof result, '\n', result);
+
+    }
+  </script>
+</head>
+
+<body>
+  <section id='user-interface' class='centered'>
+    <button onclick='sameNumberTwiceInteraction()'>Enter the same number twice</button>
+  </section>
+</body>
+
+</html>

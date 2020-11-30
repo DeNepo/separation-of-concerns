@@ -1,79 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>FAQ</title>
+  </head>
 
-<head>
-  <meta charset='utf-8'>
-  <title>FAQ</title>
+  <body>
+    <main id="user-interface">
+      <section id="faqs">
+        <details id="one-fish-details">
+          <summary id="one-fish-summary">one fish?</summary>
+          <p>
+            if only there were two fish!
+          </p>
+        </details>
+        <details id="two-fish-details">
+          <summary id="two-fish-summary">two fish?</summary>
+          <p>
+            well now that we have two fish, don't you wish ...
+          </p>
+        </details>
+        <details id="red-fish-details">
+          <summary id="red-fish-summary">red fish?</summary>
+          <p>
+            ... for a blue fish!
+          </p>
+        </details>
+        <details id="blue-fish-details">
+          <summary id="blue-fish-summary">blue fish?</summary>
+          <p>
+            ahhh.. that's the ticket
+          </p>
+        </details>
+      </section>
+    </main>
 
-  <script id='handlers'>
-    'use strict';
+    <script id="handlers">
+      'use strict';
 
-    const toggleFAQsHandler = (event) => {
-      debugger;
+      const toggleFAQsHandler = event => {
+        debugger;
 
-      const target = _;
-      if (target._ !== 'SUMMARY') {
-        return;
-      }
-
-      const sectionEl = event._;
-      const sectionChildren = _;
-
-      for (const details of sectionChildren) {
-
-        const summary = details.children[_];
-        const wasNotClicked = summary !== _;
-
-        const isOpen = details.open === _;
-
-        if (wasNotClicked && isOpen) {
-          details.open = _;
+        const target = _;
+        if (target._ !== 'SUMMARY') {
+          return;
         }
-      }
-    };
-  </script>
-</head>
 
-<body>
+        const sectionEl = event._;
+        const sectionChildren = _;
 
-  <main id='user-interface'>
-    <section id='faqs'>
-      <details id='one-fish-details'>
-        <summary id='one-fish-summary'>one fish?</summary>
-        <p>
-          if only there were two fish!
-        </p>
-      </details>
-      <details id='two-fish-details'>
-        <summary id='two-fish-summary'>two fish?</summary>
-        <p>
-          well now that we have two fish, don't you wish ...
-        </p>
-      </details>
-      <details id='red-fish-details'>
-        <summary id='red-fish-summary'>red fish?</summary>
-        <p>
-          ... for a blue fish!
-        </p>
-      </details>
-      <details id='blue-fish-details'>
-        <summary id='blue-fish-summary'>blue fish?</summary>
-        <p>
-          ahhh.. that's the ticket
-        </p>
-      </details>
-    </section>
-  </main>
+        for (const details of sectionChildren) {
+          const summary = details.children[_];
+          const wasNotClicked = summary !== _;
 
-  <script id='listeners'>
-    document.getElementById('faqs')
-      .addEventListener('click', toggleFAQsHandler);
-  </script>
+          const isOpen = details.open === _;
 
-  <!--
+          if (wasNotClicked && isOpen) {
+            details.open = _;
+          }
+        }
+      };
+    </script>
+
+    <script id="listeners">
+      document
+        .getElementById('faqs')
+        .addEventListener('click', toggleFAQsHandler);
+    </script>
+
+    <!--
     https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
     https://stackoverflow.com/questions/16751345/automatically-close-all-the-other-details-tags-after-opening-a-specific-detai
-  -->
-</body>
-
+  --></body>
 </html>

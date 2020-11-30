@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>event.target</title>
 
-<head>
-  <meta charset='utf-8'>
-  <title>event.target</title>
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
 
-  <style>
-    .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-  </style>
+  <body>
+    <main id="user-interface" class="centered">
+      <button id="the-button">mouseleave or click</button> <br />
+      <input id="the-input" placeholder="type here" />
+    </main>
 
-  <script id='handlers'>
-    'use strict';
+    <script id="handlers">
+      'use strict';
 
-    const demoHandler = (event) => {
-      debugger;
+      const demoHandler = event => {
+        debugger;
 
-      const eventType = event.type;
+        const eventType = event.type;
 
-      const target = event.target;
-      const nodeName = target.nodeName;
+        const target = event.target;
+        const nodeName = target.nodeName;
 
-      const message = `you ${eventType}ed the ${nodeName}`;
-      alert(message);
-    };
+        const message = `you ${eventType}ed the ${nodeName}`;
+        alert(message);
+      };
 
-    // https://developer.mozilla.org/en-US/docs/Web/API/Event/target
-  </script>
-</head>
+      // https://developer.mozilla.org/en-US/docs/Web/API/Event/target
+    </script>
 
-<body>
+    <script id="listeners">
+      const theButton = document.getElementById('the-button');
+      theButton.addEventListener('click', demoHandler);
+      theButton.addEventListener('mouseleave', demoHandler);
 
-  <main id='user-interface' class='centered'>
-    <button id='the-button'>mouseleave or click</button> <br>
-    <input id='the-input' placeholder='type here'>
-  </main>
-
-  <script id='listeners'>
-    const theButton = document.getElementById('the-button');
-    theButton.addEventListener('click', demoHandler);
-    theButton.addEventListener('mouseleave', demoHandler);
-
-    const theInput = document.getElementById('the-input');
-    theInput.addEventListener('keyup', demoHandler);
-    theInput.addEventListener('mouseleave', demoHandler);
-  </script>
-
-</body>
-
+      const theInput = document.getElementById('the-input');
+      theInput.addEventListener('keyup', demoHandler);
+      theInput.addEventListener('mouseleave', demoHandler);
+    </script>
+  </body>
 </html>

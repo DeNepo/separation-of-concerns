@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>before refactor: 2</title>
+
+  <script>
+    debugger;
+
+    alert('remove a specific character from a string');
+
+    const characterToRemove = prompt('the character to remove');
+    const stringToRemoveItFrom = prompt('the string to remove it from');
+
+    let stringWithout = '';
+    for (let i = 0; i < stringToRemoveItFrom.length; i++) {
+      const nextCharacter = stringToRemoveItFrom[i];
+      if (nextCharacter !== characterToRemove) {
+        stringWithout += nextCharacter;
+      }
+    }
+
+    alert(stringWithout);
+
+    console.log('-- interaction log --');
+    console.log('characterToRemove:', typeof characterToRemove, '\n', characterToRemove);
+    console.log('stringToRemoveItFrom:', typeof stringToRemoveItFrom, '\n', stringToRemoveItFrom);
+    console.log('stringWithout:', typeof stringWithout, '\n', stringWithout);
+
+  </script>
+</head>
+
+<body></body>
+
+</html>

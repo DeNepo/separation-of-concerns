@@ -1,80 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>up-down interval</title>
 
-<head>
-  <meta charset='utf-8'>
-  <title>up-down interval</title>
-
-  <style>
-    .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-  </style>
-
-  <script id='data'>
-    'use strict';
-
-    let currentNumber = 0;
-    let interval = 1;
-  </script>
-
-  <script id='handlers'>
-    'use strict';
-
-    const upHandler = () => {
-      debugger;
-      currentNumber = currentNumber + interval;
-      alert(`the current number is: ${currentNumber}`);
-    };
-
-    const downHandler = () => {
-      debugger;
-      currentNumber = currentNumber - interval;
-      alert(`the current number is: ${currentNumber}`);
-    };
-
-    const setIntervalHandler = () => {
-      debugger;
-
-      const userInput = prompt('enter a new interval');
-      const userNumber = Number(userInput);
-      if (Number.isNaN(userNumber)) {
-        alert(`"${userInput}" is not a valid number.`);
-        return;
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
       }
-      interval = userNumber;
-      alert(`the interval is now ${interval}`)
-    };
-  </script>
-</head>
+    </style>
+  </head>
 
-<body>
+  <body>
+    <main id="user interface" class="centered">
+      <button id="up">+</button>
+      <button id="down">-</button>
+      <br />
+      <button id="set-interval">set interval</button>
+    </main>
 
-  <main id='user interface' class='centered'>
-    <button id='up'>+</button>
-    <button id='down'>-</button>
-    <br>
-    <button id='set-interval'>set interval</button>
-  </main>
+    <script id="data">
+      'use strict';
 
-  <script id='listeners'>
-    // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
-    // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
+      let currentNumber = 0;
+      let interval = 1;
+    </script>
 
-    const upButton = document.getElementById('up');
-    upButton.addEventListener('click', upHandler);
+    <script id="handlers">
+      'use strict';
 
-    const downButton = document.getElementById('down');
-    downButton.addEventListener('click', downHandler);
+      const upHandler = () => {
+        debugger;
+        currentNumber = currentNumber + interval;
+        alert(`the current number is: ${currentNumber}`);
+      };
 
-    const setIntervalButton = document.getElementById('set-interval');
-    setIntervalButton.addEventListener('click', setIntervalHandler);
-  </script>
+      const downHandler = () => {
+        debugger;
+        currentNumber = currentNumber - interval;
+        alert(`the current number is: ${currentNumber}`);
+      };
 
-</body>
+      const setIntervalHandler = () => {
+        debugger;
 
+        const userInput = prompt('enter a new interval');
+        const userNumber = Number(userInput);
+        if (Number.isNaN(userNumber)) {
+          alert(`"${userInput}" is not a valid number.`);
+          return;
+        }
+        interval = userNumber;
+        alert(`the interval is now ${interval}`);
+      };
+    </script>
+
+    <script id="listeners">
+      // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
+      // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
+
+      document.getElementById('up').addEventListener('click', upHandler);
+
+      document.getElementById('down').addEventListener('click', downHandler);
+
+      document
+        .getElementById('set-interval')
+        .addEventListener('click', setIntervalHandler);
+    </script>
+  </body>
 </html>

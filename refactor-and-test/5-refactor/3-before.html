@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>before refactor: 3</title>
+
+  <script>
+    debugger;
+
+    alert('find all numbers in a range divisible by x');
+
+    const input1 = prompt('find all numbers between (lowest number) ...');
+    const lowest = Number(input1);
+
+    const input2 = prompt('... and (highest number) ...');
+    const highest = Number(input2);
+
+    const input3 = prompt('... that are divisible by:');
+    const x = Number(input3);
+
+    let allOfThem = '';
+    for (let i = lowest; i <= highest; i++) {
+      if (i % x === 0) {
+        allOfThem += `${i}, `;
+      }
+    }
+
+    alert(allOfThem);
+
+    console.log('-- interaction log --');
+    console.log('input1:', typeof input1, '\n', input1);
+    console.log('lowest:', typeof lowest, '\n', lowest);
+    console.log('input2:', typeof input2, '\n', input2);
+    console.log('highest:', typeof highest, '\n', highest);
+    console.log('input3:', typeof input3, '\n', input3);
+    console.log('x:', typeof x, '\n', x);
+    console.log('allOfThem:', typeof allOfThem, '\n', allOfThem);
+
+  </script>
+</head>
+
+<body></body>
+
+</html>

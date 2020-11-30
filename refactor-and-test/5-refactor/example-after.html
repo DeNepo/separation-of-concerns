@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>after refactor: example</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+  <script id='logic'>
+    /**
+     * determines if a value is truthy or falsy
+     * @param {number} firstNumber
+     * @param {number} secondNumber
+     * @returns {string}
+     */
+    const whichIsGreater = (firstNumber, secondNumber) => {
+
+      let whichNumber;
+      if (firstNumber > secondNumber) {
+        whichNumber = 'first';
+      } else if (secondNumber > firstNumber) {
+        whichNumber = 'second';
+      } else {
+        whichNumber = 'neither';
+      }
+
+      return whichNumber;
+    }
+
+  </script>
+
+  <script id='tests'>
+    console.log('testing: whichIsGreater ');
+    debugger;
+
+    const _1_expect = 'first';
+    const _1_actual = whichIsGreater(1, 0);
+    console.assert(_1_actual === _1_expect, 'Test 1');
+
+    const _2_expect = 'second';
+    const _2_actual = whichIsGreater(-1, 0);
+    console.assert(_2_actual === _2_expect, 'Test 2');
+
+    const _3_expect = 'first';
+    const _3_actual = whichIsGreater(Infinity, -Infinity);
+    console.assert(_3_actual === _3_expect, 'Test 3');
+
+    const _4_expect = 'neither';
+    const _4_actual = whichIsGreater(NaN, 0);
+    console.assert(_4_actual === _4_expect, 'Test 4');
+
+    const _5_expect = 'neither';
+    const _5_actual = whichIsGreater(1, 1);
+    console.assert(_5_actual === _5_expect, 'Test 5');
+  </script>
+
+  <script id='interaction'>
+    const whichIsGreaterInteraction = () => {
+      debugger;
+
+      const input1 = prompt('first number');
+      const num1 = Number(input1);
+
+      const input2 = prompt('second number');
+      const num2 = Number(input2);
+
+      const whichOne = whichIsGreater(num1, num2);
+
+      alert(`${whichOne} number is larger`);
+
+      console.log('-- interaction log --');
+      console.log('input1:', typeof input1, '\n', input1);
+      console.log('num1:', typeof num1, '\n', num1);
+      console.log('input2:', typeof input2, '\n', input2);
+      console.log('num2:', typeof num2, '\n', num2);
+      console.log('whichOne:', typeof whichOne, '\n', whichOne);
+    }
+  </script>
+</head>
+
+<body>
+  <section id='user-interface' class='centered'>
+    <button onclick='whichIsGreaterInteraction()'>which number is greater?</button>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>user input 4</title>
+
+  <script>
+    debugger;
+
+    // describe the challenge
+    alert('type the same thing twice');
+
+    // read user input
+    const input1 = prompt('enter some text');
+    const input2 = confirm('type the exact same thing');
+
+    // program logic
+    let response;
+    if (input1 = input2) {
+      response = 'well done :)';
+    } else {
+      response = 'practice typing :(';
+    }
+
+    // respond to user
+    alert(response);
+
+    // log for dev
+    console.log('-- interaction log --');
+    console.log('input1:', typeof input1, '\n', input1);
+    console.log('input2:', typeof input2, '\n', input2);
+    console.log('response:', typeof response, '\n', response);
+
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

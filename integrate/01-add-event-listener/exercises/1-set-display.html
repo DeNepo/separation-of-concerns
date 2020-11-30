@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>set, display</title>
 
-<head>
-  <meta charset='utf-8'>
-  <title>set, display</title>
-
-  <style>
-    .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-  </style>
-
-  <script id='shared-data'>
-    let userString = '';
-  </script>
-
-  <script id='handlers'>
-    'use strict';
-
-    const setStringHandler = () => {
-      debugger;
-
-      // read user input
-      const userInput = prompt('_');
-      if (userInput === null) {
-        return;
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
       }
+    </style>
+  </head>
 
-      // update global variable
-      userString = userInput;
+  <body>
+    <main id="user-interface" class="centered">
+      <button id="set-button">set string</button> <br />
+      <button id="display-button">display string</button>
+    </main>
 
-      // let the user know the userString is saved
-      alert('_');
-    };
+    <script id="shared-data">
+      let userString = '';
+    </script>
 
-    const displayStringHandler = () => {
-      debugger;
+    <script id="handlers">
+      'use strict';
 
-      alert(userString);
-    };
-  </script>
-</head>
+      const setStringHandler = () => {
+        debugger;
 
-<body>
-  <main id='user-interface' class='centered'>
-    <button id='set-button'>set string</button> <br>
-    <button id='display-button'>display string</button>
-  </main>
+        // read user input
+        const userInput = prompt('_');
+        if (userInput === null) {
+          return;
+        }
 
-  <script id='listeners'>
-    // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
-    // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
+        // update global variable
+        userString = userInput;
 
-    const setStringButton = _;
-    setStringButton._(_, _);
+        // let the user know the userString is saved
+        alert('_');
+      };
 
-    const displayStringButton = _;
-    displayStringButton._(_, _);
-  </script>
-</body>
+      const displayStringHandler = () => {
+        debugger;
 
+        alert(userString);
+      };
+    </script>
+
+    <script id="listeners">
+      // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
+      // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
+
+      _._._(_, _);
+
+      _._._(_, _);
+    </script>
+  </body>
 </html>

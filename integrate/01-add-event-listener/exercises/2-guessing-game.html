@@ -1,91 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>guessing game</title>
 
-<head>
-  <meta charset='utf-8'>
-  <title>guessing game</title>
-
-  <style>
-    .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-  </style>
-
-  <script id='data'>
-    let secret = '';
-  </script>
-
-  <script id='handlers'>
-    'use strict';
-
-    const setSecretHandler = () => {
-      debugger;
-
-      const newSecret = prompt('_');
-      if (newSecret === null) {
-        return;
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
       }
+    </style>
+  </head>
 
-      secret = newSecret;
+  <body>
+    <main id="user-interface" class="centered">
+      <button id="set">set secret</button> <br />
+      <button id="guess">guess secret</button> <br />
+      <button id="cheat">cheat</button>
+    </main>
 
-      alert('_');
-    }
+    <script id="data">
+      let secret = '';
+    </script>
 
-    const guessSecretHandler = () => {
-      debugger;
+    <script id="handlers">
+      'use strict';
 
-      const guess = prompt('_');
-      if (guess === null) {
-        return;
-      }
+      const setSecretHandler = () => {
+        debugger;
 
-      const isCorrect = guess === secret;
+        const newSecret = prompt('_');
+        if (newSecret === null) {
+          return;
+        }
 
-      if (isCorrect) {
+        secret = newSecret;
+
         alert('_');
-      } else {
-        alert('_');
-      }
-    }
+      };
 
-    const cheatHandler = () => {
-      debugger;
+      const guessSecretHandler = () => {
+        debugger;
 
-      const isACheater = confirm('_');
+        const guess = prompt('_');
+        if (guess === null) {
+          return;
+        }
 
-      if (isACheater) {
-        alert(`_`);
-      } else {
-        alert('_');
-      }
-    }
-  </script>
-</head>
+        const isCorrect = guess === secret;
 
-<body>
-  <main id='user-interface' class='centered'>
-    <button id='set'>set secret</button> <br>
-    <button id='guess'>guess secret</button> <br>
-    <button id='cheat'>cheat</button>
-  </main>
+        if (isCorrect) {
+          alert('_');
+        } else {
+          alert('_');
+        }
+      };
 
-  <script id='listeners'>
-    // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
-    // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
+      const cheatHandler = () => {
+        debugger;
 
-    const setSecretButton = _;
-    setSecretButton._(_, _);
+        const isACheater = confirm('_');
 
-    const guessSecretButton = _;
-    guessSecretButton._(_, _);
+        if (isACheater) {
+          alert(`_`);
+        } else {
+          alert('_');
+        }
+      };
+    </script>
 
-    const cheatButton = _;
-    cheatButton._(_, _);
-  </script>
-</body>
+    <script id="listeners">
+      // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
+      // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
 
+      _._._(_, _);
+
+      _._._(_, _);
+
+      _._._(_, _);
+    </script>
+  </body>
 </html>

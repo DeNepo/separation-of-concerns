@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>user input 3</title>
+
+  <script>
+    debugger;
+
+    // describe the challenge
+    alert('repeat a string x number of times.');
+
+    // read user input
+    const stringToRepeat = prompt('enter some text to repeat ...');
+
+    const repetitions = prompt('... and how many times to repeat it');
+
+    // program logic
+    let repeated = '';
+    let i = 0;
+    while (i !== repetitions) {
+      repeated += stringToRepeat;
+      i++;
+    }
+
+    // respond to user
+    alert(repeated);
+
+    // log for dev
+    console.log('-- interaction log --');
+    console.log('stringToRepeat:', typeof stringToRepeat, '\n', stringToRepeat);
+    console.log('repetitionsStr:', typeof repetitionsStr, '\n', repetitionsStr);
+    console.log('repetitions:', typeof repetitions, '\n', repetitions);
+    console.log('repeated:', typeof repeated, '\n', repeated);
+
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

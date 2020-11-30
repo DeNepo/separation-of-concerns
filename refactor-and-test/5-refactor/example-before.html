@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>before refactor: example</title>
+
+  <script>
+    debugger;
+
+    // describe the challenge
+    alert('which number is greater?');
+
+    // read user input
+    const firstInput = prompt('enter a number');
+    const firstNumber = Number(firstInput);
+
+    const secondInput = prompt('enter another number');
+    const secondNumber = Number(secondInput);
+
+    // program logic
+    let whichNumber;
+    if (firstNumber > secondNumber) {
+      whichNumber = 'first';
+    } else if (secondNumber > firstNumber) {
+      whichNumber = 'second';
+    } else {
+      whichNumber = 'neither';
+    }
+
+    // respond to user
+    alert(`${whichNumber} number is larger`);
+
+    // log for dev
+    console.log('-- interaction log --');
+    console.log('firstInput:', typeof firstInput, '\n', firstInput);
+    console.log('firstNumber:', typeof firstNumber, '\n', firstNumber);
+    console.log('secondInput:', typeof secondInput, '\n', secondInput);
+    console.log('secondNumber:', typeof secondNumber, '\n', secondNumber);
+    console.log('whichNumber:', typeof whichNumber, '\n', whichNumber);
+
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

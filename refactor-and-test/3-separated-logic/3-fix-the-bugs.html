@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>separated logic 3</title>
+
+  <script>
+    /**
+     * creates a madlib sentence using the arguments to fill in the blanks
+     * @param {string} adjective
+     * @param {string} verb
+     * @param {string} noun
+     * @returns {string}
+     */
+    const generateMadlib = (verb, adjective, noun) => {
+      const madlib = `On a {adjective} morning, never {noun} if you can see a {verb}`;
+
+      return madlib;
+    }
+
+
+    // there are no bugs below this comment, the tests are correct
+    //  you only need to debug the function
+    console.log('testing: generateMadlib ');
+    debugger;
+
+    const _1_expect = `On a sunny morning, never run if you can see a tree`;
+    const _1_actual = generateMadlib('sunny', 'run', 'tree');
+    console.assert(_1_actual === _1_expect, 'Test 1');
+
+    const _2_expect = `On a green morning, never code if you can see a table`;
+    const _2_actual = generateMadlib('green', 'code', 'table');
+    console.assert(_2_actual === _2_expect, 'Test 2');
+
+    const _3_expect = `On a flamboyant morning, never jazzercise if you can see a rainbow`;
+    const _3_actual = generateMadlib('flamboyant', 'jazzercise', 'rainbow');
+    console.assert(_3_actual === _3_expect, 'Test 3');
+
+    const _4_expect = `On a flat morning, never forsee if you can see a ford`;
+    const _4_actual = generateMadlib('flat', 'forsee', 'ford');
+    console.assert(_4_actual === _4_expect, 'Test 4');
+
+    const _5_expect = `On a fligminty morning, never wimdawb if you can see a xumenj`;
+    const _5_actual = generateMadlib('fligminty', 'wimdawb', 'xumenj');
+    console.assert(_5_actual === _5_expect, 'Test 5');
+
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

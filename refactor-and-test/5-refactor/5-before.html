@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>before refactor: 5</title>
+
+  <script>
+    debugger;
+
+    alert('predict how a string will be encoded for URIs');
+
+    const stringToEncode = prompt('enter a string to encode');
+    const guess = prompt('how do you think it will be encoded?');
+
+    const encoded = encodeURIComponent(stringToEncode);
+    const wasCorrect = encoded === guess;
+    const message = wasCorrect ? 'correct!' : 'nope :(';
+
+    alert(message);
+
+    console.log('-- interaction log --');
+    console.log('stringToEncode:', typeof stringToEncode, '\n', stringToEncode);
+    console.log('guess:', typeof guess, '\n', guess);
+    console.log('message:', typeof message, '\n', message);
+  </script>
+</head>
+
+<body></body>
+
+</html>

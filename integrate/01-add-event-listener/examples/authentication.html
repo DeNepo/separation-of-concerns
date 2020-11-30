@@ -1,94 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>authentication</title>
 
-<head>
-  <meta charset='utf-8'>
-  <title>authentication</title>
-
-  <style>
-    .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-  </style>
-
-  <script id='data'>
-    'use strict';
-    let loggedIn = false;
-    let currentUser = undefined;
-  </script>
-
-  <script id='handlers'>
-    'use strict';
-
-    const logInHandler = () => {
-      debugger;
-
-      if (loggedIn) {
-        alert(`${currentUser} is already logged in`);
-        return;
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
       }
+    </style>
+  </head>
 
-      const userName = prompt('enter your user name');
-      if (userName === null) { return; }
+  <body>
+    <main id="user interface" class="centered">
+      <button id="log-in">log in</button>
+      <button id="log-out">log out</button>
+    </main>
 
-      const password1 = prompt('enter your password');
-      if (password1 === null) { return; }
+    <script id="data">
+      'use strict';
+      let loggedIn = false;
+      let currentUser = undefined;
+    </script>
 
-      const password2 = prompt('please confirm your password');
-      if (password2 === null) { return; }
+    <script id="handlers">
+      'use strict';
 
-      if (password1 !== password2) {
-        alert('passwords do not match');
-        return;
-      }
-      loggedIn = true;
-      currentUser = userName;
-      const message = `welcome ${currentUser}`;
-      alert(message);
-    };
+      const logInHandler = () => {
+        debugger;
 
+        if (loggedIn) {
+          alert(`${currentUser} is already logged in`);
+          return;
+        }
 
-    const logOutHandler = () => {
-      debugger;
+        const userName = prompt('enter your user name');
+        if (userName === null) {
+          return;
+        }
 
-      if (!loggedIn) {
-        alert('you are not logged in');
-        return;
-      }
+        const password1 = prompt('enter your password');
+        if (password1 === null) {
+          return;
+        }
 
-      const confirmLogOut = confirm(`${currentUser}, are you sure you want to log out?`);
-      if (!confirmLogOut) { return; }
+        const password2 = prompt('please confirm your password');
+        if (password2 === null) {
+          return;
+        }
 
-      const message = `good bye ${currentUser}`;
-      alert(message);
-      loggedIn = false;
-      currentUser = undefined;
-    };
-  </script>
-</head>
+        if (password1 !== password2) {
+          alert('passwords do not match');
+          return;
+        }
+        loggedIn = true;
+        currentUser = userName;
+        const message = `welcome ${currentUser}`;
+        alert(message);
+      };
 
-<body>
+      const logOutHandler = () => {
+        debugger;
 
-  <main id='user interface' class='centered'>
-    <button id='log-in'>log in</button>
-    <button id='log-out'>log out</button>
-  </main>
+        if (!loggedIn) {
+          alert('you are not logged in');
+          return;
+        }
 
-  <script id='listeners'>
-    // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
-    // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
+        const confirmLogOut = confirm(
+          `${currentUser}, are you sure you want to log out?`
+        );
+        if (!confirmLogOut) {
+          return;
+        }
 
-    const logInButton = document.getElementById('log-in');
-    logInButton.addEventListener('click', logInHandler);
+        const message = `good bye ${currentUser}`;
+        alert(message);
+        loggedIn = false;
+        currentUser = undefined;
+      };
+    </script>
 
-    const logOutButton = document.getElementById('log-out');
-    logOutButton.addEventListener('click', logOutHandler);
-  </script>
+    <script id="listeners">
+      // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
+      // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
 
-</body>
+      document.getElementById('log-in').addEventListener('click', logInHandler);
 
+      document
+        .getElementById('log-out')
+        .addEventListener('click', logOutHandler);
+    </script>
+  </body>
 </html>

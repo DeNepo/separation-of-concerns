@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>guessing game</title>
 
-<head>
-  <meta charset='utf-8'>
-  <title>guessing game</title>
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
 
-  <style>
-    .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
+      .hidden {
+        color: white;
+      }
 
-    .hidden {
-      color: white;
-    }
+      .visible {
+        color: black;
+      }
+    </style>
+  </head>
 
-    .visible {
-      color: black;
-    }
-  </style>
+  <body>
+    <main id="user-interface" class="centered">
+      <input id="user-input" type="password" />
+      <hr />
+      <code id="output" class="hidden"></code>
+    </main>
 
-  <script id='handlers'>
-    'use strict';
+    <script id="handlers">
+      'use strict';
 
-    const setSecretHandler = () => {
-      debugger;
+      const setSecretHandler = () => {
+        debugger;
 
-      const inputEl = document.getElementById('_');
-      const newSecret = inputEl.value;
+        const inputEl = document.getElementById('_');
+        const newSecret = inputEl.value;
 
-      const outputEl = document.getElementById('_');
-      outputEl._ = newSecret;
-    };
+        const outputEl = document.getElementById('_');
+        outputEl._ = newSecret;
+      };
 
-    const displaySecretHandler = () => {
-      debugger;
+      const displaySecretHandler = () => {
+        debugger;
 
-      const outputEl = document.getElementById('_');
-      outputEl._ = 'visible';
-    };
+        const outputEl = document.getElementById('_');
+        outputEl._ = 'visible';
+      };
 
-    const hideSecretHandler = () => {
-      debugger;
+      const hideSecretHandler = () => {
+        debugger;
 
-      const outputEl = document.getElementById('_');
-      outputEl.className = '_';
-    };
-  </script>
-</head>
+        const outputEl = document.getElementById('_');
+        outputEl.className = '_';
+      };
+    </script>
 
-<body>
-  <main id='user-interface' class='centered'>
-    <input id='user-input' type='password'>
-    <hr>
-    <code id='output' class='hidden'></code>
-  </main>
+    <script id="listeners">
+      // this is all correct!
+      document
+        .getElementById('user-input')
+        .addEventListener('keyup', setSecretHandler);
 
-  <script id='listeners'>
-    // this is all correct!
-    const setSecretInput = document.getElementById('user-input');
-    setSecretInput.addEventListener('keyup', setSecretHandler);
-
-    const outputEl = document.getElementById('output');
-    outputEl.addEventListener('mouseenter', displaySecretHandler);
-    outputEl.addEventListener('mouseleave', hideSecretHandler);
-  </script>
-</body>
-
+      const outputEl = document.getElementById('output');
+      outputEl.addEventListener('mouseenter', displaySecretHandler);
+      outputEl.addEventListener('mouseleave', hideSecretHandler);
+    </script>
+  </body>
 </html>

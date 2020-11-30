@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>separated logic 2</title>
+
+  <script>
+    /**
+       * performs one of three logical operations
+       * @param {any} x - the left operand
+       * @param {string} operator - indicates which operator to use
+       * @param {any} x - the right operand
+       * @returns {any}
+       */
+    const operateLogically = (x, operator, y) => {
+      // return directly from the conditional since the return value can be any type
+      //  no need to check before returning
+      if (_) {
+        return _;
+      } else if (_) {
+        return _;
+      } else if (_) {
+        return _;
+      } else {
+        return _;
+      }
+    }
+
+
+    console.log('testing: operateLogically ');
+    debugger;
+
+    const _1_expect = false;
+    const _1_actual = operateLogically(0, 'or', false);
+    console.assert(_1_actual === _1_expect, 'Test 1');
+
+    const _2_expect = 0;
+    const _2_actual = operateLogically(0, 'nullish', false);
+    console.assert(_2_actual === _2_expect, 'Test 2');
+
+    const _3_expect = false;
+    const _3_actual = operateLogically(null, 'nullish', false);
+    console.assert(_3_actual === _3_expect, 'Test 3');
+
+    const _4_expect = '';
+    const _4_actual = operateLogically('', 'and', true);
+    console.assert(_4_actual === _4_expect, 'Test 4');
+
+    const _5_expect = true;
+    const _5_actual = operateLogically('', 'or', true);
+    console.assert(_5_actual === _5_expect, 'Test 5');
+
+    const _6_expect = 0;
+    const _6_actual = operateLogically(1, 'and', 0);
+    console.assert(_6_actual === _6_expect, 'Test 6');
+
+    const _7_expect = '"toad" is not a supported operator';
+    const _7_actual = operateLogically(1, 'toad', 0);
+    console.assert(_7_actual === _7_expect, 'Test 7');
+
+    const _8_expect = '"cheese" is not a supported operator';
+    const _8_actual = operateLogically(1, 'cheese', 0);
+    console.assert(_8_actual === _8_expect, 'Test 7');
+
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

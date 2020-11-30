@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>separated logic 1</title>
+
+  <script>
+    /**
+     * creates a comma-separated list of all numbers in a given range
+     * @param {number} num1 - start counting from this number
+     * @param {number} num2 - stop counting at this number
+     * @returns {string}
+     */
+    const numbersBetween = (num1, num2) => {
+      let listOfNumbers = '';
+      let i = _;
+      while (_ <= num2) {
+        listOfNumbers += `${_}_ `;
+        i_;
+      }
+
+      return _;
+    }
+
+    console.log('testing: numbersBetween ');
+    debugger;
+
+    const _1_expect = '1, 2, 3, ';
+    const _1_actual = numbersBetween(1, 3);
+    console.assert(_1_actual === _1_expect, 'Test 1');
+
+    const _2_expect = '-1, 0, 1, ';
+    const _2_actual = numbersBetween(-1, 1);
+    console.assert(_2_actual === _2_expect, 'Test 2');
+
+    const _3_expect = '-3, -2, -1, ';
+    const _3_actual = numbersBetween(-3, -1);
+    console.assert(_3_actual === _3_expect, 'Test 3');
+
+    const _4_expect = '0, ';
+    const _4_actual = numbersBetween(0, 0);
+    console.assert(_4_actual === _4_expect, 'Test 4');
+
+    const _5_expect = '1.5, 2.5, 3.5, ';
+    const _5_actual = numbersBetween(1.5, 3.5);
+    console.assert(_5_actual === _5_expect, 'Test 5');
+
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

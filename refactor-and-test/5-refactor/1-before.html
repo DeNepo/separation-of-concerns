@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>before refactor: 1</title>
+
+  <script>
+    debugger;
+
+    alert('shuffle three strings');
+
+    const first = prompt('first string');
+    const second = prompt('second string');
+    const third = prompt('third string');
+
+    const shuffled = `${second}, ${first}, ${third}`;
+
+    alert(shuffled);
+
+    console.log('-- interaction log --');
+    console.log('first:', typeof first, '\n', first);
+    console.log('second:', typeof second, '\n', second);
+    console.log('third:', typeof third, '\n', third);
+    console.log('shuffled:', typeof shuffled, '\n', shuffled);
+  </script>
+</head>
+
+<body></body>
+
+</html>

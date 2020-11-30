@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>all together 1</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+  <script id='logic'>
+    /**
+     * sums all numbers between lowest & highest
+     * @param {number} lowest - the lowest number to add
+     * @param {number} highest - the highest number to add
+     * @returns {number}
+     */
+    const sumInRange = (lowest, highest) => {
+
+      let sumOfAll = _;
+      for (let i = _; i <= _; i_) {
+        _ += i;
+      }
+
+      return sumOfAll;
+    }
+
+  </script>
+
+  <script id='tests'>
+
+    console.log('testing: sumInRange ');
+    debugger;
+
+    const _1_expect = 6;
+    const _1_actual = sumInRange(1, 3);
+    console.assert(_1_actual === _1_expect, 'Test 1');
+
+    const _2_expect = 0;
+    const _2_actual = sumInRange(-1, 1);
+    console.assert(_2_actual === _2_expect, 'Test 2');
+
+    const _3_expect = -6;
+    const _3_actual = sumInRange(-3, -1);
+    console.assert(_3_actual === _3_expect, 'Test 3');
+
+    const _4_expect = 0;
+    const _4_actual = sumInRange(0, 0);
+    console.assert(_4_actual === _4_expect, 'Test 4');
+
+    const _5_expect = 7.5;
+    const _5_actual = sumInRange(1.5, 3.5);
+    console.assert(_5_actual === _5_expect, 'Test 5');
+  </script>
+
+  <script id='interaction'>
+    const sumAllInteraction = () => {
+      debugger;
+
+      const input1 = prompt('first number');
+      const num1 = _(input1);
+
+      const input2 = prompt('second number');
+      const num2 = _(input2);
+
+      const sum = _(num1, num2);
+
+      alert(_);
+
+      console.log('-- interaction log --');
+      console.log('input1:', typeof input1, '\n', input1);
+      console.log('num1:', typeof num1, '\n', num1);
+      console.log('input2:', typeof input2, '\n', input2);
+      console.log('num2:', typeof num2, '\n', num2);
+      console.log('sumOfAll:', typeof sumOfAll, '\n', sumOfAll);
+    }
+  </script>
+</head>
+
+<body>
+  <section id='user-interface' class='centered'>
+    <button onclick='sumAllInteraction()'>sum all numbers from ...</button>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="utf8">
+  <title>onclick interaction 0</title>
+
+  <style>
+    .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+  <script>
+    const madlibInteraction = () => {
+      debugger;
+
+      const noun = prompt('enter a noun');
+      const verb = prompt('enter a verb');
+      const adjective = prompt('enter an adjective');
+
+      const madlib = `On a ${adjective} morning, never ${verb} if you can see a ${noun}`;
+
+      alert(madlib);
+
+      console.log('-- interaction log --');
+      console.log('noun:', typeof noun, '\n', noun);
+      console.log('verb:', typeof verb, '\n', verb);
+      console.log('adjective:', typeof adjective, '\n', adjective);
+      console.log('madlib:', typeof madlib, '\n', madlib);
+    }
+  </script>
+</head>
+
+<body>
+  <section id='user-interface' class='centered'>
+    <button onclick='madlibInteraction()'>Play Madlibs</button>
+  </section>
+</body>
+
+</html>
