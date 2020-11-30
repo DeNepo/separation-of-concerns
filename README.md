@@ -7,6 +7,8 @@
 
 ## Contents
 
+- [Getting Started](#getting-started)
+- [Study Tips](#study-tips)
 - [Learning Objectives](#learning-objectives)
 - [About the Projects](#about-the-projects)
 - [Suggested Study](#suggested-study)
@@ -16,6 +18,55 @@
 - [Class Recordings](#class-recordings.md)
 - [Curriculum](https://home.hackyourfuture.be/curriculum) (external)
 - [HYF Home](https://home.hackyourfuture.be/) (external)
+
+---
+
+## Getting Started
+
+> You will need [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) on your computer to study this material
+>
+> Using a browser with good DevTools will make your life easier: [Chromium](http://www.chromium.org/getting-involved/download-chromium), [FireFox](https://www.mozilla.org/en-US/firefox/new/), [Edge](https://www.microsoft.com/edge), [Chrome](https://www.google.com/chrome/)
+
+1. Install or update the `study-lenses` package globally
+   - `npm install -g study-lenses` (if you do not have it already)
+   - `npm update -g study-lenses` (if you already have it installed)
+1. Clone this repository:
+   - `git clone git@github.com:HackYourFutureBelgium/separation-of-concerns.git` (SSH) (recommended)
+   - `git clone https://github.com/HackYourFutureBelgium/separation-of-concerns.git` (HTTPS)
+   - `gh repo clone HackYourFutureBelgium/separation-of-concerns` (GH CLI)
+1. `cd` into the repository
+   - `cd separation-of-concerns`
+1. Run the `study` command from your CLI
+   - `study`
+1. The material will open in your default browser, you're good to go!
+
+> If you have a windows computer and get this error:
+>
+> - `... /study.ps1 cannot be loaded because running scripts ...`
+>
+> follow the instructions in [this StackOverflow answer](https://stackoverflow.com/a/63424744), that should take care of it ; )
+
+[TOP](#separation-of-concerns)
+
+---
+
+## Study Tips
+
+- Don't rush, understand! Programming is hard.
+  - The examples and exercises will still be there to study later.
+  - It's better to fail tests slowly and learn from your mistakes than to pass tests quickly and not understand why.
+- Don't skip the examples! Understanding and experimenting with working code is a very effective way to learn programming.
+- Write lots of good comments, learn more about this in [./studying-javascript](./studying-javascript)
+- Practice [Pair Programming](https://study.hackyourfuture.be/collaborating/pair-programming): two people, one computer.
+- Take a look through the [Learning From Code](https://study.hackyourfuture.be/learning/learning-from-code) guide for more study tips
+
+Not all assignments are created equal. These 3 emoji's will help you figure out how to spend your study time as effectively as possible.
+
+- 🥚 `:egg:` - these assignments are required, they cover the base skills you'll need to move on.
+- 🐣 `:hatching_chick:` - do your best to start these exercises. you don't need to finish or master them (yet) but getting the main idea will be helpful in coming weeks
+- 🐥 `:hatched_chick:` - Have you finished all the 🥚's and started all the 🐣's? push yourself with these challenges!
+
+[TOP](#separation-of-concerns)
 
 ---
 
@@ -138,6 +189,7 @@ Helpful links, examples and exercises.
 - Separation of Concerns
   - [Jon Bellah](https://jonbellah.com/articles/separation-of-concerns/)
   - [stackexchange](https://softwareengineering.stackexchange.com/questions/32581/how-do-you-explain-separation-of-concerns-to-others)
+  - [Machine Words](https://medium.com/machine-words/separation-of-concerns-1d735b703a60)
   - [Colocation](https://kentcdodds.com/blog/colocation)
 - Code in this Repo
   - 🥚 [/isolate](./isolate?hyf): focus on the DOM and events, isolating JavaScript in the debugger
@@ -165,6 +217,7 @@ Helpful links, examples and exercises.
   - [Zac Gordon](https://www.youtube.com/watch?v=l-0nPnSvbX8&list=PLruo2gSoqlej-QjRW25c97socsRiAUVuf&index=8)
   - [Traversy](https://www.youtube.com/watch?v=0ik6X4DJKCc)
   - [study.hackyourfuture.be](https://study.hackyourfuture.be/javascript/dom-manipulation)
+  - [Browser rendering behind the scenes](https://blog.logrocket.com/how-browser-rendering-works-behind-the-scenes-6782b0e8fb10/)
 - Events
   - [what are events?](https://www.youtube.com/watch?v=gx0oAgvXyE4) (mmtuts)
   - [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
@@ -173,6 +226,12 @@ Helpful links, examples and exercises.
   - [MDN Building Blocks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
   - [Event Delegation (mosh)](https://programmingwithmosh.com/javascript/javascript-event-bubbling-and-event-delegation/)
   - [Bubble & Capture (dev.to)](https://dev.to/shimphillip/handing-javascript-events-efficiently-with-bubble-and-capture-4ha5)
+  - [Monitoring Events in Chrome](https://developers.google.com/web/updates/2015/05/quickly-monitor-events-from-the-console-panel)
+  - [Bubbling, capturing, once and propagation](https://www.youtube.com/watch?v=F1anRyL37lE)
+- [Learn Form Validation](https://github.com/oliverjam/learn-form-validation)
+- Fun projects on YouTube
+  - [Code Explained](https://www.youtube.com/channel/UC8n8ftV94ZU_DJLOLtrpORA)
+  - Dev Ed: [todo list](https://www.youtube.com/watch?v=Ttf3CEsEwMQ), [rock paper scissors](https://www.youtube.com/watch?v=qWPtKtYEsN4&list=PLDyQo7g0_nsX8_gZAB8KD1lL4j4halQBJ&index=10)
 
 </details>
 <br>
