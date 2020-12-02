@@ -1,6 +1,7 @@
 {
   "name": "separation-of-concerns",
   "version": "1.0.0",
+  "type": "module",
   "description": "learn to build well-structured code that uses the DOM",
   "repository": {
     "type": "git",

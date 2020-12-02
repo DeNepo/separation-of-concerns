@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title id='export before declarations'></title>
+  <script>debugger;</script>
+  <script type="module">
+    import {
+      months, User,
+      MODULES_BECAME_STANDARD_YEAR
+    } from './script.js';
+
+    const pig = new User('pig');
+
+    // this variable was declared with let, no problems reassigning it
+    months = 'hi!';
+
+    // this variable was declared with const in the other file
+    //  attempting to change it's value here will throw an error
+    MODULES_BECAME_STANDARD_YEAR = 2063;
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

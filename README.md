@@ -23,6 +23,12 @@
 
 ## Getting Started
 
+How to study the code in this repo.
+
+<details>
+<summary>expand/collapse</summary>
+<br>
+
 > You will need [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) on your computer to study this material
 >
 > Using a browser with good DevTools will make your life easier: [Chromium](http://www.chromium.org/getting-involved/download-chromium), [FireFox](https://www.mozilla.org/en-US/firefox/new/), [Edge](https://www.microsoft.com/edge), [Chrome](https://www.google.com/chrome/)
@@ -45,6 +51,9 @@
 > - `... /study.ps1 cannot be loaded because running scripts ...`
 >
 > follow the instructions in [this StackOverflow answer](https://stackoverflow.com/a/63424744), that should take care of it ; )
+
+</details>
+<br>
 
 [TOP](#separation-of-concerns)
 
@@ -195,8 +204,9 @@ Helpful links, examples and exercises.
   - 🥚 [/isolate](./isolate?hyf): focus on the DOM and events, isolating JavaScript in the debugger
   - 🥚 [/integrate](./integrate?hyf): learn how to integrate JS into user interfaces built with HTML and CSS
   - 🥚 [/stepped](./stepped?hyf): study HTML/CSS/JS projects built up step-by-step (only examples)
-  - 🥚 [/separated](./separated?hyf): study HTML/CSS/JS projects that have been separated by concern (only examples)
   - 🥚 [/refactor-and-test](./refactor-and-test?hyf): practice refactoring the logic from user interactions and testing it in isolation
+  - 🐣 [/import-export](./import-export?hyf): learn how to use `import` and `export` to separate your code into different files
+  - 🥚 [/separated](./separated?hyf): study HTML/CSS/JS projects that have been separated by concern (only examples)
 - JavaScript 30
   - [javascript30.com](https://javascript30.com/)
   - [YouTube Playlist](https://www.youtube.com/playlist?list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH)
@@ -250,11 +260,12 @@ Helpful links, examples and exercises.
   - Reading and writing user data from the DOM
   - Basic DOM manipulation
   - Using _event listeners_ and _event handlers_
+  - Using `import`/`export`
 
 <details>
 <summary>expand/collapse</summary>
 
-### Prep Work
+### Before Class
 
 - Study
   - [javascript.info/document](https://javascript.info/document)
@@ -268,37 +279,41 @@ Helpful links, examples and exercises.
   - Read through the [javascript-30](https://github.com/HackYourFutureBelgium/javascript-30) project guide
   - Take a look at the [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) repo
 
-### Lesson Plan
+### During Class
 
-#### Isolate
+#### Before Break
 
 - [isolate/01-dom-elements](./isolate/01-dom-elements)
 - [isolate/02-read-write-dom](./isolate/02-read-write-dom)
 
-#### Integrate
+#### After Break
 
 - [integrate/01-add-event-listener](./integrate/01-add-event-listener)
 - [integrate/02-read-write-dom](./integrate/02-read-write-dom)
+- JavaScript 30 Introduction
 
-### Project
+### After Class
 
-There's an outstanding series of tutorials called [The JavaScript 30](https://javascript30.com/) put together by [Wes Bos](https://wesbos.com), it's 30 fun frontend projects with video tutorials and finished code to study. The team project this week is to study one of the projects and reconstruct it as a collaborative project.
+There's an outstanding series of tutorials called [The JavaScript 30](https://javascript30.com/) put together by [Wes Bos](https://wesbos.com), it's 30 small frontend projects with video tutorials and finished code to study. You will learn a lot from Wes Bos but his tutorials are just the beginning of your study > : )
 
-Each team member should fork [HackYourFutureBelgium/javascript-30](https://github.com/HackYourFutureBelgium/JavaScript-30), this repo contains more detailed instructions for the week's project. You can use the [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) repo to get off the ground.
+All of his finished code is in a single file, the main objective of this module is that you learn how to structure your projects across multiple files according to the **separation of concerns**. After completing his tutorials you will need to take his finished code as a starting point and refactor it into a full repository. There is a [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) repository you can use. It comes all set up, just waiting for your refactored code. _Hint: study [/refactor-and-test](./refactor-and-test?hyf) and [/import-export](./import-export?hyf) to prepare._
 
-No need to stop at 1 project! If your team is on a roll, keep going. There's a lot of projects :)
+To keep track of your progress through the JS 30 there's [HackYourFutureBelgium/javascript-30](https://github.com/HackYourFutureBelgium/JavaScript-30). There you will find more detailed instructions on how to work your way through these projects, as well as a checklist to keep track of your progress.
 
-#### Checklist
+You don't need to develop as a group this week, find what works for you. Maybe pair programming, individual study or collaborating with 2-3 people is best for you. Work your way through as many projects as you can. Here are some suggestions for this week:
 
-```md
-- [ ] [repo](https://github.com/_/_) with a complete README
-- [ ] [live demo](https://_.github.io/_)
-- [ ] [development-strategy](_https://github.com/_/_/tree/master/development-strategy.md_)
-- [ ] [One branch per step in `development-strategy.md`](https://github.com/_/_/network)
-- [ ] [One closed issue per task](https://github.com/_/_/issues?q=is%3Aissue+is%3Aclosed) (you can have more than task per development step!)
-- [ ] [One closed PR per task issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
-- [ ] [A project board](https://github.com/_/_/projects/X)
-```
+- #1: JavaScript Drum Kit
+- #3: CSS Variables
+- #5: Flex Panel Gallery
+- #8: Fun with HTML5 Canvas
+- #10: Hold Shift and Check Checkboxes
+- #13: Slide in on Scroll
+- #16: Mouse Move Shadow
+- #18: Adding Up Times
+- #20: Speech Recognition
+- #22: Follow Along Link Highlighter
+- #25: Event Capture, Propagation, Bubbling and Once
+- #28: Video Speed Controller
 
 </details>
 <br>
@@ -309,12 +324,13 @@ No need to stop at 1 project! If your team is on a roll, keep going. There's a l
 
 ## Week 2
 
-The focus of week 2 is using forms to handle more gather and process more user data.
+- Using forms to handle more gather and process more user data.
+- Working in groups on a larger project
 
 <details>
 <summary>expand/collapse</summary>
 
-### Prep Work
+### Before Class
 
 - Study (pick your favorite links)
   - [js.info: Bubbling & Capturing](https://javascript.info/bubbling-and-capturing) (`event.target`)
@@ -332,30 +348,36 @@ The focus of week 2 is using forms to handle more gather and process more user d
   - Read & Write DOM
   - Event Delegation
 
-### Lesson Plan
+### During Class
 
-#### [Isolate](../isolate/index.html)
+#### Before Break
 
-- Event Parameter
+- Isolate: Event Parameter
 
-#### [Integrate](../integrate/index.html)
+#### After Break
 
-- Event Delegation
+- Integrate: Event Delegation
 
-### Project
+### After Class
 
-Just like last week, choose a JavaScript 30 project to reverse-engineer as a team.
+Like last week, but as a full-group project. Here are some suggestions:
+
+- #11; Custom Video Player
+- #15: localStorage
+- #23: Speech Synthesis
+- #26: Stripe Follow-Along Nav
+- #27: Click and Drag
 
 #### Checklist
 
 ```md
 - [ ] [repo](https://github.com/_/_) with a complete README
 - [ ] [live demo](https://_.github.io/_)
-- [ ] [development-strategy](_)
-- [ ] [One branch per step in `development-strategy.md`](https://github.com/_/_/network)
-- [ ] [One closed issue per task](https://github.com/_/_/issues?q=is%3Aissue+is%3Aclosed) (you can have more than task per development step!)
-- [ ] [One closed PR per task issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
+- [ ] [project-planning](_https://github.com/_/_/tree/master/project-planning)
 - [ ] [A project board](https://github.com/_/_/projects/X)
+- [ ] [One issue per task](https://github.com/_/_/issues) (with labels and milestones)
+- [ ] [One branch per issue](https://github.com/_/_/network)
+- [ ] [One reviewed PR per completed issue](https://github.com/_/__/pulls?q=is%3Apr+is%3Aclosed)
 ```
 
 </details>
