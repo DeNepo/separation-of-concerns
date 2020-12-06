@@ -33,8 +33,6 @@ buttonEl.onclick = greetingHandler;
 //  you can also see it in the debugger if you expand the button
 console.log(buttonEl.nodeName, buttonEl.cloneNode(true));
 
-
-
 // you can simulate a user clicking the button
 // this is a more advanced technique
 //  you will not need to know it, just to understand it in these exercises
@@ -45,3 +43,14 @@ const clickEvent = new Event('click');
 
 // 2. dispatch the event from the button
 buttonEl.dispatchEvent(clickEvent);
+
+// -- with .onclick you can only add a single click handler --
+//  assigning a different handler will replace the first one
+const secondHandler = () => {
+  alert('second handler!');
+};
+
+buttonEl.onclick = secondHandler;
+
+const clickEvent2 = new Event('click');
+buttonEl.dispatchEvent(clickEvent2);

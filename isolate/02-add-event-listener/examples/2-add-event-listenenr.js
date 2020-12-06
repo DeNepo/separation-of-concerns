@@ -37,8 +37,6 @@ buttonEl.addEventListener('click', greetingHandler);
 //  you will see this in "integrate"
 console.log(buttonEl.nodeName, buttonEl);
 
-
-
 // you can simulate a user clicking the button
 // this is a more advanced technique
 //  you will not need to know it, just to understand it in these exercises
@@ -50,7 +48,6 @@ console.log(buttonEl.nodeName, buttonEl);
 const clickEvent1 = new Event('click');
 // 2. dispatch the event from the button
 buttonEl.dispatchEvent(clickEvent1);
-
 
 // "click" the button a second time
 //  call the handler a second time

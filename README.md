@@ -225,6 +225,7 @@ Helpful links, examples and exercises.
 - The DOM
   - [javascript.info/document](https://javascript.info/document)
   - [super highly recommended DOM tutorial](https://dom-tutorials.appspot.com/static/index.html)
+  - [inspecting-the-dom](https://hackyourfuturebelgium.github.io/inspecting-the-dom/)
   - [Zac Gordon](https://www.youtube.com/watch?v=l-0nPnSvbX8&list=PLruo2gSoqlej-QjRW25c97socsRiAUVuf&index=8)
   - [Traversy](https://www.youtube.com/watch?v=0ik6X4DJKCc)
   - [study.hackyourfuture.be](https://study.hackyourfuture.be/javascript/dom-manipulation)
