@@ -213,13 +213,14 @@ Helpful links, examples and exercises.
   - [wesbos/JavaScript30](https://github.com/wesbos/JavaScript30)
   - [Group Project Guide](https://github.com/HackYourFutureBelgium/javascript-30)
   - [Group Project Starter Repo](https://github.com/HackYourFutureBelgium/javascript-30-starter)
-- Repos to Study
+  - Looking for more practice?
+    - [MMTuts Calculator](https://www.youtube.com/watch?v=qQEYAOPWDzk)
+    - [bradtraversy/vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)
+- Repos of practice
   - [hyfbe/dom-manipulation](https://github.com/HackYourFutureBelgium/dom-manipulation)
   - [hyfbe/listeners-and-handlers](https://github.com/HackYourFutureBelgium/listeners-and-handlers)
   - [hyfbe/handler-refactors](https://github.com/HackYourFutureBelgium/handler-refactors)
   - [hyfbe/using-user-events](https://github.com/HackYourFutureBelgium/using-user-events)
-  - [hyfbe/calculator-refactor](https://github.com/HackYourFutureBelgium/calculator-refactor)
-  - [bradtraversy/vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)
 - [Generating HTML with Template Literals](https://wesbos.com/template-strings-html)
 - The DOM
   - [javascript.info/document](https://javascript.info/document)
