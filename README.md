@@ -214,8 +214,10 @@ Helpful links, examples and exercises.
   - [Group Project Guide](https://github.com/HackYourFutureBelgium/javascript-30)
   - [Group Project Starter Repo](https://github.com/HackYourFutureBelgium/javascript-30-starter)
   - Looking for more practice?
-    - [MMTuts Calculator](https://www.youtube.com/watch?v=qQEYAOPWDzk)
+    - [fun-javascript-projects.com](https://github.com/chrisdixon161/fun-javascript-projects.com) - stepped projects, :+1:
     - [bradtraversy/vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)
+    - [aman-maharshi/vanilla-js](https://github.com/aman-maharshi/vanilla-js)
+    - [MMTuts Calculator](https://www.youtube.com/watch?v=qQEYAOPWDzk) - youtube tutorial
 - Repos of practice
   - [hyfbe/dom-manipulation](https://github.com/HackYourFutureBelgium/dom-manipulation)
   - [hyfbe/listeners-and-handlers](https://github.com/HackYourFutureBelgium/listeners-and-handlers)
