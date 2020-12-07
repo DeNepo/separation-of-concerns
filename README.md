@@ -402,19 +402,26 @@ Like last week, but as a full-group project. Here are some suggestions:
 
 > [Laurent](https://github.com/LaurentVB), [Koen](https://github.com/koenvd), [Charles](https://github.com/cpauwels), [Evan](https://github.com/colevanderswands)
 
-### Week 1
-
-- [DOM Elements & Event Listeners (isolate)](https://vimeo.com/444028096), [... continued](https://vimeo.com/444028096)
-- [Event Listeners & DOM Elements (integrate)](https://vimeo.com/444028594)
-- [.innerHTML vs. .value & Recap](https://vimeo.com/manage/444029311)
-
-### Week 2
-
-- [The `event` Parameter](https://vimeo.com/444026774)
-- [Event Delegation](https://vimeo.com/444027091/)
-- [Recap Integrate](https://vimeo.com/444027329/)
+- Week 1
+  - [DOM Elements & Event Listeners (isolate)](https://vimeo.com/444028096), [... continued](https://vimeo.com/444028096)
+  - [Event Listeners & DOM Elements (integrate)](https://vimeo.com/444028594)
+  - [.innerHTML vs. .value & Recap](https://vimeo.com/444029311)
+- Week 2
+  - [The `event` Parameter](https://vimeo.com/444026774)
+  - [Event Delegation](https://vimeo.com/444027091/)
+  - [Recap Integrate](https://vimeo.com/444027329/)
 
 ## class-11-12
+
+> [Koen](https://github.com/koenvd), [Thibault](https://github.com/ThibaultLesuisse)
+
+- Week 1
+  - [Isolate: event listeners and handlers pt. 1](https://vimeo.com/488077137)
+  - [Isolate: event listeners and handlers pt. 1](https://vimeo.com/488077846)
+  - [Integrate: event listeners and handlers](https://vimeo.com/488078064)
+  - [`import`/`export` and the JS 30](https://vimeo.com/488078314)
+
+### Week
 
 [TOP](#separation-of-concerns)
 
