@@ -1,1 +1,3 @@
-export let user = "John";
+'use strict';
+
+export let user = 'John';

@@ -1,3 +1,5 @@
+'use strict';
+
 // import login/logout and immediately export them
 export * from './helpers.js';
 

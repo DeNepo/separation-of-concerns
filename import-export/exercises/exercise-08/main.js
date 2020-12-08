@@ -1,5 +1,6 @@
-import * as say from './greetings.js';
+'use strict';
 
+import * as say from './greetings.js';
 
 const test1 = 'Hello, robin!' === say.hi('robin');
 const test2 = 'Bye, robin!' === say.bye('robin');

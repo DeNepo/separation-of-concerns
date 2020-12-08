@@ -1,1 +1,3 @@
-export default "John";
+'use strict';
+
+export default 'John';

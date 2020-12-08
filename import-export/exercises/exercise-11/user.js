@@ -1,5 +1,7 @@
-export class User { // just add "default"
-  constructor(name) {
-    this.name = name;
-  }
-}
+'use strict';
+
+// export this function for use in main.js
+
+_ _ name => {
+  return `hello ${name}`;
+};

@@ -1,4 +1,6 @@
-import { logIn, logOut, User } from './auth/index.js'
+'use strict';
+
+import { logIn, logOut, User } from './auth/index.js';
 
 const newUser = _;
 const test1 = 'John is logged in.' === logIn(newUser);

@@ -1,8 +1,10 @@
-const hi = (user) => {
+'use strict';
+
+const hi = user => {
   console.log(`Hello, ${user}!`);
 };
 
-const bye = (user) => {
+const bye = user => {
   console.log(`Bye, ${user}!`);
 };
 

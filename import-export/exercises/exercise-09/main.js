@@ -1,3 +1,5 @@
+'use strict';
+
 import { hi as sayHi, bye as sayBye } from './greetings.js';
 
 const test1 = 'Hello, robin!' === sayHi('robin');

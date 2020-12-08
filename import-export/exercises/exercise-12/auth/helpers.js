@@ -1,5 +1,7 @@
-const logIn = (user) => user.name + ' is logged in.';
+'use strict';
 
-const logOut = (user) => user.name + ' is logged out.';
+const logIn = user => user.name + ' is logged in.';
+
+const logOut = user => user.name + ' is logged out.';
 
 export { login, logout };

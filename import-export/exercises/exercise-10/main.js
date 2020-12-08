@@ -1,3 +1,5 @@
+'use strict';
+
 import * as say from './greetings.js';
 
 const test1 = 'Hello, robin!' === _('robin');

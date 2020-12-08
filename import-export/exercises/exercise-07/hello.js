@@ -1,3 +1,5 @@
+'use strict';
+
 import './user.js';
 
 const test = user === 'John';
