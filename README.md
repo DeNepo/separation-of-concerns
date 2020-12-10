@@ -405,7 +405,7 @@ Like last week, but as a full-group project. Here are some suggestions:
 > [Laurent](https://github.com/LaurentVB), [Koen](https://github.com/koenvd), [Charles](https://github.com/cpauwels), [Evan](https://github.com/colevanderswands)
 
 - Week 1
-  - [DOM Elements & Event Listeners (isolate)](https://vimeo.com/444028096), [... continued](https://vimeo.com/444028096)
+  - [DOM Elements & Event Listeners (isolate)](https://vimeo.com/444028096), [... continued](https://vimeo.com/444028460)
   - [Event Listeners & DOM Elements (integrate)](https://vimeo.com/444028594)
   - [.innerHTML vs. .value & Recap](https://vimeo.com/444029311)
 - Week 2
