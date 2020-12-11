@@ -242,6 +242,11 @@ Helpful links, examples and exercises.
   - [Bubble & Capture (dev.to)](https://dev.to/shimphillip/handing-javascript-events-efficiently-with-bubble-and-capture-4ha5)
   - [Monitoring Events in Chrome](https://developers.google.com/web/updates/2015/05/quickly-monitor-events-from-the-console-panel)
   - [Bubbling, capturing, once and propagation](https://www.youtube.com/watch?v=F1anRyL37lE)
+- `import`/`export`
+  - [javascript.info](https://javascript.info/modules-intro)
+  - [Web Dev Simplified](https://www.youtube.com/watch?v=cRHQNNcYf6s)
+  - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+  - [JavaScript Tutorial](https://www.javascripttutorial.net/es6/es6-modules/)
 - [Learn Form Validation](https://github.com/oliverjam/learn-form-validation)
 - Fun projects on YouTube
   - [Code Explained](https://www.youtube.com/channel/UC8n8ftV94ZU_DJLOLtrpORA)
@@ -300,7 +305,7 @@ Helpful links, examples and exercises.
 
 There's an outstanding series of tutorials called [The JavaScript 30](https://javascript30.com/) put together by [Wes Bos](https://wesbos.com), it's 30 small frontend projects with video tutorials and finished code to study. You will learn a lot from Wes Bos but his tutorials are just the beginning of your study > : )
 
-All of his finished code is in a single file, the main objective of this module is that you learn how to structure your projects across multiple files according to the **separation of concerns**. After completing his tutorials you will need to take his finished code as a starting point and refactor it into a full repository. There is a [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) repository you can use. It comes all set up, just waiting for your refactored code. _Hint: study [/stepped](./stepped?hyf), [/refactor-and-test](./refactor-and-test?hyf), [/import-export](./import-export?hyf) and [/separated](./separated?hyf) to prepare._
+All of his finished code is in a single file, the main objective of this module is that you learn how to structure your projects across multiple files according to the **separation of concerns**. After completing his tutorials you will need to take his finished code as a starting point and refactor it into a full repository. There is a [javascript-30-gallery](https://github.com/HackYourFutureBelgium/javascript-30-gallery) repository you can use. It comes all set up, just waiting for your refactored code. _Hint: study [/stepped](./stepped?hyf), [/refactor-and-test](./refactor-and-test?hyf), [/import-export](./import-export?hyf) and [/separated](./separated?hyf) to prepare._
 
 To keep track of your progress through the JS 30 there's [HackYourFutureBelgium/javascript-30](https://github.com/HackYourFutureBelgium/JavaScript-30). There you will find more detailed instructions on how to work your way through these projects, as well as a checklist to keep track of your progress.
 
@@ -316,7 +321,6 @@ You don't need to develop as a group this week, find what works for you. Maybe p
 - #18: Adding Up Times
 - #20: Speech Recognition
 - #22: Follow Along Link Highlighter
-- #25: Event Capture, Propagation, Bubbling and Once
 - #28: Video Speed Controller
 
 </details>
