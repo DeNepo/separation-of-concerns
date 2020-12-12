@@ -5,19 +5,23 @@
       debugger;
     </script>
     <script type="module">
-      'use strict';
+      "use strict";
 
-      // import the values from script.js to pass the assertions
+      // import the values from script.js to pass the
 
-      const test3 = months[3] === _;
-      const test4 = months[5] === 'Sep';
-      const test5 = MODULES_BECAME_STANDARD_YEAR === _;
+      import { months, MODULES_BECAME_STANDARD_YEAR } from "./script.js";
 
-      console.assert(test1, 'Test 1');
-      console.assert(test2, 'Test 2');
-      console.assert(test3, 'Test 3');
-      console.assert(test4, 'Test 4');
-      console.assert(test5, 'Test 5');
+      const test1 = months[2] === "Mar";
+      const test2 = months[3] !== "Mar";
+      const test3 = months[3] === "Apr";
+      const test4 = months[5] === "Sep";
+      const test5 = MODULES_BECAME_STANDARD_YEAR === 1472;
+
+      console.assert(test1, "Test 1");
+      console.assert(test2, "Test 2");
+      console.assert(test3, "Test 3");
+      console.assert(test4, "Test 4");
+      console.assert(test5, "Test 5");
     </script>
   </head>
 

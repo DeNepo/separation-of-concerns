@@ -1,6 +1,6 @@
 'use strict';
 
-export class User {
+export default class User {
   constructor(name) {
     this.name = name;
   }

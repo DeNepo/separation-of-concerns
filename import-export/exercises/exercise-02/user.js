@@ -1,3 +1,3 @@
 'use strict';
 
-export let user = _;
+export let user = 'fendy';

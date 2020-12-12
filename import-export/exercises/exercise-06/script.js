@@ -1,5 +1,5 @@
 'use strict';
 
-const sayHi = user => `Hello, ${user}!`;
+export const sayHi = user => `Hello, ${user}!`;
 
-const sayBye = user => `Bye, ${user}!`;
+export const sayBye = user => `Bye, ${user}!`;

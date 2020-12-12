@@ -1,3 +1,3 @@
 'use strict';
-
-export default 'John';
+let user;
+export default user = 'John';

@@ -2,7 +2,7 @@
 
 import { logIn, logOut, User } from './auth/index.js';
 
-const newUser = _;
+const newUser = new User('John');
 const test1 = 'John is logged in.' === logIn(newUser);
 const test2 = 'John is logged out.' === logOut(newUser);
 

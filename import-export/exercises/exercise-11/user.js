@@ -2,6 +2,6 @@
 
 // export this function for use in main.js
 
-_ _ name => {
+export const greetUser = name => {
   return `hello ${name}`;
 };

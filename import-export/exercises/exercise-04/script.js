@@ -2,6 +2,7 @@
 
 // export these items to use them in index.html
 
-let months = ['Jan', 'Feb', 'Mar', 'Apr', 'Aug', _, 'Oct', 'Nov', 'Dec'];
+//export let months = ['Jan', 'Feb', 'Mar', 'Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+export let months = ['Jan', 'Feb', 'Mar', 'Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-const MODULES_BECAME_STANDARD_YEAR = 1472;
+export const MODULES_BECAME_STANDARD_YEAR = 1472;

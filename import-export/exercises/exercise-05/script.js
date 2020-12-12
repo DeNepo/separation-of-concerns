@@ -1,5 +1,8 @@
 'use strict';
 
-export default (user) => `Hello, ${user}!`;
+export const sayHi = (user) => `Hello, ${user}!`;
 
-export default (user) => `Bye, ${user}!`;
+export const sayBye = (user) => `Bye, ${user}!`;
+
+//export (user) => `Hello, ${user}!`;
+//export (user) => `Bye, ${user}!`;
