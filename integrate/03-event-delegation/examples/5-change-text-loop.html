@@ -49,10 +49,16 @@
 
         const target = event.target;
         target.innerHTML = newInnerHTML;
+
+        const currentTarget = event.currentTarget;
+        const message = `- you clicked: ${target.nodeName}\n- the event is handled by: ${currentTarget.nodeName}`;
+        alert(message);
       };
     </script>
 
     <script id="listeners">
+      debugger;
+
       // attach the event listener to each and every <td>
       const tableBody = document.getElementById('main-list');
       const liEls = tableBody.getElementsByTagName('li');
