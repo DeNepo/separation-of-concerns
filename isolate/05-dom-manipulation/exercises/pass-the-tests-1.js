@@ -4,7 +4,7 @@ const divEl = document.createElement('ul');
 divEl.innerHTML = `
   <p></p>
   <section></section>
-  <h1><h1>
+  <h1></h1>
 `;
 console.log(divEl.nodeName + ' (before)', divEl.cloneNode(true));
 
