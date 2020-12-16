@@ -368,7 +368,11 @@ You don't need to develop as a group this week, find what works for you. Maybe p
 
 ### After Class
 
-Like last week, but as a full-group project. Here are some suggestions:
+This week you will refactor one JS 30 project as a team using the [javascript-30-starter](https://github.com/hackyourfuturebelgium/javascript-30-starter).   You will need to take time together to study the code before writing a development strategy and setting up your group repository with issues and labels.  
+
+Be careful with time management!  Writing each file will probably not take too long, but then you will still need to review and test each other's code before mearging each file.  This can take some time to coordinate and finish, you should aim to be ready for code reviews by Wednesday.
+
+Below is a selection of JS 30 projects that are best for larger group collaboration. Pick the one that looks most interesting to your team and go for it!
 
 - #11; Custom Video Player
 - #15: localStorage
