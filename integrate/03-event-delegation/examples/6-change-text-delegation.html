@@ -53,10 +53,16 @@
         }
 
         target.innerHTML = newInnerHTML;
+
+        const currentTarget = event.currentTarget;
+        const message = `- you clicked: ${target.nodeName}\n- the event is handled by: ${currentTarget.nodeName}`;
+        alert(message);
       };
     </script>
 
     <script id="listeners">
+      debugger;
+
       // attach the event listener to the table body
       //  delegate all <td> events to the table body
       //  let event.target make sure the correct element is updated
