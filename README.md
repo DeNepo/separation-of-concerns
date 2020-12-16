@@ -426,8 +426,13 @@ Like last week, but as a full-group project. Here are some suggestions:
   - [Isolate: event listeners and handlers pt. 1](https://vimeo.com/488077846)
   - [Integrate: event listeners and handlers](https://vimeo.com/488078064)
   - [`import`/`export` and the JS 30](https://vimeo.com/488078314)
-
-### Week
+- Week 2
+  1. [the event parameter, Koen](https://www.youtube.com/watch?v=iRaYKngUaS0&feature=youtu.be)
+  2. [Thibault group - exercises](https://www.youtube.com/watch?v=1Wo9q0CNd-U&feature=youtu.be)
+  3. [event delegation, with Koen](https://www.youtube.com/watch?v=J_-aqj7yLEU&feature=youtu.be)
+  4. [full-class JS 30 refactor Pt. 1](https://www.youtube.com/watch?v=O1emyj8zhHo&feature=youtu.be)
+  5. [Pt. 2](https://www.youtube.com/watch?v=auymy232kEU&feature=youtu.be)
+  6. [Pt. 3](https://www.youtube.com/watch?v=LLki_rbxNf0&feature=youtu.be)
 
 [TOP](#separation-of-concerns)
 
