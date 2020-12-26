@@ -21,7 +21,7 @@ const loginHandler = () => {
 };
 
 // add the event listener to the button so a user can login
-_;
+document.addEventListener('click', loginHandler);
 
 
 // "click" the button once

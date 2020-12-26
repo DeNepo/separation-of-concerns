@@ -1,7 +1,8 @@
 'use strict';
 
-
-
+const element = document.createElement('p');
+element.innerHTML = 'lorem ipsum dolor';
+element.className = 'fancy-text';
 
 // the assertions are correct!  write code above to pass them
 console.assert(element.nodeName === 'P',
