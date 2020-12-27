@@ -9,9 +9,13 @@ divEl.innerHTML = `
 console.log(divEl.nodeName, divEl.cloneNode(true));
 
 // --- write some code ---
+//https://www.w3schools.com/jsref/met_element_setattribute.asp
 
+const divHref = divEl.children[0];
+divHref.setAttribute('href', '#top');
 
-
+const divText = divEl.children[0].children[0];
+divText.innerHTML = 'to the top';
 
 // --- --- --- --- --- ---
 

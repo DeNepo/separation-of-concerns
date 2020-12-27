@@ -19,9 +19,12 @@ console.log(divEl.nodeName, divEl.cloneNode(true));
 
 // --- write some code ---
 //  you will need to access and update each <td> element
-
-
-
+const arr = ['a', 'b', 'c', 'd'];
+for (const child of divEl.children[0].children[0].children){
+  for (const i of child.children){
+      i.innerHTML = arr.shift();
+  }
+}
 
 // --- --- --- --- --- ---
 
