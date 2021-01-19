@@ -368,7 +368,11 @@ You don't need to develop as a group this week, find what works for you. Maybe p
 
 ### After Class
 
-Like last week, but as a full-group project using the [javascript-30-starter repository](https://github.com/hackyourfuturebelgium/javascript-30-starter). Here are some suggestions:
+This week you will refactor one JS 30 project as a team using the [javascript-30-starter](https://github.com/hackyourfuturebelgium/javascript-30-starter). You will need to take time together to study the code before writing a development strategy and setting up your group repository with issues and labels.
+
+Be careful with time management! Writing each file will probably not take too long, but then you will still need to review and test each other's code before mearging each file. This can take some time to coordinate and finish, you should aim to be ready for code reviews by Wednesday.
+
+Below is a selection of JS 30 projects that are best for larger group collaboration. Pick the one that looks most interesting to your team and go for it!
 
 - #11; Custom Video Player
 - #15: localStorage
@@ -426,8 +430,13 @@ Like last week, but as a full-group project using the [javascript-30-starter rep
   - [Isolate: event listeners and handlers pt. 1](https://vimeo.com/488077846)
   - [Integrate: event listeners and handlers](https://vimeo.com/488078064)
   - [`import`/`export` and the JS 30](https://vimeo.com/488078314)
-
-### Week
+- Week 2
+  1. [the event parameter, Koen](https://www.youtube.com/watch?v=iRaYKngUaS0&feature=youtu.be)
+  2. [Thibault group - exercises](https://www.youtube.com/watch?v=1Wo9q0CNd-U&feature=youtu.be)
+  3. [event delegation, with Koen](https://www.youtube.com/watch?v=J_-aqj7yLEU&feature=youtu.be)
+  4. [full-class JS 30 refactor Pt. 1](https://www.youtube.com/watch?v=O1emyj8zhHo&feature=youtu.be)
+  5. [Pt. 2](https://www.youtube.com/watch?v=auymy232kEU&feature=youtu.be)
+  6. [Pt. 3](https://www.youtube.com/watch?v=LLki_rbxNf0&feature=youtu.be)
 
 [TOP](#separation-of-concerns)
 
