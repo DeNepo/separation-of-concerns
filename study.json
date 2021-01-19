@@ -1,5 +1,6 @@
 {
   "study": {
     "save": true
-  }
+  },
+  "--port": 4007
 }

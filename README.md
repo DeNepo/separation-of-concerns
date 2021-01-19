@@ -307,7 +307,7 @@ There's an outstanding series of tutorials called [The JavaScript 30](https://ja
 
 All of his finished code is in a single file, the main objective of this module is that you learn how to structure your projects across multiple files according to the **separation of concerns**. After completing his tutorials you will need to take his finished code as a starting point and refactor it into separate folders and files. _Hint: study [/stepped](./stepped?hyf), [/refactor-and-test](./refactor-and-test?hyf), [/import-export](./import-export?hyf) and [/separated](./separated?hyf) to prepare._
 
-To keep track of your progress through the JS 30 and to store your refactored proejcts there's [HackYourFutureBelgium/javascript-30](https://github.com/HackYourFutureBelgium/JavaScript-30). In this repo you will find more detailed instructions on how to work your way through these projects, as well as a folder structure for your refactors and a checklist to keep track of your progress.
+To keep track of your progress through the JS 30 and to store your refactored projects there's [HackYourFutureBelgium/javascript-30](https://github.com/HackYourFutureBelgium/JavaScript-30). In this repo you will find more detailed instructions on how to work your way through these projects, as well as a folder structure for your refactors and a checklist to keep track of your progress.
 
 You don't need to develop as a group this week, find what works for you. Maybe pair programming, individual study or collaborating with 2-3 people is best for you. Work your way through as many projects as you can. Here are some suggestions for this week:
 
@@ -368,7 +368,7 @@ You don't need to develop as a group this week, find what works for you. Maybe p
 
 ### After Class
 
-Like last week, but as a full-group project. Here are some suggestions:
+Like last week, but as a full-group project using the [javascript-30-starter repository](https://github.com/hackyourfuturebelgium/javascript-30-starter). Here are some suggestions:
 
 - #11; Custom Video Player
 - #15: localStorage
