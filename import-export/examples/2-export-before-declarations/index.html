@@ -1,23 +1,8 @@
 <html>
   <head>
     <title id="export before declarations"></title>
-    <script>
-      debugger;
-    </script>
-    <script type="module">
-      'use strict';
 
-      import { months, greet, MODULES_BECAME_STANDARD_YEAR } from './script.js';
-
-      const greetedPig = greet('pig');
-
-      // this variable was declared with const in the other file
-      //  attempting to change it's value here will throw an error
-      MODULES_BECAME_STANDARD_YEAR = 2063;
-
-      // months was declared with let, but becomes a constant when it's imported
-      months = 'hi!';
-    </script>
+    <script type="module" src="./index.js"></script>
   </head>
 
   <body></body>

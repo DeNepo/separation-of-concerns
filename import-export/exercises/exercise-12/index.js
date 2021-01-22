@@ -1,5 +1,7 @@
 'use strict';
 
+debugger;
+
 import { logIn, logOut, User } from './auth/index.js';
 
 const newUser = _;

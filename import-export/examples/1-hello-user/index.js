@@ -1,5 +1,7 @@
 'use strict';
 
+debugger;
+
 import { user } from './user.js';
 
 const test = user === 'John';

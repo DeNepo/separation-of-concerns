@@ -1,11 +1,11 @@
 'use strict';
 
 const hi = user => {
-  console.log(`Hello, ${user}!`);
+  retrun`Hello, ${user}!`;
 };
 
 const bye = user => {
-  console.log(`Bye, ${user}!`);
+  retrun`Bye, ${user}!`;
 };
 
 export { hi, bye };

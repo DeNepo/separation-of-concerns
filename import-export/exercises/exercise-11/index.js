@@ -1,6 +1,8 @@
 'use strict';
 
-import greetUser from './greet.js'; // not { greetUser }, just greetUser
+debugger;
+
+// import the function from the other file to pass the assertions
 
 const helloJohn = greetUser('John');
 const test1 = helloJohn === 'hello John';

@@ -1,6 +1,8 @@
 'use strict';
 
-import { hi as sayHi, bye as sayBye } from './greetings.js';
+debugger;
+
+import { sayHi, sayBye } from './script.js';
 
 const test1 = 'Hello, robin!' === sayHi('robin');
 const test2 = 'Bye, robin!' === sayBye('robin');
