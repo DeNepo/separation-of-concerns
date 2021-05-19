@@ -42,15 +42,12 @@
       <button id="log-out">log out</button>
     </main>
 
-    <script id="data">
-      'use strict';
+    <script id="data" type="module">
       let loggedIn = false;
       let currentUser = undefined;
     </script>
 
-    <script id="handlers">
-      'use strict';
-
+    <script id="handlers" type="module">
       const logInHandler = () => {
         debugger;
 
@@ -129,7 +126,7 @@
       };
     </script>
 
-    <script id="listeners">
+    <script id="listeners" type="module">
       document.getElementById('log-in').addEventListener('click', logInHandler);
 
       document

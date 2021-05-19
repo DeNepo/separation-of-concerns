@@ -26,29 +26,27 @@
     </main>
 
     <script id="data">
-      'use strict';
-
-      let currentNumber = 0;
-      let interval = 1;
+      const data = {
+        current: 0,
+        interval: 1,
+      };
     </script>
 
     <script id="handlers">
-      'use strict';
-
       const upHandler = () => {
         debugger;
-        currentNumber = currentNumber + interval;
+        data.current = data.current + data.interval;
 
         const output = document.getElementById('output');
-        output.innerHTML = currentNumber;
+        output.innerHTML = data.current;
       };
 
       const downHandler = () => {
         debugger;
-        currentNumber = currentNumber - interval;
+        data.current = data.current - data.interval;
 
         const output = document.getElementById('output');
-        output.innerHTML = currentNumber;
+        output.innerHTML = data.current;
       };
 
       const setIntervalHandler = () => {
@@ -57,7 +55,7 @@
         const inputEl = document.getElementById('set-interval');
         const newIntervalString = inputEl.value;
         const newInterval = Number(newIntervalString);
-        interval = newInterval;
+        data.interval = newInterval;
       };
     </script>
 

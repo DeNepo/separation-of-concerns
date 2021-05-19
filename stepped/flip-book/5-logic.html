@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <!-- open your console! -->
     <title>Flip Book</title>
+
     <style>
       .container {
         display: flex;
@@ -42,6 +43,7 @@
       console.assert(reverseAndUpper('./\.') === '.\/.', 'test 2');
       console.assert(reverseAndUpper('Fd-Df') === 'FD-DF', 'test 3');
     </script>
+
     <script id="handler">
       const handler = event => {
         const input = event.target.value;
@@ -49,6 +51,7 @@
         document.getElementById('output').innerHTML = reversedUppercase;
       };
     </script>
+
     <script id="listener">
       document.getElementById('input').addEventListener('keyup', handler);
     </script>

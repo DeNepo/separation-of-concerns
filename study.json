@@ -1,6 +1,9 @@
 {
+  "--defaults": {
+    ".js": "highlight"
+  },
+  "--port": 4004,
   "study": {
     "save": true
-  },
-  "--port": 4007
+  }
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>reverse or devowel: ES5, expressions</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <h3>ES5: function expressions</h3>
+    <hr />
+    <div id="root" class="centered">
+      <form>
+        <input name="text" placeholder="enter some text" />
+
+        <br />
+
+        <input
+          type="radio"
+          name="action"
+          value="reverse"
+          id="reverse"
+          checked
+        />
+        <label for="reverse">reverse</label>
+        <input type="radio" name="action" value="devowel" id="devowel" />
+        <label for="devowel">devowel</label>
+
+        <br />
+
+        <input type="button" id="r-or-d" value="do it:" />
+        <input name="output" readonly />
+      </form>
+    </div>
+
+    <script src="./src/logic.js"></script>
+    <script src="./src/handler.js"></script>
+    <script src="./src/listener.js"></script>
+    <!-- why is there no init.js in this version? -->
+  </body>
+</html>

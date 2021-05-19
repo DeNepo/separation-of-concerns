@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>reverse or devowel: ES6</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <h3>ES6</h3>
+    <hr />
+    <div id="root" class="centered">
+      <form>
+        <input name="text" placeholder="enter some text" />
+
+        <br />
+
+        <input
+          type="radio"
+          name="action"
+          value="reverse"
+          id="reverse"
+          checked
+        />
+        <label for="reverse">reverse</label>
+        <input type="radio" name="action" value="devowel" id="devowel" />
+        <label for="devowel">devowel</label>
+
+        <br />
+
+        <input type="button" id="r-or-d" value="do it:" />
+        <input name="output" readonly />
+      </form>
+    </div>
+
+    <script type="module" src="./src/init.js"></script>
+  </body>
+</html>

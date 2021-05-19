@@ -1,4 +1,7 @@
 {
+  "--defaults": {
+    ".js": "study"
+  },
   "study": {
     "eval": true
   }
