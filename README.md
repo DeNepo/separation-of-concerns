@@ -323,6 +323,7 @@ Helpful links, examples and exercises.
   - handlers
   - procedures
   - logic
+- `word-list` code-review checklist
 
 #### After Break
 
