@@ -247,6 +247,8 @@ Helpful links, examples and exercises.
 - [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
 - [javascript.info/events](https://javascript.info/events)
 - [javascript.inf/event-details](https://javascript.info/event-details)
+- [inspecting event listeners](https://www.stanleyulili.com/javascript/how-to-find-event-listeners-on-a-dom-node-when-debugging/)
+- [event breakpoints](https://www.youtube.com/watch?v=Q6QYrG-IYds)
 - [MDN Building Blocks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 - [Event Delegation (mosh)](https://programmingwithmosh.com/javascript/javascript-event-bubbling-and-event-delegation/)
 - [Bubble & Capture (dev.to)](https://dev.to/shimphillip/handing-javascript-events-efficiently-with-bubble-and-capture-4ha5)

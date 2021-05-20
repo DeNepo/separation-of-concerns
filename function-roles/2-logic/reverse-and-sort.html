@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>event handler example</title>
+  </head>
+
+  <body>
+    <div id="root">
+      <input id="user-text" />
+      <ul>
+        <li>reversed: <code id="reversed"></code></li>
+        <li>sorted: <code id="sorted"></code></li>
+      </ul>
+    </div>
+
+    <script id="logic">
+      debugger; // once when the logic is declared
+
+      /**
+       * reverses a string
+       * @param {string} toReverse - the text to reverse
+       * @returns {string} the original text, reversed
+       */
+      const reverse = toReverse => {
+        return toReverse
+          .split('')
+          .reverse()
+          .join('');
+      };
+      console.assert(reverse('asdf') === 'fdsa', 'reverse: test 1');
+      console.assert(reverse('hello') === 'olleh', 'reverse: test 2');
+
+      /**
+       * sorts the characters in a string by their unicode number
+       * @param {string} toSort - the string of characters to sort
+       * @returns {string} the same characters, but in unicode order
+       */
+      const sort = toSort => {
+        return toSort
+          .split('')
+          .sort()
+          .join('');
+      };
+      console.assert(sort('bca') === 'abc', 'sort: test 1');
+      console.assert(sort('4231') === '1234', 'sort: test 2');
+    </script>
+
+    <script id="handlers">
+      debugger; // once when the handlers are declared
+
+      const handleInput = event => {
+        debugger; // each time a user lifts a key in the input
+        console.log('handling input');
+
+        // read user input from the event
+        const text = event.target.value;
+
+        // process the input
+        const reversedText = reverse(text);
+        const sortedText = sort(text);
+
+        // update the UI
+        document.getElementById('reversed').innerText = reversedText;
+        document.getElementById('sorted').innerHTML = sortedText;
+      };
+    </script>
+
+    <script id="listeners">
+      debugger; // once when the listeners are attached
+
+      document
+        .getElementById('user-text')
+        .addEventListener('keyup', handleInput);
+    </script>
+  </body>
+</html>

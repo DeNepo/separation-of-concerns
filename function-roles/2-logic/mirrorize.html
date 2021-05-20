@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>mirrorize</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .text-right {
+        text-align: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root" class="centered">
+      <input id="before" class="text-right" />
+      <input id="after" readonly />
+    </div>
+
+    <script id="logic">
+      debugger; // once when the logic is declared
+
+      /**
+       * reverses a string
+       * @param {string} text - a string to be reversed
+       * @returns {string} the initial text, backwards
+       */
+      const reverse = (text = '') => {
+        let reversed = '';
+        for (const character of text) {
+          reversed = character + reversed;
+        }
+        return reversed;
+      };
+
+      console.assert(reverse('') === '', 'Test 1: ""');
+      console.assert(reverse('asdf') === 'fdsa', 'Test 2: "asdf"');
+      console.assert(reverse('  ') === '  ', 'Test 3: "   "');
+    </script>
+
+    <script id="handlers">
+      debugger; // once when the handlers are declared
+
+      /**
+       * reads the user's input and reverses it
+       * then renders the reversed text into the output element
+       *
+       * uses: reverse
+       */
+      const mirrorize = () => {
+        debugger; // each time a user types in the 'before' input
+        console.log('handling the keyup event');
+
+        // read the user's data from the DOM
+        const before = document.getElementById('before');
+        const leftSide = before.value;
+
+        // use the logic to process user data
+        const rightSide = reverse(leftSide);
+
+        // update the UI for users
+        const after = document.getElementById('after');
+        after.value = rightSide;
+      };
+    </script>
+
+    <script id="listeners">
+      debugger; // once when the listeners are attached
+
+      document.getElementById('before').addEventListener('keyup', mirrorize);
+    </script>
+  </body>
+</html>

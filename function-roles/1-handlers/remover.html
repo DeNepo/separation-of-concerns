@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>remover</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root" class="centered">
+      <form id="removable">
+        <input name="text" />
+        <br />
+        <input name="remove" />
+        <br />
+        <input name="result" readonly />
+      </form>
+    </div>
+
+    <script id="data">
+      debugger; // once when the program data is loaded
+
+      const data = {
+        text: 'potato',
+        toRemove: '',
+      };
+    </script>
+
+    <script id="handlers">
+      debugger; // once when the handler is declared
+
+      /**
+       * reads the user input from the form
+       * computes the filtered text
+       * and updates the UI for the user
+       */
+      const handleTyping = event => {
+        debugger; // each time a user types
+        console.log('removifying');
+
+        // read the form to a local variable for debugging
+        //  no worries if you don't understand forms and events yet
+        const form = event.target.form;
+
+        // update the program data with user input
+        data.text = form.text.value;
+        data.toRemove = form.remove.value;
+
+        // compute a new value using program data
+        const removified = data.text.replaceAll(data.toRemove, '');
+
+        // update the UI
+        form.result.value = removified;
+      };
+    </script>
+
+    <script id="listeners">
+      debugger; // once when the listeners are attached
+
+      document
+        .getElementById('removable')
+        .addEventListener('input', handleTyping);
+    </script>
+
+    <script id="init">
+      debugger; // once when the UI is initialized
+
+      const form = document.getElementById('removable');
+      form.text.value = data.text;
+      form.result.value = data.text;
+    </script>
+  </body>
+</html>

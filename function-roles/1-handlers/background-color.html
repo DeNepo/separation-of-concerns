@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>background color</title>
+    <meta charset="utf-8" />
+
+    <style>
+      .main {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .color-selection {
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="root" class="main">
+      <form id="color-form" class="color-selection">
+        <input type="color" name="selection" />
+      </form>
+    </section>
+
+    <script id="handlers">
+      debugger; // once when the handlers are declared
+
+      /**
+       * reads the user's color selection from the form
+       * updates the main user interface's background color
+       * @param {ChangeEvent} event - the triggered form-change event
+       */
+      const setColorHandler = event => {
+        debugger; // each time a user changes the color
+        console.log('setting the color');
+
+        // read user input
+        //  you don't need to understand events and forms just yet
+        const form = event.target.form;
+        const newColor = form.selection.value;
+
+        // update user interface
+        //  the type='color' input will always give a valid color!
+        const background = document.getElementById('root');
+        background.style.backgroundColor = newColor;
+      };
+    </script>
+
+    <script>
+      debugger; // once when the listener is attached
+
+      document
+        .getElementById('color-form')
+        .addEventListener('change', setColorHandler);
+    </script>
+  </body>
+</html>

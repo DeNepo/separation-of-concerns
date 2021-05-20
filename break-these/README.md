@@ -26,3 +26,7 @@ Try asking and answering these questions for each of your explorations. You can 
    - be sure to write this before running the code or it's not a prediction ;)
 4. **The Behavior**: What actually changed in the program? How did your experiment change the program's behavior? be specific!
 5. **The Explanation**: Why did your changes have the effect that they did? Was your prediction correct? Why or why not?
+
+---
+
+Looking for an extra challenge? Try refactoring these projects into separated files using ES6 modules.
