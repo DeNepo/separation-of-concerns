@@ -18,11 +18,11 @@
   <body>
     <div id="root" class="centered">
       <form id="removable">
-        <input name="text" />
+        <input name="text" placeholder="input" />
         <br />
-        <input name="remove" />
+        <input name="remove" placeholder="what to remove" />
         <br />
-        <input name="result" readonly />
+        <input name="result" placeholder="output" readonly />
       </form>
     </div>
 
@@ -30,7 +30,7 @@
       debugger; // once when the program data is loaded
 
       const data = {
-        text: 'potato',
+        text: '',
         toRemove: '',
       };
     </script>
@@ -69,14 +69,6 @@
       document
         .getElementById('removable')
         .addEventListener('input', handleTyping);
-    </script>
-
-    <script id="init">
-      debugger; // once when the UI is initialized
-
-      const form = document.getElementById('removable');
-      form.text.value = data.text;
-      form.result.value = data.text;
     </script>
   </body>
 </html>
