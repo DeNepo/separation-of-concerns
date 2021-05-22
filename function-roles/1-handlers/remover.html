@@ -34,7 +34,6 @@
         toRemove: '',
       };
     </script>
-    
 
     <script id="handlers">
       debugger; // once when the handler is declared
@@ -53,14 +52,14 @@
         const form = event.target.form;
 
         // update the program data with user input
-        data.text = form.text.value; // line 21 new user imput 
-        data.toRemove = form.remove.value; // line 23
+        data.text = form.text.value; //  getter implicitly by the user iteraction
+        data.toRemove = form.remove.value; // getter implicitly by the user iteraction
 
         // compute a new value using program data
         const removified = data.text.replaceAll(data.toRemove, '');
 
         // update the UI
-        form.result.value = removified;
+        form.result.value = removified; //setter ecplicitly
       };
     </script>
 
