@@ -74,7 +74,6 @@ How to study the code in this repo.
   - The examples and exercises will still be there to study later.
   - It's better to fail tests slowly and learn from your mistakes than to pass tests quickly and not understand why.
 - Don't skip the examples! Understanding and experimenting with working code is a very effective way to learn programming.
-- Write lots of good comments, learn more about this in [./studying-javascript](./studying-javascript)
 - Practice [Pair Programming](https://study.hackyourfuture.be/collaborating/pair-programming): two people, one computer.
 - Take a look through the [Learning From Code](https://study.hackyourfuture.be/learning/learning-from-code) guide for more study tips
 
