@@ -18,11 +18,11 @@
   <body>
     <div id="root" class="centered">
       <form id="removable">
-        <input name="text" placeholder="input" />
+        <input name="text" placeholder="user input" />
         <br />
-        <input name="remove" placeholder="what to remove" />
+        <input name="remove" placeholder="element to remove"/>
         <br />
-        <input name="result" placeholder="output" readonly />
+        <input name="result" readonly placeholder="result"/>
       </form>
     </div>
 
@@ -52,8 +52,8 @@
         const form = event.target.form;
 
         // update the program data with user input
-        data.text = form.text.value;
-        data.toRemove = form.remove.value;
+        data.text = form.text.value; // line 21 new user imput 
+        data.toRemove = form.remove.value; // line 23
 
         // compute a new value using program data
         const removified = data.text.replaceAll(data.toRemove, '');

@@ -1,8 +1,8 @@
 'use strict';
 
-const element = document.createElement('buton');
-element.innerHtml = 'go home';
-element.class = 'large-btn';
+const element = document.createElement('butTon');
+element.innerHTML = 'go home';
+element.className = 'large-btn';
 
 
 // the assertions are correct!  change the code above to pass them
