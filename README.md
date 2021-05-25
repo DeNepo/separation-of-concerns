@@ -341,7 +341,8 @@ And the starter page is pretty ugly. Feel free to improve the HTML and CSS as mu
 ```markdown
 - [ ] [repo](https://github.com/_/_) (with a complete README)
 - [ ] [live demo](https://_.github.io/_)
-- [/planning](https://github.com/_/_/tree/master/planning)
+- [ ] [Docs](https://github.com/_/_/tree/_/DOCS.md)
+- [/planning](https://github.com/_/_/tree/_/planning)
   - [ ] constraints
   - [ ] backlog
   - [ ] wireframe
@@ -352,6 +353,7 @@ And the starter page is pretty ugly. Feel free to improve the HTML and CSS as mu
 
 Suggested code to study:
 
+- [/function-roles](./function-roles)
 - [/isolate](./isolate): all of it
 - [/integrate](./integrate): 1 & 2
 - [/separated](./separated): it's just 3 examples
@@ -373,12 +375,55 @@ Somewhere to start with the DOM & Events
 
 ## Week 2
 
-- practice refactoring single .js files to full project repos
+practice refactoring single .js files to separate files
 
 <details>
 <summary>expand/collapse</summary>
 
-> coming soon
+### Before Class
+
+- Read through the [javascript-30](https://github.com/HackYourFutureBelgium/javascript-30) project guide
+- Take a look at the [javascript-30-starter repo](https://github.com/HackYourFutureBelgium/javascript-30-starter) (hint: it's basically the same as word-list)
+
+### During Class
+
+#### Before Break
+
+Create a new repository using the [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) and begin refactoring one of the [JavaScript30](https://github.com/wesbos/JavaScript30). suggestions:
+
+- [mouse-move-shadow.html](./js-30-in-class/mouse-move-shadow.html)
+
+#### After Break
+
+- Continue refactoring the project you started before break, or begin a new one. Maybe [click-and-drag.html](./js-30-in-class/click-and-drag.html).
+
+### After Class
+
+> nothing to submit, this is a practice week.
+
+The main objective of this module is that you learn how to split your code across multiple files according to the role it plays in your program. After completing a JS 30 tutorial you will take the finished code as a starting point and refactor it into separate folders and files in the [javascript-30-starter](https://github.com/HackYourFutureBelgium/JavaScript-30-starter).
+
+To keep track of your progress through the JS 30 and to store your refactored projects there's [HackYourFutureBelgium/javascript-30](https://github.com/HackYourFutureBelgium/JavaScript-30). In this repo you will find more detailed instructions on how to work your way through these projects.
+
+You don't need to develop as a group this week, find what works for you. Maybe pair programming, individual study or collaborating with 2-3 people is best for you. Work your way through as many projects as you can. Here are some suggestions for this week:
+
+- #1: JavaScript Drum Kit
+- #3: CSS Variables
+- #5: Flex Panel Gallery
+- #8: Fun with HTML5 Canvas
+- #10: Hold Shift and Check Checkboxes
+- #13: Slide in on Scroll
+- #16: Mouse Move Shadow
+- #20: Speech Recognition
+- #22: Follow Along Link Highlighter
+- #28: Video Speed Controller
+
+Suggested code to study:
+
+- [/stepped](./stepped)
+- [/separated](./separated)
+- [/break-these](./break-these)
+- Review `hoisting` from Behavior, Strategy, Implementation
 
 </details>
 <br>
@@ -389,12 +434,63 @@ Somewhere to start with the DOM & Events
 
 ## Week 3
 
-- a group project!
+- event delegation
+- a group project
 
 <details>
 <summary>expand/collapse</summary>
 
-> coming soon
+### Before Class
+
+- Study (pick your favorite links)
+  - [js.info: Bubbling & Capturing](https://javascript.info/bubbling-and-capturing) (`event.target`)
+  - [js.info: Event Delegation](https://javascript.info/event-delegation)
+  - [Gordon: DOM Events](https://www.youtube.com/watch?v=QE1YQnhntgw)
+  - [Griffith: JS Event Listeners](https://www.youtube.com/watch?v=EaRrmOtPYTM)
+  - [Event Delegation (mosh)](https://programmingwithmosh.com/javascript/javascript-event-bubbling-and-event-delegation/)
+  - [Event Delegation (all things JS)](https://www.youtube.com/watch?v=6NMSCh3DJug)
+  - [Event Delegation (dcode)](https://www.youtube.com/watch?v=pKzf80F3O0U)
+- [Integrate](./integrate) (examples)
+  - Event Delegation
+
+### During Class
+
+#### Before Break
+
+- [Integrate](./integrate): event delegation
+
+#### After Break
+
+- Begin refactoring the [local-storage.html](./js-30-in-class/local-storage.html) project all together.
+
+### After Class
+
+This week you will refactor one JS 30 project as a team using the [javascript-30-starter](https://github.com/hackyourfuturebelgium/javascript-30-starter). You will need to take time together to study the code before writing a development strategy and setting up your group repository with issues and labels.
+
+Be careful with time management! Writing each file will probably not take too long, but then you will still need to review and test each other's code before mearging each file. This can take some time to coordinate and finish, you should aim to be ready for code reviews by Thursday.
+
+Below is a selection of JS 30 projects that are best for larger group collaboration. Pick the one that looks most interesting to your team and go for it:
+
+- #11; Custom Video Player
+- #15: localStorage
+- #23: Speech Synthesis
+- #26: Stripe Follow-Along Nav
+- #27: Click and Drag
+
+#### Checklist
+
+```markdown
+- [ ] [repo](https://github.com/_/_) (with a complete README)
+- [ ] [live demo](https://_.github.io/_)
+- [/planning](https://github.com/_/_/tree/master/planning)
+  - [ ] communication plan
+  - [ ] constraints
+  - [ ] backlog
+  - [ ] wireframe
+  - [ ] development strategy
+  - [ ] retrospective
+- [ ] [project board](https://github.com/_/_/projects/1)
+```
 
 </details>
 <br>
