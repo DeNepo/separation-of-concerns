@@ -15,10 +15,10 @@ const helloHandler = () => {
 };
 
 // call the handler when the button is clicked
-buttonEl.addEventListener('click', firstHandler);
+buttonEl.addEventListener('click', helloHandler);
 
 // or when the button is hovered
-buttonEl.addEventListener('hover', secondHandler);
+buttonEl.addEventListener('hover', helloHandler);
 
 // .onclick is still empty!
 console.log(buttonEl.nodeName, buttonEl);
