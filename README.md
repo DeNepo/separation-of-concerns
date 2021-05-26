@@ -537,6 +537,12 @@ Below is a selection of JS 30 projects that are best for larger group collaborat
   4. [full-class JS 30 refactor Pt. 1](https://www.youtube.com/watch?v=O1emyj8zhHo&feature=youtu.be)
   5. [Pt. 2](https://www.youtube.com/watch?v=auymy232kEU&feature=youtu.be)
   6. [Pt. 3](https://www.youtube.com/watch?v=LLki_rbxNf0&feature=youtu.be)
+  
+  ## Class-13-14
+  > [Koen](https://github.com/koenvd)
+- Week 1
+  - [Part 1](https://vimeo.com/555091793)
+  
 
 [TOP](#separation-of-concerns)
 
