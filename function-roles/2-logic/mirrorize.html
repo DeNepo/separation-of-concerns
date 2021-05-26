@@ -55,13 +55,12 @@
        *
        * uses: reverse
        */
-      const mirrorize = () => {
+      const mirrorize = event => {
         debugger; // each time a user types in the 'before' input
         console.log('handling the keyup event');
 
         // read the user's data from the DOM
-        const before = document.getElementById('before');
-        const leftSide = before.value;
+        const leftSide = event.target.value;
 
         // use the logic to process user data
         const rightSide = reverse(leftSide);
