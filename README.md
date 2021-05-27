@@ -542,6 +542,7 @@ Below is a selection of JS 30 projects that are best for larger group collaborat
   > [Koen](https://github.com/koenvd)
 - Week 1
   - [Part 1](https://vimeo.com/555091793)
+  - [Part 2](https://vimeo.com/555631615)
   
 
 [TOP](#separation-of-concerns)
