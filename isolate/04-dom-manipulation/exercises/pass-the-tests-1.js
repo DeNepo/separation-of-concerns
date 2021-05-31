@@ -14,13 +14,38 @@ console.log(divEl.nodeName + ' (before)', divEl.cloneNode(true));
 //  remove the <h1>
 //  append something to the end
 
+//  replace the <p>
+
+//const p = divEl.querySelector('p') // queryselector takes the first target/object
+//const replacement = document.createElement('nav');
+//p.parentNode.replaceChild(replacement, p);
+// p.replaceWith(replacement);
+
+//const replacement = document.createElement();
+const preplace = document.createElement('nav');
+const old = divEl.querySelector('p');
+//first is new second is old
+divEl.replaceChild(preplace, old);
+
+
+
+const newDiv = document.createElement('h2');
+const section = divEl.querySelector ('section');
+divEl.insertBefore (newDiv, section);
+
+const removeTe = divEl.querySelector('h1');
+divEl.removeChild(removeTe);
+
+const create = document.createElement ('p');
+//const appendSome = divEl.querySelector('p');
+divEl.appendChild(create);
 
 
 // --- --- --- --- --- ---
 
 console.log(divEl.nodeName + ' (after)', divEl.cloneNode(true));
 
-console.assert(divEl.childElementCount === 4,
+console.assert(divEl.childElementCount === 4, 
   'Test: .childElementCount');
 
 console.assert(divEl.children[0].nodeName === 'NAV',

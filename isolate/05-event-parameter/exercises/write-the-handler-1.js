@@ -8,7 +8,14 @@ console.log('initial button:', buttonEl.cloneNode(true));
 
 const reverseInnerHTMLHandler = (event) => {
   // write code to reverse the target element's innerHTML
+//const reverse = event.type
+//reverse.innerHTML = ('54321');
 
+//DIFFERENT ANSWER, NOT IDEA WHICH ONE IS GOOD!
+
+// buttonEl.innerHTML = buttonEl.innerHTML.split('').reverse().join('');
+//reverseInnerHTML.innerHTML = ('54321');
+console.log(reverseInnerHTML.nodeName, reverseInnerHTML.cloneNode(true));
 
 };
 

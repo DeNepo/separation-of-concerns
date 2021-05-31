@@ -20,6 +20,8 @@ const loginHandler = () => {
   alert(`welcome, ${username}`);
 };
 
+buttonEl.addEventListener('click', loginHandler);
+
 // add the event listener to the button so a user can login
 _;
 

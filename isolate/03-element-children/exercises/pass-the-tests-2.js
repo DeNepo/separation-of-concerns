@@ -10,7 +10,8 @@ console.log(divEl.nodeName, divEl.cloneNode(true));
 
 // --- write some code ---
 
-
+const changedTo = divEl.children[0].children[0];
+changedTo.innerHTML = 'to the top';
 
 
 // --- --- --- --- --- ---

@@ -1,6 +1,7 @@
 'use strict';
 
 
+const element = document.createElement('p');
 
 
 // the assertions are correct!  write code above to pass them
