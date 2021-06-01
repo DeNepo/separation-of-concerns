@@ -23,7 +23,7 @@
         the functions that will be called each time a user interacts with your page
       */
 
-      const eventHandler = event => {
+      const eventHandler = (event) => {
         debugger; // each time a user triggers an event
 
         const elementId = event.target.id;
@@ -41,20 +41,20 @@
 
       // you can attach one event listener to each DOM element
       document
-        .getElementById('hover-text')
-        .addEventListener('mouseover', eventHandler);
+        .getElementById("hover-text") // execute the handler (action) wtih specific characteris
+        .addEventListener("mouseover", eventHandler);
       document
-        .getElementById('click-button')
-        .addEventListener('click', eventHandler);
+        .getElementById("click-button") //
+        .addEventListener("click", eventHandler);
       document
-        .getElementById('text-input')
-        .addEventListener('keyup', eventHandler);
+        .getElementById("text-input")
+        .addEventListener("keyup", eventHandler);
 
       // or many event listeners to one DOM element
-      const hoverClickType = document.getElementById('hover-click-type');
-      hoverClickType.addEventListener('mouseover', eventHandler);
-      hoverClickType.addEventListener('click', eventHandler);
-      hoverClickType.addEventListener('keyup', eventHandler);
+      const hoverClickType = document.getElementById("hover-click-type");
+      hoverClickType.addEventListener("mouseover", eventHandler);
+      hoverClickType.addEventListener("click", eventHandler);
+      hoverClickType.addEventListener("keyup", eventHandler);
     </script>
   </body>
 </html>
