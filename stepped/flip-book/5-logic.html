@@ -31,7 +31,7 @@
     </section>
 
     <script id="logic">
-      // write a few asserts to understand/test your logic
+      // write a few tests for your logic
       const reverseAndUpper = str => {
         return str
           .toUpperCase()
@@ -46,6 +46,7 @@
 
     <script id="handler">
       const handler = event => {
+        debugger;
         const input = event.target.value;
         const reversedUppercase = reverseAndUpper(input);
         document.getElementById('output').innerHTML = reversedUppercase;

@@ -10,7 +10,7 @@
 - [Getting Started](#getting-started)
 - [Study Tips](#study-tips)
 - [Learning Objectives](#learning-objectives)
-- [About the Projects](#about-the-projects)
+- [About the Projects](#about-the)
 - [Suggested Study](#suggested-study)
 - Break-Down
   - [Week 1](#week-1)
@@ -283,7 +283,7 @@ Helpful links, examples and exercises.
 - [Study Guide](https://github.com/HackYourFutureBelgium/javascript-30)
 - [Group Project Starter Repo](https://github.com/HackYourFutureBelgium/javascript-30-starter)
 - Looking for more like this?
-  - [fun-javascript-projects.com](https://github.com/chrisdixon161/fun-javascript-projects.com) - stepped projects, :+1:
+  - [fun-javascript.com](https://github.com/chrisdixon161/fun-javascript.com) - stepped projects, :+1:
   - [bradtraversy/vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)
   - [aman-maharshi/vanilla-js](https://github.com/aman-maharshi/vanilla-js)
   - [MMTuts Calculator](https://www.youtube.com/watch?v=qQEYAOPWDzk) - youtube tutorial
@@ -389,13 +389,19 @@ practice refactoring single .js files to separate files
 
 #### Before Break
 
-Create a new repository using the [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) and begin refactoring one of the [JavaScript30](https://github.com/wesbos/JavaScript30). suggestions:
-
-- [mouse-move-shadow.html](./js-30-in-class/mouse-move-shadow.html)
+- Q/A review from last week
+- Explore the [./stepped](./stepped) examples
+- Create a new repository using the [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) and practice refactoring:
+  - either [mouse-move-shadow.html](./in-class/mouse-move-shadow.html) or [click-and-drag.html](./in-class/click-and-drag.html)
+  - hint 1: check your code in the browser after each small change, let the errors be your guide!
+  - hint 2: after each small change use `npm run document` and check `/docs/README.md`
 
 #### After Break
 
-- Continue refactoring the project you started before break, or begin a new one. Maybe [click-and-drag.html](./js-30-in-class/click-and-drag.html).
+- Create another new repo with the [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) and practice refactoring:
+  - either [local-tapas.html](./in-class/local-tapas.html) or [click-and-drag.html](./in-class/click-and-drag.html)
+  - hint 1: check your code in the browser after each small change, let the errors be your guide!
+  - hint 2: after each small change use `npm run document` and check `/docs/README.md`
 
 ### After Class
 
@@ -458,10 +464,20 @@ Suggested code to study:
 #### Before Break
 
 - [Integrate](./integrate): event delegation
+  - **All together**: examples
+  - **Small Groups**: exercises
 
 #### After Break
 
-- Begin refactoring the [local-storage.html](./js-30-in-class/local-storage.html) project all together.
+Reverse-engineer a website project:
+
+1. Open the [memory-game-demo.html](./in-class/memory-game-demo.html) project in your browser figure out of all the user interactions.
+2. Create a new repo using [javascript-30-starter](https://github.com/HackYourFutureBelgium/JavaScript-30-starter)
+   - hint: you may want to use the `initBoard` function from the demo.
+3. Implement one interaction at a time like in the [./stepped](./stepped) examples:
+   - HTML -> CSS -> Listener -> Handler -> Logic
+   - hint 1: check your code in the browser after each small change, let the errors be your guide!
+   - hint 2: after each small change use `npm run document` and check `/docs/README.md`
 
 ### After Class
 
@@ -531,19 +547,22 @@ Below is a selection of JS 30 projects that are best for larger group collaborat
   - [Integrate: event listeners and handlers](https://vimeo.com/488078064)
   - [`import`/`export` and the JS 30](https://vimeo.com/488078314)
 - Week 2
+
   1. [the event parameter, Koen](https://www.youtube.com/watch?v=iRaYKngUaS0&feature=youtu.be)
   2. [Thibault group - exercises](https://www.youtube.com/watch?v=1Wo9q0CNd-U&feature=youtu.be)
   3. [event delegation, with Koen](https://www.youtube.com/watch?v=J_-aqj7yLEU&feature=youtu.be)
   4. [full-class JS 30 refactor Pt. 1](https://www.youtube.com/watch?v=O1emyj8zhHo&feature=youtu.be)
   5. [Pt. 2](https://www.youtube.com/watch?v=auymy232kEU&feature=youtu.be)
   6. [Pt. 3](https://www.youtube.com/watch?v=LLki_rbxNf0&feature=youtu.be)
-  
+
   ## Class-13-14
+
   > [Koen](https://github.com/koenvd)
+
 - Week 1
+
   - [Part 1](https://vimeo.com/555091793)
   - [Part 2](https://vimeo.com/555631615)
-  
 
 [TOP](#separation-of-concerns)
 

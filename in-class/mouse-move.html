@@ -3,6 +3,8 @@
   code from Wes Bos:
   https://github.com/wesbos/JavaScript30/blob/master/16%20-%20Mouse%20Move%20Shadow/index-FINISHED.html
 
+  - `this.` has been refactored to `e.currentTarget.` so arrow functions can be used
+
 -->
 
 <!DOCTYPE html>
@@ -49,7 +51,7 @@
         const { offsetWidth: width, offsetHeight: height } = hero;
         let { offsetX: x, offsetY: y } = e;
 
-        if (this !== e.target) {
+        if (e.currentTarget !== e.target) {
           x = x + e.target.offsetLeft;
           y = y + e.target.offsetTop;
         }

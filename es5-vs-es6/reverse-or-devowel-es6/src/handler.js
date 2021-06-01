@@ -18,12 +18,9 @@ export const handleClick = event => {
   const input = form.text.value;
   const action = form.action.value;
 
-  let result;
-  if (action === 'reverse') {
-    result = reverseString(input);
-  } else {
-    result = removeVowels(input);
-  }
+  const result =
+    action === 'reverse' ? reverseString(input) : removeVowels(input);
+
   form.output.value = result;
 
   // log the interaction for developers

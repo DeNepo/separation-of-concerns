@@ -3,7 +3,9 @@
   code from Wes Bos:
   https://github.com/wesbos/JavaScript30/blob/master/15%20-%20LocalStorage/index-FINISHED.html
 
-  `this.` has been refactored to `e.currentTarget.` so arrow functions can be used
+  - `this.` has been refactored to `e.currentTarget.` so arrow functions can be used
+  - background image has been removed for simplicity in class
+  - localStorage has been replaced with a POJO for refactoring simplicity
 
 -->
 
@@ -11,11 +13,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>LocalStorage</title>
+    <title>Local Tapas</title>
     <style>
       html {
         box-sizing: border-box;
-        background: url('oh-la-la.jpeg') center no-repeat;
         background-size: cover;
         min-height: 100vh;
         display: flex;
@@ -147,7 +148,7 @@
     <script>
       const addItems = document.querySelector('.add-items');
       const itemsList = document.querySelector('.plates');
-      const items = JSON.parse(localStorage.getItem('items')) || [];
+      const items = [];
 
       function addItem(e) {
         e.preventDefault();
@@ -159,7 +160,6 @@
 
         items.push(item);
         populateList(items, itemsList);
-        localStorage.setItem('items', JSON.stringify(items));
         e.currentTarget.reset();
       }
 
@@ -183,7 +183,6 @@
         const el = e.target;
         const index = el.dataset.index;
         items[index].done = !items[index].done;
-        localStorage.setItem('items', JSON.stringify(items));
         populateList(items, itemsList);
       }
 

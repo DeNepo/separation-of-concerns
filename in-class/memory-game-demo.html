@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>memory game (demo)</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      td {
+        border: 1px solid black;
+        height: 5em;
+        width: 5em;
+      }
+
+      .hidden {
+        color: white;
+      }
+
+      .visible {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root" class="centered">
+      <button id="reset">new game</button>
+      <table id="tiles">
+        <tbody>
+          <tr>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+          </tr>
+          <tr>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+          </tr>
+          <tr>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+          </tr>
+          <tr>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+            <td data-selected="no" class="hidden"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      const initBoard = () => {
+        const tds = Array.from(
+          document.getElementById('tiles').getElementsByTagName('td')
+        );
+        // https://javascript.info/task/shuffle
+        const shuffledTds = [...tds.sort(() => Math.random() - 0.5)];
+
+        for (let filler = 0; filler < tds.length / 2; filler++) {
+          for (let i = 0; i < 2; i++) {
+            const td = shuffledTds.pop();
+            td.innerHTML = filler;
+            td.className = 'hidden';
+            td.dataset.selected = 'no';
+          }
+        }
+      };
+
+      const _0x2e4b = [
+        'addEventListener',
+        'mouseout',
+        'yes',
+        '732504mNeHNt',
+        'mouseover',
+        'className',
+        'dataset',
+        '8jgPKnh',
+        '52553dlYEGi',
+        '2DESQAz',
+        '179wGZyeZ',
+        'nodeName',
+        'getElementById',
+        'hidden',
+        'selected',
+        '2477SAnRCc',
+        '226208SQqJJM',
+        'click',
+        'target',
+        '15749tSsdmR',
+        '450720lDhkQD',
+        '505874IyTcai',
+        'tiles',
+      ];
+      const _0x2474f6 = _0x543f;
+      function _0x543f(_0x243c6b, _0x2052c7) {
+        _0x243c6b = _0x243c6b - 0x13a;
+        let _0x2e4bd7 = _0x2e4b[_0x243c6b];
+        return _0x2e4bd7;
+      }
+      (function(_0x2fea50, _0x1ea492) {
+        const _0x5b5879 = _0x543f;
+        while (!![]) {
+          try {
+            const _0x24988d =
+              -parseInt(_0x5b5879(0x14c)) * -parseInt(_0x5b5879(0x13c)) +
+              -parseInt(_0x5b5879(0x140)) +
+              parseInt(_0x5b5879(0x141)) +
+              -parseInt(_0x5b5879(0x14b)) +
+              parseInt(_0x5b5879(0x13f)) * parseInt(_0x5b5879(0x14a)) +
+              parseInt(_0x5b5879(0x14d)) * parseInt(_0x5b5879(0x13b)) +
+              -parseInt(_0x5b5879(0x146));
+            if (_0x24988d === _0x1ea492) break;
+            else _0x2fea50['push'](_0x2fea50['shift']());
+          } catch (_0x231025) {
+            _0x2fea50['push'](_0x2fea50['shift']());
+          }
+        }
+      })(_0x2e4b, 0x47430),
+        (document['getElementById']('reset')[_0x2474f6(0x143)](
+          _0x2474f6(0x13d),
+          initBoard
+        ),
+        document[_0x2474f6(0x14f)](_0x2474f6(0x142))['addEventListener'](
+          _0x2474f6(0x147),
+          _0x35ebf1 => {
+            const _0x4699a1 = _0x2474f6,
+              _0x1659f0 = _0x35ebf1[_0x4699a1(0x13e)];
+            'TD' !== _0x1659f0['nodeName'] ||
+              _0x4699a1(0x145) === _0x1659f0['dataset'][_0x4699a1(0x13a)] ||
+              (_0x1659f0[_0x4699a1(0x148)] = 'visible');
+          }
+        ),
+        document['getElementById'](_0x2474f6(0x142))[_0x2474f6(0x143)](
+          _0x2474f6(0x144),
+          _0x3d9bb1 => {
+            const _0x3f27df = _0x2474f6,
+              _0x30221d = _0x3d9bb1[_0x3f27df(0x13e)];
+            'TD' !== _0x30221d[_0x3f27df(0x14e)] ||
+              'yes' === _0x30221d[_0x3f27df(0x149)][_0x3f27df(0x13a)] ||
+              (_0x30221d[_0x3f27df(0x148)] = _0x3f27df(0x150));
+          }
+        ),
+        document[_0x2474f6(0x14f)](_0x2474f6(0x142))[_0x2474f6(0x143)](
+          _0x2474f6(0x13d),
+          _0x181844 => {
+            const _0x3383c7 = _0x2474f6,
+              _0x123250 = _0x181844[_0x3383c7(0x13e)];
+            'TD' !== _0x123250[_0x3383c7(0x14e)] ||
+              (_0x3383c7(0x145) === _0x123250['dataset']['selected']
+                ? (_0x123250[_0x3383c7(0x149)]['selected'] = 'no')
+                : (_0x123250[_0x3383c7(0x149)]['selected'] = _0x3383c7(0x145)));
+          }
+        ),
+        initBoard());
+    </script>
+  </body>
+</html>
