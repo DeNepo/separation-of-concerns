@@ -418,10 +418,12 @@ You don't need to develop as a group this week, find what works for you. Maybe p
 - #5: Flex Panel Gallery
 - #8: Fun with HTML5 Canvas
 - #10: Hold Shift and Check Checkboxes
-- #13: Slide in on Scroll
-- #16: Mouse Move Shadow
+- #11; Custom Video Player
 - #20: Speech Recognition
 - #22: Follow Along Link Highlighter
+- #23: Speech Synthesis
+- #26: Stripe Follow-Along Nav
+- #27: Click and Drag
 - #28: Video Speed Controller
 
 Suggested code to study:
@@ -481,17 +483,15 @@ Reverse-engineer a website project:
 
 ### After Class
 
-This week you will refactor one JS 30 project as a team using the [javascript-30-starter](https://github.com/hackyourfuturebelgium/javascript-30-starter). You will need to take time together to study the code before writing a development strategy and setting up your group repository with issues and labels.
+> group project: 3 people (random)
 
-Be careful with time management! Writing each file will probably not take too long, but then you will still need to review and test each other's code before mearging each file. This can take some time to coordinate and finish, you should aim to be ready for code reviews by Thursday.
+This week you and your group will build a small project from scratch using the [javascript-30-starter](https://github.com/hackyourfuturebelgium/javascript-30-starter). Here are some possible user stories to get you started:
 
-Below is a selection of JS 30 projects that are best for larger group collaboration. Pick the one that looks most interesting to your team and go for it:
-
-- #11; Custom Video Player
-- #15: localStorage
-- #23: Speech Synthesis
-- #26: Stripe Follow-Along Nav
-- #27: Click and Drag
+- A user can see all the items in their list
+- A user can add a new item to their list
+- A user can remove any item from their list
+- A user can edit the description of each item in their list
+- A user can mark an item as "done" or "not done"
 
 #### Checklist
 
@@ -523,6 +523,9 @@ Below is a selection of JS 30 projects that are best for larger group collaborat
   - Which week it was (if the module is more than 1 week)
   - Give your name
   - and a helpful description
+
+<details>
+<summary>expand/collapse</summary>
 
 ## class-9-10
 
@@ -563,6 +566,8 @@ Below is a selection of JS 30 projects that are best for larger group collaborat
 
   - [Part 1](https://vimeo.com/555091793)
   - [Part 2](https://vimeo.com/555631615)
+
+</details>
 
 [TOP](#separation-of-concerns)
 
