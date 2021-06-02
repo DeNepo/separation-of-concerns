@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.half {
+  height: 50vh;
+  width: 40vw;
+  outline: none;
+}
+
+.bordered {
+  border: solid 1px;
+  border-color: olive;
+}
