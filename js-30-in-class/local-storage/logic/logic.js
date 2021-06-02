@@ -1,4 +1,4 @@
-const populateList = (plates = [], platesList) => {
+export const populateList = (plates = [], platesList) => {
   platesList.innerHTML = plates
     .map((plate, i) => {
       return `
@@ -12,5 +12,3 @@ const populateList = (plates = [], platesList) => {
     })
     .join("");
 };
-
-export { populateList };
