@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Magic Variable: `event`</title>
+    <style></style>
+  </head>
+
+  <body>
+    <section id="user-interface">
+      <button id="click-it">clicky</button>
+    </section>
+
+    <script id="data">
+      // what happens if you uncomment this line?
+      // const event = 'hi';
+    </script>
+
+    <script id="handlers">
+      const magicEvent = () => {
+        console.log('magic:', event);
+      };
+
+      const parameterEvent = event => {
+        console.log('parameter:', event);
+      };
+    </script>
+    <script id="listeners">
+      document.getElementById('click-it').addEventListener('click', magicEvent);
+
+      document
+        .getElementById('click-it')
+        .addEventListener('click', parameterEvent);
+    </script>
+  </body>
+</html>

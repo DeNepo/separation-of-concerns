@@ -223,6 +223,7 @@ Helpful links, examples and exercises.
   - 🥚 [/stepped](./stepped): study HTML/CSS/JS projects built up step-by-step (only examples)
   - 🥚 [/separated](./separated): study HTML/CSS/JS projects that have been separated by concern (only examples)
   - 🥚 [/es5-vs-es6](./es5-vs-es6): explore the differences between projects using ES5 and ES6 in the debugger (only examples)
+  - 🐣 [/magic-variables](./magic-variables): the browser will magically create some variables when you work with the DOM, don't use them. Use locally declared variables.
 - exercises
   - 🥚 [/isolate](./isolate): focus on the DOM and events, isolating JavaScript in the debugger
   - 🐣 [/integrate](./integrate): learn how to integrate JS into user interfaces built with HTML and CSS
@@ -357,6 +358,7 @@ Suggested code to study:
 - [/isolate](./isolate): all of it
 - [/integrate](./integrate): 1 & 2
 - [/separated](./separated): it's just 3 examples
+- [/magic-variables](./magic-variables): it's just 2 examples
 
 Somewhere to start with the DOM & Events
 
