@@ -12,89 +12,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>LocalStorage</title>
-    <style>
-      html {
-        box-sizing: border-box;
-        background: url('oh-la-la.jpeg') center no-repeat;
-        background-size: cover;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
-      }
-
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
-      }
-
-      svg {
-        fill: white;
-        background: rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        border-radius: 50%;
-        width: 200px;
-        margin-bottom: 50px;
-      }
-
-      .wrapper {
-        padding: 20px;
-        max-width: 350px;
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      h2 {
-        text-align: center;
-        margin: 0;
-        font-weight: 200;
-      }
-
-      .plates {
-        margin: 0;
-        padding: 0;
-        text-align: left;
-        list-style: none;
-      }
-
-      .plates li {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        padding: 10px 0;
-        font-weight: 100;
-        display: flex;
-      }
-
-      .plates label {
-        flex: 1;
-        cursor: pointer;
-      }
-
-      .plates input {
-        display: none;
-      }
-
-      .plates input + label:before {
-        content: '⬜️';
-        margin-right: 10px;
-      }
-
-      .plates input:checked + label:before {
-        content: '🌮';
-      }
-
-      .add-items {
-        margin-top: 20px;
-      }
-
-      .add-items input {
-        padding: 10px;
-        outline: 0;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-      }
-    </style>
+    <link href="./public/style.css" rel="stylesheet" />
   </head>
   <body>
     <!--
@@ -143,54 +61,56 @@
         <input type="submit" value="+ Add Item" />
       </form>
     </div>
-
     <script>
-      const addItems = document.querySelector('.add-items');
-      const itemsList = document.querySelector('.plates');
-      const items = JSON.parse(localStorage.getItem('items')) || [];
+      // const addItems = document.querySelector(".add-items");
+      //  const itemsList = document.querySelector(".plates");
+      // const items = JSON.parse(localStorage.getItem("items")) || [];
 
-      function addItem(e) {
-        e.preventDefault();
-        const text = e.currentTarget.querySelector('[name=item]').value;
-        const item = {
-          text,
-          done: false,
-        };
+      // function addItem(e) {
+      //   e.preventDefault();
+      //   const text = e.currentTarget.querySelector("[name=item]").value;
+      //   const item = {
+      //     text,
+      //     done: false,
+      //   };
 
-        items.push(item);
-        populateList(items, itemsList);
-        localStorage.setItem('items', JSON.stringify(items));
-        e.currentTarget.reset();
-      }
+      //   items.push(item);
+      //   populateList(items, itemsList);
+      //   localStorage.setItem("items", JSON.stringify(items));
+      //   e.currentTarget.reset();
+      // }
 
-      function populateList(plates = [], platesList) {
-        platesList.innerHTML = plates
-          .map((plate, i) => {
-            return `
-        <li>
-          <input type="checkbox" data-index=${i} id="item${i}" ${
-              plate.done ? 'checked' : ''
-            } />
-          <label for="item${i}">${plate.text}</label>
-        </li>
-      `;
-          })
-          .join('');
-      }
+      // function populateList(plates = [], platesList) {
+      //   platesList.innerHTML = plates
+      //     .map((plate, i) => {
+      //       return `
+      //   <li>
+      //     <input type="checkbox" data-index=${i} id="item${i}" ${
+      //         plate.done ? "checked" : ""
+      //       } />
+      //     <label for="item${i}">${plate.text}</label>
+      //   </li>
+      // `;
+      //     })
+      //     .join("");
+      // }
 
-      function toggleDone(e) {
-        if (!e.target.matches('input')) return; // skip this unless it's an input
-        const el = e.target;
-        const index = el.dataset.index;
-        items[index].done = !items[index].done;
-        localStorage.setItem('items', JSON.stringify(items));
-        populateList(items, itemsList);
-      }
+      // function toggleDone(e) {
+      //   if (!e.target.matches("input")) return; // skip this unless it's an input
+      //   const el = e.target;
+      //   const index = el.dataset.index;
+      //   items[index].done = !items[index].done;
+      //   localStorage.setItem("items", JSON.stringify(items));
+      //   populateList(items, itemsList);
+      // }
 
-      addItems.addEventListener('submit', addItem);
-      itemsList.addEventListener('click', toggleDone);
+      //addItems.addEventListener("submit", addItem);
+      //itemsList.addEventListener("click", toggleDone);
 
-      populateList(items, itemsList);
+      // populateList(items, itemsList);
+      //
     </script>
+
+    <script type="module" src="./init/index.js"></script>
   </body>
 </html>
