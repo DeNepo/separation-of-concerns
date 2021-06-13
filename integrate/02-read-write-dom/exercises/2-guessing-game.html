@@ -34,37 +34,37 @@
       const setSecretHandler = () => {
         debugger;
 
-        const inputEl = document.getElementById('_');
+        const inputEl = document.getElementById("user-input");
         const newSecret = inputEl.value;
 
-        const outputEl = document.getElementById('_');
-        outputEl._ = newSecret;
+        const outputEl = document.getElementById("output");
+        outputEl.value = newSecret;
       };
 
       const displaySecretHandler = () => {
         debugger;
 
-        const outputEl = document.getElementById('_');
-        outputEl._ = 'visible';
+        const outputEl = document.getElementById("output");
+        outputEl.className= "visible";
       };
 
       const hideSecretHandler = () => {
         debugger;
 
-        const outputEl = document.getElementById('_');
-        outputEl.className = '_';
+        const outputEl = document.getElementById("output");
+        outputEl.className = "hidden";
       };
     </script>
 
     <script id="listeners">
       // this is all correct!
       document
-        .getElementById('user-input')
-        .addEventListener('keyup', setSecretHandler);
+        .getElementById("user-input")
+        .addEventListener("keyup", setSecretHandler);
 
-      const outputEl = document.getElementById('output');
-      outputEl.addEventListener('mouseenter', displaySecretHandler);
-      outputEl.addEventListener('mouseleave', hideSecretHandler);
+      const outputEl = document.getElementById("output");
+      outputEl.addEventListener("mouseenter", displaySecretHandler);
+      outputEl.addEventListener("mouseleave", hideSecretHandler);
     </script>
   </body>
 </html>

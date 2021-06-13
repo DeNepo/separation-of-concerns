@@ -22,7 +22,7 @@
     </main>
 
     <script id="shared-data">
-      let userString = '';
+      let userString = "";
     </script>
 
     <script id="handlers">
@@ -30,7 +30,7 @@
         debugger;
 
         // read user input
-        const userInput = prompt('_');
+        const userInput = prompt("add something");
         if (userInput === null) {
           return;
         }
@@ -39,7 +39,7 @@
         userString = userInput;
 
         // let the user know the userString is saved
-        alert('_');
+        alert("your message is saved");
       };
 
       const displayStringHandler = () => {
@@ -53,9 +53,13 @@
       // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
       // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
 
-      _._._(_, _);
+      document
+        .getElementById("set-button")
+        .addEventListener("click", setStringHandler);
 
-      _._._(_, _);
+      document
+        .getElementById("display-button")
+        .addEventListener("click", displayStringHandler);
     </script>
   </body>
 </html>
