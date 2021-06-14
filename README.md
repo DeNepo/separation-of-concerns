@@ -568,6 +568,7 @@ This week you and your group will build a small project from scratch using the [
 
   - [Part 1](https://vimeo.com/555091793)
   - [Part 2](https://vimeo.com/555631615)
+  - [Part 3](https://vimeo.com/562654566)
 
 </details>
 
