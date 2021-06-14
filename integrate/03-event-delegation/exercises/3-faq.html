@@ -39,23 +39,23 @@
       const toggleFAQsHandler = event => {
         debugger;
 
-        const target = event.target;
-        if (target.nodeName !== 'SUMMARY') {
+        const target = event.target; // summary
+        if (target.nodeName !== 'SUMMARY') { // not summary 
           return;
         }
 
-        const sectionEl = event.currentTarget;
-        const sectionChildren = sectionEl.children;
+        const sectionEl = event.currentTarget; // parent of summary = section
+        const sectionChildren = sectionEl.children; // children of section 
 
         for (const details of sectionChildren) {
-          const summary = details.children[0]; // to get the first child = summary 
+          const summary = details.children[1]; // to get the first child = summary 
           const wasNotClicked = summary !== target;
 
           const isOpen = details.open === true;
 
-          if (wasNotClicked && isOpen) {
+          //if (wasNotClicked && isOpen) {
             details.open = false;
-          }
+          //}    // if you comment out 
         }
       };
     </script>
