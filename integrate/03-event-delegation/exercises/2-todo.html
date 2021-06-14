@@ -28,17 +28,17 @@
       const addTodoHandler = (event) => {
         debugger;
 
-        const newLi = document.createElement(_);
-        const newButton = document.createElement(_);
-        newButton.innerHTML = "_";
+        const newLi = document.createElement("li");
+        const newButton = document.createElement("button");
+        newButton.innerHTML = "X";
         newLi.appendChild(newButton);
-        const newInput = document.createElement(_);
+        const newInput = document.createElement("input");
         newLi.appendChild(newInput);
 
-        const addButton = event._;
-        const addButtonParent = addButton._;
-        const todoList = addButtonParent._;
-        todoList.insertBefore(_, _);
+        const addButton = event.target; // +
+        const addButtonParent = addButton.parentElement; // li
+        const todoList = addButtonParent.parentElement; //ul
+        todoList.insertBefore(newLi, addButtonParent); // ask Koen about
       };
     </script>
 
