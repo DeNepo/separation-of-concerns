@@ -15,22 +15,22 @@
     </main>
 
     <script id="handlers">
-      const deleteTodoHandler = event => {
+      const deleteTodoHandler = (event) => {
         debugger;
-        const target = _;
-        if (target._ === 'BUTTON' && target._ === 'X') {
-          const liToRemove = _.parentElement;
-          const todoList = document.getElementById(_);
-          todoList._(liToRemove);
+        const target = event.target;
+        if (target.nodeName === "BUTTON" && target.innerHTML === "X") {
+          const liToRemove = target.parentElement;
+          const todoList = document.getElementById("list");
+          todoList.removeChild(liToRemove);
         }
       };
 
-      const addTodoHandler = event => {
+      const addTodoHandler = (event) => {
         debugger;
 
         const newLi = document.createElement(_);
         const newButton = document.createElement(_);
-        newButton.innerHTML = '_';
+        newButton.innerHTML = "_";
         newLi.appendChild(newButton);
         const newInput = document.createElement(_);
         newLi.appendChild(newInput);
@@ -43,9 +43,11 @@
     </script>
 
     <script id=" listeners">
-      document.getElementById(_).addEventListener('click', _);
+      document
+        .getElementById("list")
+        .addEventListener("click", deleteTodoHandler);
 
-      document.getElementById(_).addEventListener('click', _);
+      document.getElementById("list").addEventListener("click", addTodoHandler);
     </script>
   </body>
 </html>
