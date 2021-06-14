@@ -17,28 +17,28 @@
     <script id="handlers">
       const deleteTodoHandler = (event) => {
         debugger;
-        const target = event.target;
+        const target = event.target; // SELECT button
         if (target.nodeName === "BUTTON" && target.innerHTML === "X") {
-          const liToRemove = target.parentElement;
-          const todoList = document.getElementById("list");
-          todoList.removeChild(liToRemove);
+          const liToRemove = target.parentElement; // parent element of button is li
+          const todoList = document.getElementById("list"); // select ul
+          todoList.removeChild(liToRemove); // remove the child of ul => li
         }
       };
 
       const addTodoHandler = (event) => {
         debugger;
 
-        const newLi = document.createElement("li");
-        const newButton = document.createElement("button");
-        newButton.innerHTML = "X";
-        newLi.appendChild(newButton);
-        const newInput = document.createElement("input");
-        newLi.appendChild(newInput);
+        const newLi = document.createElement("li"); // create a li element
+        const newButton = document.createElement("button"); // create a button element
+        newButton.innerHTML = "X"; // textContent is X
+        newLi.appendChild(newButton); // append button inside li
+        const newInput = document.createElement("input"); // create an input element
+        newLi.appendChild(newInput); // append input to li
 
-        const addButton = event.target; // +
-        const addButtonParent = addButton.parentElement; // li
-        const todoList = addButtonParent.parentElement; //ul
-        todoList.insertBefore(newLi, addButtonParent); // ask Koen about
+        const addButton = event.target; // SELECT +
+        const addButtonParent = addButton.parentElement; // SELECT parent element of +, it is li
+        const todoList = addButtonParent.parentElement; //SELECT parent element of li, it is ul
+        todoList.insertBefore(newLi, addButtonParent); // before parent element
       };
     </script>
 
@@ -47,7 +47,9 @@
         .getElementById("list")
         .addEventListener("click", deleteTodoHandler);
 
-      document.getElementById("list").addEventListener("click", addTodoHandler);
+      document
+        .getElementById("add-todo-button")
+        .addEventListener("click", addTodoHandler);
     </script>
   </body>
 </html>
