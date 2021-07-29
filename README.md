@@ -570,6 +570,7 @@ This week you and your group will build a small project from scratch using the [
 - Week 1
   - [Part 1](https://vimeo.com/555091793)
   - [Part 2](https://vimeo.com/555631615) - ES5 vs. ES6
+  - [Part 3](https://vimeo.com/562654566)
 - (the other weeks were small group sessions)
 
 ## Class 15
