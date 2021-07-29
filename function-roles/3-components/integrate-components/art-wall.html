@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>paint blocks</title>
+
+    <style>
+      .wall {
+        height: 100vh;
+        width: 100vw;
+      }
+      .wall-tile {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="user-interface">
+      <form id="wall-dimensions">
+        <input type="number" name="height" min="1" />
+        <input type="number" name="width" min="1" />
+      </form>
+      <div id="wall-container"></div>
+    </div>
+
+    <script id="data">
+      const state = {
+        height: 8,
+        width: 8,
+      };
+    </script>
+
+    <script id="components">
+      const colorChanger = (className) => {
+        const element = document.createElement('div');
+        element.className = className;
+        element.addEventListener('mousemove', handleMouseMove);
+        return element;
+      };
+
+      const artWall = (height, width) => {
+        // can you figure out how to write this component with classes instead of .style?
+        const table = document.createElement('table');
+        table.className = 'wall';
+
+        for (let i = 0; i < height; i++) {
+          const row = document.createElement('tr');
+          row.style.height = `${100 / height}%`;
+
+          for (let j = 0; j < width; j++) {
+            const changer = colorChanger('wall-tile');
+
+            const cell = document.createElement('td');
+            cell.style.width = `${100 / width}%;`;
+            cell.appendChild(changer);
+
+            row.appendChild(cell);
+          }
+          table.appendChild(row);
+        }
+        return table;
+      };
+    </script>
+
+    <script id="handlers">
+      const handleMouseMove = (event) => {
+        const x = Math.floor((event.clientX / window.innerWidth) * 255);
+        const y = Math.floor((event.clientY / window.innerHeight) * 255);
+        event.target.style.backgroundColor = `rgb(${x},${y},100)`;
+      };
+
+      const handleChangeDimensions = (event) => {
+        debugger;
+        console.log('-- change dimensions --');
+
+        const form = event.target.form;
+        state.height = Number(form.height.value);
+        state.width = Number(form.width.value);
+
+        const newWall = artWall(state.height, state.width);
+
+        const wallContainer = document.getElementById('wall-container');
+        wallContainer.innerHTML = '';
+        wallContainer.appendChild(newWall);
+
+        console.log(state);
+      };
+    </script>
+
+    <script id="listeners">
+      document
+        .getElementById('wall-dimensions')
+        .addEventListener('change', handleChangeDimensions);
+    </script>
+
+    <script id="init">
+      debugger;
+
+      console.log('initial state:', state);
+
+      document.getElementById('wall-dimensions').height.value = state.height;
+      document.getElementById('wall-dimensions').width.value = state.width;
+
+      const theWall = artWall(state.height, state.width);
+      document.getElementById('wall-container').appendChild(theWall);
+    </script>
+  </body>
+</html>

@@ -1,39 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>guessing game</title>
 
-<head>
-  <meta charset='utf-8'>
-  <title>guessing game</title>
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
 
-  <style>
-    .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
+      .hidden {
+        color: white;
+      }
 
-    .hidden {
-      color: white;
-    }
+      .visible {
+        color: black;
+      }
+    </style>
+  </head>
 
-    .visible {
-      color: black;
-    }
-  </style>
-</head>
+  <body>
+    <main id="user-interface" class="centered">
+      <input id="user-input" type="password" />
+      <hr />
+      <code id="output" class="hidden"></code>
+    </main>
 
-<body>
-  <main id='user-interface' class='centered'>
-    <input id='user-input' type='password'>
-    <hr>
-    <code id='output' class='hidden'></code>
-  </main>
-
-  <script id='obfuscated'>
-    const a = ['user-input', 'className', 'getElementById', 'visible', 'mouseenter', 'output', 'addEventListener', 'mouseleave']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0x187)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; 'use strict'; const setSecretHandler = () => { debugger; const c = document[b('0x3')](b('0x1')), d = c['value'], e = document[b('0x3')]('output'); e['innerHTML'] = d; }, displaySecretHandler = () => { debugger; const c = document[b('0x3')](b('0x6')); c[b('0x2')] = b('0x4'); }, hideSecretHandler = () => { debugger; const c = document[b('0x3')](b('0x6')); c[b('0x2')] = 'hidden'; }, setSecretInput = document[b('0x3')](b('0x1')); setSecretInput[b('0x7')]('keyup', setSecretHandler); const outputEl = document[b('0x3')](b('0x6')); outputEl['addEventListener'](b('0x5'), displaySecretHandler), outputEl[b('0x7')](b('0x0'), hideSecretHandler);
-  </script>
-</body>
-
+    <script id="obfuscated">
+      const a = [
+        'user-input',
+        'className',
+        'getElementById',
+        'visible',
+        'mouseenter',
+        'output',
+        'addEventListener',
+        'mouseleave',
+      ];
+      (function (b, e) {
+        const f = function (g) {
+          while (--g) {
+            b['push'](b['shift']());
+          }
+        };
+        f(++e);
+      })(a, 0x187);
+      const b = function (c, d) {
+        c = c - 0x0;
+        let e = a[c];
+        return e;
+      };
+      ('use strict');
+      const setSecretHandler = () => {
+          debugger;
+          const c = document[b('0x3')](b('0x1')),
+            d = c['value'],
+            e = document[b('0x3')]('output');
+          e['innerHTML'] = d;
+        },
+        displaySecretHandler = () => {
+          debugger;
+          const c = document[b('0x3')](b('0x6'));
+          c[b('0x2')] = b('0x4');
+        },
+        hideSecretHandler = () => {
+          debugger;
+          const c = document[b('0x3')](b('0x6'));
+          c[b('0x2')] = 'hidden';
+        },
+        setSecretInput = document[b('0x3')](b('0x1'));
+      setSecretInput[b('0x7')]('keyup', setSecretHandler);
+      const outputEl = document[b('0x3')](b('0x6'));
+      outputEl['addEventListener'](b('0x5'), displaySecretHandler),
+        outputEl[b('0x7')](b('0x0'), hideSecretHandler);
+    </script>
+  </body>
 </html>

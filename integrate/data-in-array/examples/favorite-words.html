@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Favorite Words</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="user-interface" class="centered">
+      <button id="add">add a word</button> <br />
+      <button id="remove">remove a word</button> <br />
+      <button id="search">search words</button> <br />
+      <br />
+      <button id="display">display all words</button>
+    </main>
+
+    <script id="data">
+      let words = [];
+    </script>
+
+    <script id="handlers">
+      'use strict';
+
+      const displayWordsHandler = (wordsToDisplay = words) => {
+        debugger;
+        const allWords = wordsToDisplay.reduce(
+          (acc, next) => `${acc}\n${next}`,
+          `your favorite words:`,
+        );
+        alert(allWords);
+      };
+
+      const addNewWordHandler = () => {
+        debugger;
+        const userInput = prompt(`add a new favorite word`);
+        if (userInput === null) {
+          return;
+        }
+        words.push(userInput);
+        displayWordsHandler();
+      };
+
+      const searchWordHandler = () => {
+        debugger;
+        const userInput = prompt(`enter a word to search`);
+        if (userInput === null) {
+          return;
+        }
+        const foundWords = words.filter((entry) => entry.includes(userInput));
+        if (foundWords.length === 0) {
+          alert(`no words matching "${userInput}"`);
+        } else {
+          alert(`these words match "${userInput}"\n${foundWords.join('\n')}`);
+        }
+      };
+
+      const removeWordHandler = () => {
+        debugger;
+        const userInput = prompt(`enter a word to remove`);
+        if (userInput === null) {
+          return;
+        }
+        words = words.filter((entry) => {
+          return entry !== userInput;
+        });
+        displayWordsHandler();
+      };
+    </script>
+
+    <script id="listeners">
+      debugger; // main entry point
+
+      document
+        .getElementById('add')
+        .addEventListener('click', addNewWordHandler);
+      document
+        .getElementById('search')
+        .addEventListener('click', searchWordHandler);
+      document
+        .getElementById('remove')
+        .addEventListener('click', removeWordHandler);
+      document
+        .getElementById('display')
+        .addEventListener('click', displayWordsHandler);
+    </script>
+  </body>
+</html>

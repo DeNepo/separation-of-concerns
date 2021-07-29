@@ -6,7 +6,6 @@
 
 */
 
-
 // add a <p> tag
 const pEl = document.createElement('p');
 pEl.innerHTML = 'to HYF Be.';
@@ -16,8 +15,6 @@ divEl.appendChild(pEl);
 
 console.log(divEl.nodeName, divEl.cloneNode(true));
 console.assert(divEl.children[0].nodeName === 'P', 'Test: before inserting');
-
-
 
 // append an <h1> before the <p>
 const headerEl = document.createElement('h1');

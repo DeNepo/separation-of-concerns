@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Average</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="user-interface" class="centered">
+      <button id="add">add a number</button> <br />
+      <button id="remove">remove a number</button> <br />
+      <button id="calculate">calculate the average</button>
+      <br />
+      <br />
+      <button id="display">display all numbers</button>
+    </main>
+
+    <script id="data">
+      let numbers = [];
+    </script>
+
+    <script id="handlers">
+      'use strict';
+
+      const displayNumbersHandler = () => {
+        debugger;
+        const joinNumbers = (acc, next) => {
+          return `${acc}\n${String(next)}`;
+        };
+
+        const allNumbers = numbers.reduce(joinNumbers, `all numbers:`);
+        alert(allNumbers);
+      };
+
+      const addNewNumberHandler = () => {
+        debugger;
+        const userInput = prompt(`add a new number`);
+        if (userInput === null || userInput === '') {
+          return;
+        }
+
+        const userNumber = Number(userInput);
+        if (Number.isNaN(userNumber)) {
+          alert(`${userInput} is not a valid number`);
+          return;
+        }
+
+        numbers.push(userNumber);
+        displayNumbersHandler();
+      };
+
+      const removeNumberHandler = () => {
+        debugger;
+        const userInput = prompt(`enter a number to remove`);
+        if (userInput === null || userInput === '') {
+          return;
+        }
+
+        const userNumber = Number(userInput);
+        if (Number.isNaN(userNumber)) {
+          alert(`${userInput} is not a valid number`);
+          return;
+        }
+
+        numbers = numbers.filter((entry) => {
+          return entry !== userNumber;
+        });
+        displayNumbersHandler();
+      };
+
+      const calculateAverageHandler = () => {
+        debugger;
+        let average = 0;
+        if (numbers.length !== 0) {
+          const sum = numbers.reduce((acc, next) => acc + next, 0);
+          average = sum / numbers.length;
+        }
+        alert(`the average is: ${average}`);
+      };
+    </script>
+
+    <script id="listeners">
+      debugger; // main entry point
+
+      document
+        .getElementById('add')
+        .addEventListener('click', addNewNumberHandler);
+      document
+        .getElementById('remove')
+        .addEventListener('click', removeNumberHandler);
+      document
+        .getElementById('calculate')
+        .addEventListener('click', calculateAverageHandler);
+      document
+        .getElementById('display')
+        .addEventListener('click', displayNumbersHandler);
+    </script>
+  </body>
+</html>

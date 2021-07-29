@@ -1,17 +1,24 @@
-import { testing } from '../../testing.js';
 import { reverse } from './logic.js';
 
-const reverseTests = [
-  { name: 'first', args: ['lower case words'], expected: 'sdrow esac rewol' },
-  { name: 'second', args: ['1324 &*()'], expected: ')(*& 4231' },
-  { name: 'third', args: [''], expected: '' },
-  { name: 'fourth', args: ['UPPER CASE WORDS'], expected: 'SDROW ESAC REPPU' },
-  { name: 'fifth', args: ['--""{}""--'], expected: '--""}{""--' },
-  {
-    name: 'sixth',
-    args: ['String.prototype.toUpperCase'],
-    expected: 'esaCreppUot.epytotorp.gnirtS',
-  },
-];
-
-testing(reverse, reverseTests);
+describe('reverses a string', () => {
+  it('empty string', () => {
+    const actual = reverse('');
+    expect(actual).toEqual('');
+  });
+  it('lower case words', () => {
+    const actual = reverse('lower case words');
+    expect(actual).toEqual('sdrow esac rewol');
+  });
+  it('upper case words', () => {
+    const actual = reverse('UPPER CASE WORDS');
+    expect(actual).toEqual('SDROW ESAC REPPU');
+  });
+  it('numbers and characters', () => {
+    const actual = reverse('1324 &*()');
+    expect(actual).toEqual(')(*& 4231');
+  });
+  it('cool patterns', () => {
+    const actual = reverse('--""{}""--');
+    expect(actual).toEqual('--""}{""--');
+  });
+});

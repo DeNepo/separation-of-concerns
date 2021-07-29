@@ -7,7 +7,6 @@
 
 */
 
-
 // you can create an element with lower or upper case letters
 const divEl = document.createElement('Div');
 // but the .nodeName will be in all capitals

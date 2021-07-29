@@ -16,4 +16,3 @@ console.log(divEl.cloneNode(true));
 // you can append to innerHTML
 divEl.innerHTML += '<p>thank you for visiting</p>';
 console.log(divEl.cloneNode(true));
-

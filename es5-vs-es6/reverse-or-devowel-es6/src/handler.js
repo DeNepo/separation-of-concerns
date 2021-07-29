@@ -10,7 +10,7 @@ debugger; // once when the module is loaded
  *
  * uses: reverse, removeVowels
  */
-export const handleClick = event => {
+export const handleClick = (event) => {
   debugger; // each time a user clicks the button
 
   const form = event.target.form;

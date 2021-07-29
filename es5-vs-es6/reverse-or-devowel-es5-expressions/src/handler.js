@@ -10,7 +10,7 @@ debugger; // once when the script is loaded
  *
  * uses: reverse, removeVowels
  */
-var handleClick = function(event) {
+var handleClick = function (event) {
   debugger; // each time a user clicks the button
 
   var form = event.target.form;

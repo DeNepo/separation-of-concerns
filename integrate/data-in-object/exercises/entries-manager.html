@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Entries Manager</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="user interface" class="centered">
+      <button id="write">write an entry</button> <br />
+      <button id="delete">delete an entry</button> <br />
+      <button id="search">search in values</button> <br />
+      <button id="find">find by key</button> <br />
+      <br />
+      <button id="display">display all userEntries</button>
+      <br />
+      <button id="reset">reset entries</button>
+    </main>
+
+    <script id="data">
+      let userEntries = {
+        wood: 'oak',
+        television: 'flat',
+      };
+    </script>
+
+    <script id="handlers">
+      'use strict';
+
+      const displayEntriesHandler = (message = '_', object = _) => {
+        debugger;
+        const starter = message + ':';
+        let stringToDisplay = starter;
+        for (const _ in object) {
+          const nextLine = ` ${_}: ${object[_]}`;
+          stringToDisplay += '\n' + nextLine;
+        }
+        alert(stringToDisplay);
+      };
+
+      const resetHandler = () => {
+        debugger;
+        userEntries = _;
+        displayEntriesHandler();
+      };
+
+      const writeEntryHandler = () => {
+        debugger;
+        const key = prompt(_);
+        if (_) {
+          return;
+        }
+
+        const newValue = prompt(_);
+        if (_) {
+          return;
+        }
+
+        _[_] = _;
+
+        displayEntriesHandler();
+      };
+
+      const deleteEntryHandler = () => {
+        debugger;
+        const userKey = prompt(_);
+        if (userKey === null) {
+          return;
+        }
+
+        let keyExists = false;
+        for (const _ in _) {
+          if (_ === _) {
+            keyExists = true;
+            break;
+          }
+        }
+
+        if (keyExists) {
+          delete userEntries[_];
+          _();
+        } else {
+          alert(_);
+        }
+      };
+
+      const findKeyHandler = () => {
+        debugger;
+        const userKey = prompt(_);
+        if (userKey === null) {
+          return;
+        }
+
+        let keyExists = false;
+        for (const _ in _) {
+          if (_ === _) {
+            keyExists = true;
+            break;
+          }
+        }
+
+        if (_) {
+          const foundEntry = _;
+          alert(foundEntry);
+        } else {
+          alert(_);
+        }
+      };
+
+      const searchValuesHandler = () => {
+        debugger;
+        const query = prompt(_);
+        if (query === null) {
+          return;
+        }
+
+        let searchResults = {};
+        for (const _ in _) {
+          const value = _[key];
+          const matchesQuery = _; // does the string value include the query?
+          if (matchesQuery) {
+            _ = value;
+          }
+        }
+
+        displayEntriesHandler(_, _);
+      };
+    </script>
+
+    <script id="listeners">
+      debugger; // main entry point
+
+      // this code works!
+      document
+        .getElementById('write')
+        .addEventListener('click', writeEntryHandler);
+      document
+        .getElementById('delete')
+        .addEventListener('click', deleteEntryHandler);
+      document
+        .getElementById('search')
+        .addEventListener('click', searchValuesHandler);
+      document.getElementById('find').addEventListener('click', findKeyHandler);
+      document
+        .getElementById('display')
+        .addEventListener('click', displayEntriesHandler);
+      document.getElementById('reset').addEventListener('click', resetHandler);
+    </script>
+  </body>
+</html>

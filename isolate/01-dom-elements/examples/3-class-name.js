@@ -7,8 +7,6 @@
 
 */
 
-
-
 const divEl = document.createElement('div');
 divEl.className = 'dark-widget';
 console.log(divEl.nodeName, divEl);
@@ -20,4 +18,3 @@ console.log(pEl.nodeName, pEl);
 const buttonEl = document.createElement('button');
 buttonEl.className = 'dark-text';
 console.log(buttonEl.nodeName, buttonEl);
-

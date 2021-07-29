@@ -22,11 +22,8 @@
        * @param {string} toReverse - the text to reverse
        * @returns {string} the original text, reversed
        */
-      const reverse = toReverse => {
-        return toReverse
-          .split('')
-          .reverse()
-          .join('');
+      const reverse = (toReverse) => {
+        return toReverse.split('').reverse().join('');
       };
       console.assert(reverse('asdf') === 'fdsa', 'reverse: test 1');
       console.assert(reverse('hello') === 'olleh', 'reverse: test 2');
@@ -36,11 +33,8 @@
        * @param {string} toSort - the string of characters to sort
        * @returns {string} the same characters, but in unicode order
        */
-      const sort = toSort => {
-        return toSort
-          .split('')
-          .sort()
-          .join('');
+      const sort = (toSort) => {
+        return toSort.split('').sort().join('');
       };
       console.assert(sort('bca') === 'abc', 'sort: test 1');
       console.assert(sort('4231') === '1234', 'sort: test 2');
@@ -49,7 +43,7 @@
     <script id="handlers">
       debugger; // once when the handlers are declared
 
-      const handleInput = event => {
+      const handleInput = (event) => {
         debugger; // each time a user lifts a key in the input
         console.log('handling input');
 

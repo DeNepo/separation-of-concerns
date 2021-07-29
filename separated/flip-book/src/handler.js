@@ -1,6 +1,6 @@
 import { reverseAndUpper } from './logic.js';
 
-export const handler = event => {
+export const handler = (event) => {
   // read user input from event
   const input = event.target.value;
 
@@ -16,6 +16,6 @@ export const handler = event => {
   console.log(
     'reversedUppercase:',
     typeof reversedUppercase + ',',
-    reversedUppercase
+    reversedUppercase,
   );
 };

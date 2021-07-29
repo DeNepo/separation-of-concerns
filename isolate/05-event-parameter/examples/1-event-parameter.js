@@ -32,7 +32,6 @@ const demoHandler = (event) => {
 buttonEl.addEventListener('click', demoHandler);
 buttonEl.addEventListener('mouseover', demoHandler);
 
-
 // you can simulate a user clicking the button
 // this is a more advanced technique
 //  you will not need to know it, just to understand it in these exercises

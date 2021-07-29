@@ -16,10 +16,9 @@ const hrefButtonString = `<a href='#nav'>${buttonString}</a>`;
 divEl.innerHTML = hrefButtonString;
 console.log(divEl.cloneNode(true));
 
-
 // ... or get fancy with arrays of strings
 const _0_names = ['raoul', 'plankar', 'marshule'];
-const _1_nameLis = _0_names.map(name => `<li>${name}</li>`);
+const _1_nameLis = _0_names.map((name) => `<li>${name}</li>`);
 const _2_namesListChildren = _1_nameLis.reduce((lis, next) => lis + next);
 const _3_namesList = `<ul>${_2_namesListChildren}</ul>`;
 divEl.innerHTML = _3_namesList;

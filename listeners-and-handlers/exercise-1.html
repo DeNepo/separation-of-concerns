@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 1</title>
+    <meta charset="utf-8" />
+
+    <style>
+      .secret {
+        display: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="user-interface">
+      <button id="hi" class="secret">catch me if you can!</button>
+    </section>
+
+    <script id="handlers">
+      'use strict';
+
+      const handler = (event) => {
+        debugger;
+        console.assert(
+          event.target.innerHTML === '_',
+          'event.target.innerHTML',
+        );
+        console.assert(event.target.nodeName === '_', 'event.target.nodeName');
+        console.assert(event.target.id === 'hi', 'event.target.id');
+        console.assert(event.target.className === 'secret', 'event.target._');
+        console.assert(event.type === 'click', 'event.type');
+      };
+    </script>
+
+    <script id="listeners">
+      document.getElementById('_').addEventListener('_', _);
+    </script>
+  </body>
+</html>

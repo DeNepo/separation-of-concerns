@@ -40,9 +40,7 @@
       <div id="div-el-2" class="centered">
         <section id="section-el" class="centered">
           <div id="div-el-1" class="centered">
-            <button id="button-el" class="centered">
-              clicky!
-            </button>
+            <button id="button-el" class="centered">clicky!</button>
           </div>
         </section>
       </div>
@@ -57,7 +55,7 @@
       //  instead a parent element in the bubble path handles the event
       //  the event is "delegated" to it's parents
 
-      const demoHandler = event => {
+      const demoHandler = (event) => {
         debugger;
         numberOfDelegations = numberOfDelegations + 1;
 

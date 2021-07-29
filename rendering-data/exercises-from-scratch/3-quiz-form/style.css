@@ -1,0 +1,9 @@
+.correct {
+  color: green;
+  font-family: cursive;
+}
+
+.incorrect {
+  color: red;
+  font-family: monospace;
+}

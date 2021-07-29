@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Temp Converter</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="user-interface" class="centered">
+      <button id="add">add a temperature</button>
+      <br />
+      <button id="convert">convert temperatures</button>
+      <br />
+      <br />
+      <button id="display">display all temperatures</button>
+    </main>
+
+    <script id="data">
+      const data = {
+        degrees: 'fahrenheit',
+        temperatures: [],
+      };
+    </script>
+
+    <script id="handlers">
+      'use strict';
+
+      const displayTemperatureHandler = () => {
+        debugger;
+        const joinStrings = (acc, next) => {
+          return `${acc}\n${next}`;
+        };
+        const allTemperatures = data.temperatures.reduce(
+          joinStrings,
+          `${data.degrees}:`,
+        );
+        alert(allTemperatures);
+      };
+
+      const addNewTemperatureHandler = () => {
+        debugger;
+        const newInput = prompt(`add a temperature in ${data.degrees}`);
+        if (newInput === null || newInput === '') {
+          alert('good bye');
+          return;
+        }
+
+        const newTemperature = Number(newInput);
+        if (Number.isNaN(newTemperature)) {
+          alert('not a valid temperature');
+          return;
+        }
+        data.temperatures.push(newTemperature);
+        displayTemperaturesHandler();
+      };
+
+      const convertTemperaturesHandler = () => {
+        debugger;
+        if (data.degrees === 'fahrenheit') {
+          const toCelsius = (tempF) => (5 / 9) * (tempF - 32);
+          data.temperatures = data.temperatures.map(toCelsius);
+          data.degrees = 'celsius';
+        } else {
+          const toFahrenheit = (tempC) => (tempC * 9) / 5 + 32;
+          data.temperatures = data.temperatures.map(toFahrenheit);
+          data.degrees = 'fahrenheit';
+        }
+        displayTemperatureHandler();
+      };
+    </script>
+
+    <script id="listeners">
+      debugger; // main entry point
+
+      document
+        .getElementById('add')
+        .addEventListener('click', addNewTemperatureHandler);
+      document
+        .getElementById('convert')
+        .addEventListener('click', convertTemperaturesHandler);
+      document
+        .getElementById('display')
+        .addEventListener('click', displayTemperatureHandler);
+    </script>
+  </body>
+</html>

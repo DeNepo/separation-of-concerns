@@ -1,6 +1,6 @@
 import { format } from './logic.js';
 
-export const handler = event => {
+export const handler = (event) => {
   // read user input from event
   const xValue = event.pageX;
   const yValue = event.pageY;
@@ -18,6 +18,6 @@ export const handler = event => {
   console.log(
     'formattedCoordinates:',
     typeof formattedCoordinates + ',',
-    formattedCoordinates
+    formattedCoordinates,
   );
 };

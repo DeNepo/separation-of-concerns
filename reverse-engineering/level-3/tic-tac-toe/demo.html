@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>tic tac toe (demo)</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .game {
+        height: 40vh;
+        width: 40vw;
+      }
+
+      td {
+        border: 1px solid black;
+        height: 30%;
+        width: 30%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="user-interface" class="centered">
+      <table class="game">
+        <tbody id="board">
+          <tr>
+            <td id="0"></td>
+            <td id="1"></td>
+            <td id="2"></td>
+          </tr>
+          <tr>
+            <td id="3"></td>
+            <td id="4"></td>
+            <td id="5"></td>
+          </tr>
+          <tr>
+            <td id="6"></td>
+            <td id="7"></td>
+            <td id="8"></td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="reset">reset board</button>
+    </section>
+
+    <script>
+      const _0x16c7 = [
+        'reset',
+        '1KUMbNb',
+        'add',
+        'addEventListener',
+        'target',
+        'players',
+        '499854uXdCcB',
+        'click',
+        'board',
+        'square\x20has\x20already\x20been\x20played',
+        'reset\x20board',
+        '1YGOkAy',
+        '113954ndvdjV',
+        'next',
+        'previous',
+        '178082HWJoDP',
+        'winner',
+        'getElementById',
+        'this\x20square\x20has\x20already\x20been\x20played',
+        'place\x20move',
+        'innerHTML',
+        '1158063EpleLH',
+        '1957586udFZTn',
+        '170357pcwUEa',
+        '181126apYErn',
+      ];
+      function _0x4121(_0x260522, _0xbd30e6) {
+        return (
+          (_0x4121 = function (_0x16c783, _0x41214f) {
+            _0x16c783 = _0x16c783 - 0x13a;
+            let _0x5926c1 = _0x16c7[_0x16c783];
+            return _0x5926c1;
+          }),
+          _0x4121(_0x260522, _0xbd30e6)
+        );
+      }
+      const _0x25b432 = _0x4121;
+      (function (_0x129d1b, _0x49d1ca) {
+        const _0x33e54b = _0x4121;
+        while (!![]) {
+          try {
+            const _0x45c40e =
+              -parseInt(_0x33e54b(0x141)) * -parseInt(_0x33e54b(0x14f)) +
+              -parseInt(_0x33e54b(0x140)) * -parseInt(_0x33e54b(0x144)) +
+              -parseInt(_0x33e54b(0x14d)) +
+              -parseInt(_0x33e54b(0x14a)) +
+              -parseInt(_0x33e54b(0x13b)) +
+              parseInt(_0x33e54b(0x14c)) +
+              parseInt(_0x33e54b(0x14b));
+            if (_0x45c40e === _0x49d1ca) break;
+            else _0x129d1b['push'](_0x129d1b['shift']());
+          } catch (_0x170b62) {
+            _0x129d1b['push'](_0x129d1b['shift']());
+          }
+        }
+      })(_0x16c7, 0x8dd48);
+      const game = {
+        board: [null, null, null, null, null, null, null, null, null],
+        players: { next: 'X', previous: 'O' },
+        winner: null,
+      };
+      document[_0x25b432(0x146)](_0x25b432(0x14e))[_0x25b432(0x151)](
+        _0x25b432(0x13c),
+        () => {
+          const _0x122581 = _0x25b432;
+          (game[_0x122581(0x13d)] = [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+          ]),
+            (game['players'] = { next: 'X', previous: 'O' }),
+            (game[_0x122581(0x145)] = null);
+          for (let _0x21172e = 0x0; _0x21172e < 0x9; _0x21172e++) {
+            document[_0x122581(0x146)](_0x21172e)[_0x122581(0x149)] =
+              game[_0x122581(0x13d)][_0x21172e];
+          }
+          logger[_0x122581(0x150)]({ handler: _0x122581(0x13f), game: game });
+        },
+      ),
+        document[_0x25b432(0x146)]('board')[_0x25b432(0x151)](
+          _0x25b432(0x13c),
+          (_0x2c911f) => {
+            const _0x31bdc8 = _0x25b432,
+              _0x12a2aa = _0x2c911f[_0x31bdc8(0x152)]['id'];
+            if (game[_0x31bdc8(0x13d)][_0x12a2aa] !== null) {
+              alert(_0x31bdc8(0x147)),
+                logger[_0x31bdc8(0x150)]({
+                  handler: _0x31bdc8(0x148),
+                  index: _0x12a2aa,
+                  exit: _0x31bdc8(0x13e),
+                });
+              return;
+            }
+            game[_0x31bdc8(0x13d)][_0x12a2aa] =
+              game[_0x31bdc8(0x13a)][_0x31bdc8(0x142)];
+            const _0x3353b9 = game[_0x31bdc8(0x13a)][_0x31bdc8(0x143)];
+            (game[_0x31bdc8(0x13a)][_0x31bdc8(0x143)] =
+              game[_0x31bdc8(0x13a)]['next']),
+              (game['players'][_0x31bdc8(0x142)] = _0x3353b9),
+              (_0x2c911f['target']['innerHTML'] =
+                game[_0x31bdc8(0x13d)][_0x12a2aa]);
+          },
+        );
+    </script>
+  </body>
+</html>

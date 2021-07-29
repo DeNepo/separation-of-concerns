@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>summary, details</title>
+    <style></style>
+  </head>
+
+  <body>
+    <section id="user-interface">
+      <details id="component">
+        <summary></summary>
+        <p></p>
+      </details>
+    </section>
+
+    <script id="data">
+      const state = {
+        mainText: '',
+        summaryText: '',
+        isOpen: false,
+      };
+      console.log('initial state:', { ...state });
+    </script>
+
+    <script id="handlers">
+      const preventDefaultHandler = (event) => {
+        event.preventDefault();
+        console.log('prevented default:', event);
+      };
+    </script>
+
+    <script id="listeners">
+      document
+        .getElementById('component')
+        .addEventListener('click', preventDefaultHandler);
+    </script>
+
+    <script id="init">
+      const detailsEl = document.getElementById('component');
+      detailsEl.open = state.isOpen;
+
+      const summaryEl = detailsEl.children[0];
+      summaryEl.innerHTML = state.summaryText;
+
+      const pEl = detailsEl.children[1];
+      pEl.innerHTML = state.mainText;
+    </script>
+  </body>
+</html>

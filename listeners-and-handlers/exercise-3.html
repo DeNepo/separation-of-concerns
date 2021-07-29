@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 3</title>
+    <meta charset="utf-8" />
+
+    <style>
+      .inputs {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="user-interface">
+      <form class="inputs" id="inputs">
+        <select name="_" id="selector">
+          <option value="rock">rock</option>
+          <option value="paper">paper</option>
+          <option value="scissors">scissors</option>
+        </select>
+        <input type="button" id="_" name="clickable" value="a button" />
+      </form>
+    </section>
+
+    <script id="handlers">
+      'use strict';
+
+      const first = (event) => {
+        debugger;
+        console.assert(event.target._ === 'selector', 'first: target.id');
+        console.assert(
+          event.target.nodeName === 'SELECT',
+          'first: target.nodeName',
+        );
+        console.assert(
+          event.target.form.id === 'inputs',
+          'first: target.form.id',
+        );
+        console.assert(
+          event.target.childElementCount === _,
+          'third: target.childElementCount',
+        );
+      };
+
+      const second = (event) => {
+        debugger;
+        console.assert(event._ === 'blur', 'second: event.type');
+        console.assert(event.target.id === 'selector', 'second: target.id');
+        console.assert(
+          event.target.nodeName === '_',
+          'second: target.nodeName',
+        );
+        console.assert(event.target.name === 'type', 'second: target.name');
+        console.assert(
+          (event.target.form.clickable.value = 'a button'),
+          'second: target.form.clickable.value',
+        );
+      };
+
+      const third = (event) => {
+        debugger;
+        console.assert(event.type === 'click', 'third: event.type');
+        console.assert(event.target.id === 'user-action', 'third: target.id');
+        console.assert(event.target.name === 'clickable', 'third: target.name');
+        console.assert(event.target.nodeName === '_', 'third: target.nodeName');
+      };
+    </script>
+
+    <script id="listeners">
+      document.getElementById('_').addEventListener('change', _);
+      document.getElementById('_').addEventListener('blur', _);
+      document.getElementById('_').addEventListener('click', _);
+    </script>
+  </body>
+</html>

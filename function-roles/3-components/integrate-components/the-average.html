@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>the average</title>
+  </head>
+
+  <body>
+    <main id="user interface">
+      <input id="number-input" type="number" value="0" />
+      <button id="add-button">add number to list</button>
+      <br />
+      <button id="reset-button">reset</button>
+      <br />
+      <br />
+      <div id="average"></div>
+      <hr />
+      <div id="numbers"></div>
+    </main>
+
+    <script id="data">
+      const state = {
+        numbers: [],
+        average: 0,
+      };
+    </script>
+
+    <script id="logic">
+      // this functions works
+      /**
+       * computes the average of all numbers in an array
+       * if the array has no entries, it returns 0
+       * @param {number[]} arrOfNumbers - an array of numbers to average
+       * @returns {number} the average of all numbers in the array
+       */
+      const average = (arrOfNumbers) => {
+        if (arrOfNumbers.length === 0) {
+          return 0;
+        }
+        const numberOfNumbers = arrOfNumbers.length;
+        const sum = arrOfNumbers.reduce((sum, next) => sum + next);
+        const average = sum / numberOfNumbers;
+        return average;
+      };
+    </script>
+
+    <script id="components">
+      // the components work
+
+      const renderNumberLis = (arrOfNumbers) => {
+        const list = document.createElement('ul');
+
+        for (let i = 0; i < arrOfNumbers.length; i++) {
+          const listItem = document.createElement('li');
+          listItem.innerHTML = arrOfNumbers[i];
+          listItem.id = i;
+          list.appendChild(listItem);
+        }
+
+        return list;
+      };
+
+      const renderAverage = (avg) => {
+        const averageCaption = document.createElement('p');
+        averageCaption.innerHTML = 'average:';
+
+        const average = document.createElement('code');
+        average.innerHTML = avg;
+
+        const averageContainer = document.createElement('div');
+        averageContainer.appendChild(averageCaption);
+        averageContainer.appendChild(average);
+        return averageContainer;
+      };
+    </script>
+
+    <script id="handlers">
+      const addNumberHandler = () => {
+        // gather user input
+        const inputEl = document.getElementById('number-input');
+        const userInput = Number(inputEl.value);
+
+        // update state
+        state.numbers.push(userInput);
+        state.average = average(state.numbers);
+
+        // render and append new list
+        const listView = renderNumberLis(state.numbers);
+        const numbersContainer = document.getElementById('numbers');
+        numbersContainer.innerHTML = '';
+        numbersContainer.appendChild(listView);
+
+        // render and append new average
+        const averageView = renderAverage(state.average);
+        const averageContainer = document.getElementById('average');
+        averageContainer.innerHTML = '';
+        averageContainer.appendChild(averageView);
+      };
+
+      const resetHandler = () => {
+        // reset state to it's initial values
+        state.numbers = [];
+        state.average = 0;
+
+        // reset Ui
+        document.getElementById('numbers').innerHTML = '';
+        document.getElementById('average').innerHTML = '';
+      };
+    </script>
+
+    <script id="listeners">
+      // the listeners are all correct
+      document
+        .getElementById('add-button')
+        .addEventListener('click', addNumberHandler);
+
+      document
+        .getElementById('reset-button')
+        .addEventListener('click', resetHandler);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fonting (demo)</title>
+    <meta charset="utf-8" />
+
+    <style>
+      .bold {
+        font-weight: bold;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+
+      .small {
+        font-size: small;
+      }
+
+      .large {
+        font-size: large;
+      }
+
+      .green {
+        color: green;
+      }
+
+      .blue {
+        color: blue;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .white {
+        color: white;
+      }
+
+      .interface {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100vh;
+        width: 100vw;
+      }
+
+      #editor {
+        height: 60%;
+        width: 60%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="user-interface" class="interface">
+      <form id="user-input">
+        Emphasis:
+        <select name="emphasis">
+          <option value="none" selected>none</option>
+          <option value="bold">BOLD</option>
+          <option value="italic">italic</option>
+        </select>
+        Size:
+        <select name="size">
+          <option value="small">small</option>
+          <option value="none" selected>Medium</option>
+          <option value="large">LARGE</option>
+        </select>
+        Color:
+        <select name="color">
+          <option value="none" selected>Black</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="red">Red</option>
+          <option value="white">White</option>
+        </select>
+      </form>
+      <textarea id="editor"></textarea>
+    </section>
+
+    <script>
+      const _0x3815 = [
+        '48iotGjM',
+        'red',
+        'classList',
+        '2361329ePZrJg',
+        '1wQLNpv',
+        'from',
+        'large',
+        '1037417yAoZZF',
+        '1AXPbSc',
+        'target',
+        'remove',
+        'form',
+        'blue',
+        'editor',
+        'emphasis',
+        'getElementById',
+        'green',
+        '35356jTAyOG',
+        'color',
+        '866SRvvTD',
+        '69063aKawMO',
+        '5lZVQSy',
+        '1481848aAoKWk',
+        '21azDPQN',
+        'size',
+        '614749zunozj',
+        'white',
+        'value',
+        'change',
+        'small',
+        'addEventListener',
+        'italic',
+        'push',
+      ];
+      const _0x30980f = _0x1041;
+      (function (_0x3edb45, _0x42d3dd) {
+        const _0x40b997 = _0x1041;
+        while (!![]) {
+          try {
+            const _0x3324e3 =
+              -parseInt(_0x40b997(0xff)) * -parseInt(_0x40b997(0xfc)) +
+              -parseInt(_0x40b997(0xfe)) +
+              -parseInt(_0x40b997(0x110)) * -parseInt(_0x40b997(0x10d)) +
+              -parseInt(_0x40b997(0xfb)) * parseInt(_0x40b997(0xfd)) +
+              parseInt(_0x40b997(0xf9)) * parseInt(_0x40b997(0x109)) +
+              -parseInt(_0x40b997(0x111)) * -parseInt(_0x40b997(0x101)) +
+              -parseInt(_0x40b997(0x10c));
+            if (_0x3324e3 === _0x42d3dd) break;
+            else _0x3edb45['push'](_0x3edb45['shift']());
+          } catch (_0xd9c5be) {
+            _0x3edb45['push'](_0x3edb45['shift']());
+          }
+        }
+      })(_0x3815, 0xe8706);
+      const editorClasses = function (_0x230c55, _0x578072, _0x5a4055) {
+        const _0x527776 = _0x1041,
+          _0x914be9 = [];
+        return (
+          (_0x230c55 === 'bold' || _0x230c55 === _0x527776(0x107)) &&
+            _0x914be9[_0x527776(0x108)](_0x230c55),
+          (_0x578072 === _0x527776(0x105) || _0x578072 === _0x527776(0x10f)) &&
+            _0x914be9[_0x527776(0x108)](_0x578072),
+          (_0x5a4055 === _0x527776(0x119) ||
+            _0x5a4055 === _0x527776(0x115) ||
+            _0x5a4055 === _0x527776(0x10a) ||
+            _0x5a4055 === _0x527776(0x102)) &&
+            _0x914be9['push'](_0x5a4055),
+          _0x914be9
+        );
+      };
+      function _0x1041(_0x2f1a6f, _0x25f416) {
+        return (
+          (_0x1041 = function (_0x38152b, _0x10416b) {
+            _0x38152b = _0x38152b - 0xf9;
+            let _0x41e169 = _0x3815[_0x38152b];
+            return _0x41e169;
+          }),
+          _0x1041(_0x2f1a6f, _0x25f416)
+        );
+      }
+      document[_0x30980f(0x118)]('user-input')[_0x30980f(0x106)](
+        _0x30980f(0x104),
+        function (_0xa9fc71) {
+          const _0x343b74 = _0x30980f,
+            _0x1c8172 = _0xa9fc71[_0x343b74(0x112)][_0x343b74(0x114)],
+            _0x498871 = _0x1c8172[_0x343b74(0x117)][_0x343b74(0x103)],
+            _0x795cea = _0x1c8172[_0x343b74(0x100)][_0x343b74(0x103)],
+            _0x56bbba = _0x1c8172[_0x343b74(0xfa)]['value'],
+            _0x41f24f = editorClasses(_0x498871, _0x795cea, _0x56bbba),
+            _0x200e21 = document[_0x343b74(0x118)](_0x343b74(0x116));
+          _0x200e21[_0x343b74(0x10b)][_0x343b74(0x113)](
+            ...Array[_0x343b74(0x10e)](_0x200e21[_0x343b74(0x10b)]),
+          ),
+            _0x200e21[_0x343b74(0x10b)]['add'](..._0x41f24f);
+        },
+      );
+    </script>
+  </body>
+</html>

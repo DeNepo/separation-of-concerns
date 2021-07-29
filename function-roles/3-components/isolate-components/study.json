@@ -1,0 +1,12 @@
+{
+  "--defaults": {
+    ".html": "",
+    ".js": "study"
+  },
+  "study": {
+    "type": "module",
+    "environment": true,
+    "eval": true,
+    "tests": [".spec.js"]
+  }
+}

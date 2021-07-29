@@ -106,7 +106,7 @@
         }
 
         const confirmLogOut = confirm(
-          `${currentUser}, are you sure you want to log out?`
+          `${currentUser}, are you sure you want to log out?`,
         );
         if (!confirmLogOut) {
           return;
@@ -120,8 +120,11 @@
         const userNameEl = document.getElementById('user-name');
         const password1El = document.getElementById('password');
         const password2El = document.getElementById('confirm-password');
-        outputEl.innerHTML = userNameEl.value = password1El.value = password2El.value =
-          '';
+        outputEl.innerHTML =
+          userNameEl.value =
+          password1El.value =
+          password2El.value =
+            '';
         outputEl.className = '';
       };
     </script>

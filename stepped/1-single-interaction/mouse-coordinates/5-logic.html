@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- open your console! -->
+    <title>Mouse Coordinates</title>
+    <style>
+      .center {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .pretty-text {
+        font-family: monospace;
+        font-size: 2em;
+      }
+
+      .full-screen {
+        height: 100vh;
+        width: 100vw;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="full-screen" id="user-interface">
+      <pre id="mouse-position" class="center pretty-text"></pre>
+    </section>
+
+    <script id="logic">
+      // refactor and test core logic
+      const format = (x, y) => {
+        return 'X: ' + x + '\nY: ' + y;
+      };
+      console.assert(format(5, 1) === 'X: 5\nY: 2', 'first assert');
+      console.assert(format(12, -40) === 'X: 1\nY: -40', 'second assert');
+      console.assert(format(-1999, 409) === 'X: -1999\nY: 409', 'third assert');
+    </script>
+    <script id="handlers">
+      const handler = (event) => {
+        debugger;
+        const xValue = event.pageX;
+        const yValue = event.pageY;
+        const formattedCoordinates = format(xValue, yValue);
+        document.getElementById('mouse-position').innerHTML =
+          formattedCoordinates;
+        console.log('mouse move:\n', formattedCoordinates);
+      };
+    </script>
+    <script id="listeners">
+      document
+        .getElementById('user-interface')
+        .addEventListener('mousemove', handler);
+    </script>
+  </body>
+</html>

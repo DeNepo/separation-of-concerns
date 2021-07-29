@@ -6,7 +6,6 @@
 
 */
 
-
 const buttonEl = document.createElement('button');
 buttonEl.innerHTML = 'initial text';
 console.log(buttonEl.nodeName, buttonEl.cloneNode(true));
@@ -20,7 +19,6 @@ const updateInnerHTMLHandler = () => {
   const target = event.target;
   target.innerHTML = newInnerHTML;
 };
-
 
 buttonEl.addEventListener('click', updateInnerHTMLHandler);
 

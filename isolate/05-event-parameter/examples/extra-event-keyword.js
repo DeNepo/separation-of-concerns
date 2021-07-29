@@ -9,10 +9,10 @@
 
 */
 
-
 const buttonEl = document.createElement('button');
 
-const demoHandler = () => { // no parameter!
+const demoHandler = () => {
+  // no parameter!
   // yet the function behaves no differently
 
   const eventType = event.type;
@@ -26,7 +26,6 @@ const demoHandler = () => { // no parameter!
 
 buttonEl.addEventListener('click', demoHandler);
 buttonEl.addEventListener('mouseover', demoHandler);
-
 
 const clickEvent = new Event('click');
 buttonEl.dispatchEvent(clickEvent);

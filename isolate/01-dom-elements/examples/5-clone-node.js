@@ -23,5 +23,3 @@ console.log('reference:', divEl, '\n\n');
 divEl.className = 'red-car';
 console.log('clone:', divEl.cloneNode(true));
 console.log('reference:', divEl, '\n\n');
-
-

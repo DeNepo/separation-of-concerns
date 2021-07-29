@@ -5,7 +5,7 @@ debugger; // once when the module is loaded
  * @param {string} text - the string to reverse
  * @returns {string} the reversed text
  */
-export const reverseString = text => {
+export const reverseString = (text) => {
   debugger; // each time the function is called
 
   let reversedText = '';
@@ -25,7 +25,7 @@ export const reverseString = text => {
  * @param {string} text - the text to filter
  * @returns {string} a new string with no vowels
  */
-export const removeVowels = text => {
+export const removeVowels = (text) => {
   debugger; // each time the function is called
 
   const vowels = 'AEIOUaeiou';

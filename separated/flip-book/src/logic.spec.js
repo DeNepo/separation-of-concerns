@@ -1,13 +1,20 @@
-import { testing } from '../../testing.js';
-
 import { reverseAndUpper } from './logic.js';
 
-const reverseAndUpperTests = [
-  { name: 'first', args: ['fdsa'], expected: 'ASDF' },
-  { name: 'second', args: ['./.'], expected: './.' },
-  { name: 'third', args: ['FD-Df'], expected: 'FD-DF' },
-  { name: 'fourth', args: [''], expected: '' },
-  { name: 'fifth', args: ['1234'], expected: '4321' },
-];
-
-testing(reverseAndUpper, reverseAndUpperTests);
+describe('reverses a string ans sets the characters to upper case', () => {
+  it('works with lower-case letters', () => {
+    const actual = reverseAndUpper('asdf');
+    expect(actual).toEqual('FDSA');
+  });
+  it('works with upper-case letters', () => {
+    const actual = reverseAndUpper('ASDF');
+    expect(actual).toEqual('FDSA');
+  });
+  it('works with mixed upper and lower-case letters', () => {
+    const actual = reverseAndUpper('aSdF');
+    expect(actual).toEqual('FDSA');
+  });
+  it('things that are not letters are just reversed', () => {
+    const actual = reverseAndUpper('(-0-)');
+    expect(actual).toEqual(')-0-(');
+  });
+});

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>up and down</title>
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="user-interface" class="centered">
+      <code id="current-number"></code> <br />
+      <button id="plus-one">+</button>
+      <button id="minus-one">-</button>
+    </section>
+
+    <script id="data">
+      const numbers = {
+        current: 0,
+        past: [],
+      };
+      console.log('initial state:', JSON.parse(JSON.stringify(numbers)));
+    </script>
+
+    <script id="handlers">
+      const up = () => {
+        debugger;
+        // update state
+        numbers.past.push(numbers.current);
+        numbers.current += 1;
+        // update UI
+        document.getElementById('current-number').innerHTML = numbers.current;
+        // log the interaction
+        console.log('up:', JSON.parse(JSON.stringify(numbers)));
+      };
+
+      const down = () => {
+        debugger;
+        // update state
+        numbers.past.push(numbers.current);
+        numbers.current -= 1;
+        // update UI
+        document.getElementById('current-number').innerHTML = numbers.current;
+        // log the interaction
+        console.log('down:', JSON.parse(JSON.stringify(numbers)));
+      };
+    </script>
+
+    <script id="listeners">
+      document.getElementById('plus-one').addEventListener('click', up);
+
+      document.getElementById('minus-one').addEventListener('click', down);
+    </script>
+
+    <script id="init">
+      document.getElementById('current-number').innerHTML = numbers.current;
+    </script>
+  </body>
+</html>

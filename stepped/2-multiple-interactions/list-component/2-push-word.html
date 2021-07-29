@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>List Component</title>
+    <style></style>
+  </head>
+
+  <body>
+    <section id="user-interface">
+      <input id="word" type="text" value="" /> <br />
+      <button id="push-button">push</button>
+      <hr />
+      <div id="all-words"></div>
+    </section>
+
+    <script id="data">
+      const state = {
+        words: [],
+      };
+      console.log('initial words:', [...state.words]);
+    </script>
+
+    <script id="components">
+      const wordsList = (array) => {
+        const ul = document.createElement('ul');
+        for (let string of array) {
+          const li = document.createElement('li');
+          li.innerHTML = string;
+          ul.appendChild(li);
+        }
+        return ul;
+      };
+
+      console.log('-- Test 1:\n');
+      const test1 = wordsList(['chunky']);
+      console.assert(test1.nodeName === 'UL', 'it should be an unordered list');
+      console.assert(test1.childElementCount === 1, 'it should have 1 child');
+      console.assert(
+        test1.children[0].nodeName === 'LI',
+        '.children[0].nodeName should be LI',
+      );
+      console.assert(
+        test1.children[0].innerHTML === 'chunky',
+        '.children[0].innerHTML should be "chunky"',
+      );
+
+      console.log('-- Test 2:\n');
+      const test2 = wordsList([]);
+      console.assert(test2.nodeName === 'UL', 'it should be an unordered list');
+      console.assert(
+        test2.childElementCount === 0,
+        'it should have 0 children',
+      );
+    </script>
+
+    <script id="handlers">
+      const pushWordHandler = () => {
+        debugger;
+        // read input from DOM
+        const newWord = document.getElementById('word').value;
+        // update state
+        state.words.push(newWord);
+        // render state
+        const wordsComponent = wordsList(state.words);
+        // update UI
+        const wordsContainer = document.getElementById('all-words');
+        wordsContainer.innerHTML = '';
+        wordsContainer.appendChild(wordsComponent);
+        // log interaction
+        console.log('push:', newWord, [...state.words]);
+      };
+    </script>
+
+    <script id="listeners">
+      document
+        .getElementById('push-button')
+        .addEventListener('click', pushWordHandler);
+    </script>
+  </body>
+</html>

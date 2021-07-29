@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>User Input in an Object</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="user-interface" class="centered">
+      <button id="write">write an entry</button> <br />
+      <button id="delete">delete an entry</button> <br />
+      <button id="display">display all userEntries</button>
+    </main>
+
+    <script id="data">
+      let userEntries = {};
+    </script>
+
+    <script id="handlers">
+      'use strict';
+
+      const displayEntriesHandler = () => {
+        debugger;
+
+        console.log('-- action: display values --');
+        console.log('userEntries:', typeof userEntries, '\n', userEntries);
+
+        let stringToDisplay = 'all entries:';
+        for (const key in userEntries) {
+          const nextLine = ` ${key}: ${userEntries[key]}`;
+          stringToDisplay += '\n' + nextLine;
+        }
+        console.log(
+          'stringToDisplay:',
+          typeof stringToDisplay,
+          '\n',
+          stringToDisplay,
+        );
+
+        alert(stringToDisplay);
+      };
+
+      const writeEntryHandler = () => {
+        debugger;
+
+        console.log('-- action: write entry --');
+        console.log('userEntries (before):', '\n', userEntries);
+
+        const key = prompt('enter a key:');
+        console.log('key:', typeof key, '\n', key);
+        if (key === null) {
+          return;
+        }
+
+        const newValue = prompt('enter a value:');
+        console.log('newValue:', typeof newValue, '\n', newValue);
+        if (newValue === null) {
+          return;
+        }
+        userEntries[key] = newValue;
+
+        console.log(
+          'userEntries (after):',
+          typeof userEntries,
+          '\n',
+          userEntries,
+        );
+
+        displayEntriesHandler();
+      };
+
+      const deleteEntryHandler = () => {
+        debugger;
+
+        console.log('-- action: delete entry --');
+        console.log('userEntries (before):', '\n', userEntries);
+
+        const key = prompt('enter a key to delete:');
+        console.log('key:', typeof key, '\n', key);
+        if (key === null) {
+          return;
+        }
+
+        if (key in userEntries) {
+          delete userEntries[key];
+          console.log(
+            'userEntries (after):',
+            typeof userEntries,
+            '\n',
+            userEntries,
+          );
+          displayEntriesHandler();
+        } else {
+          alert(`"${key}" does not exist`);
+        }
+      };
+    </script>
+
+    <script id="listeners">
+      debugger; // main entry point
+
+      // this code works!
+      document
+        .getElementById('write')
+        .addEventListener('click', writeEntryHandler);
+      document
+        .getElementById('delete')
+        .addEventListener('click', deleteEntryHandler);
+      document
+        .getElementById('display')
+        .addEventListener('click', displayEntriesHandler);
+    </script>
+  </body>
+</html>

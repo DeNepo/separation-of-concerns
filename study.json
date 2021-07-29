@@ -4,6 +4,10 @@
   },
   "--port": 4004,
   "study": {
-    "save": true
+    "save": true,
+    "type": "module",
+    "eval": true,
+    "environment": true,
+    "tests": [".spec.js"]
   }
 }

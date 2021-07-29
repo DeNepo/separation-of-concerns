@@ -6,9 +6,8 @@
 
 */
 
-
 const divEl = document.createElement('Div');
-divEl.innerHTML = "div time!";
+divEl.innerHTML = 'div time!';
 console.log(divEl.nodeName, divEl);
 console.log('.innerHTML:', divEl.innerHTML, '\n\n');
 
@@ -18,7 +17,7 @@ console.log(pEl.nodeName, pEl);
 console.log('.innerHTML:', pEl.innerHTML, '\n\n');
 
 const buttonEl = document.createElement('bUTTOn');
-buttonEl.innerHTML = "big time sun";
+buttonEl.innerHTML = 'big time sun';
 console.log(buttonEl.nodeName, buttonEl);
 console.log('.innerHTML:', buttonEl.innerHTML, '\n\n');
 

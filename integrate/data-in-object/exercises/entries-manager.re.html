@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Entries Manager (demo)</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+
+    <script id="data">
+      let userEntries = {
+        wood: 'oak',
+        television: '>:)',
+      };
+    </script>
+
+    <script id="handlers">
+      /* reverse-engineering!
+
+      this is a fully working demo of the so-many-numbers.html exercise
+      the source code has been obfuscated so you can't copy the solution
+      but the buttons and prompt/alerts work like they should
+
+      study the behavior of this demo to help solve the exercise
+      you'll know when you're finished when they both behave identically
+
+      hint: open this demo with the newTab
+        you can then go back and forth between this demo and the exercise
+    */
+      const a = [
+        'entries',
+        'fromEntries',
+        'keys',
+        'entry\x20\x22',
+        'enter\x20a\x20value:',
+        'enter\x20a\x20key\x20to\x20find:',
+        'search\x20results\x20for\x20\x22',
+        'includes',
+        '\x22\x20does\x20not\x20exist',
+        'filter',
+        'enter\x20a\x20search\x20query',
+      ];
+      (function (b, e) {
+        const f = function (g) {
+          while (--g) {
+            b['push'](b['shift']());
+          }
+        };
+        f(++e);
+      })(a, 0x142);
+      const b = function (c, d) {
+        c = c - 0x0;
+        let e = a[c];
+        return e;
+      };
+      ('use strict');
+      const displayEntriesHandler = (c = 'all\x20entries', d = userEntries) => {
+          const e = c + ':',
+            f = Object['entries'](d)['reduce']((g, h) => {
+              const i = h[0x0] + ':\x20' + h[0x1];
+              return g + '\x0a' + i;
+            }, e);
+          alert(f);
+        },
+        resetHandler = () => {
+          (userEntries = {}), displayEntriesHandler();
+        },
+        writeEntryHandler = () => {
+          const c = prompt('enter\x20a\x20key:');
+          if (c === null) return;
+          const d = prompt(b('0x1'));
+          if (d === null) return;
+          (userEntries[c] = d), displayEntriesHandler();
+        },
+        deleteEntryHandler = () => {
+          const c = prompt('enter\x20a\x20key\x20to\x20find:');
+          if (c === null) return;
+          const d = Object['keys'](userEntries)[b('0x4')](c);
+          d
+            ? (delete userEntries[c], displayEntriesHandler())
+            : alert('\x22' + c + b('0x5'));
+        },
+        findKeyHandler = () => {
+          const c = prompt(b('0x2'));
+          if (c === null) return;
+          const d = Object[b('0xa')](userEntries)[b('0x4')](c);
+          if (d) {
+            const e = '\x20' + c + ':\x20' + userEntries[c];
+            alert(e);
+          } else alert(b('0x0') + c + b('0x5'));
+        },
+        searchValuesHandler = () => {
+          const c = prompt(b('0x7'));
+          if (c === null) return;
+          const d = Object[b('0x8')](userEntries)[b('0x6')]((f) => {
+              return f[0x1]['includes'](c);
+            }),
+            e = Object[b('0x9')](d);
+          displayEntriesHandler(b('0x3') + c + '\x22', e);
+        };
+    </script>
+  </head>
+
+  <body>
+    <main id="user-interface" class="centered">
+      <button onclick="writeEntryHandler()">write an entry</button> <br />
+      <button onclick="deleteEntryHandler()">delete an entry</button> <br />
+      <button onclick="searchValuesHandler()">search in values</button> <br />
+      <button onclick="findKeyHandler()">find by key</button> <br />
+      <br />
+      <button onclick="displayEntriesHandler()">display all userEntries</button>
+      <br />
+      <button onclick="resetHandler()">reset entries</button>
+    </main>
+  </body>
+</html>

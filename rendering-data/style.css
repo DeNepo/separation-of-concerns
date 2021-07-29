@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+  border-bottom: solid black 1px;
+  padding-bottom: 1em;
+}
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.test-case {
+  border-bottom: solid black 1px;
+  padding-bottom: 3em;
+}
+
+.dotted-barrier {
+  width: 0%;
+  border-left: dotted black 1px;
+}
+
+.inspect {
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 3em;
+}

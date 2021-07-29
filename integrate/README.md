@@ -1,7 +1,7 @@
 examples and exercises to illustrate how JS can be integrated with HTML & CSS to create interactive web pages
 
-
 <!-- BEGIN TOC -->
+
 - /01-add-event-listener
   - /examples
     - <a href="./01-add-event-listener/examples/authentication.html" target="_blank">/authentication.html</a>

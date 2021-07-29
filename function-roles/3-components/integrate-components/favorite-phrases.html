@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>favorite phrase</title>
+
+    <style>
+      .discrete {
+        color: gray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="user interface">
+      <input id="phrase-input" placeholder="new phrase" />
+      <button id="add-button">add phrase</button>
+      <br />
+      <br />
+      <div id="favorite"></div>
+      <hr />
+      <text class="discrete">click an item to set favorite</text>
+      <br />
+      <div id="phrases"></div>
+    </main>
+
+    <script id="data">
+      const state = {
+        favorite: -1,
+        phrases: [],
+      };
+
+      // log this variable in the console for a history of:
+      //  all user ineractions
+      //  all state changes
+      console.log('initial state:', {
+        favorite: state.favorite,
+        phrases: [...state.phrases],
+      });
+    </script>
+
+    <script id="components">
+      const renderPhrasesList = (arrOfStrings) => {
+        const list = document.createElement('ol');
+        list.start = 0;
+
+        for (let i = 0; i < arrOfStrings.length; i++) {
+          const listItem = document.createElement('li');
+          listItem.innerHTML = arrOfStrings[i];
+          listItem.id = i;
+          list.appendChild(listItem);
+        }
+
+        return list;
+      };
+
+      const renderFavorite = (id, phrase) => {
+        const favoriteCaption = document.createElement('p');
+        favoriteCaption.innerHTML = 'favorite:';
+
+        const favorite = document.createElement('code');
+        favorite.innerHTML = `${id}. ${phrase}`;
+
+        const favoriteContainer = document.createElement('div');
+        favoriteContainer.appendChild(favoriteCaption);
+        favoriteContainer.appendChild(favorite);
+        return favoriteContainer;
+      };
+    </script>
+
+    <script id="handlers">
+      const addPhraseHandler = (event) => {
+        debugger;
+        // read user input
+        const inputEl = document.getElementById('phrase-input');
+        const userInput = inputEl.value;
+
+        // exit early if there was no input
+        if (userInput === '') {
+          console.log('empty user input');
+          return;
+        }
+
+        // update state
+        state.phrases.push(userInput);
+
+        // render state and update UI
+        const renderedLis = renderPhrasesList(state.phrases);
+        const phrasesEl = document.getElementById('phrases');
+        phrasesEl.innerHTML = '';
+        phrasesEl.appendChild(renderedLis);
+      };
+
+      const setFavoriteHandler = (event) => {
+        debugger;
+        // make sure an LI was clicked
+        if (event.target.nodeName !== 'LI') {
+          console.log('did not click a list item');
+          return;
+        }
+
+        // read and process user input
+        const favoriteLi = event.target;
+        const favoriteIndexStr = favoriteLi.id;
+        const favoriteIndex = Number(favoriteIndexStr);
+
+        // update state
+        state.favorite = favoriteIndex;
+
+        // render state and update UI
+        const favoritePhrase = state.phrases[state.favorite];
+        const favoriteView = renderFavorite(favoriteIndex, favoritePhrase);
+        const favoriteEl = document.getElementById('favorite');
+        favoriteEl.innerHTML = '';
+        favoriteEl.appendChild(favoriteView);
+      };
+    </script>
+
+    <script id="listeners">
+      document
+        .getElementById('add-button')
+        .addEventListener('click', addPhraseHandler);
+
+      document
+        .getElementById('phrases')
+        .addEventListener('click', setFavoriteHandler);
+    </script>
+  </body>
+</html>

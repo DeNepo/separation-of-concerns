@@ -27,7 +27,7 @@
 How to study the code in this repo.
 
 <details>
-<summary>expand/collapse</summary>
+<summary>setting up study-lenses</summary>
 <br>
 
 > You will need [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) on your computer to study this material
@@ -62,7 +62,26 @@ How to study the code in this repo.
 > follow the instructions in [this StackOverflow answer](https://stackoverflow.com/a/63424744), that should take care of it ; )
 
 </details>
-<br>
+
+### `npm run test -- path/to/file.spec.js`
+
+You can run tests in this repository using the `test` script, it will run all the tests in the path you provide.
+
+If you do `npm run test` or `npm run test -- ./` it will run every test in this repository. (there are a lot)
+
+### `npm run document -- path/to/src`
+
+This script will build a dependency graph for all the JavaScript files inside a specific `/src` folder. It can be very helpful to run the document script every time you add/remove a file or change the `import`/`export`s in an exercise.
+
+If you run this script at a higher directory, like `./`, it will document all of the `/src` folders inside that directory.
+
+### `npm run format -- path`
+
+This script will format all of the code in the path you provide.
+
+### Linting
+
+There is no linting script in this repository. It's for practice only, no need to check every detail. Your project starter repositories will have linting scripts.
 
 [TOP](#separation-of-concerns)
 
@@ -159,6 +178,8 @@ What you can expect to learn in this module
 
 ## About the Projects
 
+> template project for this module: [separation-of-concerns-starter](https://github.com/HackYourFutureBelgium/separation-of-concerns-starter)
+
 Projects in this module will be more challenging than in the last modules, adding even a little interactivity into a website will make things much more complicated! To help you deal with this complexity you will practice separating and organizing your JavaScript code into different files based on what role it plays in your application.
 
 <details>
@@ -187,7 +208,7 @@ You will learn how to use _DOM events_ to interact with users and to read more i
 
 ### Separating your Concerns
 
-A working project is not enough! For projects in this module we will expect you to turn in code that is well organized in different files based on it's role. The first week's project will come with some starter-code to help you get used to the folder structure we expect. The `using-user-input` exercises will also act as a guide & practice for building well-structured projects.
+A working project is not enough! For projects in this module we will expect you to turn in code that is well organized in different files based on it's role. The first week's project will come with some starter-code to help you get used to the folder structure we expect.
 
 ### Development Strategy
 
@@ -226,8 +247,51 @@ Helpful links, examples and exercises.
   - 🐣 [/magic-variables](./magic-variables): the browser will magically create some variables when you work with the DOM, don't use them. Use locally declared variables.
 - exercises
   - 🥚 [/isolate](./isolate): focus on the DOM and events, isolating JavaScript in the debugger
+  - 🥚 [/dom-manipulation](./dom-manipulation): practice updating the DOM in a live web page.
+  - 🥚 [/listeners-and-handlers](./listeners-and-handlers): learn how to navigate events in your browser's devtools.
   - 🐣 [/integrate](./integrate): learn how to integrate JS into user interfaces built with HTML and CSS
-  - 🐣 [/break-these](./break-these): "learn by breaking" - it's a thing. This folder has finished code from some great online tutorials, follow the tutorial then explore their code in your debugger.
+  - 🐣 [/rendering-data](./rendering-data): practice rendering JS data in to DOM components.
+  - 🐣 [/refactoring](./refactoring): practice refactoring small websites from a single JS file to many files separated by concern.
+  - 🐣 [/testing-components](./testing-components): learn how to write tests for DOM component functions.
+  - 🐣 [/reverse-engineering](./reverse-engineering): use what you learned in `/stepped` and `/separated` to reverse-engineer user interactions in small web pages.
+  - 🐥 [/hack-these](./hack-these): "learn by hacking" - it's a thing. This folder has finished code from some great online tutorials, follow the tutorial then explore their code in your debugger.
+
+### Event Driven Programming
+
+What matters for now is understanding this: _user interaction_ -> _event listener_ -> _event handler_
+
+You do not need to study the event loop, you'll see that in Asynchronous Programming.
+
+- [NERDfirst](https://www.youtube.com/watch?v=fpphnWwMrug)
+- [weird and awesome JS](https://www.youtube.com/watch?v=pNzN5WF7Uag)
+- [summary](https://www.youtube.com/watch?v=qrA7eD18CZo)
+- [wikipedia](https://en.wikipedia.org/wiki/Event-driven_programming)
+
+### Events
+
+- What is this?
+  - [Beau](https://www.youtube.com/watch?v=F3odgpghXzY)
+  - [Web Dev Simplified](https://www.youtube.com/watch?v=XF1_MlZ5l6M)
+- [domevents.dev](https://domevents.dev) (+10)
+- [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
+- [javascript.info/events](https://javascript.info/events)
+- [javascript.info/event-details](https://javascript.info/event-details)
+- [inspecting event listeners](https://www.stanleyulili.com/javascript/how-to-find-event-listeners-on-a-dom-node-when-debugging/)
+- [event breakpoints](https://www.youtube.com/watch?v=Q6QYrG-IYds)
+- [MDN Building Blocks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Monitoring Events in Chrome](https://developers.google.com/web/updates/2015/05/quickly-monitor-events-from-the-console-panel)
+- [Learn Form Validation](https://github.com/oliverjam/learn-form-validation)
+- Bubbling and Delegation
+  - [js.info: Bubbling & Capturing](https://javascript.info/bubbling-and-capturing) (`event.target`)
+  - [js.info: Event Delegation](https://javascript.info/event-delegation)
+  - [Event Delegation (mosh)](https://programmingwithmosh.com/javascript/javascript-event-bubbling-and-event-delegation/)
+  - [Bubble & Capture (dev.to)](https://dev.to/shimphillip/handing-javascript-events-efficiently-with-bubble-and-capture-4ha5)
+  - [Gordon: DOM Events](https://www.youtube.com/watch?v=QE1YQnhntgw)
+  - [Griffith: JS Event Listeners](https://www.youtube.com/watch?v=EaRrmOtPYTM)
+  - [Event Delegation (mosh)](https://programmingwithmosh.com/javascript/javascript-event-bubbling-and-event-delegation/)
+  - [Event Delegation (all things JS)](https://www.youtube.com/watch?v=6NMSCh3DJug)
+  - [Event Delegation (dcode)](https://www.youtube.com/watch?v=pKzf80F3O0U)
+  - [Bubbling, capturing, once and propagation](https://www.youtube.com/watch?v=F1anRyL37lE)
 
 ### The DOM
 
@@ -236,25 +300,18 @@ Helpful links, examples and exercises.
 - [inspecting-the-dom](https://hackyourfuturebelgium.github.io/inspecting-the-dom/)
 - [Zac Gordon](https://www.youtube.com/watch?v=l-0nPnSvbX8&list=PLruo2gSoqlej-QjRW25c97socsRiAUVuf&index=8)
 - [Traversy](https://www.youtube.com/watch?v=0ik6X4DJKCc)
-- [study.hackyourfuture.be](https://study.hackyourfuture.be/javascript/dom-manipulation)
 - [Browser rendering behind the scenes](https://blog.logrocket.com/how-browser-rendering-works-behind-the-scenes-6782b0e8fb10/)
 - also this: [Generating HTML with Template Literals](https://wesbos.com/template-strings-html)
 
-### Events
+### Separation of Concerns
 
-- [what are events?](https://www.youtube.com/watch?v=gx0oAgvXyE4) (mmtuts)
-- [domevents.dev](https://domevents.dev)
-- [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
-- [javascript.info/events](https://javascript.info/events)
-- [javascript.inf/event-details](https://javascript.info/event-details)
-- [inspecting event listeners](https://www.stanleyulili.com/javascript/how-to-find-event-listeners-on-a-dom-node-when-debugging/)
-- [event breakpoints](https://www.youtube.com/watch?v=Q6QYrG-IYds)
-- [MDN Building Blocks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- [Event Delegation (mosh)](https://programmingwithmosh.com/javascript/javascript-event-bubbling-and-event-delegation/)
-- [Bubble & Capture (dev.to)](https://dev.to/shimphillip/handing-javascript-events-efficiently-with-bubble-and-capture-4ha5)
-- [Monitoring Events in Chrome](https://developers.google.com/web/updates/2015/05/quickly-monitor-events-from-the-console-panel)
-- [Bubbling, capturing, once and propagation](https://www.youtube.com/watch?v=F1anRyL37lE)
-- [Learn Form Validation](https://github.com/oliverjam/learn-form-validation)
+> template project for this module: [separation-of-concerns-starter](https://github.com/HackYourFutureBelgium/separation-of-concerns-starter)
+
+- [Jon Bellah](https://jonbellah.com/articles/separation-of-concerns/)
+- [stackexchange](https://softwareengineering.stackexchange.com/questions/32581/how-do-you-explain-separation-of-concerns-to-others)
+- [Machine Words](https://medium.com/machine-words/separation-of-concerns-1d735b703a60)
+- [Colocation](https://kentcdodds.com/blog/colocation)
+- [FunFunRant](https://www.youtube.com/watch?v=0ZNIQOO2sfA) (you're headed in this direction)
 
 ### `import`/`export`
 
@@ -263,38 +320,10 @@ Helpful links, examples and exercises.
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 - [JavaScript Tutorial](https://www.javascripttutorial.net/es6/es6-modules/)
 
-### Separation of Concerns
-
-- [Jon Bellah](https://jonbellah.com/articles/separation-of-concerns/)
-- [stackexchange](https://softwareengineering.stackexchange.com/questions/32581/how-do-you-explain-separation-of-concerns-to-others)
-- [Machine Words](https://medium.com/machine-words/separation-of-concerns-1d735b703a60)
-- [Colocation](https://kentcdodds.com/blog/colocation)
-- [FunFunRant](https://www.youtube.com/watch?v=0ZNIQOO2sfA) (you're headed in this direction)
-
 ### Fun projects on YouTube
 
 - [Code Explained](https://www.youtube.com/channel/UC8n8ftV94ZU_DJLOLtrpORA)
 - Dev Ed: [todo list](https://www.youtube.com/watch?v=Ttf3CEsEwMQ), [rock paper scissors](https://www.youtube.com/watch?v=qWPtKtYEsN4&list=PLDyQo7g0_nsX8_gZAB8KD1lL4j4halQBJ&index=10)
-
-### JavaScript 30
-
-- [javascript30.com](https://javascript30.com/)
-- [YouTube Playlist](https://www.youtube.com/playlist?list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH)
-- [wesbos/JavaScript30](https://github.com/wesbos/JavaScript30)
-- [Study Guide](https://github.com/HackYourFutureBelgium/javascript-30)
-- [Group Project Starter Repo](https://github.com/HackYourFutureBelgium/javascript-30-starter)
-- Looking for more like this?
-  - [fun-javascript.com](https://github.com/chrisdixon161/fun-javascript.com) - stepped projects, :+1:
-  - [bradtraversy/vanillawebprojects](https://github.com/bradtraversy/vanillawebprojects)
-  - [aman-maharshi/vanilla-js](https://github.com/aman-maharshi/vanilla-js)
-  - [MMTuts Calculator](https://www.youtube.com/watch?v=qQEYAOPWDzk) - youtube tutorial
-
-### Some older exercises, take it or leave it
-
-- [hyfbe/dom-manipulation](https://github.com/HackYourFutureBelgium/dom-manipulation)
-- [hyfbe/listeners-and-handlers](https://github.com/HackYourFutureBelgium/listeners-and-handlers)
-- [hyfbe/handler-refactors](https://github.com/HackYourFutureBelgium/handler-refactors)
-- [hyfbe/using-user-events](https://github.com/HackYourFutureBelgium/using-user-events)
 
 </details>
 <br>
@@ -305,16 +334,20 @@ Helpful links, examples and exercises.
 
 ## Week 1
 
-- Event listeners and event handlers
-- Reading and writing from the DOM
-- 3 roles a function can play in your projects
-- Using the project repository (continuous integration)
+- Function Roles
+- Step-by-step process for building web pages
+- Separating code across different files
+- Generating dependency graphs for `/src` folders
 
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
+- The DOM and Event Listener
+  - [javascript.info/document](https://javascript.info/document)
+  - skim the DOM Crash Course: [part 1](https://www.youtube.com/watch?v=0ik6X4DJKCc)
+  - [What are Events?](https://www.youtube.com/watch?v=F3odgpghXzY)
 - [/function-roles](./function-roles): Look through the README
 
 ### During Class
@@ -323,17 +356,78 @@ Helpful links, examples and exercises.
 
 - [/function-roles](./function-roles)
   - handlers
-  - procedures
   - logic
-- `word-list` code-review checklist
+  - components
+- [/es5-vs-es6](./es5-vs-es6): a journey through the debugger
 
 #### After Break
 
-- [/es5-vs-es6](./es5-vs-es6): a journey through the debugger
+- [/stepped](./stepped)
+- [/separated](./separated)
+  - `npm run document`
 
 ### After Class
 
-[word-list](https://github.com/HackYourFutureBelgium/word-list): an individual project to practice working on a multi-file project and using Continuous Integration. You will be using this basic project structure until the final project, so no worries if you don't understand everything right away. There's still plenty of time to get used it.
+> no project, just study
+
+Suggested code to study:
+
+- [/function-roles](./function-roles)
+- [/isolate](./isolate): all of it
+- [/integrate](./integrate): 1 & 2
+- [/stepped](./stepped)
+- [/separated](./separated)
+- [/magic-variables](./magic-variables): it's just 2 examples
+- [/dom-manipulation](./dom-manipulation): the exercises are pretty short
+- [/listeners-and-handlers](./listeners-and-handlers): 4 exercises
+
+Somewhere to start with the DOM & Events
+
+- [javascript.info/document](https://javascript.info/document)
+- [javascript.info/events](https://javascript.info/events)
+- [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
+- [What are event listeners in JS?](https://www.youtube.com/watch?v=jqU3uaRgQyQ)
+- [domevents.dev](https://domevents.dev)
+
+</details>
+<br>
+
+[TOP](#separation-of-concerns)
+
+---
+
+## Week 2
+
+- Refactoring
+- Reverse-Engineering
+
+<details>
+<summary>expand/collapse</summary>
+
+### Before Class
+
+Take a look through [/refactoring](./refactoring) and [/reverse-engineering](./reverse-engineering) if you have not yet.
+
+### During Class
+
+#### Before Break
+
+- Q/A review from last week
+- Practice the [/refactoring](./refactoring) exercises
+  - all together
+  - in groups
+
+#### After Break
+
+- Practice [/reverse-engineering](./reverse-engineering)
+  - all together
+  - in groups
+
+### After Class
+
+> individual project: [word-list](https://github.com/HackYourFutureBelgium/word-list)
+
+This week's assignment is for learning how to work on a multi-file project. You will be using this project structure for the next few modules, so no worries if you don't understand everything right away. There's still plenty of time to understand.
 
 There's only about 15-30 lines of JavaScript you need to write. That might not sound like it may not sound like a lot, but it will take some study to figure out what exactly to write where.
 
@@ -354,85 +448,11 @@ And the starter page is pretty ugly. Feel free to improve the HTML and CSS as mu
 
 Suggested code to study:
 
-- [/function-roles](./function-roles)
-- [/isolate](./isolate): all of it
-- [/integrate](./integrate): 1 & 2
-- [/separated](./separated): it's just 3 examples
-- [/magic-variables](./magic-variables): it's just 2 examples
-
-Somewhere to start with the DOM & Events
-
-- [javascript.info/document](https://javascript.info/document)
-- [javascript.info/events](https://javascript.info/events)
-- [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
-- [What are event listeners in JS?](https://www.youtube.com/watch?v=jqU3uaRgQyQ)
-- [domevents.dev](https://domevents.dev)
-
-</details>
-<br>
-
-[TOP](#separation-of-concerns)
-
----
-
-## Week 2
-
-practice refactoring single .js files to separate files
-
-<details>
-<summary>expand/collapse</summary>
-
-### Before Class
-
-- Read through the [javascript-30](https://github.com/HackYourFutureBelgium/javascript-30) project guide
-- Take a look at the [javascript-30-starter repo](https://github.com/HackYourFutureBelgium/javascript-30-starter) (hint: it's basically the same as word-list)
-
-### During Class
-
-#### Before Break
-
-- Q/A review from last week
-- Explore the [./stepped](./stepped) examples
-- Create a new repository using the [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) and practice refactoring:
-  - either [mouse-move-shadow.html](./in-class/mouse-move-shadow.html) or [click-and-drag.html](./in-class/click-and-drag.html)
-  - hint 1: check your code in the browser after each small change, let the errors be your guide!
-  - hint 2: after each small change use `npm run document` and check `/docs/README.md`
-
-#### After Break
-
-- Create another new repo with the [javascript-30-starter](https://github.com/HackYourFutureBelgium/javascript-30-starter) and practice refactoring:
-  - either [local-tapas.html](./in-class/local-tapas.html) or [click-and-drag.html](./in-class/click-and-drag.html)
-  - hint 1: check your code in the browser after each small change, let the errors be your guide!
-  - hint 2: after each small change use `npm run document` and check `/docs/README.md`
-
-### After Class
-
-> nothing to submit, this is a practice week.
-
-The main objective of this module is that you learn how to split your code across multiple files according to the role it plays in your program. After completing a JS 30 tutorial you will take the finished code as a starting point and refactor it into separate folders and files in the [javascript-30-starter](https://github.com/HackYourFutureBelgium/JavaScript-30-starter).
-
-To keep track of your progress through the JS 30 and to store your refactored projects there's [HackYourFutureBelgium/javascript-30](https://github.com/HackYourFutureBelgium/JavaScript-30). In this repo you will find more detailed instructions on how to work your way through these projects.
-
-You don't need to develop as a group this week, find what works for you. Maybe pair programming, individual study or collaborating with 2-3 people is best for you. Work your way through as many projects as you can. Here are some suggestions for this week:
-
-- #1: JavaScript Drum Kit
-- #3: CSS Variables
-- #5: Flex Panel Gallery
-- #8: Fun with HTML5 Canvas
-- #10: Hold Shift and Check Checkboxes
-- #11; Custom Video Player
-- #20: Speech Recognition
-- #22: Follow Along Link Highlighter
-- #23: Speech Synthesis
-- #26: Stripe Follow-Along Nav
-- #27: Click and Drag
-- #28: Video Speed Controller
-
-Suggested code to study:
-
+- the rest of [/isolate](./isolate) and [/integrate](./integrate)
 - [/stepped](./stepped)
 - [/separated](./separated)
-- [/break-these](./break-these)
+- [/refactoring](./refactoring)
+- [/reverse-engineering](./separated)
 - Review `hoisting` from Behavior, Strategy, Implementation
 
 </details>
@@ -444,50 +464,34 @@ Suggested code to study:
 
 ## Week 3
 
-- event delegation
-- a group project
+Components!
+
+And a group project.
 
 <details>
 <summary>expand/collapse</summary>
 
 ### Before Class
 
-- Study (pick your favorite links)
-  - [js.info: Bubbling & Capturing](https://javascript.info/bubbling-and-capturing) (`event.target`)
-  - [js.info: Event Delegation](https://javascript.info/event-delegation)
-  - [Gordon: DOM Events](https://www.youtube.com/watch?v=QE1YQnhntgw)
-  - [Griffith: JS Event Listeners](https://www.youtube.com/watch?v=EaRrmOtPYTM)
-  - [Event Delegation (mosh)](https://programmingwithmosh.com/javascript/javascript-event-bubbling-and-event-delegation/)
-  - [Event Delegation (all things JS)](https://www.youtube.com/watch?v=6NMSCh3DJug)
-  - [Event Delegation (dcode)](https://www.youtube.com/watch?v=pKzf80F3O0U)
-- [Integrate](./integrate) (examples)
-  - Event Delegation
+- Review the Components examples from [/function-roles](./function-roles)
 
 ### During Class
 
 #### Before Break
 
-- [Integrate](./integrate): event delegation
-  - **All together**: examples
-  - **Small Groups**: exercises
+Review the _components_ role and practice a few exercises from [/rendering-data](./rendering-data) and [/testing-components](./testing-components)
 
 #### After Break
 
-Reverse-engineer a website project:
+Create random groups and get set up for the week's project!
 
-1. Open the [memory-game-demo.html](./in-class/memory-game-demo.html) project in your browser figure out of all the user interactions.
-2. Create a new repo using [javascript-30-starter](https://github.com/HackYourFutureBelgium/JavaScript-30-starter)
-   - hint: you may want to use the `initBoard` function from the demo.
-3. Implement one interaction at a time like in the [./stepped](./stepped) examples:
-   - HTML -> CSS -> Listener -> Handler -> Logic
-   - hint 1: check your code in the browser after each small change, let the errors be your guide!
-   - hint 2: after each small change use `npm run document` and check `/docs/README.md`
+- [separation-of-concerns-starter](https://github.com/HackYourFutureBelgium/separation-of-concerns-starter)
 
 ### After Class
 
-> group project: 3 people (random)
+> group project (random groups)
 
-This week you and your group will build a small project from scratch using the [javascript-30-starter](https://github.com/hackyourfuturebelgium/javascript-30-starter). Here are some possible user stories to get you started:
+This week you and your group will build a small project from scratch using the [separation-of-concerns-starter](https://github.com/HackYourFutureBelgium/separation-of-concerns-starter). Here are some possible user stories to get you started:
 
 - A user can see all the items in their list
 - A user can add a new item to their list
@@ -552,7 +556,6 @@ This week you and your group will build a small project from scratch using the [
   - [Integrate: event listeners and handlers](https://vimeo.com/488078064)
   - [`import`/`export` and the JS 30](https://vimeo.com/488078314)
 - Week 2
-
   1. [the event parameter, Koen](https://www.youtube.com/watch?v=iRaYKngUaS0&feature=youtu.be)
   2. [Thibault group - exercises](https://www.youtube.com/watch?v=1Wo9q0CNd-U&feature=youtu.be)
   3. [event delegation, with Koen](https://www.youtube.com/watch?v=J_-aqj7yLEU&feature=youtu.be)
@@ -560,14 +563,16 @@ This week you and your group will build a small project from scratch using the [
   5. [Pt. 2](https://www.youtube.com/watch?v=auymy232kEU&feature=youtu.be)
   6. [Pt. 3](https://www.youtube.com/watch?v=LLki_rbxNf0&feature=youtu.be)
 
-  ## Class-13-14
+## Class-13-14
 
-  > [Koen](https://github.com/koenvd)
+> [Koen](https://github.com/koenvd)
 
 - Week 1
-
   - [Part 1](https://vimeo.com/555091793)
-  - [Part 2](https://vimeo.com/555631615)
+  - [Part 2](https://vimeo.com/555631615) - ES5 vs. ES6
+- (the other weeks were small group sessions)
+
+## Class 15
 
 </details>
 

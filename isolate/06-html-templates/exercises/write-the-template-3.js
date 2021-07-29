@@ -17,25 +17,23 @@ const renderEvens = (numbers, id) => {
   return list;
 };
 
-
-
 const _1_emptyArray = renderEvens([], 'empty');
-console.assert(_1_emptyArray === '<ul id="empty"></ul>',
-  'Test 1: empty array');
+console.assert(_1_emptyArray === '<ul id="empty"></ul>', 'Test 1: empty array');
 
 const _2_allOdd = renderEvens([1, 3, 5], 'all-odd');
-console.assert(_2_allOdd === '<ul id="all-odd"></ul>',
-  'Test 2: empty array');
+console.assert(_2_allOdd === '<ul id="all-odd"></ul>', 'Test 2: empty array');
 
 const _3_allEven = renderEvens([2, 4, 6], 'all-even');
-console.assert(_3_allEven === '<ul id="all-even"><li>2</li><li>4</li><li>6</li></ul>',
-  'Test 3: empty array');
+console.assert(
+  _3_allEven === '<ul id="all-even"><li>2</li><li>4</li><li>6</li></ul>',
+  'Test 3: empty array',
+);
 
 const _4_mixed = renderEvens([1, 2, 3, 4, 5], 'mixed');
-console.assert(_4_mixed === '<ul id="mixed"><li>2</li><li>4</li></ul>',
-  'Test 4: empty array');
-
-
+console.assert(
+  _4_mixed === '<ul id="mixed"><li>2</li><li>4</li></ul>',
+  'Test 4: empty array',
+);
 
 const divEl = document.createElement('div');
 

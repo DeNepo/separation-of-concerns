@@ -31,7 +31,6 @@ const greetingHandler = () => {
 //  debugger will jump from here to greetingHandler
 buttonEl.addEventListener('click', greetingHandler());
 
-
 // debugger will not jump to the handler
 //  it will continue to the next line
 const clickEvent1 = new Event('click');

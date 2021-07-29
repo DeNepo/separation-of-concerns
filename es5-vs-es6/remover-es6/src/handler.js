@@ -7,7 +7,7 @@ debugger; // once when the module is loaded
  * computes the filtered text
  * and updates the UI for the user
  */
-export const handleTyping = event => {
+export const handleTyping = (event) => {
   debugger; // each time a user types
 
   // read the form to a local variable for debugging

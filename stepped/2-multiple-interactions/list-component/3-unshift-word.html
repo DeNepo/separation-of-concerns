@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>List Component</title>
+    <style></style>
+  </head>
+
+  <body>
+    <section id="user-interface">
+      <input id="word" type="text" value="" /> <br />
+      <button id="push-button">push</button>
+      <button id="unshift-button">unshift</button><br />
+      <hr />
+      <div id="all-words"></div>
+    </section>
+
+    <script id="data">
+      const state = {
+        words: [],
+      };
+      console.log('initial words:', [...state.words]);
+    </script>
+
+    <script id="components">
+      const wordsList = (array) => {
+        const ul = document.createElement('ul');
+        for (let string of array) {
+          const li = document.createElement('li');
+          li.innerHTML = string;
+          ul.appendChild(li);
+        }
+        return ul;
+      };
+
+      // removed tests for readability
+      // see step 2 for component tests
+    </script>
+
+    <script id="handlers">
+      const pushWordHandler = () => {
+        debugger;
+        // read input from DOM
+        const newWord = document.getElementById('word').value;
+        // update state
+        state.words.push(newWord);
+        // render state
+        const wordsComponent = wordsList(state.words);
+        // update UI
+        const wordsContainer = document.getElementById('all-words');
+        wordsContainer.innerHTML = '';
+        wordsContainer.appendChild(wordsComponent);
+        // log interaction
+        console.log('push:', newWord, [...state.words]);
+      };
+
+      const unshiftWordHandler = () => {
+        debugger;
+        // read user input
+        const newWord = document.getElementById('word').value;
+        // update state
+        state.words.unshift(newWord);
+        // render state
+        const wordsComponent = wordsList(state.words);
+        // update UI
+        const wordsContainer = document.getElementById('all-words');
+        wordsContainer.innerHTML = '';
+        wordsContainer.appendChild(wordsComponent);
+        // log interaction
+        console.log('unshift:', newWord, [...state.words]);
+      };
+    </script>
+
+    <script id="listeners">
+      document
+        .getElementById('push-button')
+        .addEventListener('click', pushWordHandler);
+      document
+        .getElementById('unshift-button')
+        .addEventListener('click', unshiftWordHandler);
+    </script>
+  </body>
+</html>

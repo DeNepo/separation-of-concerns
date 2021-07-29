@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>memory game (demo)</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      td {
+        border: 1px solid black;
+        height: 5em;
+        width: 5em;
+      }
+
+      .hidden {
+        color: white;
+      }
+
+      .visible {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="user-interface" class="centered">
+      <button id="reset-button">new game</button>
+      <div id="board-container"></div>
+    </div>
+
+    <script>
+      const _0x105f = [
+        'appendChild',
+        '569VzQUYj',
+        'hidden',
+        '267639wDWWuQ',
+        '3VWQpVl',
+        'addEventListener',
+        '19149eKwFxs',
+        'table',
+        '434913vXwrkb',
+        'dataset',
+        'random',
+        'className',
+        '1321iiZJAD',
+        'click',
+        '769785fIYmdi',
+        'yes',
+        '26prXbfv',
+        'getElementById',
+        'innerHTML',
+        '585677izQuST',
+        'pop',
+        'sort',
+        'keys',
+        'board-container',
+        'target',
+        'selected',
+        'nodeName',
+        'createElement',
+        'reset-button',
+        '240631fIoLZk',
+        'visible',
+        'mouseout',
+      ];
+      const _0x4acae7 = _0x17e2;
+      function _0x17e2(_0x39a4fa, _0x3f95c4) {
+        return (
+          (_0x17e2 = function (_0x105f8a, _0x17e2fb) {
+            _0x105f8a = _0x105f8a - 0xe0;
+            let _0x48dd7f = _0x105f[_0x105f8a];
+            return _0x48dd7f;
+          }),
+          _0x17e2(_0x39a4fa, _0x3f95c4)
+        );
+      }
+      (function (_0x4d88d7, _0x50fc4b) {
+        const _0x427376 = _0x17e2;
+        while (!![]) {
+          try {
+            const _0x1bd8d8 =
+              -parseInt(_0x427376(0xea)) +
+              -parseInt(_0x427376(0xe5)) +
+              -parseInt(_0x427376(0xe7)) * -parseInt(_0x427376(0xfd)) +
+              -parseInt(_0x427376(0xff)) +
+              parseInt(_0x427376(0xf8)) * parseInt(_0x427376(0xe3)) +
+              -parseInt(_0x427376(0xfb)) * -parseInt(_0x427376(0xf4)) +
+              parseInt(_0x427376(0xfa));
+            if (_0x1bd8d8 === _0x50fc4b) break;
+            else _0x4d88d7['push'](_0x4d88d7['shift']());
+          } catch (_0x2ec46a) {
+            _0x4d88d7['push'](_0x4d88d7['shift']());
+          }
+        }
+      })(_0x105f, 0x6d8a8);
+      const board = (_0x33b8af = 0x2, _0x25bcc1 = 0x2) => {
+          const _0x4c326b = _0x17e2,
+            _0x8bf43b = (_0x33b8af * _0x25bcc1) / 0x2,
+            _0x3100a8 = [...Array(_0x8bf43b)[_0x4c326b(0xed)]()]['flatMap'](
+              (_0x52e448) => [_0x52e448, _0x52e448],
+            ),
+            _0x4ce784 = [
+              ..._0x3100a8[_0x4c326b(0xec)](
+                () => Math[_0x4c326b(0xe1)]() - 0.5,
+              ),
+            ],
+            _0x12961b = document[_0x4c326b(0xf2)](_0x4c326b(0xfe));
+          for (let _0x385972 = 0x0; _0x385972 < _0x25bcc1; _0x385972++) {
+            const _0x4999a0 = document[_0x4c326b(0xf2)]('tr');
+            for (let _0x1caccd = 0x0; _0x1caccd < _0x33b8af; _0x1caccd++) {
+              const _0xfb5ba6 = document['createElement']('td');
+              (_0xfb5ba6['dataset']['selected'] = 'no'),
+                (_0xfb5ba6[_0x4c326b(0xe2)] = _0x4c326b(0xf9)),
+                (_0xfb5ba6[_0x4c326b(0xe9)] = _0x4ce784[_0x4c326b(0xeb)]()),
+                _0x4999a0[_0x4c326b(0xf7)](_0xfb5ba6);
+            }
+            _0x12961b[_0x4c326b(0xf7)](_0x4999a0);
+          }
+          return _0x12961b;
+        },
+        newGame = () => {
+          const _0x15584f = _0x17e2,
+            _0x569109 = document[_0x15584f(0xe8)](_0x15584f(0xee));
+          (_0x569109['innerHTML'] = ''),
+            _0x569109[_0x15584f(0xf7)](board(0x4, 0x4));
+        };
+      document['getElementById'](_0x4acae7(0xf3))[_0x4acae7(0xfc)](
+        _0x4acae7(0xe4),
+        newGame,
+      ),
+        document[_0x4acae7(0xe8)](_0x4acae7(0xee))['addEventListener'](
+          'mouseover',
+          (_0x88206f) => {
+            const _0x9706c3 = _0x4acae7,
+              _0x36028a = _0x88206f[_0x9706c3(0xef)];
+            if (_0x36028a[_0x9706c3(0xf1)] !== 'TD') return;
+            if (_0x36028a[_0x9706c3(0xe0)][_0x9706c3(0xf0)] === _0x9706c3(0xe6))
+              return;
+            _0x36028a[_0x9706c3(0xe2)] = _0x9706c3(0xf5);
+          },
+        ),
+        document[_0x4acae7(0xe8)](_0x4acae7(0xee))[_0x4acae7(0xfc)](
+          _0x4acae7(0xf6),
+          (_0x7c4660) => {
+            const _0x1f993b = _0x4acae7,
+              _0x426d9b = _0x7c4660['target'];
+            if (_0x426d9b[_0x1f993b(0xf1)] !== 'TD') return;
+            if (_0x426d9b['dataset'][_0x1f993b(0xf0)] === _0x1f993b(0xe6))
+              return;
+            _0x426d9b['className'] = 'hidden';
+          },
+        ),
+        document[_0x4acae7(0xe8)](_0x4acae7(0xee))[_0x4acae7(0xfc)](
+          _0x4acae7(0xe4),
+          (_0x4b3c4e) => {
+            const _0x18f8fa = _0x4acae7,
+              _0xb965d4 = _0x4b3c4e[_0x18f8fa(0xef)];
+            if (_0xb965d4[_0x18f8fa(0xf1)] !== 'TD') return;
+            _0xb965d4[_0x18f8fa(0xe0)]['selected'] === _0x18f8fa(0xe6)
+              ? (_0xb965d4[_0x18f8fa(0xe0)][_0x18f8fa(0xf0)] = 'no')
+              : (_0xb965d4[_0x18f8fa(0xe0)][_0x18f8fa(0xf0)] = 'yes');
+          },
+        ),
+        newGame();
+    </script>
+  </body>
+</html>

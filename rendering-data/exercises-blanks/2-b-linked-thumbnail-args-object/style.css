@@ -1,0 +1,13 @@
+.thumbnail-container {
+  padding-bottom: 30px;
+}
+
+.to-the-right {
+  float: right;
+}
+
+.thumbnail {
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+}

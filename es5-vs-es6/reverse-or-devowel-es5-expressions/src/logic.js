@@ -7,7 +7,7 @@ debugger; // once when the script is loaded
  * @param {string} text - the string to reverse
  * @returns {string} the reversed text
  */
-var reverseString = function(text) {
+var reverseString = function (text) {
   debugger; // each time the function is called
 
   var reversedText = '';
@@ -29,7 +29,7 @@ var reverseString = function(text) {
  * @param {string} text - the text to filter
  * @returns {string} a new string with no vowels
  */
-var removeVowels = function(text) {
+var removeVowels = function (text) {
   debugger; // each time the function is called
 
   var vowels = 'AEIOUaeiou';

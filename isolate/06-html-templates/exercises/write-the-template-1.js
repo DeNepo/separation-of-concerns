@@ -11,14 +11,10 @@ const renderHeader = (level, text) => {
 };
 
 const happyH1 = renderHeader(1, ':)');
-console.assert(happyH1 === '<h1>:)</h1>',
-  'Test 1: happy H1');
+console.assert(happyH1 === '<h1>:)</h1>', 'Test 1: happy H1');
 
 const sadH2 = renderHeader(2, ':(');
-console.assert(sadH2 === '<h2>:(</h2>',
-  'Test 2: sad H2');
-
-
+console.assert(sadH2 === '<h2>:(</h2>', 'Test 2: sad H2');
 
 const divEl = document.createElement('div');
 

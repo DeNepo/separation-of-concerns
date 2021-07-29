@@ -6,7 +6,6 @@ const buttonEl = document.createElement('button');
 buttonEl.innerHTML = 'log in';
 console.log(buttonEl.nodeName, buttonEl.cloneNode(true));
 
-
 const _ = () => {
   const username = prompt('enter your user name');
   if (username === null) {
@@ -21,7 +20,6 @@ const _ = () => {
 };
 
 buttonEl.addEventListener('hover', authenticationHandler);
-
 
 // "hover" over the button once
 const clickEvent1 = new Event(_);

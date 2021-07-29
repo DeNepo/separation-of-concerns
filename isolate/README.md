@@ -1,7 +1,7 @@
 examples and exercises of how JavaScript works in isolation: away from HTML & CSS
 
-
 <!-- BEGIN TOC -->
+
 - /01-dom-elements
   - /examples
     - <a href="./01-dom-elements/examples/1-create-element.js" target="_blank">/1-create-element.js</a>

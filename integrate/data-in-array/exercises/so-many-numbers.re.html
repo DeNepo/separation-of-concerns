@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>So Many Numbers, obfuscated</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+
+    <script id="data">
+      let numbers = [0, 1, 2, 3, 4];
+    </script>
+
+    <script id="handlers">
+      /* reverse-engineering!
+
+      this is a fully working demo of the so-many-numbers.html exercise
+      the source code has been obfuscated so you can't copy the solution
+      but the buttons and prompt/alerts work like they should
+
+      study the behavior of this demo to help solve the exercise
+      you'll know when you're finished when they both behave identically
+
+      hint: open this demo with the newTab
+        you can then go back and forth between this demo and the exercise
+    */
+      const a = [
+        'reduce',
+        'there\x20are\x20',
+        'how\x20many\x20numbers\x20would\x20you\x20like?',
+        'isNaN',
+        '\x20numbers\x20divisible\x20by\x20',
+        'filter',
+        '\x20numbers\x20greater\x20than\x20',
+        'push',
+        'find\x20all\x20numbers\x20divisible\x20by:',
+        'length',
+        '\x20is\x20not\x20a\x20valid\x20number',
+        'all\x20numbers',
+      ];
+      (function (b, e) {
+        const f = function (g) {
+          while (--g) {
+            b['push'](b['shift']());
+          }
+        };
+        f(++e);
+      })(a, 0x1ba);
+      const b = function (c, d) {
+        c = c - 0x0;
+        let e = a[c];
+        return e;
+      };
+      const displayNumbersHandler = (c = numbers, d = b('0x1')) => {
+          debugger;
+          const e = (g, h) => g + '\x0a' + String(h),
+            f = c[b('0x2')](e, '');
+          alert(d + ':\x20' + f);
+        },
+        resetNumbersHandler = () => {
+          debugger;
+          const c = prompt(b('0x4'));
+          if (c === null) return;
+          const d = Number(c);
+          if (Number[b('0x5')](d)) {
+            alert(c + b('0x0'));
+            return;
+          }
+          numbers = [];
+          for (let e = 0x0; e < d; e++) {
+            numbers[b('0x9')](e);
+          }
+          displayNumbersHandler();
+        },
+        greaterThanHandler = () => {
+          debugger;
+          const c = prompt('find\x20all\x20numbers\x20greater\x20than:');
+          if (c === null) return;
+          const d = Number(c);
+          if (Number[b('0x5')](d)) {
+            alert(c + b('0x0'));
+            return;
+          }
+          const e = numbers[b('0x7')]((h) => h > d);
+          const f = e[b('0xb')];
+          const g = 'there\x20are\x20' + f + b('0x8') + d;
+          displayNumbersHandler(e, g);
+        },
+        lessThanHandler = () => {
+          debugger;
+          const c = prompt('find\x20all\x20numbers\x20less\x20than:');
+          if (c === null) return;
+          const d = Number(c);
+          if (Number[b('0x5')](d)) {
+            alert(c + b('0x0'));
+            return;
+          }
+          const e = numbers[b('0x7')]((h) => h < d);
+          const f = e[b('0xb')];
+          const g =
+            'there\x20are\x20' + f + '\x20numbers\x20less\x20than\x20' + d;
+          displayNumbersHandler(e, g);
+        },
+        divisibleByHandler = () => {
+          debugger;
+          const c = prompt(b('0xa'));
+          if (c === null) return;
+          const d = Number(c);
+          if (Number[b('0x5')](d)) {
+            alert(c + b('0x0'));
+            return;
+          }
+          const e = numbers[b('0x7')]((h) => h % d === 0x0);
+          const f = e['length'];
+          const g = b('0x3') + f + b('0x6') + d;
+          displayNumbersHandler(e, g);
+        };
+    </script>
+  </head>
+
+  <body>
+    <main id="user-interface" class="centered">
+      <button onclick="greaterThanHandler()">how many greater than X</button>
+      <br />
+      <button onclick="lessThanHandler()">how many less than X</button> <br />
+      <button onclick="divisibleByHandler()">how many divisible by X</button>
+      <br />
+      <br />
+      <button onclick="displayNumbersHandler()">display numbers</button> <br />
+      <button onclick="resetNumbersHandler()">reset numbers</button>
+    </main>
+  </body>
+</html>

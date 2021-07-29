@@ -1,0 +1,75 @@
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.purple {
+  color: purple;
+}
+
+.to-the-right {
+  float: right;
+}
+
+.thumbnail {
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+}
+
+.thumbnail-container {
+  padding-bottom: 30px;
+}
+
+h2 {
+  margin-top: 1;
+  margin-bottom: 0;
+}
+
+header {
+  border-bottom: solid;
+  padding-left: 8px;
+}
+
+button {
+  height: 25px;
+}
+
+.things-to-study {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.exercise-output {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  max-height: 100%;
+  overflow-y: scroll;
+  padding-left: 10px;
+  padding-top: 25px;
+}
+
+.mocha-output {
+  width: 55%;
+  margin-right: 0;
+  margin-top: 0;
+  margin-left: 0;
+  /* padding-bottom:10; */
+  /* max-height:100%; */
+  overflow-y: scroll;
+}
+
+.your-code {
+  max-height: 100%;
+  /* overflow-y:scroll; */
+}
+
+#rendered-components {
+  border: 1px solid black;
+  padding: 10px;
+}

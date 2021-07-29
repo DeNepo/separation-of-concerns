@@ -7,7 +7,7 @@ debugger; // once when the script is loaded
  * computes the filtered text
  * and updates the UI for the user
  */
-var handleTyping = function(event) {
+var handleTyping = function (event) {
   debugger; // each time a user types
 
   // declare all the variables

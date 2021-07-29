@@ -1,0 +1,25 @@
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  /* keep it centered */
+}
+
+input {
+  width: 15em;
+}
+
+.fancy-text {
+  font-family: fantasy;
+  font-style: italic;
+  color: darkred;
+  border: double darkred;
+  padding: 8px;
+}

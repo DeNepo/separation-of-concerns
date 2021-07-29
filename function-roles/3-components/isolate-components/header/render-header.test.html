@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script type="module">
+      import { showComponentTestCase } from '../../../../lib/show-component-test-case.js';
+
+      import { renderHeader } from './render-header.js';
+
+      showComponentTestCase(
+        'it should throw an error if the header level is less than 1',
+        renderHeader,
+        0,
+        'error!',
+      );
+
+      showComponentTestCase(
+        'it should render an H1 element with innerHTML "hello"',
+        renderHeader,
+        1,
+        'hello',
+      );
+
+      showComponentTestCase(
+        'it should render an H3 element with innerHTML "middle"',
+        renderHeader,
+        3,
+        'middle',
+      );
+
+      showComponentTestCase(
+        'it should render an H6 element with innerHTML "bye"',
+        renderHeader,
+        6,
+        'bye',
+      );
+
+      showComponentTestCase(
+        'it should throw an error if the header level is greater than 6',
+        renderHeader,
+        7,
+        'error!',
+      );
+    </script>
+  </body>
+</html>

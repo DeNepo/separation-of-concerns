@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>So Many Numbers</title>
+
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="user-interface" class="centered">
+      <button id="greater-than">how many greater than X</button>
+      <br />
+      <button id="less-than">how many less than X</button> <br />
+      <button id="divisible-by">how many divisible by X</button>
+      <br />
+      <br />
+      <button id="display">display numbers</button> <br />
+      <button id="reset">reset numbers</button>
+    </main>
+
+    <script id="data">
+      let numbers = [0, 1, 2, 3, 4];
+    </script>
+
+    <script id="handlers">
+      'use strict';
+      /* Study the demo for this exercise then fill in the blanks
+        the goal is to exactly recreate the behavior of the demo
+        hint: use ctr-f to find all of the blanks _
+      */
+
+      // 1. A user can see all numbers listed in an alert
+      const displayNumbersHandler = (arrayOfNumbers = numbers, message = _) => {
+        debugger;
+        const joinNumbers = (acc, next) => _;
+        const allNumbersListed = arrayOfNumbers._(joinNumbers, _);
+        alert(`${message}: ${allNumbersListed}`);
+      };
+
+      // 2. A user can fill the array with as many numbers as they like
+      //  (beginning with zero, ending with userNumber - 1)
+      const resetNumbersHandler = () => {
+        debugger;
+        const userInput = prompt(_);
+        if (_) {
+          return;
+        }
+
+        const userNumber = Number(userInput);
+        if (_) {
+          alert(_);
+          return;
+        }
+
+        // a basic for loop, not for ... of
+        numbers = [];
+        for (_; _; _) {
+          numbers._(_);
+        }
+
+        displayNumbersHandler(); // no arguments! this is correct like it is
+      };
+
+      // 3. A user can see a list of all numbers greater than their input
+      const greaterThanHandler = () => {
+        debugger;
+        const userInput = prompt(_);
+        if (_) {
+          return;
+        }
+
+        const userNumber = _;
+        if (_) {
+          alert(_);
+          return;
+        }
+
+        const numbersGreaterThan = numbers._(_);
+        const howMany = numbersGreaterThan.length;
+        const newMessage = _;
+
+        _(numbersGreaterThan, newMessage);
+      };
+
+      // 4. A user can see a list of all numbers less than their input
+      const lessThanHandler = () => {
+        debugger;
+        const userInput = _;
+        if (_) {
+          return;
+        }
+
+        const userNumber = _;
+        if (_) {
+          _;
+          return;
+        }
+
+        const numbersLessThan = numbers._(_);
+        const howMany = numbersLessThan.length;
+        const newMessage = _;
+
+        _(numbersLessThan, newMessage);
+      };
+
+      // 5. A user can see a list of all numbers divisible by their input
+      const divisibleByHandler = () => {
+        debugger;
+        const userInput = _;
+        if (_) {
+          return;
+        }
+
+        const userNumber = _;
+        if (_) {
+          alert(_);
+          return;
+        }
+
+        const numbersDivisible = _;
+        const howMany = numbersDivisible.length;
+        const newMessage = _;
+
+        _(numbersDivisible, newMessage);
+      };
+    </script>
+
+    <script id="listeners">
+      debugger; // main entry point
+
+      // this code works!
+      document
+        .getElementById('greater-than')
+        .addEventListener('click', greaterThanHandler);
+      document
+        .getElementById('less-than')
+        .addEventListener('click', lessThanHandler);
+      document
+        .getElementById('divisible-by')
+        .addEventListener('click', divisibleByHandler);
+      document
+        .getElementById('display')
+        .addEventListener('click', displayNumbersHandler);
+      document
+        .getElementById('reset')
+        .addEventListener('click', resetNumbersHandler);
+    </script>
+  </body>
+</html>

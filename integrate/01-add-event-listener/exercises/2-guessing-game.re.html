@@ -1,31 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>guessing game</title>
 
-<head>
-  <meta charset='utf-8'>
-  <title>guessing game</title>
+    <style>
+      .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
 
-  <style>
-    .centered {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-  </style>
-</head>
+  <body>
+    <main id="user-interface" class="centered">
+      <button id="set">set secret</button> <br />
+      <button id="guess">guess secret</button> <br />
+      <button id="cheat">cheat</button>
+    </main>
 
-<body>
-  <main id='user-interface' class='centered'>
-    <button id='set'>set secret</button> <br>
-    <button id='guess'>guess secret</button> <br>
-    <button id='cheat'>cheat</button>
-  </main>
-
-  <script id='obfuscated'>
-    const a = ['correct!', 'click', 'the\x20secret\x20is:\x20\x0a\x20', 'good\x20choice\x20:)', 'addEventListener', 'guess', 'getElementById', 'enter\x20a\x20new\x20secret', 'nope.']; (function (b, e) { const f = function (g) { while (--g) { b['push'](b['shift']()); } }; f(++e); }(a, 0x157)); const b = function (c, d) { c = c - 0x0; let e = a[c]; return e; }; 'use strict'; let secret = ''; const setSecretHandler = () => { debugger; const c = prompt(b('0x6')); if (c === null) return; secret = c, alert('your\x20secret\x20is\x20safe\x20with\x20me\x20;)'); }, guessSecretHandler = () => { debugger; const c = prompt('guess\x20the\x20secret'); if (c === null) return; const d = c === secret; d ? alert(b('0x8')) : alert(b('0x7')); }, cheatHandler = () => { debugger; const c = confirm('are\x20you\x20sure\x20you\x20want\x20to\x20cheat?'); c ? alert(b('0x1') + secret) : alert(b('0x2')); }, setSecretButton = document[b('0x5')]('set'); setSecretButton['addEventListener'](b('0x0'), setSecretHandler); const guessSecretButton = document[b('0x5')](b('0x4')); guessSecretButton['addEventListener'](b('0x0'), guessSecretHandler); const cheatButton = document[b('0x5')]('cheat'); cheatButton[b('0x3')](b('0x0'), cheatHandler);
-  </script>
-</body>
-
+    <script id="obfuscated">
+      const a = [
+        'correct!',
+        'click',
+        'the\x20secret\x20is:\x20\x0a\x20',
+        'good\x20choice\x20:)',
+        'addEventListener',
+        'guess',
+        'getElementById',
+        'enter\x20a\x20new\x20secret',
+        'nope.',
+      ];
+      (function (b, e) {
+        const f = function (g) {
+          while (--g) {
+            b['push'](b['shift']());
+          }
+        };
+        f(++e);
+      })(a, 0x157);
+      const b = function (c, d) {
+        c = c - 0x0;
+        let e = a[c];
+        return e;
+      };
+      ('use strict');
+      let secret = '';
+      const setSecretHandler = () => {
+          debugger;
+          const c = prompt(b('0x6'));
+          if (c === null) return;
+          (secret = c),
+            alert('your\x20secret\x20is\x20safe\x20with\x20me\x20;)');
+        },
+        guessSecretHandler = () => {
+          debugger;
+          const c = prompt('guess\x20the\x20secret');
+          if (c === null) return;
+          const d = c === secret;
+          d ? alert(b('0x8')) : alert(b('0x7'));
+        },
+        cheatHandler = () => {
+          debugger;
+          const c = confirm(
+            'are\x20you\x20sure\x20you\x20want\x20to\x20cheat?',
+          );
+          c ? alert(b('0x1') + secret) : alert(b('0x2'));
+        },
+        setSecretButton = document[b('0x5')]('set');
+      setSecretButton['addEventListener'](b('0x0'), setSecretHandler);
+      const guessSecretButton = document[b('0x5')](b('0x4'));
+      guessSecretButton['addEventListener'](b('0x0'), guessSecretHandler);
+      const cheatButton = document[b('0x5')]('cheat');
+      cheatButton[b('0x3')](b('0x0'), cheatHandler);
+    </script>
+  </body>
 </html>

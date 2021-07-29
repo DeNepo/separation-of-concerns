@@ -1,7 +1,7 @@
 import { reverse } from './logic.js';
 
-export const handler = event => {
-  // pause in the debugger to step through
+export const handler = (event) => {
+  // entry point for the user interaction
   debugger;
 
   // read user input from event

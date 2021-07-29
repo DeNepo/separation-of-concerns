@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Type Caster</title>
+    <meta charset="utf-8" />
+
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <section id="user-interface">
+      <form>
+        Cast this string:
+        <input name="value" type="text" />
+        To this type:
+        <select name="type">
+          <option value="string">string</option>
+          <option value="number">number</option>
+          <option value="boolean">boolean</option>
+        </select>
+        <input type="button" id="user-action" value="Cast it!" />
+      </form>
+      <code id="casted-value" class="output"></code>
+    </section>
+
+    <script type="module" src="./src/init.js"></script>
+  </body>
+</html>

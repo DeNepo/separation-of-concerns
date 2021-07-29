@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script type="module">
+      import { showComponentTestCase } from '../../../../lib/show-component-test-case.js';
+
+      import { renderLink } from './render-link.js';
+
+      showComponentTestCase(
+        'it should render a link to YouTube with the text "HYF Belgium" (in a new tab)',
+        renderLink,
+        'HYF Belgium',
+        'https://www.youtube.com/watch?v=oHg5SJYRHA0',
+      );
+
+      showComponentTestCase(
+        'it should search "let me google that for you" (in a new tab)',
+        renderLink,
+        'lmgtfy',
+        'https://lmgtfy.com/?q=let+me+google+that+for+you&s=d',
+      );
+
+      showComponentTestCase(
+        'it link to The Brave Little Toaster (in a new tab)',
+        renderLink,
+        'toaster',
+        'https://archive.org/details/TheBraveLittleToasterPAL',
+      );
+
+      showComponentTestCase(
+        'Badgers! (in this tab)',
+        renderLink,
+        'badgers',
+        'https://badgerbadgerbadger.com/',
+        '_self',
+      );
+    </script>
+  </body>
+</html>

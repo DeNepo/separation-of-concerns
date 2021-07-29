@@ -1,0 +1,21 @@
+.replay {
+  padding: 5px;
+}
+
+button {
+  display: block;
+  padding: 10px;
+  min-width: 100px;
+  font-size: 1.4em;
+  font-family: sans-serif;
+  border-radius: 15px;
+  margin-top: 5px;
+}
+
+input {
+  font-size: 1.5em;
+}
+
+.message {
+  margin: 10px 0;
+}
