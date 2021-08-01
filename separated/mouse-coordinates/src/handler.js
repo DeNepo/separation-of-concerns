@@ -1,6 +1,8 @@
 import { format } from './logic.js';
 
 export const handler = (event) => {
+  debugger; // entry point for each interaction
+
   // read user input from event
   const xValue = event.pageX;
   const yValue = event.pageY;

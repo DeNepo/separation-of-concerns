@@ -17,10 +17,8 @@
   <body>
     <section id="user-interface" class="centered">
       <code id="current-number"></code> <br />
+      <!-- 1. write UI for incrementing by 1 -->
       <button id="plus-one">+</button>
-      <button id="minus-one">-</button>
-      <br />
-      <button id="reset">reset</button>
     </section>
 
     <script id="data">
@@ -32,6 +30,7 @@
     </script>
 
     <script id="handlers">
+      // 3. write handler for incrementing by 1
       const up = () => {
         debugger;
         // update state
@@ -42,36 +41,11 @@
         // log the interaction
         console.log('up:', JSON.parse(JSON.stringify(numbers)));
       };
-
-      const down = () => {
-        debugger;
-        // update state
-        numbers.past.push(numbers.current);
-        numbers.current -= 1;
-        // update UI
-        document.getElementById('current-number').innerHTML = numbers.current;
-        // log the interaction
-        console.log('down:', JSON.parse(JSON.stringify(numbers)));
-      };
-
-      const reset = () => {
-        debugger;
-        // reset state
-        numbers.current = 0;
-        numbers.past = [];
-        // update the UI using state
-        document.getElementById('current-number').innerHTML = numbers.current;
-        // log the interaction
-        console.log('reset:', JSON.parse(JSON.stringify(numbers)));
-      };
     </script>
 
     <script id="listeners">
+      // 2. add listener for incrementing by 1
       document.getElementById('plus-one').addEventListener('click', up);
-
-      document.getElementById('minus-one').addEventListener('click', down);
-
-      document.getElementById('reset').addEventListener('click', reset);
     </script>
 
     <script id="init">

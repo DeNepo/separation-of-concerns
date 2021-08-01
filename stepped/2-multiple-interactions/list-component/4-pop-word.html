@@ -11,6 +11,7 @@
       <input id="word" type="text" value="" /> <br />
       <button id="push-button">push</button>
       <button id="unshift-button">unshift</button><br />
+      <!-- 1. write UI for popping -->
       <button id="pop-button">pop</button>
       <hr />
       <div id="all-words"></div>
@@ -71,6 +72,7 @@
         console.log('unshift:', newWord, [...state.words]);
       };
 
+      // 3. add handler for popping
       const popHandler = () => {
         debugger;
         // update state
@@ -93,6 +95,7 @@
       document
         .getElementById('unshift-button')
         .addEventListener('click', unshiftWordHandler);
+      // 2. add listener for popping
       document
         .getElementById('pop-button')
         .addEventListener('click', popHandler);

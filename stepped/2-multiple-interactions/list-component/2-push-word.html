@@ -8,6 +8,7 @@
 
   <body>
     <section id="user-interface">
+      <!-- 1. write UI for pushing word -->
       <input id="word" type="text" value="" /> <br />
       <button id="push-button">push</button>
       <hr />
@@ -22,6 +23,7 @@
     </script>
 
     <script id="components">
+      // 3. write components for adding word
       const wordsList = (array) => {
         const ul = document.createElement('ul');
         for (let string of array) {
@@ -55,6 +57,7 @@
     </script>
 
     <script id="handlers">
+      // 3. write handler for pushing word
       const pushWordHandler = () => {
         debugger;
         // read input from DOM
@@ -73,6 +76,7 @@
     </script>
 
     <script id="listeners">
+      // 2. add event listener to UI
       document
         .getElementById('push-button')
         .addEventListener('click', pushWordHandler);

@@ -77,7 +77,7 @@ Here is a little checklist to help you find out if a function is being used as a
 
 - it returns a DOM element
 - if it has parameters, they are plain JS data
-- it may import _logic_, _handlers_, _components_ or _state_
+- it may import _logic_, _components_ or _handlers_
 - it may have unit tests or a `test.html` file
 
 Even components can have different roles! You'll learn more about this in the following module (Single Page Apps) when your entire UI is rendered using components. No more HTML :) Here's a little preview:

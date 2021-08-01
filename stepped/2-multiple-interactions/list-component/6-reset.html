@@ -13,6 +13,7 @@
       <button id="unshift-button">unshift</button><br />
       <button id="pop-button">pop</button>
       <button id="shift-button">shift</button> <br />
+      <!-- 1. write UI for resetting -->
       <button id="reset-button">reset</button>
       <hr />
       <div id="all-words"></div>
@@ -101,6 +102,7 @@
         console.log('shift:', [...state.words]);
       };
 
+      // 3. write handler for resetting
       const resetHandler = () => {
         // clear state
         while (state.words.length !== 0) {
@@ -127,6 +129,8 @@
       document
         .getElementById('shift-button')
         .addEventListener('click', shiftHandler);
+
+      // 2. add event listener for handling
       document
         .getElementById('reset-button')
         .addEventListener('click', resetHandler);

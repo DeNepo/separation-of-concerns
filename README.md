@@ -57,7 +57,7 @@ How to study the code in this repo.
 
 > If you use windows and get this error:
 >
-> - `... /study.ps1 cannot be loaded because running scripts ...`
+> - `..dy.ps1 cannot be loaded because running scripts ...`
 >
 > follow the instructions in [this StackOverflow answer](https://stackoverflow.com/a/63424744), that should take care of it ; )
 
@@ -70,6 +70,8 @@ You can run tests in this repository using the `test` script, it will run all th
 If you do `npm run test` or `npm run test -- ./` it will run every test in this repository. (there are a lot)
 
 ### `npm run document -- path/to/src`
+
+> Pro Tip: do not use `npm run document` without a specific path, it is very slow!
 
 This script will build a dependency graph for all the JavaScript files inside a specific `/src` folder. It can be very helpful to run the document script every time you add/remove a file or change the `import`/`export`s in an exercise.
 

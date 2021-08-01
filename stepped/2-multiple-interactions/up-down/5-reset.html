@@ -19,6 +19,9 @@
       <code id="current-number"></code> <br />
       <button id="plus-one">+</button>
       <button id="minus-one">-</button>
+      <br />
+      <!-- 1. write UI for resetting count -->
+      <button id="reset">reset</button>
     </section>
 
     <script id="data">
@@ -51,12 +54,27 @@
         // log the interaction
         console.log('down:', JSON.parse(JSON.stringify(numbers)));
       };
+
+      // 3. write handler for resetting count
+      const reset = () => {
+        debugger;
+        // reset state
+        numbers.current = 0;
+        numbers.past = [];
+        // update the UI using state
+        document.getElementById('current-number').innerHTML = numbers.current;
+        // log the interaction
+        console.log('reset:', JSON.parse(JSON.stringify(numbers)));
+      };
     </script>
 
     <script id="listeners">
       document.getElementById('plus-one').addEventListener('click', up);
 
       document.getElementById('minus-one').addEventListener('click', down);
+
+      // 2. add listener for resetting count
+      document.getElementById('reset').addEventListener('click', reset);
     </script>
 
     <script id="init">

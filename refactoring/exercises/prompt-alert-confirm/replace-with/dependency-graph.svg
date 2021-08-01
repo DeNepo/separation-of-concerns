@@ -20,80 +20,80 @@
 <text text-anchor="middle" x="147.5" y="-192.9" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="9.00">exercises</text>
 </g>
 <g id="clust3" class="cluster">
-<title>cluster_refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm</title>
+<title>cluster_refactoring/exercises/prompt&#45;alert&#45;confirm</title>
 <path fill="#ffffff" stroke="black" stroke-width="2" d="M36,-24C36,-24 259.01,-24 259.01,-24 265.01,-24 271.01,-30 271.01,-36 271.01,-36 271.01,-166 271.01,-166 271.01,-172 265.01,-178 259.01,-178 259.01,-178 36,-178 36,-178 30,-178 24,-172 24,-166 24,-166 24,-36 24,-36 24,-30 30,-24 36,-24"/>
-<text text-anchor="middle" x="147.5" y="-165.9" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="9.00">1&#45;prompt&#45;alert&#45;confirm</text>
+<text text-anchor="middle" x="147.5" y="-165.9" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="9.00">prompt&#45;alert&#45;confirm</text>
 </g>
 <g id="clust4" class="cluster">
-<title>cluster_refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with</title>
+<title>cluster_refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with</title>
 <path fill="#ffffff" stroke="black" stroke-width="2" d="M44,-32C44,-32 251.01,-32 251.01,-32 257.01,-32 263.01,-38 263.01,-44 263.01,-44 263.01,-139 263.01,-139 263.01,-145 257.01,-151 251.01,-151 251.01,-151 44,-151 44,-151 38,-151 32,-145 32,-139 32,-139 32,-44 32,-44 32,-38 38,-32 44,-32"/>
 <text text-anchor="middle" x="147.5" y="-138.9" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="9.00">replace&#45;with</text>
 </g>
 <g id="clust5" class="cluster">
-<title>cluster_refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src</title>
+<title>cluster_refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src</title>
 <path fill="#ffffff" stroke="black" stroke-width="2" d="M52,-40C52,-40 243.01,-40 243.01,-40 249.01,-40 255.01,-46 255.01,-52 255.01,-52 255.01,-112 255.01,-112 255.01,-118 249.01,-124 243.01,-124 243.01,-124 52,-124 52,-124 46,-124 40,-118 40,-112 40,-112 40,-52 40,-52 40,-46 46,-40 52,-40"/>
 <text text-anchor="middle" x="147.5" y="-111.9" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="9.00">src</text>
 </g>
-<!-- refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js -->
+<!-- refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js -->
 <g id="node1" class="node">
-<title>refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js</title>
-<g id="a_node1"><a xlink:href="refactoring/exercises/1-prompt-alert-confirm/replace-with/src/handler.js" xlink:title="handler.js">
+<title>refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js</title>
+<g id="a_node1"><a xlink:href="refactoring/exercises/prompt-alert-confirm/replace-with/src/handler.js" xlink:title="handler.js">
 <path fill="#ffffcc" stroke="black" d="M168.81,-97.3C168.81,-97.3 126.2,-97.3 126.2,-97.3 123.1,-97.3 120,-94.2 120,-91.1 120,-91.1 120,-84.9 120,-84.9 120,-81.8 123.1,-78.7 126.2,-78.7 126.2,-78.7 168.81,-78.7 168.81,-78.7 171.91,-78.7 175.01,-81.8 175.01,-84.9 175.01,-84.9 175.01,-91.1 175.01,-91.1 175.01,-94.2 171.91,-97.3 168.81,-97.3"/>
 <text text-anchor="middle" x="147.5" y="-85.3" font-family="Helvetica,sans-Serif" font-size="9.00">handler.js</text>
 </a>
 </g>
 </g>
-<!-- refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js -->
+<!-- refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js -->
 <g id="node2" class="node">
-<title>refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js</title>
-<g id="a_node2"><a xlink:href="refactoring/exercises/1-prompt-alert-confirm/replace-with/src/logic.js" xlink:title="logic.js">
+<title>refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js</title>
+<g id="a_node2"><a xlink:href="refactoring/exercises/prompt-alert-confirm/replace-with/src/logic.js" xlink:title="logic.js">
 <path fill="#ffffcc" stroke="black" d="M240.81,-81.3C240.81,-81.3 199.21,-81.3 199.21,-81.3 196.11,-81.3 193.01,-78.2 193.01,-75.1 193.01,-75.1 193.01,-68.9 193.01,-68.9 193.01,-65.8 196.11,-62.7 199.21,-62.7 199.21,-62.7 240.81,-62.7 240.81,-62.7 243.91,-62.7 247.01,-65.8 247.01,-68.9 247.01,-68.9 247.01,-75.1 247.01,-75.1 247.01,-78.2 243.91,-81.3 240.81,-81.3"/>
 <text text-anchor="middle" x="220.01" y="-69.3" font-family="Helvetica,sans-Serif" font-size="9.00">logic.js</text>
 </a>
 </g>
 </g>
-<!-- refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js&#45;&gt;refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js -->
+<!-- refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js&#45;&gt;refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js -->
 <g id="edge1" class="edge">
-<title>refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js&#45;&gt;refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js</title>
+<title>refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js&#45;&gt;refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js</title>
 <path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.200000" d="M175.16,-81.95C178.94,-81.09 182.87,-80.2 186.75,-79.32"/>
 <polygon fill="#000000" fill-opacity="0.200000" stroke="#000000" stroke-width="2" stroke-opacity="0.200000" points="187.39,-81.33 192.78,-77.95 186.47,-77.23 187.39,-81.33"/>
 </g>
-<!-- refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/init.js -->
+<!-- refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/init.js -->
 <g id="node3" class="node">
-<title>refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/init.js</title>
-<g id="a_node3"><a xlink:href="refactoring/exercises/1-prompt-alert-confirm/replace-with/src/init.js" xlink:title="init.js">
+<title>refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/init.js</title>
+<g id="a_node3"><a xlink:href="refactoring/exercises/prompt-alert-confirm/replace-with/src/init.js" xlink:title="init.js">
 <path fill="#ccffcc" stroke="black" d="M95.8,-97.3C95.8,-97.3 54.2,-97.3 54.2,-97.3 51.1,-97.3 48,-94.2 48,-91.1 48,-91.1 48,-84.9 48,-84.9 48,-81.8 51.1,-78.7 54.2,-78.7 54.2,-78.7 95.8,-78.7 95.8,-78.7 98.9,-78.7 102,-81.8 102,-84.9 102,-84.9 102,-91.1 102,-91.1 102,-94.2 98.9,-97.3 95.8,-97.3"/>
 <text text-anchor="middle" x="75" y="-85.3" font-family="Helvetica,sans-Serif" font-size="9.00">init.js</text>
 </a>
 </g>
 </g>
-<!-- refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/listener.js -->
+<!-- refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/listener.js -->
 <g id="node4" class="node">
-<title>refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/listener.js</title>
-<g id="a_node4"><a xlink:href="refactoring/exercises/1-prompt-alert-confirm/replace-with/src/listener.js" xlink:title="listener.js">
+<title>refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/listener.js</title>
+<g id="a_node4"><a xlink:href="refactoring/exercises/prompt-alert-confirm/replace-with/src/listener.js" xlink:title="listener.js">
 <path fill="#ffffcc" stroke="black" d="M95.8,-66.3C95.8,-66.3 54.2,-66.3 54.2,-66.3 51.1,-66.3 48,-63.2 48,-60.1 48,-60.1 48,-53.9 48,-53.9 48,-50.8 51.1,-47.7 54.2,-47.7 54.2,-47.7 95.8,-47.7 95.8,-47.7 98.9,-47.7 102,-50.8 102,-53.9 102,-53.9 102,-60.1 102,-60.1 102,-63.2 98.9,-66.3 95.8,-66.3"/>
 <text text-anchor="middle" x="75" y="-54.3" font-family="Helvetica,sans-Serif" font-size="9.00">listener.js</text>
 </a>
 </g>
 </g>
-<!-- refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/listener.js&#45;&gt;refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js -->
+<!-- refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/listener.js&#45;&gt;refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js -->
 <g id="edge2" class="edge">
-<title>refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/listener.js&#45;&gt;refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js</title>
+<title>refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/listener.js&#45;&gt;refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/handler.js</title>
 <path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.200000" d="M97.54,-66.47C104.37,-69.47 112.02,-72.84 119.2,-76"/>
 <polygon fill="#000000" fill-opacity="0.200000" stroke="#000000" stroke-width="2" stroke-opacity="0.200000" points="118.76,-78.1 125.1,-78.59 120.45,-74.25 118.76,-78.1"/>
 </g>
-<!-- refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.spec.js -->
+<!-- refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.spec.js -->
 <g id="node5" class="node">
-<title>refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.spec.js</title>
-<g id="a_node5"><a xlink:href="refactoring/exercises/1-prompt-alert-confirm/replace-with/src/logic.spec.js" xlink:title="logic.spec.js">
+<title>refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.spec.js</title>
+<g id="a_node5"><a xlink:href="refactoring/exercises/prompt-alert-confirm/replace-with/src/logic.spec.js" xlink:title="logic.spec.js">
 <path fill="#ffffcc" stroke="black" d="M173.81,-66.3C173.81,-66.3 121.2,-66.3 121.2,-66.3 118.1,-66.3 115,-63.2 115,-60.1 115,-60.1 115,-53.9 115,-53.9 115,-50.8 118.1,-47.7 121.2,-47.7 121.2,-47.7 173.81,-47.7 173.81,-47.7 176.91,-47.7 180.01,-50.8 180.01,-53.9 180.01,-53.9 180.01,-60.1 180.01,-60.1 180.01,-63.2 176.91,-66.3 173.81,-66.3"/>
 <text text-anchor="middle" x="147.5" y="-54.3" font-family="Helvetica,sans-Serif" font-size="9.00">logic.spec.js</text>
 </a>
 </g>
 </g>
-<!-- refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.spec.js&#45;&gt;refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js -->
+<!-- refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.spec.js&#45;&gt;refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js -->
 <g id="edge3" class="edge">
-<title>refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.spec.js&#45;&gt;refactoring/exercises/1&#45;prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js</title>
+<title>refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.spec.js&#45;&gt;refactoring/exercises/prompt&#45;alert&#45;confirm/replace&#45;with/src/logic.js</title>
 <path fill="none" stroke="#000000" stroke-width="2" stroke-opacity="0.200000" d="M180.04,-63.71C182.3,-64.19 184.58,-64.68 186.84,-65.16"/>
 <polygon fill="#000000" fill-opacity="0.200000" stroke="#000000" stroke-width="2" stroke-opacity="0.200000" points="186.46,-67.22 192.77,-66.42 187.34,-63.12 186.46,-67.22"/>
 </g>

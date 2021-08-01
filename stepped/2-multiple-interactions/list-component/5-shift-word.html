@@ -12,6 +12,7 @@
       <button id="push-button">push</button>
       <button id="unshift-button">unshift</button><br />
       <button id="pop-button">pop</button>
+      <!-- 1. write UI for shifting -->
       <button id="shift-button">shift</button>
       <hr />
       <div id="all-words"></div>
@@ -86,6 +87,7 @@
         console.log('pop:', [...state.words]);
       };
 
+      // 3. write handler for shifting
       const shiftHandler = () => {
         debugger;
         // update state
@@ -111,6 +113,8 @@
       document
         .getElementById('pop-button')
         .addEventListener('click', popHandler);
+
+      // 2. add event listener for shifting
       document
         .getElementById('shift-button')
         .addEventListener('click', shiftHandler);

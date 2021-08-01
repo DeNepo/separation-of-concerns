@@ -10,6 +10,7 @@
     <section id="user-interface">
       <input id="word" type="text" value="" /> <br />
       <button id="push-button">push</button>
+      <!-- 1. add UI for unshifting -->
       <button id="unshift-button">unshift</button><br />
       <hr />
       <div id="all-words"></div>
@@ -54,6 +55,7 @@
         console.log('push:', newWord, [...state.words]);
       };
 
+      // 3. write handler for unshifting
       const unshiftWordHandler = () => {
         debugger;
         // read user input
@@ -75,6 +77,7 @@
       document
         .getElementById('push-button')
         .addEventListener('click', pushWordHandler);
+      // 2. add listener for unshifting
       document
         .getElementById('unshift-button')
         .addEventListener('click', unshiftWordHandler);
