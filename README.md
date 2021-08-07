@@ -577,7 +577,9 @@ This week you and your group will build a small project from scratch using the [
 
 ## Class 15
   
-- Week 1: [function roles & enty points](https://vimeo.com/582143200)
+- Week 1
+  - [function roles & enty points](https://vimeo.com/582143200)
+  - [stepped & separated](https://vimeo.com/manage/videos/582140038)
 
 </details>
 
