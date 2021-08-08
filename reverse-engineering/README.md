@@ -12,6 +12,18 @@ Remember **Behavior, Strategy, Implementation**? Here it is all over again!
 
 ---
 
+## Inspect Everything!
+
+Half of the challenge in reverse engineering is understanding what you're rebuilding. You will want to inspect the demo at every step of your reverse-engineering to make sure you are building the best copy you can:
+
+- Inspect the _sources_ to find out what HTML is written in the demo.
+- Inspect the _styles_ of each element to reconstruct their classes (if you can't find it in the sources)
+- Inspect each element in the DOM to find _event listeners_. Which elements have listeners? What type of listener is it?
+
+You should spend at least as much time inspecting the demo as you do writing code.
+
+---
+
 ## Incremental Development
 
 Following these steps will give you some direction and make it easier to write from a blank page:
