@@ -1,6 +1,8 @@
 # Reverse Engineering
 
-> _hint_: study `/stepped` and `/separated` before starting these exercises
+> _hint 1_: study `/stepped` and `/separated` before starting these exercises
+>
+> _hint 2_: study how to use [forms](https://javascript.info/forms-controls), almost all these exercises use them
 
 In this chapter you will practice writing websites that have a single user interaction. You will be given a working demo with code that is very hard to read. Your task will be to study the program's behavior by using it (not reading the code!) then _reverse-engineer_ the same behavior starting from empty files.
 
