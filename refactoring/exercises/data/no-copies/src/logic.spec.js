@@ -1,12 +1,19 @@
 import { saveNoCopies } from './logic.js';
 
 describe('saveNoCopies: ', () => {
-  describe("saveNoCopies: adds a new item to an array if it's not saved", () => {
-    it('adds entries that do not exist', () => {
+  describe('adds a new items that are not in the array', () => {
+    it('adds a "d" if there was not a "d"', () => {
       const expected = ['a', 'b', 'c', 'd'];
       const actual = saveNoCopies(['a', 'b', 'c'], 'd');
       expect(actual).toEqual(expected);
     });
+    it('adds a "z" if there was not a "z"', () => {
+      const expected = ['a', 'b', 'c', 'd', 'z'];
+      const actual = saveNoCopies(['a', 'b', 'c', 'd'], 'z');
+      expect(actual).toEqual(expected);
+    });
+  });
+  describe('does not add items that are already in the array', () => {
     it('does not add entries that are at the beginning', () => {
       const expected = ['a', 'b', 'c'];
       const actual = saveNoCopies(['a', 'b', 'c'], 'a');
@@ -23,7 +30,7 @@ describe('saveNoCopies: ', () => {
       expect(actual).toEqual(expected);
     });
   });
-  describe('saveNoCopies has safety checks', () => {
+  describe('uses the arguments correctly', () => {
     it('does not modify the argument', () => {
       const arg = ['a', 'b', 'c', 'd', 'e'];
       saveNoCopies(arg);

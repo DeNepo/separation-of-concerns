@@ -1,9 +1,9 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
 import { game } from '../data.js';
 import { determineWinner } from '../logic/determine-winner.js';
 
-export const placeMove = (event) => {
+export const placeMove = event => {
   debugger;
   // read & process user input
   const index = event.target.id;

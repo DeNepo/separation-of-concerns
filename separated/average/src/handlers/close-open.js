@@ -1,4 +1,4 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
 import { measurements } from '../data.js';
 import { addMeasurementHandler } from './add.js';

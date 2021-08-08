@@ -1,4 +1,4 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
 import { words } from '../data.js';
 
@@ -13,7 +13,7 @@ export const addHandler = () => {
 
   // do core logic
   newAll.push(newWord);
-  const newFiltered = newAll.filter((word) => word.includes(query));
+  const newFiltered = newAll.filter(word => word.includes(query));
 
   // update state
   words.filtered = newFiltered;

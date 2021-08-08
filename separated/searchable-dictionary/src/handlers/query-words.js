@@ -1,8 +1,8 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
 import { dictionary } from '../data.js';
 
-export const queryHandler = (event) => {
+export const queryHandler = event => {
   debugger;
   // read user input
   const newQuery = event.target.value;
@@ -11,7 +11,7 @@ export const queryHandler = (event) => {
   const words = dictionary.words;
 
   // search state
-  const queryResult = words.find((word) => word.includes(newQuery));
+  const queryResult = words.find(word => word.includes(newQuery));
   const newResult = queryResult || '';
 
   // update state

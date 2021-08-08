@@ -1,8 +1,8 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
 import { numbers } from '../data.js';
 
-export const incrementCurrent = (event) => {
+export const incrementCurrent = event => {
   debugger;
   const action = event.target.id;
 

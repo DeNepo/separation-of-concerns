@@ -1,6 +1,6 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
-export const preventDefault = (event) => {
+export const preventDefault = event => {
   event.preventDefault();
 
   logger.add({

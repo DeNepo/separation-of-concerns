@@ -1,4 +1,4 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
 import { componentState } from '../data.js';
 import { infoElement } from '../components/info-element.js';

@@ -1,8 +1,8 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
 import { numbers } from '../data.js';
 
-export const setStep = (event) => {
+export const setStep = event => {
   debugger;
 
   // read user input

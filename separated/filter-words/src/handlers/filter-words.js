@@ -1,4 +1,4 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
 import { words } from '../data.js';
 
@@ -11,7 +11,7 @@ export const filterHandler = () => {
   const allWords = words.all.concat();
 
   // search state
-  const newFiltered = allWords.filter((word) => word.includes(newQuery));
+  const newFiltered = allWords.filter(word => word.includes(newQuery));
 
   // update state
   words.filtered = newFiltered;

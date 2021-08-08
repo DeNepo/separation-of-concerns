@@ -1,4 +1,4 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
 import { dictionary } from '../data.js';
 
@@ -12,7 +12,7 @@ export const removeHandler = () => {
 
   // carry out the logic logic
   //  remove the word
-  const newWords = words.filter((word) => word !== toRemove);
+  const newWords = words.filter(word => word !== toRemove);
 
   // update state
   dictionary.words = newWords;

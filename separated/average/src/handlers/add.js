@@ -1,9 +1,9 @@
-import { logger } from '../../../../lib/logger.js';
+import { logger } from '/lib/logger.js';
 
 import { average } from '../logic/average.js';
 import { measurements } from '../data.js';
 
-export const addMeasurementHandler = (event) => {
+export const addMeasurementHandler = event => {
   debugger;
 
   // read user input
