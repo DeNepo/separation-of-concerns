@@ -68,7 +68,36 @@ Following these steps will give you some direction and make it easier to write f
 
    </details>
 
-3. **User Interaction:** Now that your boilerplate and data are ready, it's time to make the thing happen! You should practice implementing user interactions from the screen backwards - first writing what the user sees, then incrementally building up the code "behind" the UI to add interactivity.
+3. **Initialize**: Does anything happen when the page is loaded that requires JavaScript? Usually this will be something displayed in the UI, and will often include program data that you don't want too write directly into the HTML file.
+
+   <details>
+   <summary>example snippet</summary>
+
+   ```html
+   <div id="user-interface">
+     <h1 id="welcome-header"></h1>
+   </div>
+   ```
+
+   ```js
+   // ./src/data.js
+
+   export const data = {
+     greeting: 'hello',
+   };
+   ```
+
+   ```js
+   // ./src/init/index.js
+
+   import { data } from '../data.js';
+
+   document.getElementById('welcome-header').innerHTML = data.greeting;
+   ```
+
+   </details>
+
+4. **User Interaction:** Now that your boilerplate and data are ready, it's time to make the thing happen! You should practice implementing user interactions from the screen backwards - first writing what the user sees, then incrementally building up the code "behind" the UI to add interactivity.
 
    1. **UI:** Write the HTML & CSS for the user interface:
 
