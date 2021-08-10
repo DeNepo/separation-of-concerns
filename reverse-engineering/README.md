@@ -208,7 +208,7 @@ Following these steps will give you some direction and make it easier to write f
       // ./src/handlers/display-secret.js
 
       export const displaySecret = (event) => {
-        event.target.classList.remove('hidden');
+        event.target.classList.toggle('hidden');
       };
       ```
 
@@ -216,7 +216,7 @@ Following these steps will give you some direction and make it easier to write f
       // ./src/handlers/hide-secret.js
 
       export const hideSecret = (event) => {
-        event.target.classList.add('hidden');
+        event.target.classList.toggle('hidden');
       };
       ```
 
@@ -224,12 +224,40 @@ Following these steps will give you some direction and make it easier to write f
 
       You don't need to finish this step completely before starting to **refactor**, if you can already tell that you will need some logic or components you can start writing them at the same time as the handler.
 
-   3. **Refactor:** Make your handler easier to read and your code more testable by refactoring logic and UI components to separate files. (_hint: you don't always need to refactor! only when it makes your code simpler to understand, reuse, or when there is some tricky logic to test_)
+   3. **Refactor:** Make your handler easier to read and your code more testable by getting rid of duplicate code, refactoring logic and UI components to separate files. (_hint: you don't always need to refactor! only when it makes your code simpler to understand, reuse, or when there is some tricky logic to test_)
 
       <details>
       <summary>example snippets</summary>
 
-      _this example is simple enough, nothing to refactor!_
+      Both handlers have the same code. Combining them into a single function and calling the same handler from both listeners will make the code easier to understand and maintain.
+
+      ```js
+      // ./src/listeners/display.js
+
+      import { toggleHidden } from '../handlers/toggle-hidden.js';
+
+      document
+        .getElementById('the-secret')
+        .addEventListener('mouseenter', toggleHidden);
+      ```
+
+      ```js
+      // ./src/listeners/hide.js
+
+      import { toggleHidden } from '../handlers/toggle-hidden.js';
+
+      document
+        .getElementById('the-secret')
+        .addEventListener('mouseleave', toggleHidden);
+      ```
+
+      ```js
+      // ./src/handlers/toggle-hidden.js
+
+      export const toggleHidden = (event) => {
+        event.target.classList.toggle('hidden');
+      };
+      ```
 
       </details>
 
