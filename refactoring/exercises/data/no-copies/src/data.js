@@ -1,1 +1,3 @@
-export const data = _;
+export const data = {
+  noCopies: [],
+};
