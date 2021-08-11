@@ -1,6 +1,8 @@
 # Reverse Engineering
 
-> _hint 1_: study `/stepped` and `/separated` before starting these exercises
+> [video guide](https://vimeo.com/585393648)
+>
+> _hint 1_: study `/isolate`, `/integrate`, `/stepped`, `/separated` before starting these exercises
 >
 > _hint 2_: study how to use [forms](https://javascript.info/forms-controls), almost all these exercises use them
 
