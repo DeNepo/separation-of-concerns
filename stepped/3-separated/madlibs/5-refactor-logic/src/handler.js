@@ -1,4 +1,4 @@
-import { buildMadlib } from './logic.js';
+import { buildMadlib } from './utils.js';
 
 export const handler = (event) => {
   // read user input

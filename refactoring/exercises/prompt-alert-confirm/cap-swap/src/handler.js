@@ -1,3 +1,3 @@
-import { capSwap } from './logic.js';
+import { capSwap } from './utils.js';
 
 export const capSwapHandler = () => {};

@@ -1,4 +1,4 @@
-import { typeCaster } from './logic.js';
+import { typeCaster } from './utils.js';
 
 describe('typeCaster: converts values to string, number or boolean', () => {
   describe('correctly casts valid types', () => {

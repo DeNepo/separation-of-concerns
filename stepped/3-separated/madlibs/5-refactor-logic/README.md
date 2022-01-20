@@ -36,7 +36,7 @@ Players can put in random words to create funny stories.
 | ---------------- | ----------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `handler(event)` | Event: a user generated event | Boolean: true | reads user inputs from event, concatenates the madlib story, and renders it into `madlib-goes-here`. the user action is logged. |
 
-## Logic
+## Utils
 
 | syntax                                       | parameters                                                                                                                           | return value                   | behavior                                                                                    |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------- |

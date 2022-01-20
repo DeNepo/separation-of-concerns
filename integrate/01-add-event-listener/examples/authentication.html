@@ -22,16 +22,18 @@
     </main>
 
     <script id="data">
-      let loggedIn = false;
-      let currentUser = undefined;
+      const state = {
+        loggedIn: false,
+        currentUser: undefined,
+      };
     </script>
 
     <script id="handlers">
       const logInHandler = () => {
         debugger;
 
-        if (loggedIn) {
-          alert(`${currentUser} is already logged in`);
+        if (state.loggedIn) {
+          alert(`${state.currentUser} is already logged in`);
           return;
         }
 
@@ -54,31 +56,31 @@
           alert('passwords do not match');
           return;
         }
-        loggedIn = true;
-        currentUser = userName;
-        const message = `welcome ${currentUser}`;
+        state.loggedIn = true;
+        state.currentUser = userName;
+        const message = `welcome ${state.currentUser}`;
         alert(message);
       };
 
       const logOutHandler = () => {
         debugger;
 
-        if (!loggedIn) {
+        if (!state.loggedIn) {
           alert('you are not logged in');
           return;
         }
 
         const confirmLogOut = confirm(
-          `${currentUser}, are you sure you want to log out?`,
+          `${state.currentUser}, are you sure you want to log out?`,
         );
         if (!confirmLogOut) {
           return;
         }
 
-        const message = `good bye ${currentUser}`;
+        const message = `good bye ${state.currentUser}`;
         alert(message);
-        loggedIn = false;
-        currentUser = undefined;
+        state.loggedIn = false;
+        state.currentUser = null;
       };
     </script>
 
@@ -86,11 +88,20 @@
       // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
       // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
 
-      document.getElementById('log-in').addEventListener('click', logInHandler);
+      const logIn = (id = '') => {
+        document.getElementById(id).addEventListener('click', logInHandler);
+      };
 
-      document
-        .getElementById('log-out')
-        .addEventListener('click', logOutHandler);
+      const logOut = (id = '') => {
+        document.getElementById(id).addEventListener('click', logOutHandler);
+      };
+    </script>
+
+    <script id="init">
+      debugger;
+
+      logIn('log-in');
+      logOut('log-out');
     </script>
   </body>
 </html>

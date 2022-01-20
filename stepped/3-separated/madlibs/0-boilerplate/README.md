@@ -26,7 +26,7 @@ Players can put in random words to create funny stories.
 | ------ | ---------- | ------------ | -------- |
 |        |            |              |          |
 
-## Logic
+## Utils
 
 | syntax | parameters | return value | behavior |
 | ------ | ---------- | ------------ | -------- |

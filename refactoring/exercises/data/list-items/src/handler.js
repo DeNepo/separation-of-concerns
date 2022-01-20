@@ -1,4 +1,4 @@
-import { list } from './logic.js';
+import { list } from './utils.js';
 import { bulletPoint } from './data.js';
 
 export const listHandler = () => {};

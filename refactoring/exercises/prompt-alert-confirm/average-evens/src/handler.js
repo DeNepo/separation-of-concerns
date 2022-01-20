@@ -1,3 +1,3 @@
-import { averageEvens } from './logic.js';
+import { averageEvens } from './utils.js';
 
 export const averageEvensHandler = () => {};

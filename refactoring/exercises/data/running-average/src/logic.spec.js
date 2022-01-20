@@ -1,4 +1,4 @@
-import { average } from './logic.js';
+import { average } from './utils.js';
 
 describe('average: computes the average of an array of numbers', () => {
   describe('average: correctly computes averages', () => {

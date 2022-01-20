@@ -1,4 +1,4 @@
-import { reverse } from './logic.js';
+import { reverse } from './utils.js';
 
 export const handler = (event) => {
   // entry point for the user interaction
@@ -7,7 +7,7 @@ export const handler = (event) => {
   // read user input from event
   const input = event.target.value;
 
-  // pass user input through core logic
+  // pass user input through core utils
   const reversed = reverse(input);
 
   // render result for user

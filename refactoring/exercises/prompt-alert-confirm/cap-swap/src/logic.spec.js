@@ -1,4 +1,4 @@
-import { capSwap } from './logic.js';
+import { capSwap } from './utils.js';
 
 describe('capSwap: makes uppercase lowercase, and lowercase uppercase', () => {
   it('returns an empty string for an empty string', () => {

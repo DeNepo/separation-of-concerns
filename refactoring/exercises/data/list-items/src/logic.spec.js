@@ -1,4 +1,4 @@
-import { list } from './logic.js';
+import { list } from './utils.js';
 
 describe('list: generates a list string from an array of strings', () => {
   describe('list: correctly lists items', () => {

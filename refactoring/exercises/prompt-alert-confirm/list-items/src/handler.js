@@ -1,3 +1,3 @@
-import { list } from './logic.js';
+import { list } from './utils.js';
 
 export const listHandler = () => {};

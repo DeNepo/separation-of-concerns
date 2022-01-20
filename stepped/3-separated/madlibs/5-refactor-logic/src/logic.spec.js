@@ -1,4 +1,4 @@
-import { buildMadlib } from './logic';
+import { buildMadlib } from './utils';
 
 describe('buildMadlib: creates a sentence using your words', () => {
   it('which type of word goes where?', () => {

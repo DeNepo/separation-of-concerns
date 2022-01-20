@@ -1,6 +1,12 @@
-export const reverse = (str) => {
-  const splitted = str.split('');
-  const reversed = splitted.reverse();
-  const joined = reversed.join('');
-  return joined;
+/**
+ * Reverses a string.
+ *
+ * @param {string} str - A string to reverse.
+ * @returns {string} The string, reversed.
+ */
+export const reverse = (str = '') => {
+  const arrayOfCharacters = str.split('');
+  const reversedArray = arrayOfCharacters.reverse();
+  const reversedString = reversedArray.join('');
+  return reversedString;
 };

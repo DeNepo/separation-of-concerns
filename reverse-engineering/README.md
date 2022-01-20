@@ -10,7 +10,7 @@ Remember **Behavior, Strategy, Implementation**? Here it is all over again!
 
 - **Behavior:** What user interactions does the web page support? What happens when the user interacts with the page?
 - **Strategy:** How is the problem broken down and solved? A lot of the strategy is already decided for you by the empty folder structure and the steps listed below. You're on your own to create a strategy for body of each function ;)
-- **Implementation:** What lines of code did you write to finally make the website work? Did you refactor your handler into logic and components?
+- **Implementation:** What lines of code did you write to finally make the website work? Did you refactor your handler into utils and components?
 
 ---
 
@@ -222,9 +222,9 @@ Following these steps will give you some direction and make it easier to write f
 
       </details>
 
-      You don't need to finish this step completely before starting to **refactor**, if you can already tell that you will need some logic or components you can start writing them at the same time as the handler.
+      You don't need to finish this step completely before starting to **refactor**, if you can already tell that you will need some utils or components you can start writing them at the same time as the handler.
 
-   3. **Refactor:** Make your handler easier to read and your code more testable by getting rid of duplicate code, refactoring logic and UI components to separate files. (_hint: you don't always need to refactor! only when it makes your code simpler to understand, reuse, or when there is some tricky logic to test_)
+   3. **Refactor:** Make your handler easier to read and your code more testable by getting rid of duplicate code, refactoring utils and UI components to separate files. (_hint: you don't always need to refactor! only when it makes your code simpler to understand, reuse, or when there is some tricky utils to test_)
 
       <details>
       <summary>example snippets</summary>

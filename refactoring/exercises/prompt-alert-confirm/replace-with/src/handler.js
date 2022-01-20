@@ -1,3 +1,3 @@
-import { replaceWith } from './logic.js';
+import { replaceWith } from './utils.js';
 
 export const replaceWithHandler = () => {};

@@ -1,4 +1,4 @@
-import { reverseAndUpper } from './logic.js';
+import { reverseAndUpper } from './utils.js';
 
 describe('reverseAndUpper: reverses a string and upper-cases all the letters', () => {
   it('"lower-case letters"', () => {

@@ -1,4 +1,4 @@
-import { reverse } from './logic.js';
+import { reverse } from './utils.js';
 
 describe('reverses a string', () => {
   it('empty string', () => {

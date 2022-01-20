@@ -1,4 +1,4 @@
-import { format } from './logic.js';
+import { format } from './utils.js';
 
 describe('formats two numbers into X/Y coordinates', () => {
   it('formats two positive numbers', () => {

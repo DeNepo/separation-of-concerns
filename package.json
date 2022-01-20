@@ -9,8 +9,8 @@
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests",
-    "format": "prettier --write",
-    "document": "node lib/document.js"
+    "format": "prettier --write ./",
+    "document": "node ./.dev-scripts/document.js"
   },
   "author": "HackYourFutureBelgium",
   "license": "MIT",

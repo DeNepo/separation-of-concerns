@@ -1,4 +1,4 @@
-import { averageEvens } from './logic.js';
+import { averageEvens } from './utils.js';
 
 describe('averageEvens: averages all even numbers in an array', () => {
   describe('averageEvens: correctly averages all even numbers', () => {

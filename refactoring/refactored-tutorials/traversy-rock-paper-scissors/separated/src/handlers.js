@@ -1,6 +1,6 @@
 import { scoreboard } from './data.js';
 
-import { getComputerChoice, getWinner } from './logic.js';
+import { getComputerChoice, getWinner } from './utils.js';
 import { renderModalBody, renderScore } from './components.js';
 
 export const play = (e) => {

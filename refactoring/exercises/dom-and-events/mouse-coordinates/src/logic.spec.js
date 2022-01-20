@@ -1,4 +1,4 @@
-import { formatCoordinates } from './logic.js';
+import { formatCoordinates } from './utils.js';
 
 describe('formatCoordinates: formats two numbers into a coordinates string', () => {
   it('positive numbers', () => {

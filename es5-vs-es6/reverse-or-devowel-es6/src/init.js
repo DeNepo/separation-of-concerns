@@ -1,6 +1,7 @@
+import { doItListener } from './listeners.js';
+
 debugger; // one when the module is loaded
 
-// run the listener file
-import './listener.js';
+doItListener('r-or-d');
 
 debugger;

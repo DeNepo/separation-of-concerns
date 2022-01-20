@@ -1,4 +1,7 @@
 // entry point for the website
+
+import { listener } from './listener.js';
+
 debugger;
 
-import './listener.js';
+listener();

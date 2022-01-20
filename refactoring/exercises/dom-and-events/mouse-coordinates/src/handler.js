@@ -1,3 +1,3 @@
-import { formatCoordinates } from './logic.js';
+import { formatCoordinates } from './utils.js';
 
 export const showMouseCoordinates = () => {};

@@ -1,4 +1,4 @@
-import { replaceWith } from './logic.js';
+import { replaceWith } from './utils.js';
 
 describe('replaceWith: replaces characters', () => {
   it('replaces nothing in an empty string', () => {

@@ -1,3 +1,3 @@
-// import { reverseAndUpper } from './logic.js';
+// import { reverseAndUpper } from './utils.js';
 
 export const reverseAndUpperHandler = _;

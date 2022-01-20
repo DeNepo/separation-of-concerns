@@ -1,16 +1,9 @@
+import { initListener, removeCharactersListener } from './listeners.js';
+
 debugger; // once when the module is loaded
 
-// run the listener file
-import './listener.js';
+initListener();
 
-import { data } from './data.js';
-
-/**
- * set the initial values for the form inputs using the program data
- */
-const form = document.getElementById('removable');
-
-form.text.value = data.text;
-form.result.value = data.text;
+removeCharactersListener('removable');
 
 debugger;
