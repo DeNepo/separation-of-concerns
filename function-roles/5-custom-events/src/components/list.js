@@ -3,7 +3,7 @@
  *
  * @param {number[]} list - A list of numbers to render.
  * @returns {HTMLListElement} - The rendered list of numbers.
- * @fires CustomEvent#removeNumber - The detail contains a 'number' field with the item's value as a number.
+ * @fires CustomEvent#removeNumber
  */
 export const listComponent = (list = []) => {
   const listEl = document.createElement('ul');

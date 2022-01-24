@@ -3,7 +3,7 @@
  *
  * @param {number} initialValue - The initial value for this input.
  * @returns {HTMLInputElement} - The rendered input element.
- * @fires CustomEvent#addNumber - The detail contains a 'number' field with the number to remove.
+ * @fires CustomEvent#addNumber
  */
 export const numberInputComponent = (initialValue = 0) => {
   const inputEl = document.createElement('input');
