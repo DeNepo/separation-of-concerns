@@ -157,8 +157,6 @@ Not really a separate role, custom events are used in your components . Custom e
 You need to document a custom event in the component that fires it:
 
 ```js
-import { greetEvent } from '../custom-events/greet.js';
-
 /**
  * Returns a new input element where a user can type their greeting.
  *
