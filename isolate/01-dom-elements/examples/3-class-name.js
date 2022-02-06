@@ -18,3 +18,8 @@ console.log(pEl.nodeName, pEl);
 const buttonEl = document.createElement('button');
 buttonEl.className = 'dark-text';
 console.log(buttonEl.nodeName, buttonEl);
+
+const inputEl = document.createElement('input');
+inputEl.className = 'username';
+inputEl.value = 'Ashenafi';
+console.log(inputEl.nodeName,inputEl);

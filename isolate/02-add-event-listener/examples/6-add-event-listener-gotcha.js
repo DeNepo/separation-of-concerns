@@ -29,7 +29,7 @@ const greetingHandler = () => {
 // add a 'click' event listener to the button
 //  oops!  greetingHandler was called on this line!
 //  debugger will jump from here to greetingHandler
-buttonEl.addEventListener('click', greetingHandler());
+buttonEl.addEventListener('click', greetingHandler());// you can check by removing the two brackets
 
 // debugger will not jump to the handler
 //  it will continue to the next line

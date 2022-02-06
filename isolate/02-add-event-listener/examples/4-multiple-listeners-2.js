@@ -9,7 +9,7 @@
 // create a new button
 const buttonEl = document.createElement('button');
 
-// write two different handlers
+// write two(one???) different handlers
 const helloHandler = () => {
   alert('hello!');
 };
@@ -29,6 +29,6 @@ const clickEvent1 = new Event('click');
 buttonEl.dispatchEvent(clickEvent1);
 
 // click the button again
-//  many times will you see an alert?
+//How many times will you see an alert?
 const clickEvent2 = new Event('hover');
 buttonEl.dispatchEvent(clickEvent2);
