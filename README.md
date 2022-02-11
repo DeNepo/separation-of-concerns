@@ -160,7 +160,7 @@ Somewhere to start with the DOM & Events
 - [/stepped](./stepped) (1-2 hours)
 - [/separated](./separated) (1-2 hours)
 - [/refactoring](./refactoring)
-- [/reverse-engineering](./separated)
+- [/reverse-engineering](./reverse-engineering)
 
 ## Chapter 3
 
