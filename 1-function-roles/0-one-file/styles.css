@@ -1,0 +1,8 @@
+.no-dots {
+  list-style-type: none;
+}
+
+.instructions {
+  font-family: monospace;
+  color: darkgray;
+}

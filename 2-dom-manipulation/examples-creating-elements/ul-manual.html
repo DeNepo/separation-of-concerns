@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>manual UL example</title>
+    <meta name="description" content="manual UL example" />
+
+    <link href="/lib/dom-manipulation/mocha/mocha.css" rel="stylesheet" />
+    <script src="/lib/dom-manipulation/mocha/mocha.js"></script>
+    <script src="/lib/dom-manipulation/assert.js"></script>
+
+    <script src="/lib/dom-manipulation/test-the-dom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2>manual UL example</h2>
+    </header>
+
+    <section class="things-to-study">
+      <div id="side to inspect" class="exercise-output">
+        <div id="expected">
+          <h1>a list of things</h1>
+          <ul>
+            <li>robots</li>
+            <li>solar systems</li>
+            <li>oil</li>
+          </ul>
+        </div>
+        <br />
+        <div id="actual"></div>
+        <br />
+        <script id="dom-manipulation-script">
+          'use strict';
+          debugger;
+
+          const h1El = document.createElement('h1');
+          h1El.innerText = 'a list of things';
+
+          const li_1 = document.createElement('li');
+          li_1.innerText = 'robots';
+
+          const li_2 = document.createElement('li');
+          li_2.innerText = 'solar systems';
+
+          const li_3 = document.createElement('li');
+          li_3.innerText = 'oil';
+
+          const ulEl = document.createElement('ul');
+          ulEl.appendChild(li_1);
+          ulEl.appendChild(li_2);
+          ulEl.appendChild(li_3);
+
+          const actual = document.getElementById('actual');
+          actual.appendChild(h1El);
+          actual.appendChild(ulEl);
+        </script>
+      </div>
+
+      <div id="mocha" class="mocha-output"></div>
+
+      <script id="run the tests!">
+        mocha.setup({
+          ui: 'bdd',
+        });
+        compareElements.attributesToTest = [
+          'nodeName',
+          'innerText',
+          'children',
+          'childElementCount',
+        ];
+        compareElements(
+          document.getElementById('actual'),
+          document.getElementById('expected'),
+        );
+        mocha.run();
+      </script>
+    </section>
+  </body>
+</html>

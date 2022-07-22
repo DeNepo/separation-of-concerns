@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="../../public/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script type="module">
+      import { showComponentTestCase } from '/lib/show-component-test-case.js';
+
+      import { stateList } from './words-list.js';
+
+      showComponentTestCase('the first 5 letters of the alphabet', wordsList, [
+        'a',
+        'b',
+        'c',
+        'd',
+        'e',
+      ]);
+
+      showComponentTestCase('my favorite colors', wordsList, [
+        'red',
+        'rouge',
+        'rood',
+      ]);
+
+      showComponentTestCase('6 animals', wordsList, [
+        'dog',
+        'snake',
+        'horse',
+        'cow',
+        'turtle',
+        'fish',
+      ]);
+    </script>
+  </body>
+</html>

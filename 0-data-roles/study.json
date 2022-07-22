@@ -1,0 +1,8 @@
+{
+  "--defaults": {
+    ".html": "study"
+  },
+  "study": {
+    "deps": true
+  }
+}

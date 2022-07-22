@@ -8,21 +8,16 @@
     "url": "git+https://github.com/HackYourFutureBelgium/separation-of-concerns.git"
   },
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests",
-    "format": "prettier --write ./",
-    "document": "node ./.dev-scripts/document.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --passWithNoTests",
+    "format": "prettier --write ./"
   },
-  "author": "HackYourFutureBelgium",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/HackYourFutureBelgium/separation-of-concerns/issues"
   },
   "homepage": "https://github.com/HackYourFutureBelgium/separation-of-concerns#readme",
   "devDependencies": {
-    "dependency-cruiser": "^10.0.6",
-    "graphviz-cli": "^1.0.0",
     "jest": "^27.0.6",
-    "misc-utils-of-mine-typescript": "0.0.12",
     "prettier": "^2.3.2"
   }
 }

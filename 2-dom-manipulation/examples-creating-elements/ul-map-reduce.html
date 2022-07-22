@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>map, reduce UL example</title>
+    <meta name="description" content="map, reduce UL example" />
+
+    <link href="/lib/dom-manipulation/mocha/mocha.css" rel="stylesheet" />
+    <script src="/lib/dom-manipulation/mocha/mocha.js"></script>
+    <script src="/lib/dom-manipulation/assert.js"></script>
+
+    <script src="/lib/dom-manipulation/test-the-dom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2>map, reduce UL example</h2>
+    </header>
+
+    <section class="things-to-study">
+      <div id="side to inspect" class="exercise-output">
+        <div id="expected">
+          <h1>a list of things</h1>
+          <ul>
+            <li>robots</li>
+            <li>solar systems</li>
+            <li>oil</li>
+          </ul>
+        </div>
+        <br />
+
+        <div id="actual"></div>
+        <br />
+        <script id="dom-manipulation-script">
+          'use strict';
+          debugger;
+
+          const h1El = document.createElement('h1');
+          h1El.innerText = 'a list of things';
+
+          const things = ['robots', 'solar systems', 'oil'];
+
+          const thingElements = things.map((thing) => {
+            const newLi = document.createElement('li');
+            newLi.innerText = thing;
+            return newLi;
+          });
+          console.log(thingElements);
+
+          const ul = document.createElement('ul');
+          const thingsListEl = thingElements.reduce((ulEl, thingEl) => {
+            ulEl.appendChild(thingEl);
+            return ulEl;
+          }, ul);
+
+          const actual = document.getElementById('actual');
+          actual.appendChild(h1El);
+          actual.appendChild(thingsListEl);
+        </script>
+      </div>
+
+      <div id="mocha" class="mocha-output"></div>
+
+      <script id="run the tests!">
+        mocha.setup({
+          ui: 'bdd',
+        });
+        compareElements.attributesToTest = [
+          'nodeName',
+          'innerText',
+          'children',
+          'childElementCount',
+        ];
+        compareElements(
+          document.getElementById('actual'),
+          document.getElementById('expected'),
+        );
+        mocha.run();
+      </script>
+    </section>
+  </body>
+</html>

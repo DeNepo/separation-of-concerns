@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script type="module">
+      import { showComponentTestCase } from '/lib/show-component-test-case.js';
+
+      import { info } from './info.js';
+
+      showComponentTestCase(
+        'several colors, no id',
+        info,
+        'several colors',
+        'red, orange, green, blue.',
+      );
+
+      showComponentTestCase(
+        'several colors, id "colors"',
+        info,
+        'several colors',
+        'red, orange, green, blue.',
+        'colors',
+      );
+
+      showComponentTestCase(
+        'what is javascript?, id "js"',
+        info,
+        'what is javascript?',
+        'a programming language!',
+        'js',
+      );
+    </script>
+  </body>
+</html>

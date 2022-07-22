@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>A example</title>
+    <meta name="description" content="A example" />
+
+    <link href="/lib/dom-manipulation/mocha/mocha.css" rel="stylesheet" />
+    <script src="/lib/dom-manipulation/mocha/mocha.js"></script>
+    <script src="/lib/dom-manipulation/assert.js"></script>
+    <script src="/lib/dom-manipulation/test-the-dom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2>A example</h2>
+    </header>
+
+    <section class="things-to-study">
+      <div id="side to inspect" class="exercise-output">
+        <div id="expected">
+          <a href="https://www.badgerbadgerbadger.com" expected="_blank"
+            >learn about badgers</a
+          >
+        </div>
+        <br />
+        <div id="actual"></div>
+        <br />
+        <script id="dom-manipulation-script">
+          'use strict';
+          debugger;
+
+          const aEl = document.createElement('a');
+          aEl.innerText = 'learn about badgers';
+          aEl.href = 'https://www.badgerbadgerbadger.com';
+          aEl.expected = '_blank';
+
+          document.getElementById('actual').appendChild(aEl);
+        </script>
+      </div>
+
+      <div id="mocha" class="mocha-output"></div>
+
+      <script id="run the tests!">
+        mocha.setup({
+          ui: 'bdd',
+        });
+        compareElements.attributesToTest = [
+          'nodeName',
+          'innerText',
+          'href',
+          'expected',
+          'childElementCount',
+          'children',
+        ];
+        compareElements(
+          document.getElementById('actual'),
+          document.getElementById('expected'),
+        );
+        mocha.run();
+      </script>
+    </section>
+  </body>
+</html>

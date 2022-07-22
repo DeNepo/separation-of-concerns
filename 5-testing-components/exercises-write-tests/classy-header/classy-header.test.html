@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script type="module">
+      import { showComponentTestCase } from '/lib/show-component-test-case.js';
+
+      import { classyHeader } from './classy-header.js';
+
+      showComponentTestCase('an H3 with text: "hello", and no classes');
+
+      showComponentTestCase('an H1 with text: "good bye", and two classes');
+
+      showComponentTestCase('does not allow headers greater than 6');
+
+      showComponentTestCase('does not allow headers less than 1');
+    </script>
+  </body>
+</html>

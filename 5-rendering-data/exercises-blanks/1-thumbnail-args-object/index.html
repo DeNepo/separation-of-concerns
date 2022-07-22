@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title></title>
+    <meta name="description" content="Rendering Data" />
+
+    <link href="../../style.css" rel="stylesheet" />
+
+    <link href="./style.css" rel="stylesheet" />
+
+    <script id="challenge">
+      const challengeName = 'thumbnail (args object)';
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <h2 id="challenge-name"></h2>
+      <div class="side-by-side">
+        <h3>actual</h3>
+        <h3>expected</h3>
+      </div>
+    </div>
+
+    <main id="test-cases"></main>
+
+    <script src="./actual.js"></script>
+    <script src="./test-cases.js"></script>
+    <script src="./expected.js"></script>
+
+    <script src="/lib/rendering-data/describe-it.js"></script>
+    <script src="/lib/rendering-data/chai-and-chai-dom.js"></script>
+    <script src="/lib/rendering-data/run-test-cases.js"></script>
+  </body>
+</html>

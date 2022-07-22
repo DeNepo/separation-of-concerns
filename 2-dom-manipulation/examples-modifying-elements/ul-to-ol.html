@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>UL to OL example</title>
+    <meta name="description" content="UL to OL example" />
+
+    <link href="/lib/dom-manipulation/mocha/mocha.css" rel="stylesheet" />
+    <script src="/lib/dom-manipulation/mocha/mocha.js"></script>
+    <script src="/lib/dom-manipulation/assert.js"></script>
+
+    <script src="/lib/dom-manipulation/test-the-dom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2>UL to OL example</h2>
+    </header>
+
+    <section class="things-to-study">
+      <div id="side to inspect" class="exercise-output">
+        <div id="expected">
+          <h1>a list of things</h1>
+          <ol>
+            <li>robots</li>
+            <li>solar systems</li>
+            <li>oil</li>
+          </ol>
+        </div>
+        <br />
+        <div id="actual">
+          <h1>a list of things</h1>
+          <ul>
+            <li>robots</li>
+            <li>solar systems</li>
+            <li>oil</li>
+          </ul>
+        </div>
+        <br />
+        <script id="dom-manipulation-script">
+          'use strict';
+          debugger;
+
+          const actual = document.getElementById('actual');
+          const unorderedList = actual.children[1];
+          console.log(unorderedList.children);
+
+          // https://stackoverflow.com/questions/17094230/how-do-i-loop-through-children-objects-in-javascript
+          const orderedList = document.createElement('ol');
+
+          const numChildren = unorderedList.children.length;
+          for (let i = 0; i < numChildren; i++) {
+            const nextChild = unorderedList.children[i].cloneNode(true);
+            orderedList.appendChild(nextChild);
+          }
+
+          actual.replaceChild(orderedList, unorderedList);
+        </script>
+      </div>
+
+      <div id="mocha" class="mocha-output"></div>
+
+      <script id="run the tests!">
+        mocha.setup({
+          ui: 'bdd',
+        });
+        compareElements.attributesToTest = [
+          'nodeName',
+          'innerText',
+          'children',
+          'childElementCount',
+        ];
+        compareElements(
+          document.getElementById('actual'),
+          document.getElementById('expected'),
+        );
+        mocha.run();
+      </script>
+    </section>
+  </body>
+</html>
