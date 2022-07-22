@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="../../public/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <p>
+      notice: the components will not open or close when you click them.
+      <br />
+      to read the main text of a closed component you will need to inspect.
+    </p>
+
+    <script type="module">
+      import { showComponentTestCase } from '/lib/show-component-test-case.js';
+
+      import { infoElement } from './info-element.js';
+
+      showComponentTestCase(
+        'a "hello" that says "good bye" if it is opened',
+        infoElement,
+        {
+          summaryText: 'hello',
+          mainText: 'good bye',
+          isOpen: false,
+        },
+      );
+
+      showComponentTestCase('it says "bye" and is open', infoElement, {
+        summaryText: 'bye',
+        mainText: 'good',
+        isOpen: true,
+      });
+
+      showComponentTestCase(
+        'it says "ok" and "pass", it is open',
+        infoElement,
+        {
+          summaryText: 'ok',
+          mainText: 'pass',
+          isOpen: true,
+        },
+      );
+    </script>
+  </body>
+</html>

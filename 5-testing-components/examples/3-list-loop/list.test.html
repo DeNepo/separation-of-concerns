@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script type="module">
+      import { showComponentTestCase } from '/lib/show-component-test-case.js';
+
+      import { list } from './list.js';
+
+      showComponentTestCase(
+        'an ordered list of three items',
+        list,
+        ['toad', 'frog', 'salamander'],
+        0,
+      );
+
+      showComponentTestCase(
+        'an ordered list of two items',
+        list,
+        ['orange', 'blue'],
+        3,
+      );
+    </script>
+  </body>
+</html>

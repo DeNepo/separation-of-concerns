@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script type="module">
+      import { showComponentTestCase } from '/lib/show-component-test-case.js';
+
+      import { header } from './header.js';
+
+      showComponentTestCase('an H6 with text: "pogo"', header, 6, 'pogo');
+
+      showComponentTestCase('an H3 with text: "hello"', header, 3, 'hello');
+
+      showComponentTestCase(
+        'an H1 with text: "good bye"',
+        header,
+        1,
+        'good bye',
+      );
+
+      showComponentTestCase(
+        'does not allow headers greater than 6',
+        header,
+        7,
+        'should throw an error',
+      );
+
+      showComponentTestCase(
+        'does not allow headers less than 1',
+        header,
+        0,
+        'should throw an error',
+      );
+    </script>
+  </body>
+</html>

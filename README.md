@@ -1,7 +1,74 @@
 # Separation of Concerns
 
-Examples, exercises and guides for the
-[Separation of Concerns module](https://home.hackyourfuture.be/curriculum/separation-of-concerns)
+> "The most important principle in Software Engineering is the Separation of Concerns \(SoC\): The idea that a software system must be decomposed into parts that overlap in functionality as little as possible."
+>
+> - [Effective Software Design](https://effectivesoftwaredesign.com/2012/02/05/separation-of-concerns/)
+
+- [Learning Objectives](#learning-objectives)
+- [Getting Started](#getting-started)
+- [Study Tips](#study-tips)
+- [Suggested Study](./suggested-study.md)
+
+---
+
+## Learning Objectives
+
+<details>
+<summary>Priorities: 🥚, 🐣, 🐥, 🐔 (click to learn more)</summary>
+<br>
+
+There is a lot to learn in this repository. If you can't master all the material
+at once, that's expected! Anything you don't master now will always be waiting
+for you to review when you need it. These 4 emoji's will help you prioritize
+your study time and to measure your progress:
+
+- 🥚: Understanding this material is required, it covers the base skills you'll
+  need to move on. You do not need to finish all of them but should feel
+  comfortable that you could with enough time.
+- 🐣: You have started all of these exercises and feel you could complete them
+  all if you just had more time. It may not be easy for you but with effort you
+  can make it through.
+- 🐥: You have studied the examples and started some exercises if you had time.
+  You should have a big-picture understanding of these concepts/skills, but may
+  not be confident completing the exercises.
+- 🐔: These concepts or skills are not necessary but are related to this module.
+  If you are finished with 🥚, 🐣 and 🐥 you can use the 🐔 exercises to push
+  yourself without getting distracted from the module's main objectives.
+
+---
+
+</details>
+
+- [ ] 🥚 **event-driven programming**: identify the concept in a JS program via listeners & handlers
+- [ ]🥚 **entry points**: describe what an entry point is, there are 2 kinds in the programs for this module - initialization & interaction. identify them in a program
+- 🥚 **function roles**: describe what function roles are and why they're important. they can identify a function's role given checklists for each role covered in this module:
+  - [ ] **_listeners_**: functions that attach event listeners to the DOM
+  - [ ] 🥚 **_handlers_**: entry point for user interactions
+  - [ ] 🥚 **_utils_** _(utilities)_: pure functions to help do things with data
+  - [ ] 🐣 **_components_**: render data into DOM elements to display for the user
+  - [ ] 🐥 **_custom events_**: create custom events events in your components, passing useful data between components and handlers
+- [ ] 🥚 **DOM access**: You read and write values from the DOM in an event handler
+- [ ] 🥚 **es5 vs. es6**: You can demonstrate the change in developer-experience pre and post es6 by stepping through in the debugger and explaining differences in scoping \(global vs. script, block vs. local, modules\) between two programs with identical user experience but different implementations.
+- [ ] 🥚 **Scope Hierarchy**: You is comfortable navigating different scopes in the browser's debugger to understand an existing application \(script, module, closure, local, block\)
+- [ ] 🥚 **Code Splitting**: You can use ES Modules to split your code into multiple files & folders according to function role, data, listeners and initialization. They can use generated dependency diagrams and documentation to understand and navigate this folder structure.
+- [ ] 🥚 **Dependency Graphs**: You can use a project's dependency graph to understand how it is organized and to navigate the source code.
+- [ ] 🥚 **Development Strategies**: You can write development strategies that have all of the program's state defined at the beginning, and separate each user story into _interface_ and _interaction_ tasks.
+- [ ] 🐣 **Naming Functions**: You can come up with clear and helpful names for the functions in your program. A good function name will take into account the function's role and the program's domain, like in the `/naming-variables` exercises from Debugging.
+- [ ] 🐣 **DOM manipulation**: You can manipulate the DOM when implementing level-appropriate user interactions
+- [ ] 🐣 **Isolating Components**: You can use a `test.html` file to render your components with different inputs
+- [ ] 🐣 **Forms**: You can do basic handling of form data via `event.target.form`
+- [ ] 🐣 **Handling events**: You can use the `event` argument to process user interactions, including bubbled events using `event.target`
+- [ ] 🐣 **Passing Component Unit Tests**: You can write vanilla DOM component functions to pass provided unit tests
+- [ ] 🐣 **refactoring**: refactor a single-script tutorial-style web page into multiple files using imports and exports
+- [ ] 🐥 **reverse-engineering**: You can incrementally reverse-engineer a level-appropriate user interaction following these steps:
+  - _init_
+  - Listeners
+  - Handlers
+  - (possibly): Utils, Components, Custom Events
+- [ ] 🐔 **From Spec**: given user stories, You can develop a site from scratch using a template repository.
+- [ ] 🐔 **Writing Component Unit Tests**: You can write unit tests to validate your component functions using BDD syntax
+
+[TOP](#separation-of-concerns)
 
 ---
 
@@ -112,64 +179,6 @@ If you create a fork of this repository you can open a project board in your for
 
 ---
 
-## Materials
-
-- examples
-  - 🥚 [/function-roles](./function-roles): learn the different ways you can use functions in your programs, not all functions play the same role
-  - 🥚 [/stepped](./stepped): study HTML/CSS/JS projects built up step-by-step (only examples)
-  - 🥚 [/separated](./separated): study HTML/CSS/JS projects that have been separated by concern (only examples)
-  - 🥚 [/es5-vs-es6](./es5-vs-es6): explore the differences between projects using ES5 and ES6 in the debugger (only examples)
-  - 🐣 [/magic-variables](./magic-variables): the browser will magically create some variables when you work with the DOM, don't use them. Use locally declared variables.
-- exercises
-  - 🥚 [/isolate](./isolate): focus on the DOM and events, isolating JavaScript in the debugger
-  - 🥚 [/dom-manipulation](./dom-manipulation): practice updating the DOM in a live web page.
-  - 🥚 [/listeners-and-handlers](./listeners-and-handlers): learn how to navigate events in your browser's devtools.
-  - 🐣 [/integrate](./integrate): learn how to integrate JS into user interfaces built with HTML and CSS
-  - 🐣 [/rendering-data](./rendering-data): practice rendering JS data in to DOM components.
-  - 🐣 [/refactoring](./refactoring): practice refactoring small websites from a single JS file to many files separated by concern.
-  - 🐣 [/testing-components](./testing-components): learn how to write tests for DOM component functions.
-  - 🐣 [/reverse-engineering](./reverse-engineering): use what you learned in `/stepped` and `/separated` to reverse-engineer user interactions in small web pages.
-  - 🐥 [/hack-these](./hack-these): "learn by hacking" - it's a thing. This folder has finished code from some great online tutorials, follow the tutorial then explore their code in your debugger.
-
-## Chapter 1
-
-> no project, just study
-
-Suggested code to study:
-
-- [/function-roles](./function-roles)
-- [/isolate](./isolate): all of it
-- [/integrate](./integrate): 1 & 2
-- [/stepped](./stepped) (1-2 hours)
-- [/separated](./separated) (1-2 hours)
-- [/dom-manipulation](./dom-manipulation): the exercises are pretty short
-- [/listeners-and-handlers](./listeners-and-handlers): 4 exercises
-- [/magic-variables](./magic-variables): it's just 2 examples
-
-Somewhere to start with the DOM & Events
-
-- [javascript.info/document](https://javascript.info/document)
-- [javascript.info/events](https://javascript.info/events)
-- [`onclick` vs. `.addEventListener('click', handler)`](https://www.youtube.com/watch?v=7UstS0hsHgI)
-- [What are event listeners in JS?](https://www.youtube.com/watch?v=jqU3uaRgQyQ)
-- [domevents.dev](https://domevents.dev)
-
-## Chapter 2
-
-- the rest of [/isolate](./isolate) and [/integrate](./integrate)
-- [/stepped](./stepped) (1-2 hours)
-- [/separated](./separated) (1-2 hours)
-- [/refactoring](./refactoring)
-- [/reverse-engineering](./reverse-engineering)
-
-## Chapter 3
-
-- [/rendering-data](./rendering-data)
-- [/testing-components](./testing-components)
-- Take some time to study the **Custom Events** example from [/function-roles](./funciton-role)
-
-looking for a challenge?
-
-- [/hack-these](./hack-these)
+![draino in the fridge](./assets/draino-in-the-fridge.png)
 
 [TOP](#separation-of-concerns)

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>add a link</title>
+    <meta name="description" content="add a link" />
+
+    <link href="/lib/dom-manipulation/mocha/mocha.css" rel="stylesheet" />
+    <script src="/lib/dom-manipulation/mocha/mocha.js"></script>
+    <script src="/lib/dom-manipulation/assert.js"></script>
+
+    <script src="/lib/dom-manipulation/test-the-dom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2>add a link</h2>
+    </header>
+
+    <section class="things-to-study">
+      <div id="side to inspect" class="exercise-output">
+        <div id="expected">
+          <h2>a great tutorial on DOM manipulation:</h2>
+          <a
+            href="https://www.youtube.com/watch?v=0ik6X4DJKCc"
+            expected="_blank"
+            >Mr. Traversy does it again!</a
+          >
+        </div>
+
+        <div id="actual">
+          <h2>a great tutorial on DOM manipulation:</h2>
+        </div>
+
+        <script id="dom-manipulation-script">
+          'use strict';
+          debugger;
+
+          // write me! (... without using cloneNode, that's kind of cheating)
+        </script>
+      </div>
+
+      <div id="mocha" class="mocha-output"></div>
+
+      <script id="run the tests!">
+        mocha.setup({
+          ui: 'bdd',
+        });
+        compareElements.attributesToTest = [
+          'nodeName',
+          'innerText',
+          'href',
+          'expected',
+          'children',
+          'childElementCount',
+        ];
+        compareElements(
+          document.getElementById('actual'),
+          document.getElementById('expected'),
+        );
+        mocha.run();
+      </script>
+    </section>
+  </body>
+</html>

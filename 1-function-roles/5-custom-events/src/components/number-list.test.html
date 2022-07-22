@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>test: numberList</title>
+
+    <link href="../../styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script type="module">
+      import { showComponentTestCase } from '/lib/show-component-test-case.js';
+
+      import { REMOVE_EVENT } from '../../data/constants.js';
+
+      import { numberList } from './number-list.js';
+
+      const returned1 = showComponentTestCase(
+        'even numbers',
+        numberList,
+        [2, 4, 6, 8],
+      );
+      returned1.addEventListener(REMOVE_EVENT, (event) => console.log(event));
+
+      const returned2 = showComponentTestCase(
+        'odd numbers',
+        numberList,
+        [1, 3, 5, 7],
+      );
+      returned2.addEventListener(REMOVE_EVENT, (event) => console.log(event));
+
+      const returned3 = showComponentTestCase(
+        'all numbers',
+        numberList,
+        [1, 2, 3, 4, 5, 6, 7, 8],
+      );
+      returned3.addEventListener(REMOVE_EVENT, (event) => console.log(event));
+    </script>
+  </body>
+</html>

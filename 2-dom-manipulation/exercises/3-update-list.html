@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>update a list</title>
+    <meta name="description" content="update a list" />
+
+    <link href="/lib/dom-manipulation/mocha/mocha.css" rel="stylesheet" />
+    <script src="/lib/dom-manipulation/mocha/mocha.js"></script>
+    <script src="/lib/dom-manipulation/assert.js"></script>
+
+    <script src="/lib/dom-manipulation/test-the-dom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2>update a list</h2>
+    </header>
+
+    <section class="things-to-study">
+      <div id="side to inspect" class="exercise-output">
+        <div id="expected">
+          <h1>a list of things</h1>
+          <ul>
+            <li>robots</li>
+            <li>solar systems</li>
+            <li>oil</li>
+          </ul>
+        </div>
+
+        <div id="actual">
+          <h1>a list of things</h1>
+          <ul>
+            <li>animals</li>
+            <li>solar systems</li>
+            <li>oil</li>
+          </ul>
+        </div>
+
+        <script id="dom-manipulation-script">
+          'use strict';
+          debugger;
+
+          // write me! (... without using cloneNode, that's kind of cheating)
+        </script>
+      </div>
+
+      <div id="mocha" class="mocha-output"></div>
+
+      <script id="run the tests!">
+        mocha.setup({
+          ui: 'bdd',
+        });
+        compareElements.attributesToTest = [
+          'nodeName',
+          'innerText',
+          'children',
+          'childElementCount',
+        ];
+        compareElements(
+          document.getElementById('actual'),
+          document.getElementById('expected'),
+        );
+        mocha.run();
+      </script>
+    </section>
+  </body>
+</html>

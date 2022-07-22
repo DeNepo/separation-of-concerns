@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>DETAILS/SUMMARY example</title>
+    <meta name="description" content="DETAILS/SUMMARY example" />
+
+    <link href="/lib/dom-manipulation/mocha/mocha.css" rel="stylesheet" />
+    <script src="/lib/dom-manipulation/mocha/mocha.js"></script>
+    <script src="/lib/dom-manipulation/assert.js"></script>
+
+    <script src="/lib/dom-manipulation/test-the-dom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2>DETAILS/SUMAMRY example</h2>
+    </header>
+
+    <section class="things-to-study">
+      <div id="side to inspect" class="exercise-output">
+        <div id="expected">
+          <details>
+            <summary>a great tutorial on DOM manipulation:</summary>
+            <a
+              href="https://www.youtube.com/watch?v=0ik6X4DJKCc"
+              expected="_blank"
+              >Mr. Traversy does it again!</a
+            >
+          </details>
+        </div>
+        <br />
+        <div id="actual"></div>
+        <br />
+        <script id="dom-manipulation-script">
+          'use strict';
+          debugger;
+
+          const summaryEl = document.createElement('summary');
+          summaryEl.innerText = 'a great tutorial on DOM manipulation:';
+
+          const aEl = document.createElement('a');
+          aEl.innerText = 'Mr. Traversy does it again!';
+          aEl.href = 'https://www.youtube.com/watch?v=0ik6X4DJKCc';
+          aEl.expected = '_blank';
+
+          const detailsEl = document.createElement('details');
+          detailsEl.appendChild(summaryEl);
+          detailsEl.appendChild(aEl);
+
+          document.getElementById('actual').appendChild(detailsEl);
+        </script>
+      </div>
+
+      <div id="mocha" class="mocha-output"></div>
+
+      <script id="run the tests!">
+        mocha.setup({
+          ui: 'bdd',
+        });
+        compareElements.attributesToTest = [
+          'nodeName',
+          'innerText',
+          'href',
+          'expected',
+          'children',
+          'childElementCount',
+        ];
+        compareElements(
+          document.getElementById('actual').children[0],
+          document.getElementById('expected').children[0],
+        );
+        mocha.run();
+      </script>
+    </section>
+  </body>
+</html>

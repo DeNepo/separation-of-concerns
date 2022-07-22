@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>update UL manually example</title>
+    <meta name="description" content="update UL manually example" />
+
+    <link href="/lib/dom-manipulation/mocha/mocha.css" rel="stylesheet" />
+    <script src="/lib/dom-manipulation/mocha/mocha.js"></script>
+    <script src="/lib/dom-manipulation/assert.js"></script>
+
+    <script src="/lib/dom-manipulation/test-the-dom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2>update UL manually example</h2>
+    </header>
+
+    <section class="things-to-study">
+      <div id="side to inspect" class="exercise-output">
+        <div id="expected">
+          <h1>a list of things</h1>
+          <ul>
+            <li>robots</li>
+            <li>solar systems</li>
+            <li>oil</li>
+          </ul>
+        </div>
+        <br />
+        <div id="actual">
+          <h1>a list of things</h1>
+          <ul>
+            <li>pigs</li>
+            <li>chairs</li>
+            <li>a carpet</li>
+          </ul>
+        </div>
+        <br />
+        <script id="dom-manipulation-script">
+          'use strict';
+          debugger;
+
+          const actual = document.getElementById('actual');
+          const ulEl = actual.children[1];
+
+          ulEl.children[0].innerText = 'robots';
+          ulEl.children[1].innerText = 'solar systems';
+          ulEl.children[2].innerText = 'oil';
+        </script>
+      </div>
+
+      <div id="mocha" class="mocha-output"></div>
+
+      <script id="run the tests!">
+        mocha.setup({
+          ui: 'bdd',
+        });
+        compareElements.attributesToTest = [
+          'nodeName',
+          'innerText',
+          'children',
+          'childElementCount',
+        ];
+        compareElements(
+          document.getElementById('actual'),
+          document.getElementById('expected'),
+        );
+        mocha.run();
+      </script>
+    </section>
+  </body>
+</html>
