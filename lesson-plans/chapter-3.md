@@ -1,12 +1,10 @@
 # Chapter 3
 
-- Refactoring
-- Reverse-Engineering
-- And a group project.
+Components!
 
 ## Before Class
 
-Take a look through `/refactoring` and `/reverse-engineering` if you have not yet.
+- Review the Components examples from `/function-roles`
 
 ---
 
@@ -14,26 +12,17 @@ Take a look through `/refactoring` and `/reverse-engineering` if you have not ye
 
 ### Before Break
 
-- Q/A review from last week
-- Practice the `/refactoring` exercises
-  - all together
-  - in groups
+Review the _components_ role and study examples from `/separated` that use components.
 
 ### After Break
 
-- Practice `/reverse-engineering`
-  - all together
-  - in groups
-- Create random groups and get set up for the week's project!
-  - [separation-of-concerns-starter](https://github.com/HackYourFutureBelgium/separation-of-concerns-starter)
+Practice a few exercises from `/rendering-data` and `/testing-components`
 
 ---
 
 ## After Class
 
-Work on the exercises in this repository, and continue studying your favorite tutorial(s).
-
-Meet with your group and begin planning + developing your **A List** deliverable.
+Work on the exercises in this repo, and continue studying your favorite tutorial(s).
 
 Study together! Working in small groups and taking turns to predict and explain
 what is happening with the code is a nice way to spend a few hours. Teaching is
