@@ -1,4 +1,4 @@
 import { search } from './utils.js';
-import { data } from './data.js';
+import { state } from '../data/state.js';
 
-export const seachFoodsHandler = () => {};
+export const searchFoodsHandler = () => {};
