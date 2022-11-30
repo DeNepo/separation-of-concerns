@@ -1,4 +1,4 @@
-import { saveNoCopies } from './utils.js.js.js';
+import { saveNoCopies } from './utils.js';
 
 describe('saveNoCopies: ', () => {
   describe('adds a new items that are not in the array', () => {
