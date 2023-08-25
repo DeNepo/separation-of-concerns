@@ -92,7 +92,7 @@ Following these steps will give you some direction and make it easier to write f
 
    _PS. not all programs need data!_
 
-3. **Initialize UI**: How does the page look when you open it, before any interactions? Make your page look exactly like that. Usually this will be something displayed in the UI, and will often include program data that you don't want too write directly into the HTML file.
+3. **Initialize UI**: How does the page look when you open it, before any interactions? Make your page look exactly like that. Usually this will be something displayed in the UI, and will often include program data that you don't want to write directly into the HTML file.
 
     <details>
     <summary>example snippet</summary>
@@ -141,7 +141,7 @@ Following these steps will give you some direction and make it easier to write f
 
     </details>
 
-   To figure out what needs to happen when the page is initialized you can compare the pages _source_ to it's _DOM_.
+   To figure out what needs to happen when the page is initialized you can compare the pages _source_ to its _DOM_.
 
 4. **User Interaction:** Now that your boilerplate and data are ready, it's time to make the thing happen! You should practice implementing user interactions from the screen backwards - first writing what the user sees, then incrementally building up the code "behind" the UI to add interactivity.
 
